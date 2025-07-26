@@ -1,4 +1,4 @@
-{"$schema": "https://github.com/LeonNagant/MaaGF1_Test/raw/main/schema/interface.schema.json",
+{"$schema": "https://json-schema.org/draft-07/schema",
   "name": "MaaGF1",
   "version": "v1.2.0",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
