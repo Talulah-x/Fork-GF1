@@ -1,0 +1,187 @@
+{
+    "=裂变链接捡垃圾_裂变链接捡垃圾": {
+        "next": [
+            "检测地图_裂变链接捡垃圾"
+        ]
+    },
+    "检测地图_裂变链接捡垃圾": {
+        "recognition": "OCR",
+        "expected": [
+            "点击指挥部"
+        ],
+        "action": "Click",
+        "rate_limit": 10,
+        "next": [
+            "计划模式_裂变链接捡垃圾"
+        ],
+        "interrupt": [
+            "检测地图_裂变链接捡垃圾"
+        ]
+    },
+    "计划模式_裂变链接捡垃圾": {
+        "recognition": "OCR",
+        "expected": [
+            "计划模式"
+        ],
+        "action": "Click",
+        "pre_delay": 2000,
+        "rate_limit": 10,
+        "next": [
+            "检测是否进入计划_裂变链接捡垃圾"
+        ]
+    },
+    "检测是否进入计划_裂变链接捡垃圾": {
+        "recognition": "OCR",
+        "expected": [
+            "执行"
+        ],
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "rate_limit": 1,
+        "next": [
+            "点击梯队_裂变链接捡垃圾"
+        ],
+        "interrupt": [
+            "计划模式_裂变链接捡垃圾"
+        ]
+    },
+    "点击梯队_裂变链接捡垃圾": {
+        "recognition": "DirectHit",
+        "pre_delay": 250,
+        "action": "Click",
+        "target": [
+            576,
+            382,
+            116,
+            117
+        ],
+        "next": [
+            "点击随机点_裂变链接捡垃圾"
+        ]
+    },
+    "点击随机点_裂变链接捡垃圾": {
+        "recognition": "DirectHit",
+        "pre_delay": 100,
+        "action": "Click",
+        "post_delay": 100,
+        "target": [
+            604,
+            2,
+            68,
+            50
+        ],
+        "next": [
+            "检测计划成功_裂变链接捡垃圾"
+        ]
+    },
+    "检测计划成功_裂变链接捡垃圾": {
+        "recognition": "OCR",
+        "expected": [
+            "下一回合"
+        ],
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "rate_limit": 1,
+        "next": [
+            "执行计划_裂变链接捡垃圾"
+        ],
+        "interrupt": [
+            "点击梯队_裂变链接捡垃圾"
+        ]
+    },
+    "执行计划_裂变链接捡垃圾": {
+        "recognition": "OCR",
+        "expected": [
+            "执行"
+        ],
+        "action": "Click",
+        "next": [
+            "确认出击_裂变链接捡垃圾"
+        ]
+    },
+    "确认出击_裂变链接捡垃圾": {
+        "recognition": "OCR",
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "next": [
+            "突发新闻_裂变链接捡垃圾"
+        ],
+        "interrupt": [
+            "确认出击_裂变链接捡垃圾"
+        ]
+    },
+    "突发新闻_裂变链接捡垃圾": {
+        "recognition": "OCR",
+        "expected": [
+            "突发新闻"
+        ],
+        "action": "Click",
+        "target": [
+            800,
+            1,
+            1,
+            1
+        ],
+        "next": [
+            "检测进战_裂变链接捡垃圾"
+        ],
+        "interrupt": [
+            "突发新闻_裂变链接捡垃圾"
+        ]
+    },
+    "检测进战_裂变链接捡垃圾": {
+        "recognition": "OCR",
+        "expected": [
+            "时间"
+        ],
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "rate_limit": 10,
+        "next": [
+            "暂停_裂变链接捡垃圾"
+        ],
+        "interrupt": [
+            "检测进战_裂变链接捡垃圾"
+        ]
+    },
+    "暂停_裂变链接捡垃圾": {
+        "recognition": "DirectHit",
+        "pre_delay": 200,
+        "action": "Click",
+        "target": [
+            578,
+            48,
+            44,
+            13
+        ],
+        "next": [
+            "撤退_裂变链接捡垃圾"
+        ]
+    },
+    "撤退_裂变链接捡垃圾": {
+        "recognition": "OCR",
+        "expected": [
+            "撤退"
+        ],
+        "pre_delay": 100,
+        "action": "Click",
+        "post_delay": 10000,
+        "next": [
+            "再次作战_裂变链接捡垃圾"
+        ],
+        "interrupt": [
+            "撤退_裂变链接捡垃圾"
+        ]
+    },
+    "再次作战_裂变链接捡垃圾": {
+        "recognition": "OCR",
+        "expected": [
+            "再次作战"
+        ],
+        "action": "Click",
+        "rate_limit": 10,
+        "next": "检测地图_裂变链接捡垃圾"
+    }
+}

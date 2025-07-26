@@ -9,7 +9,7 @@
         ],
         "template": "combat/levelUp/13-4/team2_map.png",
         "next": [
-            "弹药检查_134部署"
+            "弹药检查new_134部署"
         ]
     },
     "拖尸队布置_134部署": {
@@ -103,7 +103,7 @@
         ],
         "action": "Click",
         "next": [
-            "弹药检查_134部署"
+            "弹药检查new_134部署"
         ]
     },
     "重装机场选择梯队_134部署": {
@@ -166,7 +166,7 @@
         ]
     },
     "弹药检查_134部署修正拖动": {
-        "recognition": "FeatureMatch",
+        "recognition": "TemplateMatch",
         "template": "combat/levelUp/13-4/team2_map.png",
         "roi": [
             363,

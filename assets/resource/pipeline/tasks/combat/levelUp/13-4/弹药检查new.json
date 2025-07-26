@@ -1,0 +1,150 @@
+{
+    "弹药检查new_134部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            149,
+            324,
+            192,
+            202
+        ],
+        "template": [
+            "combat/levelUp/13-4/team2_map.png"
+        ],
+        "next": [
+            "弹药判断有new_134部署",
+            "弹药判断无new_134部署"
+        ],
+        "interrupt": [
+            "重装机场选择梯队_134部署"
+        ]
+    },
+    "点击2队new_134部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            149,
+            324,
+            192,
+            202
+        ],
+        "template": [
+            "combat/levelUp/13-4/team2_map.png"
+        ],
+        "target_offset": [
+            -30,
+            20,
+            0,
+            0
+        ],
+        "action": "Click",
+        "rate_limit": 200,
+        "post_delay": 1500,
+        "next": [
+            "点击队伍编成_134编队",
+            "点击2队new_134部署"
+        ],
+        "interrupt": [
+            "重装机场选择梯队_134部署"
+        ]
+    },
+    "点击2队new_134部署修正识别": {
+        "recognition": "OCR",
+        "roi": [
+            724,
+            43,
+            294,
+            90
+        ],
+        "expected": "第二梯队",
+        "action": "Click",
+        "target": [
+            539,
+            44,
+            15,
+            17
+        ],
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "点击2队new_134部署修正识别",
+            "点击2队new_134部署修正拖动"
+        ]
+    },
+    "点击2队new_134部署修正拖动": {
+        "recognition": "TemplateMatch",
+        "template": "combat/levelUp/13-4/team2_map.png",
+        "roi": [
+            363,
+            343,
+            168,
+            165
+        ],
+        "action": "Swipe",
+        "begin": [
+            910,
+            415,
+            1,
+            1
+        ],
+        "end": [
+            667,
+            416,
+            1,
+            1
+        ],
+        "duration": 600,
+        "next": [
+            "弹药判断无new_134部署",
+            "弹药判断有new_134部署",
+            "弹药检查new_134部署",
+            "点击部署界面2队new_134部署",
+            "点击2队new_134部署修正识别",
+            "点击2队new_134部署修正拖动"
+        ]
+    },
+    "点击部署界面2队new_134部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            10,
+            220,
+            140,
+            100
+        ],
+        "template": "combat/levelUp/13-4/team2_dply.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "弹药检查new_134部署",
+            "点击部署界面2队new_134部署"
+        ]
+    },
+    "弹药判断无new_134部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            138,
+            291,
+            316,
+            232
+        ],
+        "threshold": 0.7,
+        "template": "combat/levelUp/13-4/Gnewnoammo.png",
+        "green_mask": true,
+        "next": [
+            "开始作战_134战斗"
+        ]
+    },
+    "弹药判断有new_134部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            138,
+            291,
+            316,
+            232
+        ],
+        "template": "combat/levelUp/13-4/Gnewfullammo.png",
+        "green_mask": true,
+        "threshold": 0.7,
+        "next": [
+            "点击2队new_134部署"
+        ]
+    }
+}

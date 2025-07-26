@@ -122,9 +122,11 @@
         ],
         "template": "storage/navi.png",
         "action": "Click",
+        "post_wait_freezes": 1,
         "post_delay": 1000,
         "next": [
-            "导航栏战斗_134人形回收"
+            "导航栏战斗_134人形回收",
+            "进入导航栏_134人形回收"
         ]
     },
     "导航栏战斗_134人形回收": {

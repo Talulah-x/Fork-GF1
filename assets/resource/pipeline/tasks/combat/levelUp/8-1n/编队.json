@@ -22,12 +22,21 @@
     },
     "选择2队zas_8_1N编队": {
         "recognition": "OCR",
-        "expected": [
-            "Zas",
-            "M21"
+        "expected": "阵型编成",
+        "roi": [
+            920,
+            500,
+            292,
+            285
+        ],
+        "target": [
+            837,
+            302,
+            78,
+            122
         ],
         "action": "Click",
-        "post_delay": 2000,
+        "post_wait_freezes": 1,
         "next": [
             "显示全部_8_1N编队",
             "点击队伍编成_8_1N编队"
@@ -65,10 +74,11 @@
         ]
     },
     "点击队伍中的Zas_8_1N编队": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "combat/levelUp/8-1N/zas_in_team1.png",
-            "combat/levelUp/8-1N/zas_in_team2.png"
+        "target": [
+            50,
+            639,
+            55,
+            43
         ],
         "action": "Click",
         "post_delay": 1000,

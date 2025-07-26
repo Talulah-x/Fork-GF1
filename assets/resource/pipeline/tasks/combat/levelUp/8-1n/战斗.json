@@ -2,10 +2,10 @@
     "开始作战前初始化_8_1N战斗": {
         "recognition": "TemplateMatch",
         "roi": [
-            930,
-            93,
-            300,
-            240
+            200,
+            50,
+            250,
+            250
         ],
         "template": "combat/levelUp/8-1N/team2_map.png",
         "next": [
@@ -36,10 +36,10 @@
     "点击2队单zas准备补给_8_1N战斗": {
         "recognition": "TemplateMatch",
         "roi": [
-            930,
-            93,
-            300,
-            240
+            200,
+            50,
+            250,
+            250
         ],
         "template": "combat/levelUp/8-1N/team2_map.png",
         "target_offset": [
@@ -125,10 +125,10 @@
     "点击2队单zas_8_1N战斗": {
         "recognition": "TemplateMatch",
         "roi": [
-            930,
-            93,
-            300,
-            240
+            200,
+            50,
+            250,
+            250
         ],
         "template": "combat/levelUp/8-1N/team2_map.png",
         "action": "Click",

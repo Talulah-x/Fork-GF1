@@ -1,7 +1,8 @@
 {
         "=宿舍自动点赞": {
                 "next": [
-                        "点击点赞"
+                        "点击点赞",
+                        "点击下一个宿舍"
                 ]
         },
         "点击点赞": {
@@ -12,39 +13,22 @@
                 ],
                 "action": "Click",
                 "next": [
-                        "收电池",
-                        "点击下一个宿舍"
-                ]
-        },
-        "收电池": {
-                "recognition": "TemplateMatch",
-                "template": "dormitory/Gbattery.png",
-                "action": "Click",
-                "green_mask": true,
-                "enabled": false,
-                "next": [
                         "点击下一个宿舍"
                 ]
         },
         "点击下一个宿舍": {
                 "recognition": "TemplateMatch",
-                "template": "dormitory/next.png",
+                "template": "dormitory/message.png",
                 "action": "Click",
+                "target": [
+                        202,
+                        655,
+                        21,
+                        32
+                ],
                 "post_delay": 200,
                 "next": [
                         "点击点赞"
                 ]
-        },
-        "离开参观": {
-                "recognition": "TemplateMatch",
-                "template": "dormitory/message.png",
-                "action": "Click",
-                "target": [
-                        64,
-                        62,
-                        0,
-                        0
-                ],
-                "next": []
         }
 }

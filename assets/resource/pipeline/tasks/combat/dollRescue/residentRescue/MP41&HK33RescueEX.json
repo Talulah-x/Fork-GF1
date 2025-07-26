@@ -5,6 +5,40 @@
             "地图初始化_MP41打捞"
         ]
     },
+    "MP41&HK33RescueEX_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/斩牙行动战斗EX.png"
+        ],
+        "post_wait_freezes": 1,
+        "order_by": "Horizontal",
+        "index": -1,
+        "next": [
+            "点击确认出击_MP41打捞"
+        ]
+    },
+    "点击确认出击_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/确认出击.png"
+        ],
+        "post_delay": 2000,
+        "next": [
+            "人形回收_MP41打捞",
+            "点击机场_MP41打捞",
+            "真的确定出击_MP41打捞"
+        ]
+    },
+    "真的确定出击_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "template": "combat/dollRescue/residentRescue/MP41&HK33RescueEX/情报点确定.png",
+        "action": "Click",
+        "next": [
+            "点击机场_MP41打捞"
+        ]
+    },
     "地图初始化_MP41打捞": {
         "recognition": "TemplateMatch",
         "roi": [
@@ -13,7 +47,7 @@
             127,
             129
         ],
-        "template": "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\init.png",
+        "template": "combat/dollRescue/residentRescue/MP41&HK33RescueEX/init.png",
         "next": [
             "点击机场_MP41打捞",
             "布置完毕_MP41打捞"
@@ -54,164 +88,11 @@
             "拖到右上角_MP41打捞"
         ]
     },
-    "美美撤离_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\撤离.png"
-        ],
-        "post_wait_freezes": 100,
-        "next": [
-            "确认撤离_MP41打捞"
-        ]
-    },
-    "确认撤离_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\确认撤离.png"
-        ],
-        "next": [
-            "点击终止作战_MP41打捞"
-        ]
-    },
-    "点击抽薪_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\抽薪.png"
-        ],
-        "post_wait_freezes": 100,
-        "next": [
-            "一判_MP41打捞"
-        ]
-    },
-    "一判_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\一判.png"
-        ],
-        "post_delay": 200,
-        "next": [
-            "跳过获得角色1_MP41打捞",
-            "判定失败&结算_MP41打捞",
-            "判定成功1_MP41打捞",
-            "判定成功2_MP41打捞"
-        ]
-    },
-    "判定失败&结算_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\判定失败.png"
-        ],
-        "next": [
-            "点击抽薪2_MP41打捞"
-        ]
-    },
-    "判定成功1_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\二星.png"
-        ],
-        "next": [
-            "点击抽薪2_MP41打捞"
-        ]
-    },
-    "判定成功2_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\三星.png"
-        ],
-        "next": [
-            "点击抽薪2_MP41打捞"
-        ]
-    },
-    "点击抽薪2_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\抽薪.png"
-        ],
-        "post_wait_freezes": 100,
-        "next": [
-            "跳过获得角色2_MP41打捞",
-            "二判_MP41打捞"
-        ]
-    },
-    "点击终止作战_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\终止作战.png"
-        ],
-        "post_wait_freezes": 100,
-        "next": [
-            "点击重新作战_MP41打捞"
-        ]
-    },
-    "点击重新作战_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\重新作战.png"
-        ],
-        "post_wait_freezes": 6,
-        "next": [
-            "开始作战_MP41打捞"
-        ]
-    },
-    "开始作战_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\开始作战.png"
-        ],
-        "post_delay": 1000,
-        "next": [
-            "人形回收_MP41打捞",
-            "选中铁血_MP41打捞"
-        ]
-    },
-    "MP41&HK33RescueEX_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\斩牙行动战斗EX.png"
-        ],
-        "post_wait_freezes": 1,
-        "next": [
-            "点击确认出击_MP41打捞"
-        ]
-    },
-    "点击确认出击_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\确认出击.png"
-        ],
-        "post_delay": 2000,
-        "next": [
-            "人形回收_MP41打捞",
-            "点击机场_MP41打捞"
-        ]
-    },
-    "真的确定出击_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "template": "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\情报点确定.png",
-        "action": "Click",
-        "next": [
-            "点击机场_MP41打捞"
-        ]
-    },
     "点击机场_MP41打捞": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\机场.png"
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/机场.png"
         ],
         "threshold": [
             0.6
@@ -227,11 +108,91 @@
             "部署梯队2_MP41打捞"
         ]
     },
+    "部署梯队2_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/部署梯队的确定.png"
+        ],
+        "post_wait_freezes": 200,
+        "roi": [
+            961,
+            540,
+            173,
+            131
+        ],
+        "next": [
+            "点击指挥部_MP41打捞"
+        ]
+    },
+    "点击指挥部_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/指挥部.png"
+        ],
+        "threshold": [
+            0.5
+        ],
+        "post_delay": 200,
+        "next": [
+            "点击指挥部_MP41打捞",
+            "部署梯队1_MP41打捞"
+        ]
+    },
+    "部署梯队1_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/部署梯队的确定.png"
+        ],
+        "post_delay": 1000,
+        "next": [
+            "开始作战_MP41打捞"
+        ]
+    },
+    "布置完毕_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/第2梯队.png"
+        ],
+        "threshold": [
+            0.4
+        ],
+        "roi": [
+            264,
+            292,
+            337,
+            323
+        ],
+        "post_delay": 200,
+        "target_offset": [
+            -30,
+            20,
+            0,
+            0
+        ],
+        "next": [
+            "开始作战_MP41打捞"
+        ]
+    },
+    "开始作战_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/开始作战.png"
+        ],
+        "post_delay": 1000,
+        "next": [
+            "人形回收_MP41打捞",
+            "选中铁血_MP41打捞"
+        ]
+    },
     "选中铁血_MP41打捞": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\第2梯队.png"
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/第2梯队.png"
         ],
         "roi": [
             264,
@@ -251,131 +212,54 @@
             "点击补给_MP41打捞"
         ]
     },
-    "部署梯队1_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\部署梯队的确定.png"
-        ],
-        "post_delay": 1000,
-        "next": [
-            "开始作战_MP41打捞"
-        ]
-    },
-    "部署梯队2_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\部署梯队的确定.png"
-        ],
-        "post_wait_freezes": 200,
-        "roi": [
-            961,
-            540,
-            173,
-            131
-        ],
-        "next": [
-            "点击指挥部_MP41打捞"
-        ]
-    },
-    "点击指挥部_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\指挥部.png"
-        ],
-        "threshold": [
-            0.5
-        ],
-        "post_delay": 200,
-        "next": [
-            "部署梯队1_MP41打捞"
-        ]
-    },
     "点击补给_MP41打捞": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\补给.png"
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/补给.png"
         ],
         "post_wait_freezes": 100,
         "next": [
-            "点击抽薪_MP41打捞"
+            "点击抽薪1_MP41打捞"
         ]
     },
-    "二判_MP41打捞": {
+    "点击抽薪1_MP41打捞": {
         "recognition": "TemplateMatch",
         "action": "Click",
         "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\二判.png"
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/抽薪.png"
         ],
-        "post_delay": 200,
-        "target_offset": [
-            -25,
-            4,
-            0,
-            0
-        ],
+        "post_wait_freezes": 100,
         "next": [
-            "跳过获得角色2_MP41打捞",
-            "判定失败&结算-2_MP41打捞",
-            "判定成功1-2_MP41打捞",
-            "判定成功2-2_MP41打捞"
+            "一判_MP41打捞"
         ]
     },
-    "判定失败&结算-2_MP41打捞": {
+    "一判_MP41打捞": {
         "recognition": "TemplateMatch",
-        "action": "Click",
         "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\判定失败.png"
-        ],
-        "next": [
-            "点击铁血_MP41打捞"
-        ]
-    },
-    "判定成功1-2_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\二星.png"
-        ],
-        "next": [
-            "点击铁血_MP41打捞"
-        ]
-    },
-    "判定成功2-2_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\三星.png"
-        ],
-        "next": [
-            "点击铁血_MP41打捞"
-        ]
-    },
-    "点击铁血_MP41打捞": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\第2梯队.png"
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/chip_cancel.png"
         ],
         "roi": [
-            264,
-            292,
-            337,
-            323
+            1000,
+            136,
+            160,
+            224
         ],
         "post_delay": 200,
-        "target_offset": [
-            -30,
-            20,
-            0,
-            0
-        ],
         "next": [
-            "点击铁血_MP41打捞",
-            "美美撤离_MP41打捞"
+            "一判再判_MP41打捞"
+        ]
+    },
+    "一判再判_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "template": "combat/dollRescue/residentRescue/MP41&HK33RescueEX/一判.png",
+        "action": "Click",
+        "next": [
+            "一判_MP41打捞",
+            "跳过获得角色1_MP41打捞",
+            "判定失败&结算_MP41打捞",
+            "判定成功1_MP41打捞",
+            "判定成功2_MP41打捞"
         ]
     },
     "跳过获得角色1_MP41打捞": {
@@ -401,6 +285,48 @@
         ],
         "timeout": 600000
     },
+    "判定失败&结算_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/判定失败.png"
+        ],
+        "next": [
+            "点击抽薪2_MP41打捞"
+        ]
+    },
+    "判定成功1_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/二星.png"
+        ],
+        "next": [
+            "点击抽薪2_MP41打捞"
+        ]
+    },
+    "判定成功2_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/三星.png"
+        ],
+        "next": [
+            "点击抽薪2_MP41打捞"
+        ]
+    },
+    "点击抽薪2_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/抽薪.png"
+        ],
+        "post_wait_freezes": 100,
+        "next": [
+            "跳过获得角色2_MP41打捞",
+            "二判_MP41打捞"
+        ]
+    },
     "跳过获得角色2_MP41打捞": {
         "recognition": "TemplateMatch",
         "roi": [
@@ -424,13 +350,75 @@
         ],
         "timeout": 600000
     },
-    "布置完毕_MP41打捞": {
+    "二判_MP41打捞": {
         "recognition": "TemplateMatch",
-        "template": [
-            "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\第2梯队.png"
+        "roi": [
+            1000,
+            136,
+            160,
+            224
         ],
-        "threshold": [
-            0.4
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/chip_cancel.png"
+        ],
+        "post_delay": 200,
+        "next": [
+            "二判再判_MP41打捞"
+        ]
+    },
+    "二判再判_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "template": "combat/dollRescue/residentRescue/MP41&HK33RescueEX/二判.png",
+        "target_offset": [
+            -10,
+            4,
+            0,
+            0
+        ],
+        "action": "Click",
+        "next": [
+            "二判_MP41打捞",
+            "跳过获得角色2_MP41打捞",
+            "判定失败&结算-2_MP41打捞",
+            "判定成功1-2_MP41打捞",
+            "判定成功2-2_MP41打捞"
+        ]
+    },
+    "判定失败&结算-2_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/判定失败.png"
+        ],
+        "next": [
+            "点击铁血_MP41打捞"
+        ]
+    },
+    "判定成功1-2_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/二星.png"
+        ],
+        "next": [
+            "点击铁血_MP41打捞"
+        ]
+    },
+    "判定成功2-2_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/三星.png"
+        ],
+        "next": [
+            "点击铁血_MP41打捞"
+        ]
+    },
+    "点击铁血_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/第2梯队.png"
         ],
         "roi": [
             264,
@@ -445,6 +433,50 @@
             0,
             0
         ],
+        "next": [
+            "点击铁血_MP41打捞",
+            "美美撤离_MP41打捞"
+        ]
+    },
+    "美美撤离_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/撤离.png"
+        ],
+        "post_wait_freezes": 100,
+        "next": [
+            "确认撤离_MP41打捞"
+        ]
+    },
+    "确认撤离_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/确认撤离.png"
+        ],
+        "next": [
+            "点击终止作战_MP41打捞"
+        ]
+    },
+    "点击终止作战_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/终止作战.png"
+        ],
+        "post_wait_freezes": 100,
+        "next": [
+            "点击重新作战_MP41打捞"
+        ]
+    },
+    "点击重新作战_MP41打捞": {
+        "recognition": "TemplateMatch",
+        "action": "Click",
+        "template": [
+            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/重新作战.png"
+        ],
+        "post_wait_freezes": 6,
         "next": [
             "开始作战_MP41打捞"
         ]
@@ -533,7 +565,8 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "导航栏战斗_MP41打捞"
+            "导航栏战斗_MP41打捞",
+            "进入导航栏_MP41打捞"
         ]
     },
     "导航栏战斗_MP41打捞": {
@@ -563,7 +596,7 @@
     },
     "进入章节_MP41打捞": {
         "recognition": "TemplateMatch",
-        "template": "combat\\dollRescue\\residentRescue\\MP41&HK33RescueEX\\进入章节.png",
+        "template": "combat/dollRescue/residentRescue/MP41&HK33RescueEX/进入章节.png",
         "action": "Click",
         "post_delay": 1000,
         "next": [

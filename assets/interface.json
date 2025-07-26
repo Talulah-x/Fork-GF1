@@ -1,4 +1,5 @@
-{"$schema": "https://json-schema.org/draft-07/schema",
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
   "name": "MaaGF1",
   "version": "v1.2.0",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
@@ -34,7 +35,15 @@
       "name": "13-4循环",
       "entry": "=134总流程",
       "check": false,
-      "doc": "请在第十三战役-普通界面或者进入13-4地图后的界面运行，**要求地图缩放到最小**，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/13-4%E5%8F%8C%E7%BB%B4%E5%85%8B%E6%89%98%E6%8B%96%E5%B0%B8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "doc": "请在第十三战役-普通界面或者进入13-4地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/13-4%E5%8F%8C%E6%89%93%E6%89%8B%E6%8B%96%E5%B0%B8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "repeatable": true,
+      "repeat_count": 1
+    },
+    {
+      "name": "13-4地图初始化",
+      "entry": "拖到左上角_134地图初始化",
+      "check": false,
+      "doc": "请在进入13-4地图后的界面运行",
       "repeatable": true,
       "repeat_count": 1
     },
@@ -42,7 +51,15 @@
       "name": "8-1N循环",
       "entry": "=8_1N总流程",
       "check": false,
-      "doc": "请在第八战役-夜战或者进入8-1N地图后的界面运行，**要求地图缩放到最小**，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8CZas%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "doc": "请在第八战役-夜战或者进入8-1N地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8C%E6%89%93%E6%89%8B%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "repeatable": true,
+      "repeat_count": 1
+    },
+    {
+      "name": "8-1N地图初始化",
+      "entry": "拖到左上角_8_1N地图初始化",
+      "check": false,
+      "doc": "请在进入8-1N地图后的界面运行",
       "repeatable": true,
       "repeat_count": 1
     },
@@ -50,7 +67,7 @@
       "name": "MP41抽薪打捞",
       "entry": "=MP41打捞总流程",
       "check": false,
-      "doc": "请在裂变链接第五章能点击到“斩牙行动II战斗EX”位置或者进入该地图后的界面运行，**要求地图缩放到最小**，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "doc": "请在裂变链接第五章能点击到“斩牙行动II战斗EX”位置或者进入该地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
       "repeat_count": 1
     },
@@ -73,7 +90,7 @@
     {
       "name": "宿舍内自动点击爱心",
       "entry": "=点击爱心",
-      "check": true,
+      "check": false,
       "doc": "一直点爱心直到识别不到爱心",
       "repeatable": true,
       "repeat_count": 1
@@ -83,6 +100,14 @@
       "entry": "=宿舍自动点赞",
       "check": false,
       "doc": "一直点赞并参观下一个宿舍直到无赞可点",
+      "repeatable": true,
+      "repeat_count": 1
+    },
+    {
+      "name": "裂变链接捡垃圾",
+      "entry": "=裂变链接捡垃圾_裂变链接捡垃圾",
+      "check": false,
+      "doc": "进入关卡部署梯队后点击开始         *目前只适用于1280*720",
       "repeatable": true,
       "repeat_count": 1
     }
