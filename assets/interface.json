@@ -37,7 +37,8 @@
       "check": false,
       "doc": "请在第十三战役-普通界面或者进入13-4地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/13-4%E5%8F%8C%E6%89%93%E6%89%8B%E6%8B%96%E5%B0%B8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
-      "repeat_count": 1
+      "repeat_count": 1,
+      "option": "弹药检查版本选择_134"
     },
     {
       "name": "13-4地图初始化",
@@ -54,7 +55,7 @@
       "doc": "请在第八战役-夜战或者进入8-1N地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8C%E6%89%93%E6%89%8B%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
       "repeat_count": 1,
-      "option": "弹药检查_8_1N"
+      "option": "弹药检查版本选择_8_1N"
     },
     {
       "name": "8-1N地图初始化",
@@ -118,7 +119,7 @@
     }
   ],
   "option": {
-    "弹药检查_8_1N": {
+    "弹药检查版本选择_8_1N": {
       "cases": [
         {
           "name": "启用新版弹药识别"
@@ -178,6 +179,64 @@
               ],
               "interrupt": [
                 "拖到左上角_8_1N地图初始化"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "弹药检查版本选择_134": {
+      "cases": [
+        {
+          "name": "启用新版弹药识别"
+        },
+        {
+          "name": "启用旧版弹药识别",
+          "pipeline_override": {
+            "单vv队确定_134部署": {
+              "recognition": "OCR",
+              "roi": [
+                901,
+                548,
+                202,
+                115
+              ],
+              "expected": [
+                "确定",
+                "取消"
+              ],
+              "action": "Click",
+              "next": [
+                "弹药检查_134部署"
+              ]
+            },
+            "布置完成_134部署": {
+              "recognition": "TemplateMatch",
+              "roi": [
+                149,
+                342,
+                151,
+                164
+              ],
+              "template": "combat/levelUp/13-4/team2_map.png",
+              "next": [
+                "弹药检查_134部署"
+              ]
+            },
+            "=134总流程": {
+              "recognition": "OCR",
+              "expected": [
+                "故友",
+                "开始作战"
+              ],
+              "next": [
+                "点击134_134进入",
+                "弹药检查_134部署",
+                "布置完成_134部署",
+                "拖尸队布置_134部署"
+              ],
+              "interrupt": [
+                "拖到左上角_134地图初始化"
               ]
             }
           }
