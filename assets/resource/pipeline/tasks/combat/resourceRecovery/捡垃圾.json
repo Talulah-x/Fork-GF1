@@ -14,22 +14,16 @@
     "recognition":"OCR",
     "action":"Click",
     "expected":["开始作战"],
-    "next":["捡垃圾-计划模式"]
+    "next":["捡垃圾-计划模式"],
+    "interrupt":["捡垃圾-开始作战"]
 },
 "捡垃圾-计划模式":{
     "recognition":"OCR",
-    "expected":["计划模式"],
-    "pre_wait_freezes":1500,
+    "expected":["结束回合"],
     "action":"Click",
-    "next":["捡垃圾-计划检测"],
+    "target":[27,621,92,21],
+    "next":["捡垃圾-计划模式"],
     "interrupt":"捡垃圾-点击梯队"
-},
-"捡垃圾-计划检测":{
-    "recognition":"OCR",
-    "expected":"执行计划",
-    "action":"DoNothing",
-    "next":"捡垃圾-点击梯队",
-    "interrupt":"捡垃圾-计划模式"
 },
 "捡垃圾-点击梯队":{
     "recognition":"DirectHit",
@@ -89,19 +83,20 @@
     "recognition":"DirectHit",
     "action":"Click",
     "target":[350,10,0,0],
-    "next":["捡垃圾-加速"],
+    "next":["捡垃圾-撤退检测"],
     "interrupt":"捡垃圾-暂停"
 },
-"捡垃圾-加速":{
+"捡垃圾-撤退检测":{
     "recognition":"OCR",
-    "expected":"结算",
-    "action":"Click",
-    "next":"捡垃圾-再次作战"
+    "expected":["添加标靶"],
+    "action":"DoNothing",
+    "next":["捡垃圾-再次作战"]
 },
 "捡垃圾-再次作战":{
-    "recognition":"OCR",
+    "recognition":"DirectHit",
     "action":"Click",
-    "expected":["再次作战"],
-    "next":"捡垃圾-检测地图"
+    "target":[310,612,127,31],
+    "next":"捡垃圾-检测地图",
+    "interrupt":"捡垃圾-再次作战"
 }
 }
