@@ -110,7 +110,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: M4A1-GUI-${{ matrix.os }}-${{ matrix.arch }}
+          name: MaaGF1-GUI-${{ needs.meta.outputs.tag }}-${{ matrix.arch }}
           path: "install"
 
   changelog:
