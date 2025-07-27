@@ -42,7 +42,6 @@
     "recognition":"OCR",
     "action":"Click",
     "expected":["下一回合"],
-    "timeout":200,
     "on_error":["捡垃圾-点击梯队"],
     "next":["捡垃圾-执行计划"]
 },
@@ -56,19 +55,12 @@
     "recognition":"OCR",
     "action":"Click",
     "expected":["确定"],
-    "next":["捡垃圾-中断计划"]
-},
-"捡垃圾-中断计划":{
-    "recognition":"OCR",
-    "action":"Click",
-    "expected":["确定"],
-    "next":["捡垃圾-随机事件"],
-    "interrupt":"捡垃圾-中断计划"
+    "next":["捡垃圾-确认出击"],
+    "interrupt":"捡垃圾-随机事件"
 },
 "捡垃圾-随机事件":{
-    "recognition":"OCR",
+    "recognition":"DirectHit",
     "action":"Click",
-    "expected":["突发新闻"],
     "target":[100,100,100,100],
     "next":["捡垃圾-暂停"]
 },
@@ -88,7 +80,7 @@
 },
 "捡垃圾-撤退检测":{
     "recognition":"OCR",
-    "expected":["添加标靶"],
+    "expected":["重新战斗"],
     "action":"DoNothing",
     "next":["捡垃圾-再次作战"]
 },
