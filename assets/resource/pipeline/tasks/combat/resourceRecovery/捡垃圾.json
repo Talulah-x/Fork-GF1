@@ -32,7 +32,7 @@
         "expected": [
             "计划模式"
         ],
-        "pre_wait_freezes": 1500,
+        "pre_wait_freezes": 500,
         "action": "Click",
         "next": [
             "捡垃圾-计划检测"
@@ -41,10 +41,9 @@
     },
     "捡垃圾-计划检测": {
         "recognition": "OCR",
-        "expected": "执行计划",
+        "expected": "结束回合",
         "action": "DoNothing",
-        "next": "捡垃圾-点击梯队",
-        "interrupt": "捡垃圾-计划模式"
+        "next": "捡垃圾-计划模式"
     },
     "捡垃圾-点击梯队": {
         "recognition": "DirectHit",
@@ -63,10 +62,10 @@
         "recognition": "DirectHit",
         "action": "Click",
         "target": [
-            596,
-            66,
-            9,
-            11
+            604,
+            2,
+            68,
+            50
         ],
         "next": [
             "捡垃圾-下一回合"
@@ -137,7 +136,8 @@
         ]
     },
     "捡垃圾-暂停": {
-        "recognition": "DirectHit",
+        "recognition": "OCR",
+        "expected": "伤害",
         "action": "Click",
         "target": [
             640,
@@ -146,14 +146,19 @@
             0
         ],
         "next": [
-            "捡垃圾-撤退"
-        ],
+            "捡垃圾-检测暂停"
+        ]
+    },
+    "捡垃圾-检测暂停": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "next": "捡垃圾-撤退",
         "interrupt": "捡垃圾-暂停"
     },
     "捡垃圾-撤退": {
         "recognition": "OCR",
         "expected": [
-            "添加标靶"
+            "重新战斗"
         ],
         "action": "Click",
         "target": [
