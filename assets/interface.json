@@ -53,7 +53,8 @@
       "check": false,
       "doc": "请在第八战役-夜战或者进入8-1N地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8C%E6%89%93%E6%89%8B%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
-      "repeat_count": 1
+      "repeat_count": 1,
+      "option": "弹药检查_8_1N"
     },
     {
       "name": "8-1N地图初始化",
@@ -109,5 +110,73 @@
       "check": true,
       "doc": "进入关卡部署梯队后点击开始，若之前缩放过地图需要取消记录缩放后运行一次*目前只适用于1280*720"
     }
-  ]
+  ],
+  "option": {
+    "弹药检查_8_1N": {
+      "cases": [
+        {
+          "name": "启用新版弹药识别"
+        },
+        {
+          "name": "启用旧版弹药识别",
+          "pipeline_override": {
+            "狗粮队确定_8_1N部署": {
+              "recognition": "OCR",
+              "roi": [
+                933,
+                556,
+                180,
+                100
+              ],
+              "expected": [
+                "确定",
+                "取消"
+              ],
+              "action": "Click",
+              "post_delay": 1200,
+              "next": [
+                "弹药检查_8_1N部署"
+              ]
+            },
+            "布置完成_8_1N部署": {
+              "recognition": "TemplateMatch",
+              "roi": [
+                180,
+                38,
+                272,
+                225
+              ],
+              "template": "combat/levelUp/8-1N/team2_map.png",
+              "target_offset": [
+                -30,
+                20,
+                0,
+                0
+              ],
+              "rate_limit": 200,
+              "next": [
+                "弹药检查_8_1N部署"
+              ]
+            },
+            "=8_1N总流程": {
+              "recognition": "OCR",
+              "expected": [
+                "巨鹰与寒鸦",
+                "开始作战"
+              ],
+              "next": [
+                "炸狗队布置_8_1N部署",
+                "点击8-1N_8_1N进入",
+                "弹药检查_8_1N部署",
+                "布置完成_8_1N部署"
+              ],
+              "interrupt": [
+                "拖到左上角_8_1N地图初始化"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
 }
