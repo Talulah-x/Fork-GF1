@@ -59,8 +59,7 @@
     "interrupt":"捡垃圾-随机事件"
 },
 "捡垃圾-随机事件":{
-    "recognition":"OCR",
-    "expected":["突发新闻"],
+    "recognition":"DirectHit",
     "action":"Click",
     "target":[100,100,100,100],
     "next":["捡垃圾-暂停"]
