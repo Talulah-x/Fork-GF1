@@ -1,4 +1,9 @@
 <!-- markdownlint-disable MD033 MD041 -->
+<p align="center">
+  <img alt="LOGO" src="https://cdn.jsdelivr.net/gh/LeonNagant/MaaGF1_Test/example_img/icon/icon.png" width="256" height="256" />
+</p>
+
+<div align="center">
 
 # MaaGF1_Test
 
@@ -15,7 +20,7 @@
 - 可读性差
 
 ⚠️ **账号风险警告** ⚠️  
-少女前线官方曾有大量封禁脚本的记录！ 
+少女前线官方曾有大量封禁脚本的记录！
 **账号安全自行判断，该项目不承担任何后果**
 具体请见 **📄免责声明与许可** 部分
 
@@ -40,7 +45,6 @@
 - **主开发分辨率**：1280×720
 
 - 绝大多数地图需要打开**记录上次完成关卡时镜头缩放**功能，请阅读相关使用手册或者GUI界面内的任务说明。
-
 
 ### ⚠️ 重要注意事项
 
@@ -108,9 +112,11 @@
 
 ### ▶️ 裂变链接捡垃圾  ——feat.[白烛](https://github.com/Talulah-x)
 
+- [操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)
 
 ### ▶️ 指挥官后勤  ——feat.[白烛](https://github.com/Talulah-x)
 
+- [操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)
 -
 
 ## 🔧 更多功能开发中
@@ -118,7 +124,7 @@
 ---
 
 ## ❓ 反馈渠道
-
+++++
 [提交 Issue](https://github.com/LeonNagant/MaaGF1_Test/issues)
 
 QQ群：*720731834*
