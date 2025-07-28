@@ -11,10 +11,10 @@
     "expected": "灰域探查",
     "action": "Click",
     "next": [
-      "灰域-战斗页-探查",
-      "灰域-灰域检测"
-    ],
-    "interrupt": "灰域-进入灰域"
+      "灰域-战斗页-探查识图",
+      "灰域-灰域检测",
+      "灰域-进入灰域"
+    ]
   },
   "灰域-战斗页-探查": {
     "recognition": "OCR",
@@ -26,8 +26,10 @@
     ],
     "expected": "探查",
     "action": "Click",
-    "next": "灰域-灰域检测",
-    "interrupt": "灰域-战斗页-探查"
+    "next": [
+      "灰域-灰域检测",
+      "灰域-战斗页-探查"
+    ]
   },
   "灰域-战斗页-探查识图": {
     "recognition": "FeatureMatch",
@@ -37,8 +39,10 @@
       "GrayZone/进入灰域3.png"
     ],
     "action": "Click",
-    "next": "灰域-灰域检测",
-    "interrupt": "灰域-战斗页-探查"
+    "next": [
+      "灰域-灰域检测",
+      "灰域-战斗页-探查识图"
+    ]
   },
   "灰域-灰域检测": {
     "recognition": "OCR",
@@ -94,8 +98,10 @@
     "recognition": "TemplateMatch",
     "template": "GrayZone/奇遇点.png",
     "action": "Click",
-    "next": "灰域-出击奇遇",
-    "interrupt": "灰域-检测奇遇"
+    "next": [
+      "灰域-出击奇遇",
+      "灰域-检测奇遇"
+    ]
   },
   "灰域-出击奇遇": {
     "recognition": "OCR",
@@ -109,9 +115,9 @@
     "action": "Click",
     "next": [
       "灰域-奇遇代理",
-      "灰域-人形回收"
-    ],
-    "interrupt": "灰域-出击奇遇"
+      "灰域-人形回收",
+      "灰域-出击奇遇"
+    ]
   },
   "灰域-奇遇代理": {
     "recognition": "OCR",
@@ -123,8 +129,10 @@
     ],
     "expected": "代理作战",
     "action": "Click",
-    "next": "灰域-代理确认",
-    "interrupt": "灰域-奇遇代理"
+    "next": [
+      "灰域-代理确认",
+      "灰域-奇遇代理"
+    ]
   },
   "灰域-代理确认": {
     "recognition": "OCR",
@@ -136,8 +144,10 @@
     ],
     "expected": "确认",
     "action": "Click",
-    "next": "灰域-代理检测",
-    "interrupt": "灰域-代理确认"
+    "next": [
+      "灰域-代理检测",
+      "灰域-代理确认"
+    ]
   },
   "灰域-代理检测": {
     "recognition": "OCR",
@@ -149,8 +159,10 @@
     ],
     "expected": "代理介入中",
     "action": "DoNothing",
-    "next": "灰域-战斗检测",
-    "interrupt": "灰域-代理检测"
+    "next": [
+      "灰域-战斗检测",
+      "灰域-代理检测"
+    ]
   },
   "灰域-战斗检测": {
     "recognition": "OCR",
@@ -173,8 +185,10 @@
       92,
       70
     ],
-    "next": "灰域-灰域检测",
-    "interrupt": "灰域-加速结算"
+    "next": [
+      "灰域-灰域检测",
+      "灰域-加速结算"
+    ]
   },
   "灰域-人形回收": {
     "recognition": "OCR",
@@ -209,9 +223,9 @@
     "action": "Click",
     "template": "GrayZone/导航栏.png",
     "next": [
-      "灰域-战斗页面"
-    ],
-    "interrupt": "返回灰域"
+      "灰域-战斗页面",
+      "返回灰域"
+    ]
   },
   "灰域-战斗页面": {
     "recognition": "OCR",
@@ -220,8 +234,8 @@
       "战斗"
     ],
     "next": [
-      "灰域-进入灰域"
-    ],
-    "interrupt": "灰域-战斗页面"
+      "灰域-进入灰域",
+      "灰域-战斗页面"
+    ]
   }
 }
