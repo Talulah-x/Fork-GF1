@@ -2,10 +2,10 @@
     "剩余行动01_8_1N战斗": {
         "recognition": "OCR",
         "roi": [
-            840,
-            630,
-            180,
-            90
+            966,
+            604,
+            124,
+            115
         ],
         "expected": [
             "01"
@@ -19,40 +19,23 @@
     "点击1队图标_8_1N重置": {
         "recognition": "TemplateMatch",
         "roi": [
-            212,
-            114,
-            664,
-            477
+            427,
+            148,
+            351,
+            243
         ],
-        "template": "combat/levelUp/8-1N/expteam_map.png",
+        "template": "combat/levelUp/8-1N/map_team1.png",
         "action": "Click",
         "rate_limit": 200,
+        "target_offset": [
+            -25,
+            15,
+            0,
+            0
+        ],
         "next": [
             "点击1队图标_8_1N重置",
-            "点击1队撤离_8_1N重置",
-            "点击1队图标_8_1N重置修正识别"
-        ]
-    },
-    "点击1队图标_8_1N重置修正识别": {
-        "recognition": "OCR",
-        "roi": [
-            724,
-            43,
-            294,
-            90
-        ],
-        "expected": "第一梯队",
-        "action": "Click",
-        "target": [
-            60,
-            70,
-            10,
-            10
-        ],
-        "pre_delay": 1000,
-        "post_delay": 1000,
-        "next": [
-            "点击1队图标_8_1N重置"
+            "点击1队撤离_8_1N重置"
         ]
     },
     "点击1队撤离_8_1N重置": {
@@ -78,7 +61,8 @@
     "终止作战菜单_8_1N重置": {
         "recognition": "OCR",
         "expected": [
-            "终止作战"
+            "终止作战",
+            "终正作战"
         ],
         "action": "Click",
         "next": [
@@ -88,10 +72,10 @@
     "重新作战_8_1N重置": {
         "recognition": "OCR",
         "roi": [
-            344,
-            445,
-            185,
-            65
+            398,
+            459,
+            205,
+            68
         ],
         "expected": [
             "重新作战"

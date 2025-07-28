@@ -2,10 +2,10 @@
     "装备强化_8_1N装备强化": {
         "recognition": "OCR",
         "roi": [
-            675,
-            301,
-            182,
-            90
+            775,
+            290,
+            169,
+            82
         ],
         "expected": [
             "装备强化"
@@ -52,13 +52,13 @@
     "选择高级装备_8_1N装备强化": {
         "recognition": "TemplateMatch",
         "template": [
-            "storage/g_equip2.png",
-            "storage/g_equip1.png"
+            "storage/Geqip.png"
         ],
         "post_delay": 1000,
         "pre_delay": 1000,
         "threshold": 0.9,
         "action": "Click",
+        "green_mask": true,
         "next": [
             "选择低级装备_8_1N装备强化",
             "选择高级装备_8_1N装备强化"
@@ -128,7 +128,7 @@
         "template": "storage/navi.png",
         "action": "Click",
         "pre_delay": 800,
-        "post_wait_freezes": 1,
+        "post_wait_freezes": 200,
         "next": [
             "导航栏战斗_8_1N装备强化",
             "进入导航栏_8_1N装备强化"
@@ -139,8 +139,8 @@
         "roi": [
             80,
             150,
-            100,
-            150
+            150,
+            200
         ],
         "template": "storage/navi_combat.png",
         "action": "Click",
