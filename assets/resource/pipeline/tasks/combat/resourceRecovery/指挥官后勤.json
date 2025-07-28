@@ -40,12 +40,10 @@
         "interrupt": "零电荷-再次作战"
     },
     "零电荷-人形结算": {
-        "recognition": "OCR",
-        "expected": "GENERAL",
+        "recognition": "DirectHit",
         "action": "Click",
-        "next": [
-            "零电荷-人形结算"
-        ],
+        "target":[310,612,127,31],
+        "next": ["零电荷-人形结算"],
         "interrupt": "零电荷-再次作战"
     },
     "零电荷-人形拆解": {
