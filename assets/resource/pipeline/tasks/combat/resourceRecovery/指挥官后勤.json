@@ -52,7 +52,7 @@
         "recognition": "OCR",
         "expected": "人形拆解",
         "action": "Click",
-        "next": "选择角色"
+        "next": "零电荷-选择角色"
     },
     "零电荷-选择角色": {
         "recognition": "OCR",
