@@ -15,8 +15,9 @@
 - 可读性差
 
 ⚠️ **账号风险警告** ⚠️  
-少女前线官方声明：使用脚本存在封号风险  
+少女前线官方曾有大量封禁脚本的记录！ 
 **账号安全自行判断，该项目不承担任何后果**
+具体请见 **📄免责声明与许可** 部分
 
 ---
 
@@ -36,21 +37,10 @@
 
 #### 当前支持
 
-- **主开发分辨率**：1680×1050
-- **未来更新计划**：1280×800（开发中）
+- **主开发分辨率**：1280×720
 
-#### 分辨率 Q&A
+- 绝大多数地图需要打开**记录上次完成关卡时镜头缩放**功能，请阅读相关使用手册或者GUI界面内的任务说明。
 
-**Q：为什么选用1680×1050分辨率？**  
-A：该分辨率长宽比可点击所有支持地图的关键点位，同时高分辨率确保识别精度 ~~（绝不是因为LeonNagant偷懒不做全适配）~~
-
-**Q：我的显示器不支持此分辨率怎么办？**  
-A：少女前线会根据显示器自动适配可选分辨率。若使用相近分辨率（如1600×1024），脚本可能仍可运行，但需要手动校准初始位置（详见各功能使用手册中的校准说明）
-
-**Q：我的显示器是1920×1080的，使用1680×1050会导致任务栏遮挡游戏窗口该怎么办？**  
-A：可以设置任务栏为**自动隐藏**/**垂直任务栏** ~~，LeonNagant偷懒不做全适配，自己也在将就用~~
-
----
 
 ### ⚠️ 重要注意事项
 
@@ -70,14 +60,14 @@ A：可以设置任务栏为**自动隐藏**/**垂直任务栏** ~~，LeonNagant
 - [使用手册全集](https://github.com/LeonNagant/MaaGF1_Test/tree/main/manual)  
 ```! 未阅读手册直接使用可能导致脚本异常，请在按照使用手册排查问题后，确认你是在最新的发行版遇到bug再进行反馈```
 
-#### 3. 普通用户使用指南
+#### 3. 用户使用指南
 
 1. 下载最新[发行版](https://github.com/LeonNagant/MaaGF1_Test/releases/tag/release)  
-   `MaaGF1-GUI-win-x86_64-.zip`
+   `MaaGF1-GUI-win-x86_64-.zip`（如果你不知道自己该下什么版本就下x86）
 2. 解压文件
 3. 运行 `MFAAvalonia.exe`
 4. 选择「少女前线」窗口
-5. 选择要执行的脚本，循环次数保持为"1"不变即可（未来可能会加入循环次数选择）
+5. 选择要执行的脚本，**循环次数保持为"1"不变即可**（未来可能会加入循环次数选择）
 6. 点击开始运行
 
 ---
@@ -112,14 +102,14 @@ A：可以设置任务栏为**自动隐藏**/**垂直任务栏** ~~，LeonNagant
 
 - ## 其他
 
-### ▶️ 自动打灰奖励关（1680x1050或者1280x800多分辨率支持!） ——feat.[do_e](https://github.com/isla23)
+### ▶️ 自动打灰奖励关 ——feat.[do_e](https://github.com/isla23)、[白烛](https://github.com/Talulah-x)
 
 - [操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%87%AA%E5%8A%A8%E6%89%93%E7%81%B0%E5%A5%96%E5%8A%B1%E5%85%B3%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)
 
-### ▶️ 裂变链接捡垃圾 **（WIP *目前只适用于1280x720*）** ——feat.[Talulah-x](https://github.com/Talulah-x)
+### ▶️ 裂变链接捡垃圾  ——feat.[白烛](https://github.com/Talulah-x)
 
 
-### ▶️ 指挥官后勤 **（WIP *目前只适用于1280x720*）** ——feat.[Talulah-x](https://github.com/Talulah-x)
+### ▶️ 指挥官后勤  ——feat.[白烛](https://github.com/Talulah-x)
 
 -
 
@@ -148,3 +138,7 @@ QQ群：*720731834*
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
 感谢参与了该项目开发、测试的所有开发者和用户！
+
+<a href="https://github.com/LeonNagant/MaaGF1_Test/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=LeonNagant/MaaGF1_Test" />
+</a>
