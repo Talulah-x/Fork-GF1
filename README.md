@@ -118,6 +118,9 @@ A：可以设置任务栏为**自动隐藏**/**垂直任务栏** ~~，LeonNagant
 
 ### ▶️ 裂变链接捡垃圾 **（WIP *目前只适用于1280x720*）** ——feat.[Talulah-x](https://github.com/Talulah-x)
 
+
+### ▶️ 指挥官后勤 **（WIP *目前只适用于1280x720*）** ——feat.[Talulah-x](https://github.com/Talulah-x)
+
 -
 
 ## 🔧 更多功能开发中
