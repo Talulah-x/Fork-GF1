@@ -19,14 +19,14 @@
 },
 "捡垃圾-计划模式":{
     "recognition":"OCR",
-    "expected":["结束回合"],
+    "expected":["计划模式"],
     "action":"Click",
-    "target":[27,621,92,21],
-    "next":["捡垃圾-计划模式"],
-    "interrupt":"捡垃圾-点击梯队"
+    "next":["捡垃圾-点击梯队"],
+    "interrupt":"捡垃圾-计划模式"
 },
 "捡垃圾-点击梯队":{
-    "recognition":"DirectHit",
+    "recognition":"OCR",
+    "expected":["执行计划"],
     "action":"Click",
     "target":[576,382,116,117],
     "next":["捡垃圾-点击随机点"]
@@ -59,7 +59,8 @@
     "interrupt":"捡垃圾-随机事件"
 },
 "捡垃圾-随机事件":{
-    "recognition":"DirectHit",
+    "recognition":"OCR",
+    "expected":["突发新闻"],
     "action":"Click",
     "target":[100,100,100,100],
     "next":["捡垃圾-暂停"]
