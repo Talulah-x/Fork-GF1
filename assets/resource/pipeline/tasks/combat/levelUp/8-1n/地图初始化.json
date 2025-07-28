@@ -39,7 +39,10 @@
             260,
             273
         ],
-        "template": "combat/levelUp/8-1N/init.png",
+        "template": [
+            "combat/levelUp/8-1N/init.png",
+            "combat/levelUp/8-1N/team2_map.png"
+        ],
         "action": "Swipe",
         "begin": [
             1050,

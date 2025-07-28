@@ -13,9 +13,6 @@
         "next": [
             "弹药判断有new_8_1N部署",
             "弹药判断无new_8_1N部署"
-        ],
-        "interrupt": [
-            "重装机场选择梯队_8_1N部署"
         ]
     },
     "点击2队new_8_1N部署": {
@@ -41,9 +38,6 @@
         "next": [
             "点击队伍编成_8_1N编队",
             "点击2队new_8_1N部署"
-        ],
-        "interrupt": [
-            "重装机场选择梯队_8_1N部署"
         ]
     },
     "点击2队new_8_1N部署修正识别": {
@@ -125,7 +119,7 @@
             272,
             225
         ],
-        "threshold": 0.7,
+        "threshold": 0.6,
         "template": "combat/levelUp/8-1N/Gnewnoammo.png",
         "green_mask": true,
         "next": [
@@ -142,7 +136,7 @@
         ],
         "template": "combat/levelUp/8-1N/Gnewfullammofix.png",
         "green_mask": true,
-        "threshold": 0.7,
+        "threshold": 0.6,
         "next": [
             "点击2队new_8_1N部署"
         ]

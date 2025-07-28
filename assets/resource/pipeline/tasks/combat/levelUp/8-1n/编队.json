@@ -91,6 +91,8 @@
         "template": "combat/levelUp/8-1N/zas_team1.png",
         "action": "Click",
         "post_delay": 1000,
+        "threshold": 0.8,
+        "green_mask": false,
         "next": [
             "确定_8_1N编队"
         ]

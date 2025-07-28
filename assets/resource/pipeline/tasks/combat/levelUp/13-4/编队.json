@@ -91,6 +91,8 @@
         "template": "combat/levelUp/13-4/vv_team1.png",
         "action": "Click",
         "post_delay": 1000,
+        "threshold": 0.8,
+        "green_mask": true,
         "next": [
             "确定_134编队"
         ]
