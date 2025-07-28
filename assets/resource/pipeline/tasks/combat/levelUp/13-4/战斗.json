@@ -268,7 +268,7 @@
             "combat/levelUp/13-4/doll_get4.png"
         ],
         "action": "Click",
-        "threshold": 0.6,
+        "threshold": 0.75,
         "rate_limit": 100,
         "next": [
             "跳过获得角色_134战斗",

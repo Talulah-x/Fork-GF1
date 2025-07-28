@@ -65,8 +65,12 @@
         ]
     },
     "选择低级装备_8_1N装备强化": {
-        "recognition": "TemplateMatch",
-        "template": "storage/stdby.png",
+        "target": [
+            513,
+            185,
+            48,
+            46
+        ],
         "action": "Click",
         "next": [
             "强制点击至无智能选择_8_1N装备强化"
