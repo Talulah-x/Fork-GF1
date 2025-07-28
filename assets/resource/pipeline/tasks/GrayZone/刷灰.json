@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "=开始打灰": {
+    "next": ["灰域-进入灰域",
+    "灰域-灰域检测"]
+  },
+  "灰域-进入灰域": {
+    "recognition": "OCR",
+    "expected" : "灰域探查",
+    "action": "Click",
+    "next": [
+      "灰域-战斗页-探查",
+      "灰域-灰域检测"],
+    "interrupt": "灰域-进入灰域"
+  },
+  "灰域-战斗页-探查": {
+    "recognition": "OCR",
+    "roi" : [989,560,219,160],
+    "expected" : "探查",
+    "action": "Click",
+    "next": "灰域-灰域检测",
+    "interrupt": "灰域-战斗页-探查"
+  },
+  "灰域-灰域检测": {
+    "recognition": "OCR",
+    "roi" : [0,531,293,189],
+    "expected": "带",
+    "action": "DoNothing",
+    "next": "灰域-检测奇遇",
+    "interrupt": "灰域-切换地图"
+  },
+  "灰域-切换地图": {
+    "recognition": "OCR",
+    "roi" : [0,531,293,189],
+    "expected": "带",
+    "action": "Click",
+    "next": "灰域-选择地图"
+  },
+  "灰域-选择地图": {
+    "recognition": "OCR",
+    "roi" : [631,346,491,77],
+    "expected": "硅状",
+    "action": "Click",
+    "next": "灰域-确认切换"
+  },
+  "灰域-确认切换": {
+    "recognition": "OCR",
+    "roi" : [569,393,272,225],
+    "expected" : "确定",
+    "action": "Click",
+    "post_delay": 10000,
+    "next": "灰域-灰域检测"
+  },
+  "灰域-检测奇遇": {
+    "recognition": "TemplateMatch",
+    "template" : "GrayZone/奇遇点.png",
+    "action": "Click",
+    "next": "灰域-出击奇遇",
+    "interrupt": "灰域-检测奇遇"
+  },
+  "灰域-出击奇遇": {
+    "recognition": "OCR",
+    "roi" : [655,503,253,116],
+    "expected": "出击",
+    "action": "Click",
+    "next": [
+      "灰域-奇遇代理",
+      "灰域-人形回收"
+    ],
+    "interrupt": "灰域-出击奇遇"
+  },
+  "灰域-奇遇代理": {
+    "recognition": "OCR",
+    "roi" : [703,550,307,170],
+    "expected" : "代理作战",
+    "action": "Click",
+    "next": "灰域-代理确认",
+    "interrupt": "灰域-奇遇代理"
+  },
+  "灰域-代理确认": {
+    "recognition": "OCR",
+    "roi" : [765,417,266,199],
+    "expected": "确认",
+    "action": "Click",
+    "next": "灰域-代理检测",
+    "interrupt": "灰域-代理确认"
+  },
+  "灰域-代理检测": {
+    "recognition": "OCR",
+    "roi" : [454,5,300,177],
+    "expected" : "代理介入中",
+    "action": "DoNothing",
+    "next": "灰域-战斗检测",
+    "interrupt": "灰域-代理检测"
+  }, 
+  "灰域-战斗检测": {
+    "recognition": "OCR",
+    "roi" : [25,137,626,387],
+    "expected" : "自身损失",
+    "action": "DoNothing",
+    "next": "灰域-加速结算"
+  },
+  "灰域-加速结算": {
+    "recognition": "DirectHit",
+    "action": "Click",
+    "target": [1060,599,92,70],
+    "next": "灰域-灰域检测",
+    "interrupt": "灰域-加速结算"
+  },
+  "灰域-人形回收": {
+    "recognition": "OCR",
+    "expected": "人形回收",
+    "action": "Click",
+    "next": "灰域-选择角色"
+},
+  "灰域-选择角色": {
+    "recognition": "OCR",
+    "expected": "角色",
+    "action": "Click",
+    "next": "灰域-智能选择"
+},
+  "灰域-智能选择": {
+    "recognition": "OCR",
+    "expected": [
+         "智能",
+         "确定"
+],
+    "action":"Click",
+    "next": "灰域-智能选择",
+    "interrupt": "灰域-回收"
+},
+  "灰域-回收": {
+        "recognition":"OCR",
+        "expected": "回收",
+        "action": "Click",
+        "next": "返回灰域"
+    },
+  "返回灰域":{
+    "recognition":"TemplateMatch",
+    "action":"Click",
+    "template":"GrayZone/导航栏.png",
+    "next":["灰域-战斗页面"],
+    "interrupt":"返回灰域"
+},
+  "灰域-战斗页面":{
+    "recognition":"OCR",
+    "action":"Click",
+    "expected":["战斗"],
+    "next":["灰域-进入灰域"],
+    "interrupt":"灰域-战斗页面"
+}
+}
