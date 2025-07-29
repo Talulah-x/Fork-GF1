@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema",
   "name": "MaaGF1",
-  "version": "v1.2.0",
+  "version": "v1.4.8",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -13,8 +13,8 @@
       "win32": {
         "class_regex": ".*",
         "window_regex": "少女前线",
-        "input": 1,
-        "screencap": 1
+        "input": 3,
+        "screencap": 3
       }
     },
     {
@@ -37,7 +37,7 @@
       "check": false,
       "doc": "请在第十三战役-普通界面或者进入13-4地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/13-4%E5%8F%8C%E6%89%93%E6%89%8B%E6%8B%96%E5%B0%B8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
-      "repeat_count": 1,
+      "repeat_count": 3,
       "option": [
         "弹药检查版本选择_134",
         "是否开启结算加速_134"
@@ -49,7 +49,7 @@
       "check": false,
       "doc": "请在进入13-4地图后的界面运行",
       "repeatable": true,
-      "repeat_count": 1
+      "repeat_count": 3
     },
     {
       "name": "8-1N循环",
@@ -57,7 +57,7 @@
       "check": false,
       "doc": "请在第八战役-夜战或者进入8-1N地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8C%E6%89%93%E6%89%8B%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
-      "repeat_count": 1,
+      "repeat_count": 3,
       "option": [
         "弹药检查版本选择_8_1N",
         "是否开启结算加速_134"
@@ -69,7 +69,7 @@
       "check": false,
       "doc": "请在进入8-1N地图后的界面运行",
       "repeatable": true,
-      "repeat_count": 1
+      "repeat_count": 3
     },
     {
       "name": "MP41抽薪打捞",
@@ -77,7 +77,7 @@
       "check": false,
       "doc": "请在裂变链接第五章能点击到“斩牙行动II战斗EX”位置或者进入该地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
-      "repeat_count": 1
+      "repeat_count": 3
     },
     {
       "name": "兵棋挂机循环",
@@ -85,7 +85,7 @@
       "check": false,
       "doc": "请在咖啡馆点击兵棋桌后或兵棋房间内运行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%85%B5%E6%A3%8B%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
-      "repeat_count": 1
+      "repeat_count": 3
     },
     {
       "name": "灰域彩蛋点刷奖励循环",
@@ -93,7 +93,7 @@
       "check": false,
       "doc": "在主界面或者刚进入灰域界面执行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%87%AA%E5%8A%A8%E6%89%93%E7%81%B0%E5%A5%96%E5%8A%B1%E5%85%B3%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
-      "repeat_count": 1
+      "repeat_count": 3
     },
     {
       "name": "宿舍内自动点击爱心",
@@ -101,7 +101,7 @@
       "check": false,
       "doc": "一直点爱心直到识别不到爱心",
       "repeatable": true,
-      "repeat_count": 1
+      "repeat_count": 3
     },
     {
       "name": "宿舍自动点赞",
@@ -109,13 +109,14 @@
       "check": false,
       "doc": "从主界面开始运行，偷电，点赞并参观下一个宿舍直到无赞可点",
       "repeatable": true,
-      "repeat_count": 1
+      "repeat_count": 3
     },
     {
       "name": "裂变链接捡垃圾",
       "entry": "!裂变链接捡垃圾",
       "check": false,
-      "doc": "⚠️打开记录缩放，将地图缩放至最小后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)"
+      "doc": "⚠️打开记录缩放，将地图缩放至最小后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)", 
+      "option": "捡垃圾-部署第几梯队"
     },
     {
       "name": "指挥官后勤",
@@ -283,6 +284,184 @@
               ]
             }
           }
+        }
+      ]
+    },
+    "捡垃圾-部署第几梯队": {
+      "cases": [
+        {
+          "name": "1",
+          "pipeline_override": {
+            "捡垃圾_选择梯队": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            0,
+            129,
+            706
+        ],
+        "expected": "1",
+        "action": "Click",
+        "next": [
+            "捡垃圾_确认部署"
+            ]
+           }
+          }
+        },
+        {
+          "name": "2",
+          "pipeline_override": {
+            "捡垃圾_选择梯队": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            0,
+            129,
+            706
+        ],
+        "expected": "2",
+        "action": "Click",
+        "next": [
+            "捡垃圾_确认部署"
+            ]
+           }
+          }
+        },
+        {
+          "name": "3",
+          "pipeline_override": {
+            "捡垃圾_选择梯队": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            0,
+            129,
+            706
+        ],
+        "expected": "3",
+        "action": "Click",
+        "next": [
+            "捡垃圾_确认部署"
+            ]
+           }
+          }
+        },
+        {
+          "name": "4",
+          "pipeline_override": {
+            "捡垃圾_选择梯队": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            0,
+            129,
+            706
+        ],
+        "expected": "4",
+        "action": "Click",
+        "next": [
+            "捡垃圾_确认部署"
+            ]
+           }
+          }
+        },
+        {
+          "name": "5",
+          "pipeline_override": {
+            "捡垃圾_选择梯队": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            0,
+            129,
+            706
+        ],
+        "expected": "5",
+        "action": "Click",
+        "next": [
+            "捡垃圾_确认部署"
+            ]
+           }
+          }
+        },
+        {
+          "name": "6",
+          "pipeline_override": {
+            "捡垃圾_选择梯队": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            0,
+            129,
+            706
+        ],
+        "expected": "6",
+        "action": "Click",
+        "next": [
+            "捡垃圾_确认部署"
+            ]
+           }
+          }
+        },
+        {
+          "name": "7",
+          "pipeline_override": {
+            "捡垃圾_选择梯队": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            0,
+            129,
+            706
+        ],
+        "expected": "7",
+        "action": "Click",
+        "next": [
+            "捡垃圾_确认部署"
+            ]
+           }
+          }
+        },
+        {
+          "name": "8",
+          "pipeline_override": {
+            "捡垃圾_选择梯队": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            0,
+            129,
+            706
+        ],
+        "expected": "8",
+        "action": "Click",
+        "next": [
+            "捡垃圾_确认部署"
+            ]
+           }
+          }
+        },
+        {
+          "name": "9",
+          "pipeline_override": {
+            "捡垃圾_选择梯队": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            0,
+            129,
+            706
+        ],
+        "expected": "9",
+        "action": "Click",
+        "next": [
+            "捡垃圾_确认部署"
+            ]
+           }
+          }
+        },
+        {
+          "name": "10"
         }
       ]
     }
