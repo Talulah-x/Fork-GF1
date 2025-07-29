@@ -1,5 +1,5 @@
 {
-    "人形回收_public": {
+    "public_人形回收": {
         "recognition": "OCR",
         "expected": "人形回收",
         "roi": [
@@ -10,10 +10,10 @@
         ],
         "action": "Click",
         "next": [
-            "=人形回收总流程_public"
+            "!人形回收总流程_public"
         ]
     },
-    "=人形回收总流程_public": {
+    "!人形回收总流程_public": {
         "recognition": "OCR",
         "expected": [
             "资源回收"
@@ -21,10 +21,10 @@
         "action": "Click",
         "post_delay": 800,
         "next": [
-            "智能选择点击选择角色_public"
+            "public_智能选择点击选择角色"
         ]
     },
-    "智能选择点击选择角色_public": {
+    "public_智能选择点击选择角色": {
         "recognition": "TemplateMatch",
         "roi": [
             252,
@@ -36,19 +36,19 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "智能选择_public",
-            "智能选择点击选择角色_public",
-            "无角色可选_public"
+            "public_智能选择",
+            "public_智能选择点击选择角色",
+            "public_无角色可选"
         ]
     },
-    "白屏处理_public": {
+    "public_白屏处理": {
         "recognition": "OCR",
         "expected": [
             "智能选择"
         ],
-        "next": "进入导航栏_public"
+        "next": "public_进入导航栏"
     },
-    "智能选择_public": {
+    "public_智能选择": {
         "recognition": "OCR",
         "expected": [
             "智能选择"
@@ -56,20 +56,20 @@
         "action": "Click",
         "post_delay": 400,
         "next": [
-            "智能选择人形拆解选择确定_public"
+            "public_智能选择人形拆解选择确定"
         ]
     },
-    "智能选择人形拆解选择确定_public": {
+    "public_智能选择人形拆解选择确定": {
         "recognition": "OCR",
         "expected": [
             "确定"
         ],
         "action": "Click",
         "next": [
-            "智能选择回收_public"
+            "public_智能选择回收"
         ]
     },
-    "智能选择回收_public": {
+    "public_智能选择回收": {
         "recognition": "OCR",
         "roi": [
             1025,
@@ -83,10 +83,10 @@
         "action": "Click",
         "post_delay": 800,
         "next": [
-            "手动选择点击选择角色_public"
+            "public_手动选择点击选择角色"
         ]
     },
-    "手动选择点击选择角色_public": {
+    "public_手动选择点击选择角色": {
         "recognition": "TemplateMatch",
         "roi": [
             252,
@@ -98,21 +98,21 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "手动选择_public",
-            "无角色可选_public",
-            "手动选择点击选择角色_public"
+            "public_手动选择",
+            "public_无角色可选",
+            "public_手动选择点击选择角色"
         ]
     },
-    "手动选择_public": {
+    "public_手动选择": {
         "recognition": "OCR",
         "expected": [
             "智能选择"
         ],
         "next": [
-            "手动选择1_public"
+            "public_手动选择1"
         ]
     },
-    "手动选择1_public": {
+    "public_手动选择1": {
         "action": "Click",
         "target": [
             80,
@@ -121,10 +121,10 @@
             24
         ],
         "next": [
-            "手动选择2_public"
+            "public_手动选择2"
         ]
     },
-    "手动选择2_public": {
+    "public_手动选择2": {
         "action": "Click",
         "target": [
             250,
@@ -133,10 +133,10 @@
             24
         ],
         "next": [
-            "手动选择3_public"
+            "public_手动选择3"
         ]
     },
-    "手动选择3_public": {
+    "public_手动选择3": {
         "action": "Click",
         "target": [
             420,
@@ -145,10 +145,10 @@
             24
         ],
         "next": [
-            "手动选择4_public"
+            "public_手动选择4"
         ]
     },
-    "手动选择4_public": {
+    "public_手动选择4": {
         "action": "Click",
         "target": [
             590,
@@ -157,10 +157,10 @@
             24
         ],
         "next": [
-            "手动选择5_public"
+            "public_手动选择5"
         ]
     },
-    "手动选择5_public": {
+    "public_手动选择5": {
         "action": "Click",
         "target": [
             760,
@@ -169,10 +169,10 @@
             24
         ],
         "next": [
-            "手动选择6_public"
+            "public_手动选择6"
         ]
     },
-    "手动选择6_public": {
+    "public_手动选择6": {
         "action": "Click",
         "target": [
             930,
@@ -181,10 +181,10 @@
             24
         ],
         "next": [
-            "手动选择7_public"
+            "public_手动选择7"
         ]
     },
-    "手动选择7_public": {
+    "public_手动选择7": {
         "action": "Click",
         "target": [
             80,
@@ -193,10 +193,10 @@
             24
         ],
         "next": [
-            "手动选择8_public"
+            "public_手动选择8"
         ]
     },
-    "手动选择8_public": {
+    "public_手动选择8": {
         "action": "Click",
         "target": [
             250,
@@ -205,10 +205,10 @@
             24
         ],
         "next": [
-            "手动选择9_public"
+            "public_手动选择9"
         ]
     },
-    "手动选择9_public": {
+    "public_手动选择9": {
         "action": "Click",
         "target": [
             420,
@@ -217,10 +217,10 @@
             24
         ],
         "next": [
-            "手动选择10_public"
+            "public_手动选择10"
         ]
     },
-    "手动选择10_public": {
+    "public_手动选择10": {
         "action": "Click",
         "target": [
             590,
@@ -229,10 +229,10 @@
             24
         ],
         "next": [
-            "手动选择11_public"
+            "public_手动选择11"
         ]
     },
-    "手动选择11_public": {
+    "public_手动选择11": {
         "action": "Click",
         "target": [
             760,
@@ -241,10 +241,10 @@
             24
         ],
         "next": [
-            "手动选择12_public"
+            "public_手动选择12"
         ]
     },
-    "手动选择12_public": {
+    "public_手动选择12": {
         "action": "Click",
         "target": [
             930,
@@ -253,21 +253,21 @@
             24
         ],
         "next": [
-            "手动选择人形拆解选择确定_public",
-            "白屏处理_public"
+            "public_手动选择人形拆解选择确定",
+            "public_白屏处理"
         ]
     },
-    "手动选择人形拆解选择确定_public": {
+    "public_手动选择人形拆解选择确定": {
         "recognition": "OCR",
         "expected": [
             "确定"
         ],
         "action": "Click",
         "next": [
-            "手动选择回收_public"
+            "public_手动选择回收"
         ]
     },
-    "手动选择回收_public": {
+    "public_手动选择回收": {
         "recognition": "OCR",
         "roi": [
             1025,
@@ -280,27 +280,27 @@
         ],
         "action": "Click",
         "next": [
-            "回收确定_public"
+            "public_回收确定"
         ]
     },
-    "回收确定_public": {
+    "public_回收确定": {
         "recognition": "TemplateMatch",
         "template": "storage/retire_confirm.png",
         "action": "Click",
         "next": [
-            "手动选择点击选择角色_public"
+            "public_手动选择点击选择角色"
         ]
     },
-    "无角色可选_public": {
+    "public_无角色可选": {
         "recognition": "OCR",
         "expected": [
             "没有"
         ],
         "next": [
-            "进入导航栏_public"
+            "public_进入导航栏"
         ]
     },
-    "进入导航栏_public": {
+    "public_进入导航栏": {
         "recognition": "TemplateMatch",
         "roi": [
             124,
@@ -313,11 +313,11 @@
         "pre_delay": 800,
         "post_wait_freezes": 200,
         "next": [
-            "导航栏战斗_public",
-            "进入导航栏_public"
+            "public_导航栏战斗",
+            "public_进入导航栏"
         ]
     },
-    "导航栏战斗_public": {
+    "public_导航栏战斗": {
         "recognition": "TemplateMatch",
         "roi": [
             80,

@@ -1,5 +1,5 @@
 {
-    "不中断计划_public": {
+    "public_不中断计划": {
         "recognition": "OCR",
         "expected": [
             "中断"
