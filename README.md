@@ -34,7 +34,7 @@
 
 ## 🚨 使用前必读
 
-<div align="center" style="background-color: #fff8e1; padding: 15px; border-radius: 8px; margin: 20px 0;">
+
 
 ⚠️ **重要提示** ⚠️  
 1. 请更新至[最新发行版](https://github.com/LeonNagant/MaaGF1_Test/releases)  
