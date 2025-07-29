@@ -38,13 +38,14 @@
         "next": [
             "智能选择_public",
             "智能选择点击选择角色_public",
-            "无角色可选_public",
-            "白屏_public"
+            "无角色可选_public"
         ]
     },
-    "白屏_public": {
-        "recognition": "TemplateMatch",
-        "template": "storage/bugblank.png",
+    "白屏处理_public": {
+        "recognition": "OCR",
+        "expected": [
+            "智能选择"
+        ],
         "next": "进入导航栏_public"
     },
     "智能选择_public": {
@@ -99,7 +100,6 @@
         "next": [
             "手动选择_public",
             "无角色可选_public",
-            "白屏_public",
             "手动选择点击选择角色_public"
         ]
     },
@@ -253,7 +253,8 @@
             24
         ],
         "next": [
-            "手动选择人形拆解选择确定_public"
+            "手动选择人形拆解选择确定_public",
+            "白屏处理_public"
         ]
     },
     "手动选择人形拆解选择确定_public": {
