@@ -15,11 +15,11 @@
         "rate_limit": 1000,
         "next": [
             "布置完成_134部署",
-            "人形回收_public",
             "再次作战_134重置",
             "点击获得角色_134重置",
             "点击134_134进入"
-        ]
+        ],
+        "interrupt": "人形回收_public"
     },
     "点击获得角色_134重置": {
         "recognition": "TemplateMatch",

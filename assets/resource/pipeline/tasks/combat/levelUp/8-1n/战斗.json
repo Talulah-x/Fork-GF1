@@ -265,13 +265,14 @@
         "template": "combat/levelUp/8-1N/794.png",
         "rate_limit": 2000,
         "post_delay": 4000,
-        "timeout": 600000,
         "next": [
             "加速结算_8_1N战斗",
             "跳过获得装备_8_1N战斗",
             "梯队遇敌_8_1N战斗",
             "剩余行动01_8_1N战斗"
-        ]
+        ],
+        "timeout": 600000,
+        "interrupt": "不中断计划_public"
     },
     "跳过获得装备_8_1N战斗": {
         "recognition": "TemplateMatch",
@@ -285,13 +286,15 @@
         "action": "Click",
         "threshold": 0.58,
         "rate_limit": 100,
-        "timeout": 600000,
+        "post_delay": 1,
         "next": [
             "跳过获得装备_8_1N战斗",
-            "剩余行动01_8_1N战斗",
             "梯队遇敌_8_1N战斗",
+            "剩余行动01_8_1N战斗",
             "加速结算_8_1N战斗"
-        ]
+        ],
+        "timeout": 600000,
+        "interrupt": "不中断计划_public"
     },
     "加速结算_8_1N战斗": {
         "recognition": "OCR",
@@ -302,14 +305,16 @@
             75
         ],
         "expected": "战斗结算",
-        "rate_limit": 100,
-        "timeout": 600000,
+        "rate_limit": 500,
         "action": "Click",
+        "post_delay": 1,
         "next": [
-            "剩余行动01_8_1N战斗",
             "梯队遇敌_8_1N战斗",
+            "剩余行动01_8_1N战斗",
             "跳过获得装备_8_1N战斗",
             "加速结算_8_1N战斗"
-        ]
+        ],
+        "timeout": 600000,
+        "interrupt": "不中断计划_public"
     }
 }
