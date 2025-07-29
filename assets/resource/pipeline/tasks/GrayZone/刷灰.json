@@ -42,7 +42,8 @@
     "next": [
       "灰域-灰域检测",
       "灰域-战斗页-探查识图"
-    ]
+    ],
+    "interrupt": "灰域-领取奖励"
   },
   "灰域-灰域检测": {
     "recognition": "OCR",
@@ -67,7 +68,8 @@
     ],
     "expected": "带",
     "action": "Click",
-    "next": "灰域-选择地图"
+    "next": "灰域-选择地图",
+    "interrupt": "灰域-领取奖励"
   },
   "灰域-选择地图": {
     "recognition": "OCR",
@@ -79,7 +81,8 @@
     ],
     "expected": "硅状",
     "action": "Click",
-    "next": "灰域-确认切换"
+    "next": "灰域-确认切换",
+    "interrupt": "灰域-领取奖励"
   },
   "灰域-确认切换": {
     "recognition": "OCR",
@@ -96,7 +99,11 @@
   },
   "灰域-检测奇遇": {
     "recognition": "TemplateMatch",
-    "template": "GrayZone/奇遇点.png",
+    "template": [
+      "GrayZone/奇遇点1.png",
+      "GrayZone/奇遇点2.png",
+      "GrayZone/奇遇点3.png"
+    ],
     "action": "Click",
     "next": [
       "灰域-出击奇遇",
@@ -236,6 +243,17 @@
     "next": [
       "灰域-进入灰域",
       "灰域-战斗页面"
+    ]
+  },
+  "灰域-领取奖励": {
+    "recognition": "TemplateMatch",
+    "template": "GrayZone/领取奖励.png",
+    "action": "Click",
+    "target": [
+      555,
+      50,
+      45,
+      45
     ]
   }
 }
