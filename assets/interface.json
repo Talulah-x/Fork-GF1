@@ -85,7 +85,7 @@
       "name": "灰域彩蛋点刷奖励循环",
       "entry": "=开始打灰",
       "check": false,
-      "doc": "在主界面或者刚进入灰域界面执行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%87%AA%E5%8A%A8%E6%89%93%E7%81%B0%E5%A5%96%E5%8A%B1%E5%85%B3%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)——feat.[do_e](https://github.com/isla23)、[白烛](https://github.com/Talulah-x)",
+      "doc": "在主界面或者刚进入灰域界面执行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%87%AA%E5%8A%A8%E6%89%93%E7%81%B0%E5%A5%96%E5%8A%B1%E5%85%B3%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
       "repeat_count": 1
     },
@@ -101,7 +101,7 @@
       "name": "宿舍自动点赞",
       "entry": "=宿舍自动点赞",
       "check": false,
-      "doc": "一直点赞并参观下一个宿舍直到无赞可点",
+      "doc": "从主界面开始运行，偷电，点赞并参观下一个宿舍直到无赞可点",
       "repeatable": true,
       "repeat_count": 1
     },
@@ -109,13 +109,13 @@
       "name": "裂变链接捡垃圾",
       "entry": "=裂变链接捡垃圾",
       "check": false,
-      "doc": "进入关卡部署梯队后点击开始，若之前缩放过地图需要取消记录缩放后运行一次。[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) ——feat.[白烛](https://github.com/Talulah-x)"
+      "doc": "⚠️打开记录缩放，将地图缩放至最小后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)"
     },
     {
       "name": "指挥官后勤",
       "entry": "=零电荷-指挥官后勤",
       "check": false,
-      "doc": "进入零电荷，部署第十梯队，运行前需要手动下一次梯队并运行。[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) ——feat.[白烛](https://github.com/Talulah-x)"
+      "doc": "进入零电荷，部署第十梯队，运行前需要手动下一次梯队并运行。[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)"
     }
   ],
   "option": {
