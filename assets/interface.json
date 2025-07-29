@@ -115,7 +115,7 @@
       "name": "裂变链接捡垃圾",
       "entry": "!裂变链接捡垃圾",
       "check": false,
-      "doc": "⚠️打开记录缩放，将地图缩放至最小后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)", 
+      "doc": "⚠️打开记录缩放，将地图缩放至最小并拉从最左下向右上拉至地图边缘后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)", 
       "option": "捡垃圾-部署第几梯队"
     },
     {
