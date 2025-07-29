@@ -37,7 +37,7 @@
 <div align="center" style="background-color: #fff8e1; padding: 15px; border-radius: 8px; margin: 20px 0;">
 
 ⚠️ **重要提示** ⚠️  
-1. 请更新至[最新发行版](https://github.com/LeonNagant/MaaGF1_Test/releases/tag/release)  
+1. 请更新至[最新发行版](https://github.com/LeonNagant/MaaGF1_Test/releases)  
 2. 仔细阅读相关[使用手册](https://github.com/LeonNagant/MaaGF1_Test/tree/main/manual)  
 3. 确认脚本兼容性后再使用！
 
