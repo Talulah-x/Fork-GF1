@@ -1,62 +1,214 @@
 {
 "=裂变链接捡垃圾":{
-    "next":["捡垃圾-检测地图"]
+    "next":[
+        "主界面进入捡垃圾",
+        "捡垃圾-检测地图"]
 },
-
+"主界面进入捡垃圾":{
+    "recognition":"OCR",
+    "roi" : [874,377,162,102],
+    "expected" : "战斗",
+    "action":"Click",
+    "next":[
+        "主界面进入捡垃圾",
+        "捡垃圾-进入裂变链接",
+        "捡垃圾-常驻活动"
+    ]
+},
+"捡垃圾-常驻活动":{
+    "recognition":"OCR",
+    " roi" : [0,310,265,410],
+    "expected" : "常驻活动",
+    "action":"Click",
+    "next":[
+        "捡垃圾-点击裂变链接",
+        "捡垃圾-常驻活动"
+    ]
+},
+"捡垃圾-点击裂变链接":{
+    "recognition":"OCR",
+    "roi" : [182,95,136,624],
+    "expected":"11.75",
+    "action":"Click",
+    "next":[
+        "捡垃圾-进入裂变链接",
+        "捡垃圾-点击裂变链接"
+    ]
+},
+"捡垃圾-进入裂变链接":{
+    "recognition":"OCR",
+    "roi" : [559,459,365,127],
+    "expected" : "SHATTERED",
+    "action":"Click",
+    "next":[
+        "捡垃圾-点击捡垃圾关卡",
+        "捡垃圾-滑动到第三章",
+        "捡垃圾-进入裂变链接"
+    ]
+},
+"捡垃圾-滑动到第三章":{
+    "recognition":"OCR",
+    "expected" : "塔林",
+    "action":"swipe",
+    "begin" : [446,112,1,1],
+    "end" : [437,517,1,1],
+    "next":[
+        "捡垃圾-进入第三章",
+        "捡垃圾-滑动到第三章"
+    ]
+},
+"捡垃圾-进入第三章":{
+    "recognition":"OCR",
+    "expected" : "献祭",
+    "action":"Click",
+    "next":[
+        "捡垃圾-滑动到捡垃圾地图",
+        "捡垃圾-进入第三章"
+    ]
+},
+"捡垃圾-滑动到捡垃圾地图":{
+    "recognition":"OCR",
+    " roi" : [117,308,222,145],
+    "expected" : "CRA",
+    "action":"swipe",
+    "begin" : [1257,301,1,1],
+    "end" : [287,311,1,1],
+    "next":[
+        "捡垃圾-点击捡垃圾关卡",
+        "捡垃圾-滑动到捡垃圾地图"
+    ]
+},
+"捡垃圾-点击捡垃圾关卡":{
+    "recognition":"OCR",
+    " roi" : [117,308,222,145],
+    "expected" : "CRA",
+    "action":"Click",
+    "target": [608,219,165,24],
+    "next":[
+        "捡垃圾-进入捡垃圾关卡",
+        "捡垃圾-点击捡垃圾关卡"
+    ]
+},
+"捡垃圾-进入捡垃圾关卡":{
+    "recognition":"OCR",
+    " roi" : [1083,336,197,151],
+    "expected" : "确认出击",
+    "action":"Click",
+    "next":[
+        "捡垃圾-初始化地图",
+        "捡垃圾-进入捡垃圾关卡"
+    ]
+},
+"捡垃圾-初始化地图":{
+    "recognition":"OCR",
+    "roi" : [140,15,132,78],
+    "expected" : "战场说明",
+    "action":"swipe",
+    "begin" : [261,696,1,1],
+    "end" : [1280,0,1,1],
+    "next":[
+        "捡垃圾-部署梯队",
+        "捡垃圾-初始化地图"
+    ]
+},
+"捡垃圾-部署梯队":{
+    "recognition":"OCR",
+    "roi" : [140,15,132,78],
+    "expected" : "战场说明",
+    "action":"Click",
+    "target":[694,432,38,39],
+    "next":[
+        "捡垃圾-选择梯队",
+        "捡垃圾-部署梯队",
+        "捡垃圾-滑动梯队"
+    ]
+},
+"捡垃圾-选择梯队":{
+    "recognition":"OCR",
+    "roi" : [0,0,129,706],
+    "expected" : "10",
+    "action":"Click",
+    "next":[
+        "捡垃圾-确认部署"
+    ]
+},
+"捡垃圾-滑动梯队":{
+    "recognition":"OCR",
+    "expected" : "选择梯队",
+    "action":"swipe",
+    "begin" : [65,679,1,1],
+    "end" : [68,158,1,1],
+    "next":[
+        "捡垃圾-选择梯队"
+    ]
+},
+"捡垃圾-确认部署":{
+    "recognition":"OCR",
+    " roi" : [1029,544,251,176],
+    "expected" : "确定",
+    "action":"Click",
+    "next":[
+        "捡垃圾-检测地图",
+        "捡垃圾-确认部署"
+    ]
+},
 "捡垃圾-检测地图":{
     "recognition":"OCR",
+    "roi" : [140,15,132,78],
     "action":"DoNothing",
-    "expected":["弹药耗尽口粮耗尽"],
-    "next":["捡垃圾-开始作战"],
-    "interrupt":["捡垃圾-检测地图"]
+    "expected":["战场说明"],
+    "next":[
+        "捡垃圾-开始作战",
+        "捡垃圾-检测地图"]
 },
 "捡垃圾-开始作战":{
     "recognition":"OCR",
+    "roi" : [1003,607,276,112],
     "action":"Click",
     "expected":["开始作战"],
-    "next":["捡垃圾-计划模式"],
-    "interrupt":["捡垃圾-开始作战"]
+    "next":["捡垃圾-计划模式",
+    "捡垃圾-开始作战"]
 },
 "捡垃圾-计划模式":{
     "recognition":"OCR",
-    "expected":["计划模式"],
+    "roi" : [1097,619,168,86],
+    "expected":["结束回合"],
     "action":"Click",
-    "next":["捡垃圾-点击梯队"],
-    "interrupt":"捡垃圾-计划模式"
+    "target":[20,609,116,38],
+    "next":["捡垃圾-点击梯队",
+            "捡垃圾-计划模式"
+]
 },
 "捡垃圾-点击梯队":{
     "recognition":"OCR",
+    "roi" : [1097,619,168,86],
     "expected":["执行计划"],
     "action":"Click",
-    "target":[576,382,116,117],
+    "target":[694,435,37,35],
     "next":["捡垃圾-点击随机点"]
 },
 "捡垃圾-点击随机点":{
     "recognition":"DirectHit",
     "action":"Click",
-    "target":[596,66,9,11],
-    "next":["捡垃圾-下一回合"],
-    "interrupt":["捡垃圾-点击梯队"]
-},
-"捡垃圾-下一回合":{
-    "recognition":"OCR",
-    "action":"Click",
-    "expected":["下一回合"],
-    "on_error":["捡垃圾-点击梯队"],
-    "next":["捡垃圾-执行计划"]
+    "target":[698,245,35,33],
+    "next":["捡垃圾-执行计划",
+    "捡垃圾-点击梯队"]
 },
 "捡垃圾-执行计划":{
     "recognition":"OCR",
+    "roi" : [1090,519,189,68],
+    "expected":"下一回合",
     "action":"Click",
-    "expected":["执行计划"],
+    "target": [1103,622,152,72],
     "next":["捡垃圾-确认出击"]
 },
 "捡垃圾-确认出击":{
     "recognition":"OCR",
+    "roi" : [712,446,127,89],
     "action":"Click",
     "expected":["确定"],
-    "next":["捡垃圾-确认出击"],
-    "interrupt":"捡垃圾-随机事件"
+    "next":["捡垃圾-确认出击",
+    "捡垃圾-随机事件"]
 },
 "捡垃圾-随机事件":{
     "recognition":"DirectHit",
@@ -75,12 +227,12 @@
     "recognition":"DirectHit",
     "action":"Click",
     "target":[350,10,0,0],
-    "next":["捡垃圾-撤退检测"],
-    "interrupt":"捡垃圾-暂停"
+    "next":["捡垃圾-撤退检测",
+    "捡垃圾-暂停"]
 },
 "捡垃圾-撤退检测":{
     "recognition":"OCR",
-    "expected":["重新战斗"],
+    "expected":["添加标靶"],
     "action":"DoNothing",
     "next":["捡垃圾-再次作战"]
 },
@@ -88,7 +240,7 @@
     "recognition":"DirectHit",
     "action":"Click",
     "target":[310,612,127,31],
-    "next":"捡垃圾-检测地图",
-    "interrupt":"捡垃圾-再次作战"
+    "next":["捡垃圾-检测地图",
+       "捡垃圾-再次作战"]
 }
 }
