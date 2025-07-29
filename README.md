@@ -147,4 +147,9 @@
   <img src="https://contrib.rocks/image?repo=LeonNagant/MaaGF1_Test" width="800"/>
 </a>
 
+### 相关项目
+
+## 感谢 [FMddl-MAAutoGirlsFrontLine](https://github.com/Fufu-OuO/FMddl-MAAutoGirlsFrontLine) 开发组对本项目的支持与贡献！
+
+
 > 感谢所有参与开发、测试的贡献者和用户！
