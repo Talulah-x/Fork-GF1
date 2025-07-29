@@ -204,6 +204,7 @@
         ],
         "template": "combat/levelUp/8-1N/port_2.png",
         "action": "Click",
+        "threshold": 0.55,
         "post_delay": 1000,
         "next": [
             "炸狗点2_8_1N战斗_确认",

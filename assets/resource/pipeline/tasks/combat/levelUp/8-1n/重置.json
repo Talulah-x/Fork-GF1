@@ -54,15 +54,17 @@
             "确定"
         ],
         "action": "Click",
+        "post_delay": 500,
         "next": [
             "终止作战菜单_8_1N重置"
         ]
     },
     "终止作战菜单_8_1N重置": {
-        "recognition": "OCR",
-        "expected": [
-            "终止作战",
-            "终正作战"
+        "target": [
+            298,
+            23,
+            53,
+            32
         ],
         "action": "Click",
         "next": [

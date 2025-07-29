@@ -38,7 +38,10 @@
       "doc": "请在第十三战役-普通界面或者进入13-4地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/13-4%E5%8F%8C%E6%89%93%E6%89%8B%E6%8B%96%E5%B0%B8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
       "repeat_count": 1,
-      "option": "弹药检查版本选择_134"
+      "option": [
+        "弹药检查版本选择_134",
+        "是否开启结算加速_134"
+      ]
     },
     {
       "name": "13-4地图初始化",
@@ -55,7 +58,10 @@
       "doc": "请在第八战役-夜战或者进入8-1N地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8C%E6%89%93%E6%89%8B%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": true,
       "repeat_count": 1,
-      "option": "弹药检查版本选择_8_1N"
+      "option": [
+        "弹药检查版本选择_8_1N",
+        "是否开启结算加速_134"
+      ]
     },
     {
       "name": "8-1N地图初始化",
@@ -119,6 +125,51 @@
     }
   ],
   "option": {
+    "是否开启结算加速_8_1N": {
+      "cases": [
+        {
+          "name": "启用结算加速"
+        },
+        {
+          "name": "关闭结算加速",
+          "pipeline_override": {
+            "执行计划_8_1N战斗": {
+              "recognition": "OCR",
+              "expected": [
+                "执行计划"
+              ],
+              "action": "Click",
+              "next": [
+                "剩余行动01_8_1N战斗"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "是否开启结算加速_134": {
+      "cases": [
+        {
+          "name": "启用结算加速"
+        },
+        {
+          "name": "关闭结算加速",
+          "pipeline_override": {
+            "执行计划_134战斗": {
+              "recognition": "OCR",
+              "expected": [
+                "执行计划"
+              ],
+              "action": "Click",
+              "next": [
+                "再次作战_134重置"
+              ],
+              "timeout": 600000
+            }
+          }
+        }
+      ]
+    },
     "弹药检查版本选择_8_1N": {
       "cases": [
         {

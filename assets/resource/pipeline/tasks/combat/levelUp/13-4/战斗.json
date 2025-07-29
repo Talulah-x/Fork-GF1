@@ -269,7 +269,7 @@
         ],
         "action": "Click",
         "threshold": 0.7,
-        "rate_limit": 100,
+        "rate_limit": 400,
         "next": [
             "跳过获得角色_134战斗",
             "加速结算_134战斗",
@@ -281,6 +281,9 @@
     "加速结算_134战斗": {
         "recognition": "OCR",
         "expected": "战斗结算",
+        "pre_delay": 100,
+        "rate_limit": 400,
+        "post_delay": 500,
         "action": "Click",
         "next": [
             "梯队遇敌_134战斗",
