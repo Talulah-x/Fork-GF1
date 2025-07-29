@@ -56,7 +56,10 @@
     "expected": "带",
     "action": "DoNothing",
     "next": "灰域-检测奇遇",
-    "interrupt": "灰域-切换地图"
+    "interrupt": [
+      "灰域-切换地图",
+      "灰域-领取奖励"
+    ]
   },
   "灰域-切换地图": {
     "recognition": "OCR",
