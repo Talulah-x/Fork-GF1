@@ -134,15 +134,17 @@
         {
           "name": "关闭结算加速",
           "pipeline_override": {
-            "执行计划_8_1N战斗": {
-              "recognition": "OCR",
-              "expected": [
-                "执行计划"
-              ],
-              "action": "Click",
-              "next": [
-                "81N战斗_剩余行动01"
-              ]
+            "81N战斗_执行计划": {
+              "post_delay": 80000
+            },
+            "81N战斗_加速结算": {
+              "enable": false
+            },
+            "81N战斗_跳过获得装备": {
+              "enable": false
+            },
+            "81N战斗_梯队遇敌": {
+              "enable": false
             }
           }
         }
@@ -156,16 +158,17 @@
         {
           "name": "关闭结算加速",
           "pipeline_override": {
-            "执行计划_134战斗": {
-              "recognition": "OCR",
-              "expected": [
-                "执行计划"
-              ],
-              "action": "Click",
-              "next": [
-                "134重置_再次作战"
-              ],
-              "timeout": 600000
+            "134战斗_执行计划": {
+              "post_delay": 90000
+            },
+            "134战斗_加速结算": {
+              "enable": false
+            },
+            "134战斗_跳过获得角色": {
+              "enable": false
+            },
+            "134战斗_梯队遇敌": {
+              "enable": false
             }
           }
         }
@@ -211,7 +214,7 @@
                 "81N部署_弹药检查"
               ]
             },
-            "!8_1N总流程": {
+            "!81N总流程": {
               "recognition": "OCR",
               "expected": [
                 "巨鹰与寒鸦",
@@ -294,7 +297,12 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "1",
               "action": "Click",
               "next": [
@@ -308,7 +316,12 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-             "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "2",
               "action": "Click",
               "next": [
@@ -322,7 +335,12 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-             "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "3",
               "action": "Click",
               "next": [
@@ -336,7 +354,12 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "4",
               "action": "Click",
               "next": [
@@ -350,7 +373,12 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "5",
               "action": "Click",
               "next": [
@@ -364,7 +392,12 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "6",
               "action": "Click",
               "next": [
@@ -378,7 +411,12 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "7",
               "action": "Click",
               "next": [
@@ -392,7 +430,12 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "8",
               "action": "Click",
               "next": [
@@ -406,7 +449,12 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "9",
               "action": "Click",
               "next": [
@@ -427,7 +475,12 @@
           "pipeline_override": {
             "零电荷_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "1",
               "action": "Click",
               "next": [
@@ -441,7 +494,12 @@
           "pipeline_override": {
             "零电荷_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "2",
               "action": "Click",
               "next": [
@@ -455,7 +513,12 @@
           "pipeline_override": {
             "零电荷_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "3",
               "action": "Click",
               "next": [
@@ -469,7 +532,12 @@
           "pipeline_override": {
             "零电荷_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "4",
               "action": "Click",
               "next": [
@@ -483,7 +551,12 @@
           "pipeline_override": {
             "零电荷_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "5",
               "action": "Click",
               "next": [
@@ -497,7 +570,12 @@
           "pipeline_override": {
             "零电荷_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "6",
               "action": "Click",
               "next": [
@@ -511,7 +589,12 @@
           "pipeline_override": {
             "零电荷_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "7",
               "action": "Click",
               "next": [
@@ -525,7 +608,12 @@
           "pipeline_override": {
             "零电荷_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "8",
               "action": "Click",
               "next": [
@@ -539,7 +627,12 @@
           "pipeline_override": {
             "零电荷_选择梯队": {
               "recognition": "OCR",
-              "roi" : [0,6,135,713],
+              "roi": [
+                0,
+                6,
+                135,
+                713
+              ],
               "expected": "9",
               "action": "Click",
               "next": [
