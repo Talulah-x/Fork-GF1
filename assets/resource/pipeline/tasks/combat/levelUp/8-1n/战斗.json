@@ -224,6 +224,7 @@
             "combat/levelUp/8-1N/Gp03.png"
         ],
         "green_mask": true,
+        "threshold":0.6,
         "next": [
             "81N战斗_炸狗点2"
         ]
