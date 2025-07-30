@@ -42,7 +42,7 @@
     },
     {
       "name": "13-4地图初始化",
-      "entry": "拖到左上角_134地图初始化",
+      "entry": "拖到右上角_134地图初始化",
       "check": false,
       "doc": "请在进入13-4地图后的界面运行",
       "repeatable": true,
@@ -101,21 +101,21 @@
       "name": "宿舍自动点赞",
       "entry": "=宿舍自动点赞",
       "check": false,
-      "doc": "一直点赞并参观下一个宿舍直到无赞可点",
+      "doc": "从主界面开始运行，偷电，点赞并参观下一个宿舍直到无赞可点",
       "repeatable": true,
       "repeat_count": 1
     },
     {
       "name": "裂变链接捡垃圾",
       "entry": "=裂变链接捡垃圾",
-      "check": true,
-      "doc": "进入关卡部署梯队后点击开始，若之前缩放过地图需要取消记录缩放后运行一次*目前只适用于1280*720"
+      "check": false,
+      "doc": "⚠️打开记录缩放，将地图缩放至最小后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)"
     },
     {
       "name": "指挥官后勤",
       "entry": "=零电荷-指挥官后勤",
-      "check": true,
-      "doc": "进入零电荷"
+      "check": false,
+      "doc": "进入零电荷，部署第十梯队，运行前需要手动下一次梯队并运行。[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)"
     }
   ],
   "option": {
@@ -148,18 +148,12 @@
             "布置完成_8_1N部署": {
               "recognition": "TemplateMatch",
               "roi": [
-                180,
-                38,
-                272,
-                225
+                179,
+                78,
+                277,
+                233
               ],
-              "template": "combat/levelUp/8-1N/team2_map.png",
-              "target_offset": [
-                -30,
-                20,
-                0,
-                0
-              ],
+              "template": "combat/levelUp/8-1N/map_team2.png",
               "rate_limit": 200,
               "next": [
                 "弹药检查_8_1N部署"
@@ -172,10 +166,9 @@
                 "开始作战"
               ],
               "next": [
-                "炸狗队布置_8_1N部署",
                 "点击8-1N_8_1N进入",
-                "弹药检查_8_1N部署",
-                "布置完成_8_1N部署"
+                "部署梯队_8_1N部署",
+                "弹药检查new_8_1N部署"
               ],
               "interrupt": [
                 "拖到左上角_8_1N地图初始化"
@@ -213,12 +206,12 @@
             "布置完成_134部署": {
               "recognition": "TemplateMatch",
               "roi": [
-                149,
-                342,
-                151,
-                164
+                39,
+                377,
+                426,
+                152
               ],
-              "template": "combat/levelUp/13-4/team2_map.png",
+              "template": "combat/levelUp/13-4/map_team2.png",
               "next": [
                 "弹药检查_134部署"
               ]
@@ -231,12 +224,11 @@
               ],
               "next": [
                 "点击134_134进入",
-                "弹药检查_134部署",
-                "布置完成_134部署",
-                "拖尸队布置_134部署"
+                "部署梯队_134部署",
+                "弹药检查new_134部署"
               ],
               "interrupt": [
-                "拖到左上角_134地图初始化"
+                "拖到右上角_134地图初始化"
               ]
             }
           }

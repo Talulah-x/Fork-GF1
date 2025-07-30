@@ -1,0 +1,333 @@
+{
+    "人形回收_public": {
+        "recognition": "OCR",
+        "expected": "人形回收",
+        "roi": [
+            529,
+            253,
+            248,
+            345
+        ],
+        "action": "Click",
+        "next": [
+            "=人形回收总流程_public"
+        ]
+    },
+    "=人形回收总流程_public": {
+        "recognition": "OCR",
+        "expected": [
+            "资源回收"
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "智能选择点击选择角色_public"
+        ]
+    },
+    "智能选择点击选择角色_public": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            252,
+            145,
+            204,
+            151
+        ],
+        "template": "storage/选择角色.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "智能选择_public",
+            "智能选择点击选择角色_public",
+            "无角色可选_public"
+        ]
+    },
+    "白屏处理_public": {
+        "recognition": "OCR",
+        "expected": [
+            "智能选择"
+        ],
+        "next": "进入导航栏_public"
+    },
+    "智能选择_public": {
+        "recognition": "OCR",
+        "expected": [
+            "智能选择"
+        ],
+        "action": "Click",
+        "post_delay": 400,
+        "next": [
+            "智能选择人形拆解选择确定_public"
+        ]
+    },
+    "智能选择人形拆解选择确定_public": {
+        "recognition": "OCR",
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "next": [
+            "智能选择回收_public"
+        ]
+    },
+    "智能选择回收_public": {
+        "recognition": "OCR",
+        "roi": [
+            1025,
+            551,
+            213,
+            107
+        ],
+        "expected": [
+            "回收"
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "手动选择点击选择角色_public"
+        ]
+    },
+    "手动选择点击选择角色_public": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            252,
+            145,
+            204,
+            151
+        ],
+        "template": "storage/选择角色.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "手动选择_public",
+            "无角色可选_public",
+            "手动选择点击选择角色_public"
+        ]
+    },
+    "手动选择_public": {
+        "recognition": "OCR",
+        "expected": [
+            "智能选择"
+        ],
+        "next": [
+            "手动选择1_public"
+        ]
+    },
+    "手动选择1_public": {
+        "action": "Click",
+        "target": [
+            80,
+            270,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择2_public"
+        ]
+    },
+    "手动选择2_public": {
+        "action": "Click",
+        "target": [
+            250,
+            270,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择3_public"
+        ]
+    },
+    "手动选择3_public": {
+        "action": "Click",
+        "target": [
+            420,
+            270,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择4_public"
+        ]
+    },
+    "手动选择4_public": {
+        "action": "Click",
+        "target": [
+            590,
+            270,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择5_public"
+        ]
+    },
+    "手动选择5_public": {
+        "action": "Click",
+        "target": [
+            760,
+            270,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择6_public"
+        ]
+    },
+    "手动选择6_public": {
+        "action": "Click",
+        "target": [
+            930,
+            270,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择7_public"
+        ]
+    },
+    "手动选择7_public": {
+        "action": "Click",
+        "target": [
+            80,
+            520,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择8_public"
+        ]
+    },
+    "手动选择8_public": {
+        "action": "Click",
+        "target": [
+            250,
+            520,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择9_public"
+        ]
+    },
+    "手动选择9_public": {
+        "action": "Click",
+        "target": [
+            420,
+            520,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择10_public"
+        ]
+    },
+    "手动选择10_public": {
+        "action": "Click",
+        "target": [
+            590,
+            520,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择11_public"
+        ]
+    },
+    "手动选择11_public": {
+        "action": "Click",
+        "target": [
+            760,
+            520,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择12_public"
+        ]
+    },
+    "手动选择12_public": {
+        "action": "Click",
+        "target": [
+            930,
+            520,
+            48,
+            24
+        ],
+        "next": [
+            "手动选择人形拆解选择确定_public",
+            "白屏处理_public"
+        ]
+    },
+    "手动选择人形拆解选择确定_public": {
+        "recognition": "OCR",
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "next": [
+            "手动选择回收_public"
+        ]
+    },
+    "手动选择回收_public": {
+        "recognition": "OCR",
+        "roi": [
+            1025,
+            551,
+            213,
+            107
+        ],
+        "expected": [
+            "回收"
+        ],
+        "action": "Click",
+        "next": [
+            "回收确定_public"
+        ]
+    },
+    "回收确定_public": {
+        "recognition": "TemplateMatch",
+        "template": "storage/retire_confirm.png",
+        "action": "Click",
+        "next": [
+            "手动选择点击选择角色_public"
+        ]
+    },
+    "无角色可选_public": {
+        "recognition": "OCR",
+        "expected": [
+            "没有"
+        ],
+        "next": [
+            "进入导航栏_public"
+        ]
+    },
+    "进入导航栏_public": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            124,
+            18,
+            120,
+            105
+        ],
+        "template": "storage/navi.png",
+        "action": "Click",
+        "pre_delay": 800,
+        "post_wait_freezes": 200,
+        "next": [
+            "导航栏战斗_public",
+            "进入导航栏_public"
+        ]
+    },
+    "导航栏战斗_public": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            80,
+            150,
+            150,
+            200
+        ],
+        "template": "storage/navi_combat.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "next": []
+    }
+}

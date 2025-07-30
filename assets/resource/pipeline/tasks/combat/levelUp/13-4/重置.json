@@ -15,18 +15,19 @@
         "rate_limit": 1000,
         "next": [
             "布置完成_134部署",
-            "人形回收_134人形回收",
+            "人形回收_public",
             "再次作战_134重置",
-            "点击获得角色_134重置"
+            "点击获得角色_134重置",
+            "点击134_134进入"
         ]
     },
     "点击获得角色_134重置": {
         "recognition": "TemplateMatch",
         "roi": [
-            900,
-            30,
-            250,
-            181
+            866,
+            2,
+            413,
+            619
         ],
         "template": [
             "combat/levelUp/13-4/doll_get0.png",
@@ -35,7 +36,7 @@
             "combat/levelUp/13-4/doll_get4.png"
         ],
         "action": "Click",
-        "threshold": 0.75,
+        "threshold": 0.7,
         "next": [
             "点击获得角色_134重置",
             "再次作战_134重置"

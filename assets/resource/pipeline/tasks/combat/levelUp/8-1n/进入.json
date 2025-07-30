@@ -6,9 +6,8 @@
             "开始作战"
         ],
         "next": [
-            "炸狗队布置_8_1N部署",
             "点击8-1N_8_1N进入",
-            "布置完成_8_1N部署",
+            "部署梯队_8_1N部署",
             "弹药检查new_8_1N部署"
         ],
         "interrupt": [
@@ -18,6 +17,7 @@
     "点击8-1N_8_1N进入": {
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/8-1N/run8_1N.png",
+        "green_mask": true,
         "action": "Click",
         "next": [
             "普通作战_8_1N进入"
@@ -26,10 +26,10 @@
     "普通作战_8_1N进入": {
         "recognition": "OCR",
         "roi": [
-            824,
-            552,
-            150,
-            90
+            828,
+            527,
+            329,
+            142
         ],
         "expected": [
             "普通作战"
@@ -37,8 +37,7 @@
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "布置完成_8_1N部署",
-            "炸狗队布置_8_1N部署",
+            "部署梯队_8_1N部署",
             "装备强化_8_1N装备强化"
         ],
         "interrupt": [

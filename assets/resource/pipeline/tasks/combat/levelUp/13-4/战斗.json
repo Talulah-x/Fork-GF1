@@ -2,26 +2,26 @@
     "开始作战前初始化_134战斗": {
         "recognition": "TemplateMatch",
         "roi": [
-            149,
-            342,
-            151,
-            164
+            70,
+            468,
+            157,
+            108
         ],
-        "template": "combat/levelUp/13-4/team2_map.png",
+        "template": "combat/levelUp/13-4/map_team2.png",
         "next": [
             "开始作战_134战斗"
         ],
         "interrupt": [
-            "拖到左上角_134地图初始化"
+            "拖到右上角_134地图初始化"
         ]
     },
     "开始作战_134战斗": {
         "recognition": "OCR",
         "roi": [
-            765,
-            530,
-            355,
-            190
+            944,
+            571,
+            335,
+            148
         ],
         "expected": [
             "开始作战"
@@ -33,82 +33,18 @@
         ]
     },
     "点击2队单vv准备补给_134战斗": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            30,
-            330,
-            160,
-            180
-        ],
-        "template": [
-            "combat/levelUp/13-4/port_offset.png"
-        ],
-        "target_offset": [
-            100,
-            0,
-            0,
-            0
-        ],
-        "action": "Click",
-        "pre_delay": 1000,
-        "post_delay": 1000,
-        "next": [
-            "点击补给_134战斗",
-            "点击2队单vv准备补给_134战斗",
-            "点击2队单vv准备补给_134战斗修正识别"
-        ]
-    },
-    "点击2队单vv准备补给_134战斗修正识别": {
-        "recognition": "OCR",
-        "roi": [
-            724,
-            43,
-            294,
-            90
-        ],
-        "expected": "第二梯队",
-        "action": "Click",
         "target": [
-            539,
-            44,
-            15,
-            17
+            76,
+            533,
+            8,
+            20
         ],
+        "action": "Click",
         "pre_delay": 1000,
         "post_delay": 1000,
         "next": [
-            "点击2队单vv准备补给_134战斗修正识别",
-            "点击2队单vv准备补给_134战斗修正拖动"
-        ]
-    },
-    "点击2队单vv准备补给_134战斗修正拖动": {
-        "recognition": "TemplateMatch",
-        "template": "combat/levelUp/13-4/team2_map.png",
-        "roi": [
-            363,
-            343,
-            168,
-            165
-        ],
-        "action": "Swipe",
-        "begin": [
-            910,
-            415,
-            1,
-            1
-        ],
-        "end": [
-            667,
-            416,
-            1,
-            1
-        ],
-        "duration": 600,
-        "next": [
             "点击补给_134战斗",
-            "点击2队单vv准备补给_134战斗",
-            "点击2队单vv准备补给_134战斗修正识别",
-            "点击2队单vv准备补给_134战斗修正拖动"
+            "点击2队单vv准备补给_134战斗"
         ]
     },
     "点击补给_134战斗": {
@@ -124,14 +60,8 @@
     },
     "取消2队选择_134战斗": {
         "recognition": "TemplateMatch",
-        "roi": [
-            30,
-            330,
-            160,
-            180
-        ],
         "template": [
-            "combat/levelUp/13-4/port_offset.png"
+            "combat/levelUp/13-4/init.png"
         ],
         "action": "Click",
         "post_delay": 1000,
@@ -140,85 +70,47 @@
         ]
     },
     "点击1队图标_134战斗": {
-        "recognition": "TemplateMatch",
-        "template": "combat/levelUp/13-4/team1_map.png",
-        "roi": [
-            746,
-            251,
-            161,
-            156
+        "target": [
+            697,
+            438,
+            26,
+            25
         ],
         "action": "Click",
-        "target_offset": [
-            -30,
-            20,
-            0,
-            0
-        ],
+        "post_wait_freezes": 1,
         "post_delay": 800,
         "rate_limit": 200,
         "next": [
+            "出现妖精技能释放_134战斗",
             "点击1队取消_134战斗",
-            "点击1队图标_134战斗",
-            "点击1队图标_134修正识别"
+            "点击1队图标_134战斗"
         ]
     },
-    "点击1队图标_134修正识别": {
+    "出现妖精技能释放_134战斗": {
         "recognition": "OCR",
+        "expected": [
+            "释放"
+        ],
         "roi": [
-            724,
-            43,
-            294,
-            90
+            1075,
+            156,
+            204,
+            437
         ],
-        "expected": "第一梯队",
-        "action": "Click",
-        "target": [
-            539,
-            44,
-            15,
-            17
-        ],
-        "pre_delay": 1000,
-        "post_delay": 1000,
-        "next": [
-            "点击1队图标_134修正识别",
-            "点击1队图标_134修正拖动"
-        ]
-    },
-    "点击1队图标_134修正拖动": {
-        "recognition": "TemplateMatch",
-        "template": "combat/levelUp/13-4/team1_map.png",
-        "roi": [
-            561,
-            385,
-            65,
-            76
-        ],
-        "action": "Swipe",
-        "begin": [
-            180,
-            542,
-            1,
-            1
-        ],
-        "end": [
-            446,
-            440,
-            1,
-            1
-        ],
-        "duration": 600,
-        "next": [
-            "点击1队取消_134战斗",
-            "点击1队图标_134战斗",
-            "点击1队图标_134修正识别",
-            "点击1队图标_134修正拖动"
-        ]
+        "next": "点击计划模式_134战斗"
     },
     "点击1队取消_134战斗": {
-        "recognition": "TemplateMatch",
-        "template": "combat/levelUp/13-4/cancel.png",
+        "recognition": "OCR",
+        "roi": [
+            1071,
+            592,
+            192,
+            88
+        ],
+        "expected": [
+            "确定",
+            "取消"
+        ],
         "action": "Click",
         "post_delay": 1200,
         "next": [
@@ -237,106 +129,63 @@
         ]
     },
     "巡游者_134战斗": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            655,
-            363,
-            147,
-            147
+        "target": [
+            609,
+            529,
+            24,
+            24
         ],
-        "template": "combat/levelUp/13-4/pos1.png",
         "action": "Click",
         "post_delay": 200,
         "rate_limit": 500,
         "next": [
             "巡游者_134战斗_确认",
-            "巡游者_134战斗_OCR确认",
             "巡游者_134战斗"
         ]
     },
     "巡游者_134战斗_确认": {
         "recognition": "TemplateMatch",
         "roi": [
-            655,
-            363,
-            147,
-            147
+            569,
+            495,
+            106,
+            89
         ],
         "template": [
-            "combat/levelUp/13-4/Gchoose1.png",
-            "combat/levelUp/13-4/Gchoose2.png",
-            "combat/levelUp/13-4/G02.png"
+            "combat/levelUp/13-4/gp2.png"
         ],
-        "threshold": 0.75,
+        "threshold": 0.8,
         "green_mask": true,
-        "rate_limit": 500,
-        "next": [
-            "钢狮_134战斗"
-        ]
-    },
-    "巡游者_134战斗_OCR确认": {
-        "recognition": "OCR",
-        "roi": [
-            655,
-            363,
-            147,
-            147
-        ],
-        "expected": [
-            "2"
-        ],
         "rate_limit": 500,
         "next": [
             "钢狮_134战斗"
         ]
     },
     "钢狮_134战斗": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            742,
-            538,
-            151,
-            141
+        "target": [
+            698,
+            710,
+            24,
+            9
         ],
-        "template": "combat/levelUp/13-4/pos2.png",
         "action": "Click",
         "post_delay": 200,
         "rate_limit": 500,
         "next": [
             "钢狮_134战斗_确认",
-            "钢狮_134战斗_OCR确认",
             "钢狮_134战斗"
         ]
     },
     "钢狮_134战斗_确认": {
         "recognition": "TemplateMatch",
         "roi": [
-            742,
-            538,
-            151,
-            180
+            673,
+            584,
+            78,
+            80
         ],
         "template": [
-            "combat/levelUp/13-4/Gchoose1.png",
-            "combat/levelUp/13-4/Gchoose2.png",
-            "combat/levelUp/13-4/G05.png"
-        ],
-        "green_mask": true,
-        "rate_limit": 500,
-        "next": [
-            "终点_134战斗"
-        ]
-    },
-    "钢狮_134战斗_OCR确认": {
-        "recognition": "OCR",
-        "roi": [
-            742,
-            538,
-            151,
-            141
-        ],
-        "expected": [
-            "5"
+            "combat/levelUp/13-4/gp4.png"
         ],
         "green_mask": true,
         "rate_limit": 500,
@@ -345,54 +194,31 @@
         ]
     },
     "终点_134战斗": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            656,
-            542,
-            146,
-            143
+        "target": [
+            609,
+            713,
+            21,
+            6
         ],
-        "template": "combat/levelUp/13-4/pos3.png",
         "action": "Click",
         "post_delay": 200,
         "rate_limit": 500,
         "next": [
             "终点_134战斗_确认",
-            "终点_134战斗_OCR确认",
             "终点_134战斗"
         ]
     },
     "终点_134战斗_确认": {
         "recognition": "TemplateMatch",
         "roi": [
-            656,
-            582,
-            146,
-            100
+            579,
+            594,
+            80,
+            81
         ],
-        "threshold": 0.83,
+        "threshold": 0.8,
         "template": [
-            "combat/levelUp/13-4/Gchoose1.png",
-            "combat/levelUp/13-4/Gchoose2.png",
-            "combat/levelUp/13-4/G10.png",
-            "combat/levelUp/13-4/G09.png"
-        ],
-        "green_mask": true,
-        "rate_limit": 500,
-        "next": [
-            "执行计划_134战斗"
-        ]
-    },
-    "终点_134战斗_OCR确认": {
-        "recognition": "OCR",
-        "roi": [
-            656,
-            542,
-            146,
-            143
-        ],
-        "expected": [
-            "10"
+            "combat/levelUp/13-4/gp9.png"
         ],
         "green_mask": true,
         "rate_limit": 500,
@@ -430,10 +256,10 @@
     "跳过获得角色_134战斗": {
         "recognition": "TemplateMatch",
         "roi": [
-            900,
-            30,
-            250,
-            181
+            866,
+            2,
+            413,
+            619
         ],
         "template": [
             "combat/levelUp/13-4/doll_get0.png",
@@ -442,7 +268,8 @@
             "combat/levelUp/13-4/doll_get4.png"
         ],
         "action": "Click",
-        "threshold": 0.75,
+        "threshold": 0.7,
+        "rate_limit": 100,
         "next": [
             "跳过获得角色_134战斗",
             "加速结算_134战斗",
@@ -453,12 +280,6 @@
     },
     "加速结算_134战斗": {
         "recognition": "OCR",
-        "roi": [
-            0,
-            5,
-            270,
-            75
-        ],
         "expected": "战斗结算",
         "action": "Click",
         "next": [
