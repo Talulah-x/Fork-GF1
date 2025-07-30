@@ -32,7 +32,7 @@
     ]
   },
   "灰域_战斗页探查识图": {
-    "recognition": "FeatureMatch",
+    "recognition": "TemplateMatch",
     "template": [
       "GrayZone/进入灰域1.png",
       "GrayZone/进入灰域2.png",
@@ -40,8 +40,8 @@
     ],
     "action": "Click",
     "next": [
-      "灰域_灰域检测",
-      "灰域_战斗页探查识图"
+      "灰域_战斗页探查识图",
+      "灰域_灰域检测"
     ],
     "interrupt": "灰域_领取奖励"
   },
@@ -224,6 +224,12 @@
   },
   "灰域_回收": {
     "recognition": "OCR",
+    "roi": [
+      640,
+      360,
+      640,
+      360
+    ],
     "expected": "回收",
     "action": "Click",
     "next": "灰域_返回灰域"
