@@ -294,12 +294,7 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi": [
-                0,
-                0,
-                129,
-                706
-              ],
+              "roi" : [0,6,135,713],
               "expected": "1",
               "action": "Click",
               "next": [
@@ -313,12 +308,7 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi": [
-                0,
-                0,
-                129,
-                706
-              ],
+             "roi" : [0,6,135,713],
               "expected": "2",
               "action": "Click",
               "next": [
@@ -332,12 +322,7 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi": [
-                0,
-                0,
-                129,
-                706
-              ],
+             "roi" : [0,6,135,713],
               "expected": "3",
               "action": "Click",
               "next": [
@@ -351,12 +336,7 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi": [
-                0,
-                0,
-                129,
-                706
-              ],
+              "roi" : [0,6,135,713],
               "expected": "4",
               "action": "Click",
               "next": [
@@ -370,12 +350,7 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi": [
-                0,
-                0,
-                129,
-                706
-              ],
+              "roi" : [0,6,135,713],
               "expected": "5",
               "action": "Click",
               "next": [
@@ -389,12 +364,7 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi": [
-                0,
-                0,
-                129,
-                706
-              ],
+              "roi" : [0,6,135,713],
               "expected": "6",
               "action": "Click",
               "next": [
@@ -408,12 +378,7 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi": [
-                0,
-                0,
-                129,
-                706
-              ],
+              "roi" : [0,6,135,713],
               "expected": "7",
               "action": "Click",
               "next": [
@@ -427,12 +392,7 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi": [
-                0,
-                0,
-                129,
-                706
-              ],
+              "roi" : [0,6,135,713],
               "expected": "8",
               "action": "Click",
               "next": [
@@ -446,16 +406,144 @@
           "pipeline_override": {
             "捡垃圾_选择梯队": {
               "recognition": "OCR",
-              "roi": [
-                0,
-                0,
-                129,
-                706
-              ],
+              "roi" : [0,6,135,713],
               "expected": "9",
               "action": "Click",
               "next": [
                 "捡垃圾_确认部署"
+              ]
+            }
+          }
+        },
+        {
+          "name": "10"
+        }
+      ]
+    },
+    "零电荷-部署第几梯队": {
+      "cases": [
+        {
+          "name": "1",
+          "pipeline_override": {
+            "零电荷_选择梯队": {
+              "recognition": "OCR",
+              "roi" : [0,6,135,713],
+              "expected": "1",
+              "action": "Click",
+              "next": [
+                "零电荷_确认部署"
+              ]
+            }
+          }
+        },
+        {
+          "name": "2",
+          "pipeline_override": {
+            "零电荷_选择梯队": {
+              "recognition": "OCR",
+              "roi" : [0,6,135,713],
+              "expected": "2",
+              "action": "Click",
+              "next": [
+                "零电荷_确认部署"
+              ]
+            }
+          }
+        },
+        {
+          "name": "3",
+          "pipeline_override": {
+            "零电荷_选择梯队": {
+              "recognition": "OCR",
+              "roi" : [0,6,135,713],
+              "expected": "3",
+              "action": "Click",
+              "next": [
+                "零电荷_确认部署"
+              ]
+            }
+          }
+        },
+        {
+          "name": "4",
+          "pipeline_override": {
+            "零电荷_选择梯队": {
+              "recognition": "OCR",
+              "roi" : [0,6,135,713],
+              "expected": "4",
+              "action": "Click",
+              "next": [
+                "零电荷_确认部署"
+              ]
+            }
+          }
+        },
+        {
+          "name": "5",
+          "pipeline_override": {
+            "零电荷_选择梯队": {
+              "recognition": "OCR",
+              "roi" : [0,6,135,713],
+              "expected": "5",
+              "action": "Click",
+              "next": [
+                "零电荷_确认部署"
+              ]
+            }
+          }
+        },
+        {
+          "name": "6",
+          "pipeline_override": {
+            "零电荷_选择梯队": {
+              "recognition": "OCR",
+              "roi" : [0,6,135,713],
+              "expected": "6",
+              "action": "Click",
+              "next": [
+                "零电荷_确认部署"
+              ]
+            }
+          }
+        },
+        {
+          "name": "7",
+          "pipeline_override": {
+            "零电荷_选择梯队": {
+              "recognition": "OCR",
+              "roi" : [0,6,135,713],
+              "expected": "7",
+              "action": "Click",
+              "next": [
+                "零电荷_确认部署"
+              ]
+            }
+          }
+        },
+        {
+          "name": "8",
+          "pipeline_override": {
+            "零电荷_选择梯队": {
+              "recognition": "OCR",
+              "roi" : [0,6,135,713],
+              "expected": "8",
+              "action": "Click",
+              "next": [
+                "零电荷_确认部署"
+              ]
+            }
+          }
+        },
+        {
+          "name": "9",
+          "pipeline_override": {
+            "零电荷_选择梯队": {
+              "recognition": "OCR",
+              "roi" : [0,6,135,713],
+              "expected": "9",
+              "action": "Click",
+              "next": [
+                "零电荷_确认部署"
               ]
             }
           }
