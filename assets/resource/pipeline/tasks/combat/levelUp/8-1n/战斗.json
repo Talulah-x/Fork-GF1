@@ -224,7 +224,7 @@
             "combat/levelUp/8-1N/Gp03.png"
         ],
         "green_mask": true,
-        "threshold":0.6,
+        "threshold": 0.6,
         "next": [
             "81N战斗_炸狗点2"
         ]
@@ -242,7 +242,7 @@
             "combat/levelUp/8-1N/Gp06.png"
         ],
         "green_mask": true,
-        "threshold":0.6,
+        "threshold": 0.6,
         "next": [
             "81N战斗_执行计划"
         ]
@@ -279,7 +279,7 @@
         "inverse": true,
         "rate_limit": 100,
         "action": "Click",
-        "target":[
+        "target": [
             971,
             318,
             147,
@@ -290,8 +290,9 @@
         "next": [
             "81N战斗_加速结算"
         ],
-        "interrupt":[
-            "81N战斗_梯队遇敌"
+        "interrupt": [
+            "81N战斗_梯队遇敌",
+            "public_不中断计划"
         ],
         "timeout": 600000
     }

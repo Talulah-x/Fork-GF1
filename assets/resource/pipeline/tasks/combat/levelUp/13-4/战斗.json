@@ -259,7 +259,7 @@
         "inverse": true,
         "rate_limit": 100,
         "action": "Click",
-        "target":[
+        "target": [
             971,
             318,
             147,
@@ -270,8 +270,9 @@
         "next": [
             "134战斗_加速结算"
         ],
-        "interrupt":[
-            "134战斗_梯队遇敌"
+        "interrupt": [
+            "134战斗_梯队遇敌",
+            "public_不中断计划"
         ],
         "timeout": 600000
     }
