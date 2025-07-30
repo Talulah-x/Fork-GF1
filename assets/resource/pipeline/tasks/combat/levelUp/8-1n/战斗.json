@@ -223,8 +223,8 @@
             "combat/levelUp/8-1N/p03.png",
             "combat/levelUp/8-1N/Gp03.png"
         ],
-        "threshold": 0.7,
         "green_mask": true,
+        "threshold": 0.6,
         "next": [
             "81N战斗_炸狗点2"
         ]
@@ -241,8 +241,8 @@
             "combat/levelUp/8-1N/p06.png",
             "combat/levelUp/8-1N/Gp06.png"
         ],
-        "threshold": 0.7,
         "green_mask": true,
+        "threshold": 0.6,
         "next": [
             "81N战斗_执行计划"
         ]
@@ -255,66 +255,45 @@
         "action": "Click",
         "next": [
             "81N战斗_梯队遇敌",
-            "81N战斗_加速结算",
-            "81N战斗_跳过获得装备",
             "81N战斗_剩余行动01"
         ]
     },
     "81N战斗_梯队遇敌": {
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/8-1N/794.png",
-        "rate_limit": 2000,
-        "post_delay": 4000,
+        "post_delay": 6000,
+        "rate_limit": 500,
         "next": [
-            "81N战斗_加速结算",
-            "81N战斗_跳过获得装备",
             "81N战斗_梯队遇敌",
             "81N战斗_剩余行动01"
         ],
         "timeout": 600000,
-        "interrupt": "public_不中断计划"
-    },
-    "81N战斗_跳过获得装备": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            1063,
-            245,
-            217,
-            173
-        ],
-        "template": "combat/levelUp/8-1N/eqip_get.png",
-        "action": "Click",
-        "threshold": 0.58,
-        "rate_limit": 100,
-        "post_delay": 1,
-        "next": [
-            "81N战斗_跳过获得装备",
-            "81N战斗_梯队遇敌",
-            "81N战斗_剩余行动01",
+        "interrupt": [
+            "public_不中断计划",
             "81N战斗_加速结算"
-        ],
-        "timeout": 600000,
-        "interrupt": "public_不中断计划"
+        ]
     },
     "81N战斗_加速结算": {
-        "recognition": "OCR",
-        "roi": [
-            0,
-            5,
-            270,
-            75
-        ],
-        "expected": "战斗结算",
-        "rate_limit": 500,
+        "recognition": "TemplateMatch",
+        "template": "combat/levelUp/8-1N/794.png",
+        "inverse": true,
+        "rate_limit": 100,
         "action": "Click",
-        "post_delay": 1,
+        "target": [
+            971,
+            318,
+            147,
+            105
+        ],
+        "pre_delay": 0,
+        "post_delay": 200,
         "next": [
-            "81N战斗_梯队遇敌",
-            "81N战斗_剩余行动01",
-            "81N战斗_跳过获得装备",
             "81N战斗_加速结算"
         ],
-        "timeout": 600000,
-        "interrupt": "public_不中断计划"
+        "interrupt": [
+            "81N战斗_梯队遇敌",
+            "public_不中断计划"
+        ],
+        "timeout": 600000
     }
 }
