@@ -33,14 +33,6 @@
         ]
     },
     "134战斗_点击2队单vv准备补给": {
-        "recognition": "TemplateMatch",
-        "template": "combat/levelUp/13-4/init.png",
-        "roi": [
-            448,
-            442,
-            161,
-            175
-        ],
         "target": [
             76,
             533,
@@ -241,53 +233,46 @@
         ],
         "action": "Click",
         "next": [
-            "134重置_再次作战"
-        ],
-        "interrupt": [
             "134战斗_梯队遇敌",
-            "134战斗_加速结算",
-            "134战斗_跳过获得角色"
+            "134重置_再次作战"
         ],
         "timeout": 600000
     },
     "134战斗_梯队遇敌": {
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/13-4/794.png",
-        "action": "DoNothing",
         "post_delay": 10000,
-        "rate_limit": 100,
-        "timeout": 600000,
-        "interrupt": "public_不中断计划"
-    },
-    "134战斗_跳过获得角色": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            866,
-            2,
-            413,
-            619
+        "rate_limit": 1000,
+        "next": [
+            "134战斗_梯队遇敌",
+            "134重置_再次作战"
         ],
-        "template": [
-            "combat/levelUp/13-4/doll_get0.png",
-            "combat/levelUp/13-4/doll_get2.png",
-            "combat/levelUp/13-4/doll_get3.png",
-            "combat/levelUp/13-4/doll_get4.png"
-        ],
-        "action": "Click",
-        "threshold": 0.7,
-        "rate_limit": 100,
-        "post_delay": 1,
         "timeout": 600000,
-        "interrupt": "public_不中断计划"
+        "interrupt": [
+            "public_不中断计划",
+            "134战斗_加速结算"
+        ]
     },
     "134战斗_加速结算": {
-        "recognition": "OCR",
-        "expected": "战斗结算",
+        "recognition": "TemplateMatch",
+        "template": "combat/levelUp/13-4/794.png",
+        "inverse": true,
         "rate_limit": 100,
         "action": "Click",
-        "pre_delay": 1,
+        "target":[
+            971,
+            318,
+            147,
+            105
+        ],
+        "pre_delay": 10,
         "post_delay": 200,
-        "timeout": 600000,
-        "interrupt": "public_不中断计划"
+        "next": [
+            "134战斗_加速结算"
+        ],
+        "interrupt":[
+            "134战斗_梯队遇敌"
+        ],
+        "timeout": 600000
     }
 }
