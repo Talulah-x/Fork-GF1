@@ -1,0 +1,15 @@
+{
+    "public_不中断计划": {
+        "recognition": "OCR",
+        "expected": [
+            "中断"
+        ],
+        "action": "Click",
+        "target": [
+            467,
+            480,
+            118,
+            24
+        ]
+    }
+}

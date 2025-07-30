@@ -1,5 +1,5 @@
 {
-    "点击队伍编成_8_1N编队": {
+    "81N编队_点击队伍编成": {
         "roi": [
             141,
             588,
@@ -13,10 +13,10 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "选择2队zas_8_1N编队"
+            "81N编队_选择2队zas"
         ]
     },
-    "选择2队zas_8_1N编队": {
+    "81N编队_选择2队zas": {
         "recognition": "OCR",
         "expected": "阵型编成",
         "roi": [
@@ -34,31 +34,31 @@
         "action": "Click",
         "post_wait_freezes": 1,
         "next": [
-            "显示全部_8_1N编队",
-            "点击队伍编成_8_1N编队"
+            "81N编队_显示全部",
+            "81N编队_点击队伍编成"
         ]
     },
-    "显示全部_8_1N编队": {
+    "81N编队_显示全部": {
         "recognition": "OCR",
         "expected": [
             "显示全部"
         ],
         "action": "Click",
         "next": [
-            "选择收藏角色_8_1N编队"
+            "81N编队_选择收藏角色"
         ]
     },
-    "选择收藏角色_8_1N编队": {
+    "81N编队_选择收藏角色": {
         "recognition": "OCR",
         "expected": [
             "显示收藏"
         ],
         "action": "Click",
         "next": [
-            "选择收藏角色确认_8_1N编队"
+            "81N编队_选择收藏角色确认"
         ]
     },
-    "选择收藏角色确认_8_1N编队": {
+    "81N编队_选择收藏角色确认": {
         "recognition": "OCR",
         "expected": [
             "确认"
@@ -66,10 +66,10 @@
         "action": "Click",
         "post_delay": 500,
         "next": [
-            "点击队伍中的Zas_8_1N编队"
+            "81N编队_点击队伍中的Zas"
         ]
     },
-    "点击队伍中的Zas_8_1N编队": {
+    "81N编队_点击队伍中的Zas": {
         "target": [
             64,
             636,
@@ -79,10 +79,10 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "点击1队Zas_8_1N编队"
+            "81N编队_点击1队Zas"
         ]
     },
-    "点击1队Zas_8_1N编队": {
+    "81N编队_点击1队Zas": {
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/8-1N/G_team1.png",
         "action": "Click",
@@ -90,10 +90,10 @@
         "threshold": 0.8,
         "green_mask": true,
         "next": [
-            "确定_8_1N编队"
+            "!确定"
         ]
     },
-    "确定_8_1N编队": {
+    "!确定": {
         "recognition": "OCR",
         "expected": [
             "确定"
@@ -101,11 +101,11 @@
         "action": "Click",
         "post_delay": 600,
         "next": [
-            "确定_8_1N编队",
-            "返回地图_8_1N编队"
+            "!确定",
+            "81N编队_返回地图"
         ]
     },
-    "返回地图_8_1N编队": {
+    "81N编队_返回地图": {
         "recognition": "TemplateMatch",
         "roi": [
             33,
@@ -117,11 +117,11 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "开始作战前初始化_8_1N战斗",
-            "返回地图_8_1N编队"
+            "81N战斗_开始作战前初始化",
+            "81N编队_返回地图"
         ],
         "interrupt": [
-            "拖到左上角_8_1N地图初始化"
+            "81N地图初始化_拖到左上角"
         ]
     }
 }

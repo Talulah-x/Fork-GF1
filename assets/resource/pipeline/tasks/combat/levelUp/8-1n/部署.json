@@ -1,5 +1,5 @@
 {
-    "部署梯队_8_1N部署": {
+    "81N部署_部署梯队": {
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/8-1N/init.png",
         "roi": [
@@ -9,13 +9,13 @@
             117
         ],
         "next": [
-            "确认1队是否已部署_8_1N部署"
+            "81N部署_确认1队是否已部署"
         ],
         "interrupt": [
-            "部署1队_8_1N部署"
+            "81N部署_部署1队"
         ]
     },
-    "确认1队是否已部署_8_1N部署": {
+    "81N部署_确认1队是否已部署": {
         "recognition": "TemplateMatch",
         "roi": [
             115,
@@ -25,15 +25,15 @@
         ],
         "template": "combat/levelUp/8-1N/map_team1.png",
         "next": [
-            "确认2队是否已部署_8_1N部署"
+            "81N部署_确认2队是否已部署"
         ],
         "rate_limit": 100,
         "post_delay": 10,
         "interrupt": [
-            "部署2队_8_1N部署"
+            "81N部署_部署2队"
         ]
     },
-    "确认2队是否已部署_8_1N部署": {
+    "81N部署_确认2队是否已部署": {
         "recognition": "TemplateMatch",
         "roi": [
             179,
@@ -43,15 +43,15 @@
         ],
         "template": "combat/levelUp/8-1N/map_team2.png",
         "next": [
-            "确认3队是否已部署_8_1N部署"
+            "81N部署_确认3队是否已部署"
         ],
         "rate_limit": 100,
         "post_delay": 10,
         "interrupt": [
-            "部署3队_8_1N部署"
+            "81N部署_部署3队"
         ]
     },
-    "确认3队是否已部署_8_1N部署": {
+    "81N部署_确认3队是否已部署": {
         "recognition": "TemplateMatch",
         "roi": [
             947,
@@ -61,12 +61,12 @@
         ],
         "template": "combat/levelUp/8-1N/map_team3.png",
         "next": [
-            "布置完成_8_1N部署"
+            "81N部署_布置完成"
         ],
         "rate_limit": 100,
         "post_delay": 10
     },
-    "布置完成_8_1N部署": {
+    "81N部署_布置完成": {
         "recognition": "TemplateMatch",
         "roi": [
             179,
@@ -77,10 +77,10 @@
         "template": "combat/levelUp/8-1N/map_team2.png",
         "rate_limit": 200,
         "next": [
-            "弹药检查new_8_1N部署"
+            "81N部署_弹药检查new"
         ]
     },
-    "部署1队_8_1N部署": {
+    "81N部署_部署1队": {
         "recognition": "TemplateMatch",
         "roi": [
             115,
@@ -93,10 +93,10 @@
         "action": "Click",
         "post_delay": 500,
         "next": [
-            "部署1队确定_8_1N部署"
+            "81N部署_部署1队确定"
         ]
     },
-    "部署1队确定_8_1N部署": {
+    "81N部署_部署1队确定": {
         "recognition": "OCR",
         "roi": [
             1071,
@@ -111,7 +111,7 @@
         "action": "Click",
         "next": []
     },
-    "部署2队_8_1N部署": {
+    "81N部署_部署2队": {
         "recognition": "TemplateMatch",
         "roi": [
             179,
@@ -125,10 +125,10 @@
         "post_delay": 1500,
         "pre_delay": 1500,
         "next": [
-            "部署2队确定_8_1N部署"
+            "81N部署_部署2队确定"
         ]
     },
-    "部署2队确定_8_1N部署": {
+    "81N部署_部署2队确定": {
         "recognition": "OCR",
         "roi": [
             1071,
@@ -143,7 +143,7 @@
         "action": "Click",
         "next": []
     },
-    "部署3队_8_1N部署": {
+    "81N部署_部署3队": {
         "recognition": "TemplateMatch",
         "roi": [
             947,
@@ -155,13 +155,13 @@
         "template": "combat/levelUp/8-1N/port_h.png",
         "action": "Click",
         "next": [
-            "部署3队确定_8_1N部署"
+            "81N部署_部署3队确定"
         ],
         "interrupt": [
-            "重装机场选择梯队_8_1N部署"
+            "81N部署_重装机场选择梯队"
         ]
     },
-    "部署3队确定_8_1N部署": {
+    "81N部署_部署3队确定": {
         "recognition": "OCR",
         "roi": [
             1071,
@@ -176,15 +176,15 @@
         "action": "Click",
         "post_delay": 1200,
         "next": [
-            "弹药检查new_8_1N部署"
+            "81N部署_弹药检查new"
         ]
     },
-    "重装机场选择梯队_8_1N部署": {
+    "81N部署_重装机场选择梯队": {
         "recognition": "OCR",
         "expected": "选择梯队",
         "action": "Click"
     },
-    "弹药检查_8_1N部署": {
+    "81N部署_弹药检查": {
         "recognition": "TemplateMatch",
         "roi": [
             200,
@@ -201,12 +201,12 @@
         "rate_limit": 200,
         "threshold": 0.7,
         "next": [
-            "弹药判断有_8_1N部署",
-            "弹药判断无_8_1N部署",
-            "弹药检查_8_1N部署"
+            "81N部署_弹药判断有",
+            "81N部署_弹药判断无",
+            "81N部署_弹药检查"
         ]
     },
-    "弹药判断无_8_1N部署": {
+    "81N部署_弹药判断无": {
         "recognition": "TemplateMatch",
         "roi": [
             150,
@@ -217,10 +217,10 @@
         "template": "combat/levelUp/8-1N/Gnoammo.png",
         "green_mask": true,
         "next": [
-            "无弹药不编成_8_1N部署"
+            "81N部署_无弹药不编成"
         ]
     },
-    "弹药判断有_8_1N部署": {
+    "81N部署_弹药判断有": {
         "recognition": "TemplateMatch",
         "roi": [
             150,
@@ -231,16 +231,16 @@
         "template": "combat/levelUp/8-1N/Gfullammo.png",
         "green_mask": true,
         "next": [
-            "点击队伍编成_8_1N编队"
+            "81N编队_点击队伍编成"
         ]
     },
-    "无弹药不编成_8_1N部署": {
+    "81N部署_无弹药不编成": {
         "recognition": "OCR",
         "expected": [
             "取消"
         ],
         "action": "Click",
         "post_delay": 500,
-        "next": "开始作战前初始化_8_1N战斗"
+        "next": "81N战斗_开始作战前初始化"
     }
 }

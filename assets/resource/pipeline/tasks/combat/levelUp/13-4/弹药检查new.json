@@ -1,5 +1,5 @@
 {
-    "弹药检查new_134部署": {
+    "134部署_弹药检查new": {
         "recognition": "TemplateMatch",
         "roi": [
             70,
@@ -11,11 +11,11 @@
             "combat/levelUp/13-4/map_team2.png"
         ],
         "next": [
-            "弹药判断有new_134部署",
-            "弹药判断无new_134部署"
+            "134部署_弹药判断有new",
+            "134部署_弹药判断无new"
         ]
     },
-    "点击2队new_134部署": {
+    "134部署_点击2队new": {
         "target": [
             76,
             533,
@@ -26,11 +26,11 @@
         "rate_limit": 200,
         "post_delay": 1500,
         "next": [
-            "点击队伍编成_134编队",
-            "点击2队new_134部署"
+            "134编队_点击队伍编成",
+            "134部署_点击2队new"
         ]
     },
-    "点击部署界面2队new_134部署": {
+    "134部署_点击部署界面2队new": {
         "recognition": "TemplateMatch",
         "roi": [
             10,
@@ -42,11 +42,11 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "弹药检查new_134部署",
-            "点击部署界面2队new_134部署"
+            "134部署_弹药检查new",
+            "134部署_点击部署界面2队new"
         ]
     },
-    "弹药判断无new_134部署": {
+    "134部署_弹药判断无new": {
         "recognition": "TemplateMatch",
         "roi": [
             50,
@@ -58,10 +58,10 @@
         "template": "combat/levelUp/13-4/Gnewnoammo.png",
         "green_mask": true,
         "next": [
-            "开始作战_134战斗"
+            "134战斗_开始作战"
         ]
     },
-    "弹药判断有new_134部署": {
+    "134部署_弹药判断有new": {
         "recognition": "TemplateMatch",
         "roi": [
             50,
@@ -73,7 +73,7 @@
         "green_mask": true,
         "threshold": 0.7,
         "next": [
-            "点击2队new_134部署"
+            "134部署_点击2队new"
         ]
     }
 }

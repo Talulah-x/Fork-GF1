@@ -1,5 +1,5 @@
 {
-    "开始作战前初始化_8_1N战斗": {
+    "81N战斗_开始作战前初始化": {
         "recognition": "TemplateMatch",
         "roi": [
             179,
@@ -9,13 +9,13 @@
         ],
         "template": "combat/levelUp/8-1N/map_team2.png",
         "next": [
-            "开始作战_8_1N战斗"
+            "81N战斗_开始作战"
         ],
         "interrupt": [
-            "拖到左上角_8_1N地图初始化"
+            "81N地图初始化_拖到左上角"
         ]
     },
-    "开始作战_8_1N战斗": {
+    "81N战斗_开始作战": {
         "recognition": "OCR",
         "roi": [
             944,
@@ -29,11 +29,11 @@
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "点击2队单zas准备补给_8_1N战斗",
-            "装备强化_8_1N装备强化"
+            "81N战斗_点击2队单zas准备补给",
+            "81N装备强化_装备强化"
         ]
     },
-    "点击2队单zas准备补给_8_1N战斗": {
+    "81N战斗_点击2队单zas准备补给": {
         "recognition": "TemplateMatch",
         "roi": [
             179,
@@ -53,11 +53,11 @@
         "post_delay": 1000,
         "rate_limit": 200,
         "next": [
-            "点击补给_8_1N战斗",
-            "点击2队单zas准备补给_8_1N战斗"
+            "81N战斗_点击补给",
+            "81N战斗_点击2队单zas准备补给"
         ]
     },
-    "点击补给_8_1N战斗": {
+    "81N战斗_点击补给": {
         "recognition": "OCR",
         "expected": [
             "补给"
@@ -65,10 +65,10 @@
         "action": "Click",
         "post_delay": 800,
         "next": [
-            "点击2队单zas_8_1N战斗"
+            "81N战斗_点击2队单zas"
         ]
     },
-    "点击2队单zas_8_1N战斗": {
+    "81N战斗_点击2队单zas": {
         "recognition": "TemplateMatch",
         "roi": [
             179,
@@ -86,11 +86,11 @@
         ],
         "post_delay": 800,
         "next": [
-            "点击2队撤离_8_1N战斗",
-            "点击2队单zas_8_1N战斗"
+            "81N战斗_点击2队撤离",
+            "81N战斗_点击2队单zas"
         ]
     },
-    "点击2队撤离_8_1N战斗": {
+    "81N战斗_点击2队撤离": {
         "recognition": "OCR",
         "expected": [
             "撤离"
@@ -98,10 +98,10 @@
         "action": "Click",
         "post_delay": 400,
         "next": [
-            "点击2队撤离确定_8_1N战斗"
+            "81N战斗_点击2队撤离确定"
         ]
     },
-    "点击2队撤离确定_8_1N战斗": {
+    "81N战斗_点击2队撤离确定": {
         "recognition": "OCR",
         "expected": [
             "确定"
@@ -109,10 +109,10 @@
         "post_delay": 800,
         "action": "Click",
         "next": [
-            "点击1队图标_8_1N战斗"
+            "81N战斗_点击1队图标"
         ]
     },
-    "点击1队图标_8_1N战斗": {
+    "81N战斗_点击1队图标": {
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/8-1N/map_team1.png",
         "roi": [
@@ -131,12 +131,12 @@
         "post_delay": 800,
         "rate_limit": 200,
         "next": [
-            "出现妖精技能释放_8_1N战斗",
-            "点击1队取消_8_1N战斗",
-            "点击1队图标_8_1N战斗"
+            "81N战斗_出现妖精技能释放",
+            "81N战斗_点击1队取消",
+            "81N战斗_点击1队图标"
         ]
     },
-    "出现妖精技能释放_8_1N战斗": {
+    "81N战斗_出现妖精技能释放": {
         "recognition": "OCR",
         "expected": [
             "释放"
@@ -147,9 +147,9 @@
             204,
             437
         ],
-        "next": "点击计划模式_8_1N战斗"
+        "next": "81N战斗_点击计划模式"
     },
-    "点击1队取消_8_1N战斗": {
+    "81N战斗_点击1队取消": {
         "recognition": "OCR",
         "roi": [
             1071,
@@ -164,10 +164,10 @@
         "action": "Click",
         "post_delay": 1200,
         "next": [
-            "点击计划模式_8_1N战斗"
+            "81N战斗_点击计划模式"
         ]
     },
-    "点击计划模式_8_1N战斗": {
+    "81N战斗_点击计划模式": {
         "recognition": "OCR",
         "expected": [
             "计划模式"
@@ -175,10 +175,10 @@
         "action": "Click",
         "post_delay": 1500,
         "next": [
-            "炸狗点1_8_1N战斗"
+            "81N战斗_炸狗点1"
         ]
     },
-    "炸狗点1_8_1N战斗": {
+    "81N战斗_炸狗点1": {
         "recognition": "TemplateMatch",
         "roi": [
             165,
@@ -190,11 +190,11 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "炸狗点1_8_1N战斗_确认",
-            "炸狗点1_8_1N战斗"
+            "81N战斗_炸狗点1确认",
+            "81N战斗_炸狗点1"
         ]
     },
-    "炸狗点2_8_1N战斗": {
+    "81N战斗_炸狗点2": {
         "recognition": "TemplateMatch",
         "roi": [
             179,
@@ -204,13 +204,14 @@
         ],
         "template": "combat/levelUp/8-1N/port_2.png",
         "action": "Click",
+        "threshold": 0.55,
         "post_delay": 1000,
         "next": [
-            "炸狗点2_8_1N战斗_确认",
-            "炸狗点2_8_1N战斗"
+            "81N战斗_炸狗点2确认",
+            "81N战斗_炸狗点2"
         ]
     },
-    "炸狗点1_8_1N战斗_确认": {
+    "81N战斗_炸狗点1确认": {
         "recognition": "TemplateMatch",
         "roi": [
             165,
@@ -225,10 +226,10 @@
         "threshold": 0.7,
         "green_mask": true,
         "next": [
-            "炸狗点2_8_1N战斗"
+            "81N战斗_炸狗点2"
         ]
     },
-    "炸狗点2_8_1N战斗_确认": {
+    "81N战斗_炸狗点2确认": {
         "recognition": "TemplateMatch",
         "roi": [
             179,
@@ -243,36 +244,37 @@
         "threshold": 0.7,
         "green_mask": true,
         "next": [
-            "执行计划_8_1N战斗"
+            "81N战斗_执行计划"
         ]
     },
-    "执行计划_8_1N战斗": {
+    "81N战斗_执行计划": {
         "recognition": "OCR",
         "expected": [
             "执行计划"
         ],
         "action": "Click",
         "next": [
-            "梯队遇敌_8_1N战斗",
-            "加速结算_8_1N战斗",
-            "跳过获得装备_8_1N战斗",
-            "剩余行动01_8_1N战斗"
+            "81N战斗_梯队遇敌",
+            "81N战斗_加速结算",
+            "81N战斗_跳过获得装备",
+            "81N战斗_剩余行动01"
         ]
     },
-    "梯队遇敌_8_1N战斗": {
+    "81N战斗_梯队遇敌": {
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/8-1N/794.png",
         "rate_limit": 2000,
         "post_delay": 4000,
-        "timeout": 600000,
         "next": [
-            "加速结算_8_1N战斗",
-            "跳过获得装备_8_1N战斗",
-            "梯队遇敌_8_1N战斗",
-            "剩余行动01_8_1N战斗"
-        ]
+            "81N战斗_加速结算",
+            "81N战斗_跳过获得装备",
+            "81N战斗_梯队遇敌",
+            "81N战斗_剩余行动01"
+        ],
+        "timeout": 600000,
+        "interrupt": "public_不中断计划"
     },
-    "跳过获得装备_8_1N战斗": {
+    "81N战斗_跳过获得装备": {
         "recognition": "TemplateMatch",
         "roi": [
             1063,
@@ -284,15 +286,17 @@
         "action": "Click",
         "threshold": 0.58,
         "rate_limit": 100,
-        "timeout": 600000,
+        "post_delay": 1,
         "next": [
-            "跳过获得装备_8_1N战斗",
-            "剩余行动01_8_1N战斗",
-            "梯队遇敌_8_1N战斗",
-            "加速结算_8_1N战斗"
-        ]
+            "81N战斗_跳过获得装备",
+            "81N战斗_梯队遇敌",
+            "81N战斗_剩余行动01",
+            "81N战斗_加速结算"
+        ],
+        "timeout": 600000,
+        "interrupt": "public_不中断计划"
     },
-    "加速结算_8_1N战斗": {
+    "81N战斗_加速结算": {
         "recognition": "OCR",
         "roi": [
             0,
@@ -301,14 +305,16 @@
             75
         ],
         "expected": "战斗结算",
-        "rate_limit": 100,
-        "timeout": 600000,
+        "rate_limit": 500,
         "action": "Click",
+        "post_delay": 1,
         "next": [
-            "剩余行动01_8_1N战斗",
-            "梯队遇敌_8_1N战斗",
-            "跳过获得装备_8_1N战斗",
-            "加速结算_8_1N战斗"
-        ]
+            "81N战斗_梯队遇敌",
+            "81N战斗_剩余行动01",
+            "81N战斗_跳过获得装备",
+            "81N战斗_加速结算"
+        ],
+        "timeout": 600000,
+        "interrupt": "public_不中断计划"
     }
 }
