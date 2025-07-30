@@ -162,7 +162,7 @@
             "宿舍_返回主菜单"
         ],
         "interrupt": [
-            "宿舍_点击esc"
+            "宿舍_点击返回"
         ]
     },
     "宿舍_返回主菜单": {
@@ -170,13 +170,17 @@
         "expected": "据点",
         "next": []
     },
-    "宿舍_点击esc": {
+    "宿舍_点击返回": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "dormitory/Gback1.png",
+            "dormitory/Gback2.png"
+        ],
+        "green_mask": true,
         "action": "Click",
-        "target": [
-            30,
-            20,
-            3,
-            3
+        "next": [
+            "宿舍_返回主菜单",
+            "宿舍_点击返回"
         ]
     }
 }
