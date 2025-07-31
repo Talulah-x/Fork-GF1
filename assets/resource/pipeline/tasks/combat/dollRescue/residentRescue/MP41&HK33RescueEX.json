@@ -241,6 +241,7 @@
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/抽薪.png"
         ],
+        "threshold": 0.6,
         "post_wait_freezes": 100,
         "next": [
             "MP41打捞_一判"

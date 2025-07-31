@@ -81,7 +81,8 @@
             "回收"
         ],
         "action": "Click",
-        "post_delay": 800,
+        "post_delay": 1500,
+        "post_wait_freezes": 1,
         "next": [
             "public_手动选择点击选择角色"
         ]

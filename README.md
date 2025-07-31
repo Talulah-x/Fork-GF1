@@ -90,8 +90,8 @@
 
 ### 用户使用指南
 
-1. 下载最新[发行版](https://github.com/LeonNagant/MaaGF1_Test/releases/tag/release)  
-   `MaaGF1-GUI-win-x86_64-.zip`
+1. 下载最新[发行版](https://github.com/LeonNagant/MaaGF1_Test/releases)  
+   `MaaGF1-GUI-v1.x.xx-x86_64-.zip`
 2. 解压文件
 3. 运行 `MFAAvalonia.exe`
 4. 选择「少女前线」窗口
@@ -100,7 +100,7 @@
 
 ---
 
-## 🌟 功能矩阵
+## 🌟 功能
 
 ### ⚔️ 作战升级
 

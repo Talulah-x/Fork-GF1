@@ -202,7 +202,9 @@
             277,
             233
         ],
-        "template": "combat/levelUp/8-1N/port_2.png",
+        "template": [
+            "combat/levelUp/8-1N/port_2.png"
+        ],
         "action": "Click",
         "threshold": 0.55,
         "post_delay": 1000,
@@ -224,7 +226,7 @@
             "combat/levelUp/8-1N/Gp03.png"
         ],
         "green_mask": true,
-        "threshold": 0.6,
+        "threshold": 0.7,
         "next": [
             "81N战斗_炸狗点2"
         ]
@@ -242,7 +244,7 @@
             "combat/levelUp/8-1N/Gp06.png"
         ],
         "green_mask": true,
-        "threshold": 0.6,
+        "threshold": 0.7,
         "next": [
             "81N战斗_执行计划"
         ]
@@ -255,7 +257,8 @@
         "action": "Click",
         "next": [
             "81N战斗_梯队遇敌",
-            "81N战斗_剩余行动01"
+            "81N战斗_剩余行动01",
+            "81N战斗_执行计划"
         ]
     },
     "81N战斗_梯队遇敌": {
