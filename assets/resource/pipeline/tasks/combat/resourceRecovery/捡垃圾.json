@@ -352,8 +352,25 @@
         "target" : [381,9,107,31],
         "next": [
             "捡垃圾_撤退",
-            "捡垃圾_再次作战"
+            "捡垃圾_点击"
         ]
+    },
+    "捡垃圾_点击": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [381,9,107,31],
+        "next": [
+            "捡垃圾_战败检测"
+        ]
+    },
+    "捡垃圾_战败检测": {
+        "recognition": "OCR",
+        "roi" : [371,74,392,289],
+        "expected": [
+            "7"
+        ],
+        "action": "Click",
+        "next": "捡垃圾_再次作战"
     },
     "捡垃圾_再次作战": {
         "recognition": "DirectHit",
