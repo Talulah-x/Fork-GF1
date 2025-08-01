@@ -241,23 +241,14 @@
     "134战斗_梯队遇敌": {
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/13-4/794.png",
-        "post_delay": 10000,
-        "rate_limit": 500,
+        "post_delay": 9000,
+        "rate_limit": 100,
         "next": [
-            "134战斗_梯队遇敌",
-            "134重置_再次作战"
-        ],
-        "timeout": 600000,
-        "interrupt": [
-            "public_不中断计划",
             "134战斗_加速结算"
-        ]
+        ],
+        "timeout": 600000
     },
     "134战斗_加速结算": {
-        "recognition": "TemplateMatch",
-        "template": "combat/levelUp/13-4/794.png",
-        "inverse": true,
-        "rate_limit": 100,
         "action": "Click",
         "target": [
             971,
@@ -268,10 +259,21 @@
         "pre_delay": 0,
         "post_delay": 200,
         "next": [
+            "134战斗_等待作战",
             "134战斗_加速结算"
         ],
-        "interrupt": [
+        "timeout": 600000
+    },
+    "134战斗_等待作战": {
+        "recognition": "TemplateMatch",
+        "template": "combat/levelUp/13-4/794.png",
+        "rate_limit": 100,
+        "next":[
             "134战斗_梯队遇敌",
+            "134重置_再次作战"
+        ],
+        "post_delay":3000,
+        "interrupt":[
             "public_不中断计划"
         ],
         "timeout": 600000

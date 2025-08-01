@@ -177,10 +177,7 @@
             "取消"
         ],
         "action": "Click",
-        "post_delay": 1200,
-        "next": [
-            "81N部署_弹药检查new"
-        ]
+        "post_delay": 1200
     },
     "81N部署_重装机场选择梯队": {
         "recognition": "OCR",
