@@ -124,6 +124,23 @@
       "check": false,
       "doc": "进入零电荷，部署第十梯队，运行前需要手动下一次梯队并运行。[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "option": "零电荷-部署第几梯队"
+    },
+    {
+      "name": "虚粒子对活动刷币打捞",
+      "entry": "!VP活动打捞",
+      "check": false,
+      "doc": [
+        "在什么地方可以启动脚本？",
+        "✅活动菜单",
+        "✅打捞关卡地图（进入地图即可请不要手动下队）",
+        "使用前须知：",
+        "❗仓库满了会拆解全部未锁人形!!!",
+        "❗某轮结束后若要改变打捞目标请手动撤离打捞队",
+        "❗第一次使用前请将打捞关卡地图缩放最小并向左下拖拽到底"
+      ],
+      "option": "选择打捞目标",
+      "repeatable": true,
+      "repeat_count": 1
     }
   ],
   "option": {
@@ -644,6 +661,178 @@
         },
         {
           "name": "10"
+        }
+      ]
+    },
+    "选择打捞目标": {
+      "cases": [
+        {
+          "name": "M1895",
+          "pipeline_override": {
+            "VP_打捞线下队": {
+              "recognition": "TemplateMatch",
+              "template": "Activity/机场1.png",
+              "order_by": "Horizontal",
+              "index": 0,
+              "action": "Click",
+              "threshold": 0.5,
+              "pre_delay": 600,
+              "next": [
+                "VP_确定下队"
+              ]
+            },
+            "VP_打捞线终点": {
+              "recognition": "TemplateMatch",
+              "template": "Activity/终点.png",
+              "order_by": "Horizontal",
+              "index": 0,
+              "action": "Click",
+              "threshold": 0.5,
+              "pre_delay": 600,
+              "post_delay": 800,
+              "next": [
+                "VP_判断是否选中终点",
+                "VP_打捞线终点"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Cx4风暴",
+          "pipeline_override": {
+            "VP_打捞线下队": {
+              "recognition": "TemplateMatch",
+              "template": "Activity/机场1.png",
+              "order_by": "Horizontal",
+              "index": 0,
+              "action": "Click",
+              "threshold": 0.5,
+              "pre_delay": 600,
+              "next": [
+                "VP_确定下队"
+              ]
+            },
+            "VP_打捞线终点": {
+              "recognition": "TemplateMatch",
+              "template": "Activity/终点.png",
+              "order_by": "Horizontal",
+              "index": 1,
+              "action": "Click",
+              "threshold": 0.5,
+              "pre_delay": 600,
+              "post_delay": 800,
+              "next": [
+                "VP_判断是否选中终点",
+                "VP_打捞线终点"
+              ]
+            }
+          }
+        },
+        {
+          "name": "SR5",
+          "pipeline_override": {
+            "VP_打捞线下队": {
+              "recognition": "TemplateMatch",
+              "template": "Activity/机场1.png",
+              "order_by": "Horizontal",
+              "index": 1,
+              "action": "Click",
+              "threshold": 0.5,
+              "pre_delay": 600,
+              "next": [
+                "VP_确定下队"
+              ]
+            },
+            "VP_打捞线终点": {
+              "recognition": "TemplateMatch",
+              "template": "Activity/终点.png",
+              "order_by": "Horizontal",
+              "index": 1,
+              "action": "Click",
+              "threshold": 0.5,
+              "pre_delay": 600,
+              "post_delay": 800,
+              "next": [
+                "VP_判断是否选中终点",
+                "VP_打捞线终点"
+              ]
+            }
+          }
+        },
+        {
+          "name": "AK-74U",
+          "pipeline_override": {
+            "VP_打捞线下队": {
+              "recognition": "TemplateMatch",
+              "template": "Activity/机场1.png",
+              "order_by": "Horizontal",
+              "index": 1,
+              "action": "Click",
+              "threshold": 0.5,
+              "pre_delay": 600,
+              "next": [
+                "VP_确定下队"
+              ]
+            },
+            "VP_打捞线终点": {
+              "recognition": "TemplateMatch",
+              "template": "Activity/终点.png",
+              "order_by": "Horizontal",
+              "index": 2,
+              "action": "Click",
+              "threshold": 0.5,
+              "pre_delay": 600,
+              "post_delay": 800,
+              "next": [
+                "VP_判断是否选中终点",
+                "VP_打捞线终点"
+              ]
+            }
+          }
+        },
+        {
+          "name": "TKB-408",
+          "pipeline_override": {
+            "VP_打捞线下队": {
+              "recognition": "TemplateMatch",
+              "roi": [
+                736,
+                8,
+                543,
+                323
+              ],
+              "template": "Activity/机场2.png",
+              "action": "Click",
+              "threshold": 0.5,
+              "pre_delay": 800,
+              "next": [
+                "VP_确定下队"
+              ]
+            },
+            "VP_打捞线终点": {
+              "recognition": "TemplateMatch",
+              "template": "Activity/终点2.png",
+              "roi": [
+                838,
+                482,
+                253,
+                144
+              ],
+              "action": "Click",
+              "target_offset": [
+                -15,
+                0,
+                -15,
+                0
+              ],
+              "pre_delay": 600,
+              "post_delay": 800,
+              "next": [
+                "VP_判断是否选中终点",
+                "VP_打捞线终点"
+              ]
+            }
+          }
         }
       ]
     }
