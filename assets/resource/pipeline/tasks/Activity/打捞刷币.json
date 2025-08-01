@@ -1,0 +1,301 @@
+{
+    "!VP活动打捞": {
+        "next": [
+            "VP_点击刷币关",
+            "VP_打捞线下队",
+            "VP_开始作战"
+        ],
+        "interrupt": "VP_拖动菜单"
+    },
+    "VP_作战菜单进入": {
+        "recognition": "OCR",
+        "roi": [
+            42,
+            62,
+            141,
+            131
+        ],
+        "expected": [
+            "粒"
+        ],
+        "action": "Click",
+        "pre_delay": 900,
+        "post_delay": 2500
+    },
+    "VP_拖动菜单": {
+        "pre_delay": 500,
+        "action": "Swipe",
+        "begin": [
+            301,
+            644,
+            1,
+            1
+        ],
+        "end": [
+            1154,
+            643,
+            1,
+            1
+        ],
+        "post_delay": 300
+    },
+    "VP_点击刷币关": {
+        "recognition": "OCR",
+        "expected": "真空",
+        "action": "Click",
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "VP_确定出击"
+        ]
+    },
+    "VP_确定出击": {
+        "recognition": "OCR",
+        "roi": [
+            1091,
+            345,
+            189,
+            132
+        ],
+        "expected": "出击",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "VP_打捞线下队",
+            "VP_作战菜单进入"
+        ],
+        "interrupt": [
+            "public_人形回收"
+        ]
+    },
+    "VP_打捞线下队": {
+        "next": [
+            "VP_确定下队"
+        ]
+    },
+    "VP_确定下队": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1088,
+            611,
+            145,
+            48
+        ],
+        "template": [
+            "Activity/下队确定.png",
+            "Activity/下队取消.png"
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": "VP_开始作战"
+    },
+    "VP_次数作战_开始作战": {
+        "recognition": "OCR",
+        "roi": [
+            995,
+            565,
+            273,
+            153
+        ],
+        "expected": "开始作战",
+        "action": "DoNothing"
+    },
+    "VP_开始作战": {
+        "recognition": "OCR",
+        "roi": [
+            995,
+            565,
+            273,
+            153
+        ],
+        "expected": "开始作战",
+        "action": "Click",
+        "post_delay": 1500,
+        "post_wait_freezes": 500,
+        "next": "VP_点击梯队1"
+    },
+    "VP_点击计划模式": {
+        "recognition": "TemplateMatch",
+        "template": "Activity/计划模式.png",
+        "action": "Click",
+        "next": [
+            "VP_判断是否计划模式",
+            "VP_点击计划模式"
+        ]
+    },
+    "VP_判断是否计划模式": {
+        "recognition": "TemplateMatch",
+        "template": "Activity/是否计划.png",
+        "next": [
+            "VP_打捞线终点"
+        ]
+    },
+    "VP_点击梯队1": {
+        "recognition": "TemplateMatch",
+        "template": "Activity/梯队1.png",
+        "action": "Click",
+        "target_offset": [
+            -30,
+            30,
+            10,
+            -6
+        ],
+        "post_delay": 600,
+        "next": [
+            "VP判断是否选中梯队1",
+            "VP_点击梯队1"
+        ]
+    },
+    "VP判断是否选中梯队1": {
+        "recognition": "OCR",
+        "roi": [
+            1143,
+            109,
+            127,
+            68
+        ],
+        "expected": "指令",
+        "next": [
+            "VP_点击计划模式"
+        ]
+    },
+    "VP_打捞线终点": {
+        "next": [
+            "VP_判断是否选中终点",
+            "VP_打捞线终点"
+        ]
+    },
+    "VP_判断是否选中终点": {
+        "recognition": "OCR",
+        "roi": [
+            1095,
+            522,
+            133,
+            50
+        ],
+        "expected": "下一",
+        "next": [
+            "VP_执行计划"
+        ]
+    },
+    "VP_执行计划": {
+        "recognition": "OCR",
+        "roi": [
+            1059,
+            586,
+            221,
+            134
+        ],
+        "expected": "计划",
+        "action": "Click",
+        "post_delay": 6500,
+        "next": "VP加速结算"
+    },
+    "VP加速结算": {
+        "action": "DoNothing",
+        "post_delay": 450,
+        "next": [
+            "VP_再次作战"
+        ],
+        "interrupt": [
+            "VP_加速结算",
+            "VP_加速结算1",
+            "VP_invert"
+        ]
+    },
+    "VP_invert": {
+        "action": "DoNothing",
+        "inverse": true,
+        "recognition": "OCR",
+        "expected": "hello"
+    },
+    "VP_加速结算": {
+        "recognition": "TemplateMatch",
+        "template": "Activity/加速结算.png",
+        "roi": [
+            0,
+            0,
+            201,
+            80
+        ],
+        "pre_delay": 50,
+        "action": "Click",
+        "target": [
+            602,
+            76,
+            110,
+            44
+        ],
+        "post_delay": 50
+    },
+    "VP_加速结算1": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            866,
+            2,
+            413,
+            619
+        ],
+        "template": [
+            "combat/levelUp/13-4/doll_get0.png",
+            "combat/levelUp/13-4/doll_get2.png",
+            "combat/levelUp/13-4/doll_get3.png",
+            "combat/levelUp/13-4/doll_get4.png",
+            "Activity/get5.png"
+        ],
+        "action": "Click",
+        "pre_delay": 50,
+        "post_delay": 50
+    },
+    "VP_再次作战": {
+        "recognition": "OCR",
+        "roi": [
+            277,
+            572,
+            188,
+            73
+        ],
+        "expected": [
+            "再次作战"
+        ],
+        "action": "Click",
+        "rate_limit": 1000,
+        "next": [
+            "VP_次数作战_开始作战",
+            "VP_再次作战",
+            "VP_作战菜单进入"
+        ],
+        "interrupt": [
+            "public_人形回收",
+            "VP_点击获得角色"
+        ]
+    },
+    "VP_点击获得角色": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            866,
+            2,
+            413,
+            619
+        ],
+        "template": [
+            "combat/levelUp/13-4/doll_get0.png",
+            "combat/levelUp/13-4/doll_get2.png",
+            "combat/levelUp/13-4/doll_get3.png",
+            "combat/levelUp/13-4/doll_get4.png",
+            "Activity/get5.png",
+            "Activity/战利品.png"
+        ],
+        "action": "Click",
+        "target_offset": [
+            -160,
+            -160,
+            0,
+            0
+        ],
+        "threshold": 0.7,
+        "pre_delay": 100,
+        "post_delay": 100,
+        "timeout": 40000
+    }
+}
