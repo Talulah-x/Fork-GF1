@@ -68,7 +68,7 @@
     },
     "零电荷_进入打捞关": {
         "recognition": "OCR",
-        "recommended roi" : [238,101,173,134],
+        " roi" : [238,101,173,134],
         "expected" : "Zero",
         "action": "Click",
         "post_delay": 400,
@@ -80,7 +80,7 @@
     },
     "零电荷_进入零电荷关卡": {
         "recognition": "OCR",
-        "recommended roi" : [895,139,340,157],
+        "roi" : [895,139,340,157],
         "expected" : "无来由的恐惧瞬间EX",
         "action": "Click",
         "target":[1120,391,92,38],
@@ -167,7 +167,7 @@
         "roi" : [1002,604,277,115],
         "action": "Click",
         "expected": [
-            "点"
+            "点击指挥"
         ],
         "next": [
             "零电荷_结束回合",
