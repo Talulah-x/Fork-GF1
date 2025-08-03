@@ -343,7 +343,8 @@
             200
         ],
         "template": "storage/navi_combat.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 500,
         "pre_delay": 1000,
         "next": []
     }

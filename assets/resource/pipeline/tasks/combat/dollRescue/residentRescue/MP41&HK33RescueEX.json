@@ -201,11 +201,13 @@
         ]
     },
     "MP41打捞_选中铁血": {
-        "recognition": "TemplateMatch",
-        "action": "Click",
-        "template": [
-            "combat/dollRescue/residentRescue/MP41&HK33RescueEX/第2梯队.png"
+        "target": [
+            472,
+            538,
+            15,
+            20
         ],
+        "action": "Click",
         "roi": [
             264,
             292,
@@ -213,19 +215,19 @@
             323
         ],
         "post_delay": 200,
-        "target_offset": [
-            -30,
-            20,
-            0,
-            0
-        ],
         "next": [
-            "MP41打捞_选中铁血",
-            "MP41打捞_点击补给"
+            "MP41打捞_点击补给",
+            "MP41打捞_选中铁血"
         ]
     },
     "MP41打捞_点击补给": {
         "recognition": "OCR",
+        "roi": [
+            1136,
+            512,
+            136,
+            96
+        ],
         "expected": [
             "补给"
         ],

@@ -241,8 +241,8 @@
             "执行计划"
         ],
         "action": "Click",
-
-        "timeout": 600000
+        "timeout": 600000,
+        "interrupt": "public_不中断计划"
     },
     "134战斗_梯队遇敌": {
         "recognition": "TemplateMatch",
@@ -265,10 +265,27 @@
         "pre_delay": 0,
         "post_delay": 200,
         "next": [
+            "134战斗_不中断计划",
             "134战斗_等待作战",
             "134战斗_加速结算"
         ],
         "timeout": 600000
+    },
+    "134战斗_不中断计划": {
+        "recognition": "OCR",
+        "expected": [
+            "中断"
+        ],
+        "rate_limit": 1000,
+        "action": "LongPress",
+        "duration": 500,
+        "target": [
+            467,
+            480,
+            118,
+            24
+        ],
+        "next": "134战斗_加速结算"
     },
     "134战斗_等待作战": {
         "recognition": "TemplateMatch",
