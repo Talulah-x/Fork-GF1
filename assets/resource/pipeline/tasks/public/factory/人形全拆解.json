@@ -27,10 +27,10 @@
     "public拆人形_智能选择点击选择角色": {
         "recognition": "TemplateMatch",
         "roi": [
-            518,
-            183,
-            83,
-            52
+            320,
+            180,
+            90,
+            61
         ],
         "template": "storage/选择角色.png",
         "action": "Click",
