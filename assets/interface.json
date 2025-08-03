@@ -136,9 +136,10 @@
         "✅活动菜单",
         "✅打捞关卡地图（进入地图即可请不要手动下队）",
         "使用前须知：",
+        "❗使用前打开自动补给，默认第一梯队打捞队，需带随意妖精",
         "❗仓库满了会拆解全部未锁人形!!!",
         "❗某轮结束后若要改变打捞目标请手动撤离打捞队",
-        "❗第一次使用前请将打捞关卡地图缩放最小并向左下拖拽到底"
+        "❗第一次使用前请将打捞关卡地图缩放到最小,嗯住左键从右上四项资源往左下计划模式方向拖拽，一直到拖拽不动为止"
       ],
       "option": [
         "选择打捞目标"
@@ -651,26 +652,31 @@
           "name": "M1895",
           "pipeline_override": {
             "VP_打捞线下队": {
-              "recognition": "TemplateMatch",
-              "template": "Activity/机场1.png",
-              "order_by": "Horizontal",
-              "index": 0,
+              "recognition": "DirectHit",
               "action": "Click",
-              "threshold": 0.5,
-              "pre_delay": 600,
+              "target": [
+                421,
+                587,
+                23,
+                16
+              ],
+              "pre_delay": 300,
+              "post_delay": 300,
               "next": [
                 "VP_确定下队"
               ]
             },
             "VP_打捞线终点": {
-              "recognition": "TemplateMatch",
-              "template": "Activity/终点.png",
-              "order_by": "Horizontal",
-              "index": 0,
+              "recognition": "DirectHit",
               "action": "Click",
-              "threshold": 0.5,
-              "pre_delay": 600,
-              "post_delay": 800,
+              "target": [
+                296,
+                209,
+                18,
+                16
+              ],
+              "pre_delay": 300,
+              "post_delay": 300,
               "next": [
                 "VP_判断是否选中终点",
                 "VP_打捞线终点"
@@ -682,26 +688,31 @@
           "name": "Cx4风暴",
           "pipeline_override": {
             "VP_打捞线下队": {
-              "recognition": "TemplateMatch",
-              "template": "Activity/机场1.png",
-              "order_by": "Horizontal",
-              "index": 0,
+              "recognition": "DirectHit",
               "action": "Click",
-              "threshold": 0.5,
-              "pre_delay": 600,
+              "target": [
+                405,
+                593,
+                17,
+                18
+              ],
+              "pre_delay": 300,
+              "post_delay": 300,
               "next": [
                 "VP_确定下队"
               ]
             },
             "VP_打捞线终点": {
-              "recognition": "TemplateMatch",
-              "template": "Activity/终点.png",
-              "order_by": "Horizontal",
-              "index": 1,
+              "recognition": "DirectHit",
               "action": "Click",
-              "threshold": 0.5,
-              "pre_delay": 600,
-              "post_delay": 800,
+              "target": [
+                548,
+                210,
+                20,
+                14
+              ],
+              "pre_delay": 300,
+              "post_delay": 300,
               "next": [
                 "VP_判断是否选中终点",
                 "VP_打捞线终点"
@@ -713,26 +724,26 @@
           "name": "SR5",
           "pipeline_override": {
             "VP_打捞线下队": {
-              "recognition": "TemplateMatch",
-              "template": "Activity/机场1.png",
-              "order_by": "Horizontal",
-              "index": 1,
+              "recognition": "DirectHit",
               "action": "Click",
-              "threshold": 0.5,
-              "pre_delay": 600,
+              "target": [
+                673,
+                587,
+                23,
+                17
+              ],
+              "pre_delay": 300,
+              "post_delay": 300,
               "next": [
                 "VP_确定下队"
               ]
             },
             "VP_打捞线终点": {
-              "recognition": "TemplateMatch",
-              "template": "Activity/终点.png",
-              "order_by": "Horizontal",
-              "index": 1,
+              "recognition": "DirectHit",
               "action": "Click",
-              "threshold": 0.5,
-              "pre_delay": 600,
-              "post_delay": 800,
+"target" : [548,210,20,14],
+              "pre_delay": 300,
+              "post_delay": 300,
               "next": [
                 "VP_判断是否选中终点",
                 "VP_打捞线终点"
@@ -744,26 +755,26 @@
           "name": "AK-74U",
           "pipeline_override": {
             "VP_打捞线下队": {
-              "recognition": "TemplateMatch",
-              "template": "Activity/机场1.png",
-              "order_by": "Horizontal",
-              "index": 1,
+              "recognition": "DirectHit",
               "action": "Click",
-              "threshold": 0.5,
-              "pre_delay": 600,
+              "target": [
+                673,
+                587,
+                23,
+                17
+              ],
+              "pre_delay": 300,
+              "post_delay": 300,
               "next": [
                 "VP_确定下队"
               ]
             },
             "VP_打捞线终点": {
-              "recognition": "TemplateMatch",
-              "template": "Activity/终点.png",
-              "order_by": "Horizontal",
-              "index": 2,
+              "recognition": "DirectHit",
               "action": "Click",
-              "threshold": 0.5,
-              "pre_delay": 600,
-              "post_delay": 800,
+"target" : [801,209,19,16],
+              "pre_delay": 300,
+              "post_delay": 300,
               "next": [
                 "VP_判断是否选中终点",
                 "VP_打捞线终点"
@@ -775,43 +786,28 @@
           "name": "TKB-408",
           "pipeline_override": {
             "VP_打捞线下队": {
-              "recognition": "TemplateMatch",
-              "roi": [
-                736,
-                8,
-                543,
-                323
-              ],
-              "template": [
-                "Activity/机场2.png",
-                "Activity/机场21.png"
+              "recognition": "DirectHit",
+              "target": [
+                861,
+                282,
+                25,
+                23
               ],
               "action": "Click",
-              "threshold": 0.5,
               "pre_delay": 800,
               "next": [
                 "VP_确定下队"
               ]
             },
             "VP_打捞线终点": {
-              "recognition": "TemplateMatch",
-              "template": [
-                "Activity/终点2.png",
-                "Activity/终点21.png"
-              ],
-              "roi": [
-                838,
-                482,
-                253,
-                144
+              "recognition": "DirectHit",
+              "target": [
+                861,
+                587,
+                21,
+                17
               ],
               "action": "Click",
-              "target_offset": [
-                -15,
-                0,
-                -15,
-                0
-              ],
               "pre_delay": 600,
               "post_delay": 800,
               "next": [
