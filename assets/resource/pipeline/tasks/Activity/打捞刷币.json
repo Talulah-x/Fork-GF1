@@ -19,7 +19,7 @@
             "粒"
         ],
         "action": "Click",
-        "pre_delay": 900,
+        "pre_delay": 10,
         "post_delay": 2500
     },
     "VP_拖动菜单": {
@@ -213,13 +213,14 @@
     "VP_入加速结算": {
         "recognition": "TemplateMatch",
         "template": "Activity/加速结算.png",
+        "threshold": 0.5,
         "roi": [
             1,
             1,
             201,
             80
         ],
-        "pre_delay": 50,
+        "pre_delay": 10,
         "action": "Click",
         "target": [
             800,
@@ -227,7 +228,7 @@
             133,
             70
         ],
-        "post_delay": 200,
+        "timeout": 600000,
         "next": [
             "VP_出加速结算"
         ],
@@ -238,9 +239,16 @@
     "VP_出加速结算": {
         "recognition": "TemplateMatch",
         "template": [
-            "Activity/加速结算.png",
             "Activity/战利品.png"
         ],
+        "action": "Click",
+        "target": [
+            1,
+            1,
+            201,
+            80
+        ],
+        "pre_delay": 500,
         "post_delay": 8500
     },
     "VP_加速结算1": {
@@ -252,8 +260,8 @@
             70
         ],
         "action": "Click",
-        "pre_delay": 100,
-        "post_delay": 300
+        "pre_delay": 1,
+        "post_delay": 1
     },
     "VP_再次作战": {
         "recognition": "OCR",
@@ -267,7 +275,8 @@
             "再次作战"
         ],
         "action": "Click",
-        "rate_limit": 1000,
+        "post_delay": 800,
+        "rate_limit": 1200,
         "next": [
             "VP_次数作战_开始作战",
             "VP_再次作战",
