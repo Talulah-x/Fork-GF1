@@ -192,67 +192,68 @@
         "next": "VP加速结算"
     },
     "VP加速结算": {
+        "recognition": "DirectHit",
         "action": "DoNothing",
-        "post_delay": 400,
+        "post_delay": 200,
+        "timeout": 700000,
         "next": [
             "VP_再次作战"
         ],
         "interrupt": [
-            "VP_加速结算",
-            "VP_加速结算1",
+            "VP_入加速结算",
             "VP_invert"
         ]
     },
     "VP_invert": {
+        "recognition": "OCR",
         "action": "DoNothing",
         "inverse": true,
-        "recognition": "OCR",
-        "expected": "hello"
+        "expected": "HELLO"
     },
-    "VP_加速结算": {
+    "VP_入加速结算": {
         "recognition": "TemplateMatch",
         "template": "Activity/加速结算.png",
         "roi": [
-            0,
-            0,
+            1,
+            1,
             201,
             80
         ],
         "pre_delay": 50,
         "action": "Click",
         "target": [
-            602,
-            76,
-            110,
-            44
+            800,
+            312,
+            133,
+            70
         ],
-        "post_delay": 50
-    },
-    "VP_加速结算1": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            866,
-            2,
-            413,
-            619
-        ],
-        "template": [
-            "combat/levelUp/13-4/doll_get0.png",
-            "combat/levelUp/13-4/doll_get2.png",
-            "combat/levelUp/13-4/doll_get3.png",
-            "combat/levelUp/13-4/doll_get4.png",
-            "Activity/get5.png"
-        ],
-        "action": "Click",
-        "pre_delay": 50,
-        "post_delay": 50,
+        "post_delay": 200,
         "next": [
-            "VP_防止中断计划"
+            "VP_出加速结算"
+        ],
+        "interrupt": [
+            "VP_加速结算1"
         ]
     },
-    "VP_防止中断计划": {
-        "action": "DoNothing",
+    "VP_出加速结算": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Activity/加速结算.png",
+            "Activity/战利品.png"
+        ],
         "post_delay": 8500
+    },
+    "VP_加速结算1": {
+        "recognition": "DirectHit",
+        "target": [
+            800,
+            312,
+            133,
+            70
+        ],
+        "action": "Click",
+        "pre_delay": 100,
+        "post_delay": 300
     },
     "VP_再次作战": {
         "recognition": "OCR",
@@ -278,31 +279,16 @@
         ]
     },
     "VP_点击获得角色": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            866,
-            2,
-            413,
-            619
-        ],
-        "template": [
-            "combat/levelUp/13-4/doll_get0.png",
-            "combat/levelUp/13-4/doll_get2.png",
-            "combat/levelUp/13-4/doll_get3.png",
-            "combat/levelUp/13-4/doll_get4.png",
-            "Activity/get5.png",
-            "Activity/战利品.png"
-        ],
+        "recognition": "DirectHit",
         "action": "Click",
-        "target_offset": [
-            -160,
-            -160,
-            0,
-            0
+        "roi": [
+            310,
+            607,
+            150,
+            39
         ],
-        "threshold": 0.7,
         "pre_delay": 100,
         "post_delay": 100,
-        "timeout": 40000
+        "timeout": 600000
     }
 }
