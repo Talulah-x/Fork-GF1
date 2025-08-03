@@ -1,19 +1,19 @@
 {
-    "public拆人形_人形回收": {
+    "public拆装备_装备回收": {
         "recognition": "OCR",
-        "expected": "人形回收",
+        "expected": "装备回收",
         "roi": [
-            529,
-            253,
-            248,
-            345
+            516,
+            313,
+            139,
+            61
         ],
         "action": "Click",
         "next": [
-            "!人形回收总流程"
+            "!装备回收总流程"
         ]
     },
-    "!人形回收总流程": {
+    "!装备回收总流程": {
         "recognition": "OCR",
         "expected": [
             "资源回收"
@@ -21,10 +21,10 @@
         "action": "Click",
         "post_delay": 800,
         "next": [
-            "public拆人形_智能选择点击选择角色"
+            "public拆装备_智能选择点击选择装备"
         ]
     },
-    "public拆人形_智能选择点击选择角色": {
+    "public拆装备_智能选择点击选择装备": {
         "recognition": "TemplateMatch",
         "roi": [
             518,
@@ -32,44 +32,62 @@
             83,
             52
         ],
-        "template": "storage/选择角色.png",
+        "template": "storage/选择装备.png",
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "public拆人形_智能选择",
-            "public拆人形_智能选择点击选择角色",
-            "public拆人形_无角色可选"
+            "public拆装备_智能选择",
+            "public拆装备_智能选择点击选择装备",
+            "public拆装备_无装备可选"
         ]
     },
-    "public拆人形_白屏处理": {
+    "public拆装备_白屏处理": {
         "recognition": "OCR",
+        "roi": [
+            1097,
+            589,
+            160,
+            83
+        ],
         "expected": [
             "智能选择"
         ],
-        "next": "public拆人形_进入导航栏"
+        "next": "public拆装备_进入导航栏"
     },
-    "public拆人形_智能选择": {
+    "public拆装备_智能选择": {
         "recognition": "OCR",
+        "roi": [
+            1097,
+            589,
+            160,
+            83
+        ],
         "expected": [
             "智能选择"
         ],
         "action": "Click",
         "post_delay": 400,
         "next": [
-            "public拆人形_智能选择人形拆解选择确定"
+            "public拆装备_智能选择装备拆解选择确定"
         ]
     },
-    "public拆人形_智能选择人形拆解选择确定": {
+    "public拆装备_智能选择装备拆解选择确定": {
         "recognition": "OCR",
+        "roi": [
+            1089,
+            577,
+            181,
+            128
+        ],
         "expected": [
             "确定"
         ],
         "action": "Click",
         "next": [
-            "public拆人形_智能选择回收"
+            "public拆装备_智能选择回收"
         ]
     },
-    "public拆人形_智能选择回收": {
+    "public拆装备_智能选择回收": {
         "recognition": "OCR",
         "roi": [
             1025,
@@ -81,36 +99,37 @@
             "回收"
         ],
         "action": "Click",
-        "post_delay": 2000,
+        "post_delay": 1500,
+        "post_wait_freezes": 1,
         "next": [
-            "public拆人形_手动选择点击选择角色"
+            "public拆装备_手动选择点击选择装备"
         ]
     },
-    "public拆人形_手动选择点击选择角色": {
+    "public拆装备_手动选择点击选择装备": {
         "target": [
-            318,
-            193,
-            49,
-            36
+            499,
+            184,
+            77,
+            56
         ],
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "public拆人形_手动选择",
-            "public拆人形_无角色可选",
-            "public拆人形_手动选择点击选择角色"
+            "public拆装备_手动选择",
+            "public拆装备_无装备可选",
+            "public拆装备_手动选择点击选择装备"
         ]
     },
-    "public拆人形_手动选择": {
+    "public拆装备_手动选择": {
         "recognition": "OCR",
         "expected": [
             "智能选择"
         ],
         "next": [
-            "public拆人形_手动选择1"
+            "public拆装备_手动选择1"
         ]
     },
-    "public拆人形_手动选择1": {
+    "public拆装备_手动选择1": {
         "action": "Click",
         "target": [
             80,
@@ -119,10 +138,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择2"
+            "public拆装备_手动选择2"
         ]
     },
-    "public拆人形_手动选择2": {
+    "public拆装备_手动选择2": {
         "action": "Click",
         "target": [
             250,
@@ -131,10 +150,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择3"
+            "public拆装备_手动选择3"
         ]
     },
-    "public拆人形_手动选择3": {
+    "public拆装备_手动选择3": {
         "action": "Click",
         "target": [
             420,
@@ -143,10 +162,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择4"
+            "public拆装备_手动选择4"
         ]
     },
-    "public拆人形_手动选择4": {
+    "public拆装备_手动选择4": {
         "action": "Click",
         "target": [
             590,
@@ -155,10 +174,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择5"
+            "public拆装备_手动选择5"
         ]
     },
-    "public拆人形_手动选择5": {
+    "public拆装备_手动选择5": {
         "action": "Click",
         "target": [
             760,
@@ -167,10 +186,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择6"
+            "public拆装备_手动选择6"
         ]
     },
-    "public拆人形_手动选择6": {
+    "public拆装备_手动选择6": {
         "action": "Click",
         "target": [
             930,
@@ -179,10 +198,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择7"
+            "public拆装备_手动选择7"
         ]
     },
-    "public拆人形_手动选择7": {
+    "public拆装备_手动选择7": {
         "action": "Click",
         "target": [
             80,
@@ -191,10 +210,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择8"
+            "public拆装备_手动选择8"
         ]
     },
-    "public拆人形_手动选择8": {
+    "public拆装备_手动选择8": {
         "action": "Click",
         "target": [
             250,
@@ -203,10 +222,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择9"
+            "public拆装备_手动选择9"
         ]
     },
-    "public拆人形_手动选择9": {
+    "public拆装备_手动选择9": {
         "action": "Click",
         "target": [
             420,
@@ -215,10 +234,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择10"
+            "public拆装备_手动选择10"
         ]
     },
-    "public拆人形_手动选择10": {
+    "public拆装备_手动选择10": {
         "action": "Click",
         "target": [
             590,
@@ -227,10 +246,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择11"
+            "public拆装备_手动选择11"
         ]
     },
-    "public拆人形_手动选择11": {
+    "public拆装备_手动选择11": {
         "action": "Click",
         "target": [
             760,
@@ -239,10 +258,10 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择12"
+            "public拆装备_手动选择12"
         ]
     },
-    "public拆人形_手动选择12": {
+    "public拆装备_手动选择12": {
         "action": "Click",
         "target": [
             930,
@@ -251,21 +270,21 @@
             24
         ],
         "next": [
-            "public拆人形_手动选择人形拆解选择确定",
-            "public拆人形_白屏处理"
+            "public拆装备_手动选择装备拆解选择确定",
+            "public拆装备_白屏处理"
         ]
     },
-    "public拆人形_手动选择人形拆解选择确定": {
+    "public拆装备_手动选择装备拆解选择确定": {
         "recognition": "OCR",
         "expected": [
             "确定"
         ],
         "action": "Click",
         "next": [
-            "public拆人形_手动选择回收"
+            "public拆装备_手动选择回收"
         ]
     },
-    "public拆人形_手动选择回收": {
+    "public拆装备_手动选择回收": {
         "recognition": "OCR",
         "roi": [
             1025,
@@ -278,27 +297,27 @@
         ],
         "action": "Click",
         "next": [
-            "public拆人形_回收确定"
+            "public拆装备_回收确定"
         ]
     },
-    "public拆人形_回收确定": {
+    "public拆装备_回收确定": {
         "recognition": "TemplateMatch",
         "template": "storage/retire_confirm.png",
         "action": "Click",
         "next": [
-            "public拆人形_手动选择点击选择角色"
+            "public拆装备_手动选择点击选择装备"
         ]
     },
-    "public拆人形_无角色可选": {
+    "public拆装备_无装备可选": {
         "recognition": "OCR",
         "expected": [
             "没有"
         ],
         "next": [
-            "public拆人形_进入导航栏"
+            "public拆装备_进入导航栏"
         ]
     },
-    "public拆人形_进入导航栏": {
+    "public拆装备_进入导航栏": {
         "recognition": "TemplateMatch",
         "roi": [
             124,
@@ -311,11 +330,11 @@
         "pre_delay": 800,
         "post_wait_freezes": 200,
         "next": [
-            "public拆人形_导航栏战斗",
-            "public拆人形_进入导航栏"
+            "public拆装备_导航栏战斗",
+            "public拆装备_进入导航栏"
         ]
     },
-    "public拆人形_导航栏战斗": {
+    "public拆装备_导航栏战斗": {
         "recognition": "TemplateMatch",
         "roi": [
             80,

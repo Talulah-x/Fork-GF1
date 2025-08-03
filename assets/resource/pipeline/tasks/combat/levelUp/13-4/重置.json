@@ -18,7 +18,7 @@
             "134重置_点击获得角色",
             "134进入_点击134"
         ],
-        "interrupt": "public_人形回收"
+        "interrupt": "public拆人形_人形回收"
     },
     "134重置_点击获得角色": {
         "recognition": "TemplateMatch",
