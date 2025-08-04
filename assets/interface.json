@@ -66,7 +66,7 @@
       ]
     },
     {
-      "name": "跑步机",
+      "name": "跑步机（WIP，仍需调试）",
       "entry": "!跑步机总流程",
       "check": false,
       "doc": " **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
