@@ -252,7 +252,7 @@
           "name": "关闭结算加速",
           "pipeline_override": {
             "134战斗_执行计划": {
-              "post_delay": 65000,
+              "post_delay": 65000
             }
           }
         }
