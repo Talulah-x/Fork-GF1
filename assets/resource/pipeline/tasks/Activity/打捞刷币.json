@@ -10,16 +10,16 @@
     "VP_作战菜单进入": {
         "recognition": "OCR",
         "roi": [
-            42,
-            62,
-            141,
-            131
+            39,
+            109,
+            103,
+            74
         ],
         "expected": [
-            "粒"
+            "虚粒"
         ],
         "action": "Click",
-        "pre_delay": 10,
+        "pre_wait_freezes": 500,
         "post_delay": 2500
     },
     "VP_拖动菜单": {
@@ -290,14 +290,13 @@
     "VP_点击获得角色": {
         "recognition": "DirectHit",
         "action": "Click",
-        "roi": [
-            310,
-            607,
-            150,
-            39
+        "target": [
+            386,
+            620,
+            1,
+            1
         ],
         "pre_delay": 100,
-        "post_delay": 100,
         "timeout": 600000
     }
 }
