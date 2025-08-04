@@ -304,6 +304,7 @@
         "recognition": "TemplateMatch",
         "template": "storage/retire_confirm.png",
         "action": "Click",
+        "post_wait_freezes":500,
         "next": [
             "public拆装备_手动选择点击选择装备"
         ]

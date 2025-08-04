@@ -49,6 +49,12 @@
     },
     "134战斗_点击补给": {
         "recognition": "OCR",
+        "roi":[
+            1141,
+            535,
+            117,
+            55
+        ],
         "expected": [
             "补给"
         ],
@@ -108,13 +114,12 @@
     "134战斗_点击1队取消": {
         "recognition": "OCR",
         "roi": [
-            1071,
-            592,
-            192,
-            88
+            1074,
+            601,
+            181,
+            73
         ],
         "expected": [
-            "确定",
             "取消"
         ],
         "action": "Click",
@@ -124,12 +129,14 @@
         ]
     },
     "134战斗_点击计划模式": {
-        "recognition": "OCR",
-        "expected": [
-            "计划模式"
+        "target":[
+            5,
+            614,
+            130,
+            34
         ],
         "action": "Click",
-        "post_delay": 1500,
+        "post_delay": 500,
         "next": [
             "134战斗_巡游者"
         ]
@@ -236,9 +243,11 @@
         ]
     },
     "134战斗_执行计划": {
-        "recognition": "OCR",
-        "expected": [
-            "执行计划"
+        "target":[
+            1105,
+            627,
+            153,
+            74
         ],
         "action": "Click",
         "timeout": 600000,
@@ -246,6 +255,12 @@
     },
     "134战斗_梯队遇敌": {
         "recognition": "TemplateMatch",
+        "roi":[
+            287,
+            179,
+            438,
+            270
+        ],
         "template": "combat/levelUp/13-4/794.png",
         "post_delay": 9000,
         "rate_limit": 100,
@@ -273,12 +288,18 @@
     },
     "134战斗_不中断计划": {
         "recognition": "OCR",
+        "roi":[
+            518,
+            280,
+            231,
+            64
+        ],
         "expected": [
             "中断"
         ],
-        "rate_limit": 1000,
+        "rate_limit": 100,
         "action": "LongPress",
-        "duration": 500,
+        "duration": 200,
         "target": [
             467,
             480,
@@ -289,6 +310,12 @@
     },
     "134战斗_等待作战": {
         "recognition": "TemplateMatch",
+        "roi":[
+            287,
+            179,
+            438,
+            270
+        ],
         "template": "combat/levelUp/13-4/794.png",
         "rate_limit": 100,
         "next": [

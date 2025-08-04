@@ -87,12 +87,14 @@
         ]
     },
     "public拆人形_手动选择点击选择角色": {
-        "target": [
-            318,
-            193,
-            49,
-            36
+        "recognition": "TemplateMatch",
+        "roi": [
+            320,
+            180,
+            90,
+            61
         ],
+        "template": "storage/选择角色.png",
         "action": "Click",
         "post_delay": 1000,
         "next": [
@@ -285,6 +287,7 @@
         "recognition": "TemplateMatch",
         "template": "storage/retire_confirm.png",
         "action": "Click",
+        "post_wait_freezes":500,
         "next": [
             "public拆人形_手动选择点击选择角色"
         ]

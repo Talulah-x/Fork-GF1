@@ -155,8 +155,8 @@
           "name": "专属装备强化",
           "pipeline_override": {
             "81N_选择装备处理方式": {
-              "next": [
-                "81N装备强化_装备强化"
+              "interrupt": [
+                "public装备强化_装备强化"
               ]
             }
           }
@@ -165,8 +165,18 @@
           "name": "拆解（锁上需保留装备）",
           "pipeline_override": {
             "81N_选择装备处理方式": {
-              "next": [
+              "interrupts": [
                 "public拆装备_装备回收"
+              ]
+            }
+          }
+        },        {
+          "name": "结束任务",
+          "pipeline_override": {
+            "81N_选择装备处理方式": {
+              "timeout": 1000,
+              "interrupt": [
+                
               ]
             }
           }
