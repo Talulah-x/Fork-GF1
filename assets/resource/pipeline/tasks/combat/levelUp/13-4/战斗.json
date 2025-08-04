@@ -262,7 +262,7 @@
             270
         ],
         "template": "combat/levelUp/13-4/794.png",
-        "post_delay": 8000,
+        "post_delay": 9000,
         "rate_limit": 100,
         "next": [
             "134战斗_加速结算"
