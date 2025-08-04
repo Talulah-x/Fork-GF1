@@ -1,0 +1,182 @@
+{
+    "public_不中断计划": {
+        "recognition": "OCR",
+        "expected": [
+            "中断"
+        ],
+        "rate_limit": 1000,
+        "action": "LongPress",
+        "duration": 500,
+        "target": [
+            467,
+            480,
+            118,
+            24
+        ],
+        "next": []
+    },
+    "public_加速结算进入": {
+        "recognition": "OCR",
+        "expected": [
+            "结算"
+        ],
+        "rate_limit": 1000,
+        "roi": [
+            0,
+            0,
+            249,
+            122
+        ],
+        "action": "Click",
+        "target": [
+            372,
+            615,
+            80,
+            21
+        ],
+        "post_delay": 1,
+        "next": [
+            "public_加速结算点击1"
+        ]
+    },
+    "public_加速结算点击1": {
+        "target": [
+            372,
+            615,
+            80,
+            21
+        ],
+        "rate_limit": 20,
+        "post_delay": 1,
+        "action": "Click",
+        "next": [
+            "public_加速结算点击2"
+        ]
+    },
+    "public_加速结算点击2": {
+        "target": [
+            372,
+            615,
+            80,
+            21
+        ],
+        "rate_limit": 20,
+        "post_delay": 1,
+        "action": "Click",
+        "next": [
+            "public_加速结算点击3"
+        ]
+    },
+    "public_加速结算点击3": {
+        "target": [
+            372,
+            615,
+            80,
+            21
+        ],
+        "rate_limit": 20,
+        "post_delay": 1,
+        "action": "Click",
+        "next": [
+            "public_加速结算点击4"
+        ]
+    },
+    "public_加速结算点击4": {
+        "target": [
+            372,
+            615,
+            80,
+            21
+        ],
+        "rate_limit": 20,
+        "post_delay": 1,
+        "action": "Click",
+        "next": [
+            "public_加速结算点击10"
+        ]
+    },
+    "public_加速结算点击5": {
+        "target": [
+            372,
+            615,
+            80,
+            21
+        ],
+        "rate_limit": 20,
+        "post_delay": 1,
+        "action": "Click",
+        "next": []
+    },
+    "public_加速结算点击6": {
+        "target": [
+            1230,
+            320,
+            36,
+            149
+        ],
+        "rate_limit": 20,
+        "post_delay": 1,
+        "action": "Click",
+        "next": [
+            "public_加速结算点击7"
+        ]
+    },
+    "public_加速结算点击7": {
+        "target": [
+            1230,
+            320,
+            36,
+            149
+        ],
+        "rate_limit": 20,
+        "post_delay": 1,
+        "action": "Click",
+        "next": [
+            "public_加速结算点击8"
+        ]
+    },
+    "public_加速结算点击8": {
+        "target": [
+            1230,
+            320,
+            36,
+            149
+        ],
+        "rate_limit": 20,
+        "post_delay": 1,
+        "action": "Click",
+        "next": [
+            "public_加速结算点击9"
+        ]
+    },
+    "public_加速结算点击9": {
+        "target": [
+            1230,
+            320,
+            36,
+            149
+        ],
+        "rate_limit": 20,
+        "post_delay": 1,
+        "action": "Click",
+        "next": [
+            "public_加速结算点击10"
+        ]
+    },
+    "public_加速结算点击10": {
+        "target": [
+            372,
+            615,
+            80,
+            21
+        ],
+        "rate_limit": 20,
+        "action": "LongPress",
+        "duration": 100,
+        "post_delay": 10000,
+        "next": [
+            "public_加速后等待"
+        ]
+    },
+    "public_加速后等待": {}
+}

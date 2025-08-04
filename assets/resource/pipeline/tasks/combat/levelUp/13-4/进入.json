@@ -7,6 +7,7 @@
         ],
         "next": [
             "134进入_点击134",
+            "134部署_布置完成",
             "134部署_部署梯队",
             "134部署_弹药检查new"
         ],
@@ -17,6 +18,12 @@
     "134进入_点击134": {
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/13-4/run134.png",
+        "roi": [
+            393,
+            300,
+            834,
+            419
+        ],
         "action": "Click",
         "next": [
             "134进入_普通作战"

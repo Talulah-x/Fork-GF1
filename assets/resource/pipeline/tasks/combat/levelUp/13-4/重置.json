@@ -13,12 +13,13 @@
         "action": "Click",
         "rate_limit": 1000,
         "next": [
-            "134部署_布置完成",
             "134重置_再次作战",
-            "134重置_点击获得角色",
-            "134进入_点击134"
+            "134重置_点击获得角色"
         ],
-        "interrupt": "public拆人形_人形回收"
+        "interrupt": [
+            "public拆人形_人形回收",
+            "public拆人形_导航栏战斗"
+        ]
     },
     "134重置_点击获得角色": {
         "recognition": "TemplateMatch",

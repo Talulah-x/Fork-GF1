@@ -34,8 +34,12 @@
         ]
     },
     "81N_选择装备处理方式": {
-        "next":"!81N总流程",
-        "interrupt":[]
+        "next": [
+            "81N进入_点击8-1N"
+        ],
+        "interrupt": [
+            "public拆人形_导航栏战斗"
+        ]
     },
     "81N战斗_点击2队单zas准备补给": {
         "recognition": "TemplateMatch",
@@ -266,64 +270,12 @@
             "执行计划"
         ],
         "action": "Click",
-        "interrupt": "public_不中断计划"
-    },
-    "81N战斗_梯队遇敌": {
-        "recognition": "TemplateMatch",
-        "template": "combat/levelUp/8-1N/794.png",
-        "post_delay": 5000,
-        "rate_limit": 100,
         "next": [
-            "81N战斗_加速结算"
-        ],
-        "timeout": 600000
-    },
-    "81N战斗_加速结算": {
-        "action": "Click",
-        "target": [
-            971,
-            318,
-            147,
-            105
-        ],
-        "pre_delay": 0,
-        "post_delay": 200,
-        "next": [
-            "81N战斗_不中断计划",
-            "81N战斗_等待作战",
-            "81N战斗_加速结算"
-        ],
-        "timeout": 600000
-    },
-    "81N战斗_不中断计划": {
-        "recognition": "OCR",
-        "expected": [
-            "中断"
-        ],
-        "rate_limit": 1000,
-        "action": "LongPress",
-        "duration": 500,
-        "target": [
-            467,
-            480,
-            118,
-            24
-        ],
-        "next": "81N战斗_加速结算"
-    },
-    "81N战斗_等待作战": {
-        "recognition": "TemplateMatch",
-        "template": "combat/levelUp/8-1N/794.png",
-        "rate_limit": 100,
-        "next": [
-            "81N战斗_梯队遇敌",
             "81N战斗_剩余行动01"
         ],
-        "post_delay": 3000,
         "interrupt": [
             "public_不中断计划"
-        ],
-        "timeout": 600000
+        ]
     },
     "81N战斗_剩余行动01": {
         "recognition": "TemplateMatch",

@@ -36,7 +36,7 @@
       "entry": "!134总流程",
       "check": false,
       "doc": "请在第十三战役-普通界面或者进入13-4地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/13-4%E5%8F%8C%E6%89%93%E6%89%8B%E6%8B%96%E5%B0%B8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-      "repeatable": false,
+      "repeatable": true,
       "repeat_count": 1,
       "option": [
         "134_弹药检查版本选择",
@@ -64,6 +64,14 @@
         "81N_选择狗粮类型",
         "81N_装备溢出处理"
       ]
+    },
+    {
+      "name": "跑步机",
+      "entry": "!跑步机总流程",
+      "check": false,
+      "doc": " **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "repeatable": false,
+      "repeat_count": 1
     },
     {
       "name": "8-1N地图初始化",
@@ -170,14 +178,13 @@
               ]
             }
           }
-        },        {
+        },
+        {
           "name": "结束任务",
           "pipeline_override": {
             "81N_选择装备处理方式": {
               "timeout": 1000,
-              "interrupt": [
-                
-              ]
+              "interrupt": []
             }
           }
         }
@@ -213,10 +220,8 @@
           "name": "启用结算加速",
           "pipeline_override": {
             "81N战斗_执行计划": {
-              "next": [
-                "81N战斗_梯队遇敌",
-                "81N战斗_剩余行动01",
-                "81N战斗_执行计划"
+              "interrupt": [
+                "public_加速结算进入"
               ]
             }
           }
@@ -225,10 +230,7 @@
           "name": "关闭结算加速",
           "pipeline_override": {
             "81N战斗_执行计划": {
-              "post_delay": 65000,
-              "next": [
-                "81N战斗_剩余行动01"
-              ]
+              "post_delay": 65000
             }
           }
         }
@@ -240,9 +242,8 @@
           "name": "启用结算加速",
           "pipeline_override": {
             "134战斗_执行计划": {
-              "next": [
-                "134战斗_梯队遇敌",
-                "134重置_再次作战"
+              "interrupt": [
+                "public_加速结算进入"
               ]
             }
           }
@@ -252,9 +253,6 @@
           "pipeline_override": {
             "134战斗_执行计划": {
               "post_delay": 65000,
-              "next": [
-                "134重置_再次作战"
-              ]
             }
           }
         }
