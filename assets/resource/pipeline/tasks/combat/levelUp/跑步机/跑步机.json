@@ -1,4 +1,5 @@
-{"!跑步机总流程": {
+{
+    "!跑步机总流程": {
         "next": [
             "跑步机_主界面进入跑步机",
             "跑步机_常驻活动",
@@ -105,7 +106,12 @@
     },
     "跑步机_滑动到跑步机地图": {
         "recognition": "OCR",
-        "roi" : [554,158,204,141],
+        "roi": [
+            554,
+            158,
+            204,
+            141
+        ],
         "action": "Swipe",
         "expected": "EX",
         "begin": [
@@ -127,7 +133,12 @@
     },
     "跑步机_点击跑步机关卡": {
         "recognition": "OCR",
-        "roi" : [281,385,999,164],
+        "roi": [
+            281,
+            385,
+            999,
+            164
+        ],
         "expected": "EX",
         "action": "Click",
         "next": [
@@ -135,13 +146,22 @@
             "跑步机_点击跑步机关卡"
         ]
     },
-    
     "跑步机_进入跑步机关卡": {
         "recognition": "OCR",
-        "roi" : [887,142,345,160],
-        "expected" : "认知裂变I-战斗EX",
+        "roi": [
+            887,
+            142,
+            345,
+            160
+        ],
+        "expected": "认知裂变I-战斗EX",
         "action": "Click",
-        "target": [1130,394,94,32],
+        "target": [
+            1130,
+            394,
+            94,
+            32
+        ],
         "next": [
             "跑步机_初始化地图",
             "跑步机_进入跑步机关卡",
@@ -150,890 +170,1526 @@
     },
     "跑步机_确认进入": {
         "recognition": "OCR",
-        "roi" : [666,419,199,156] ,
-        "expected" : "确",
+        "roi": [
+            666,
+            419,
+            199,
+            156
+        ],
+        "expected": "确",
         "action": "Click",
         "next": [
             "跑步机_初始化地图",
             "跑步机_确认进入"
         ]
     },
-    "跑步机_初始化地图":{
-        "recognition":"OCR",
-        "roi" : [142,35,106,53],
-        "expected":"明",
-        "action":"Swipe",
-        "begin" : [279,107,1,1],
-        "end" : [962,609,1,1],
-        "next":[
+    "跑步机_初始化地图": {
+        "recognition": "OCR",
+        "roi": [
+            142,
+            35,
+            106,
+            53
+        ],
+        "expected": "明",
+        "action": "Swipe",
+        "begin": [
+            279,
+            107,
+            1,
+            1
+        ],
+        "end": [
+            962,
+            609,
+            1,
+            1
+        ],
+        "next": [
             "跑步机_梯队部署完成",
-            "跑步机_部署第一梯队"]
+            "跑步机_部署第一梯队"
+        ]
     },
-    "跑步机_梯队部署完成":{
-        "recognition":"OCR",
-        "roi" : [601,296,21,26],
-        "expected" : "2",
-        "action":"DoNothing",
-        "next":"跑步机_开始作战"
+    "跑步机_梯队部署完成": {
+        "recognition": "OCR",
+        "roi": [
+            601,
+            296,
+            21,
+            26
+        ],
+        "expected": "2",
+        "action": "DoNothing",
+        "next": "跑步机_开始作战"
     },
-    "跑步机_部署第一梯队":{
-        "recognition":"OCR",
-        "roi" : [142,35,106,53],
-        "expected":"明",
-        "action":"Click",
-        "target": [445,359,62,60],
-        "next":[
+    "跑步机_部署第一梯队": {
+        "recognition": "OCR",
+        "roi": [
+            142,
+            35,
+            106,
+            53
+        ],
+        "expected": "明",
+        "action": "Click",
+        "target": [
+            445,
+            359,
+            62,
+            60
+        ],
+        "next": [
             "跑步机_部署第一梯队",
             "跑步机_确认部署第一梯队",
-            "跑步机_初始化地图"]
+            "跑步机_初始化地图"
+        ]
     },
-    "跑步机_确认部署第一梯队":{
-        "recognition":"OCR",
-        "roi" : [1119,602,120,63],
-        "expected":"确",
-        "action":"Click",
-        "next":[
+    "跑步机_确认部署第一梯队": {
+        "recognition": "OCR",
+        "roi": [
+            1119,
+            602,
+            120,
+            63
+        ],
+        "expected": "确",
+        "action": "Click",
+        "next": [
             "跑步机_部署第二梯队",
             "跑步机_确认部署第一梯队"
         ]
     },
-    "跑步机_部署第二梯队":{
-        "recognition":"OCR",
-        "roi" : [142,35,106,53],
-        "expected":"明",
-        "action":"Click",
-        "target":[550,311,63,51],
-        "next":[
+    "跑步机_部署第二梯队": {
+        "recognition": "OCR",
+        "roi": [
+            142,
+            35,
+            106,
+            53
+        ],
+        "expected": "明",
+        "action": "Click",
+        "target": [
+            550,
+            311,
+            63,
+            51
+        ],
+        "next": [
             "跑步机_部署第二梯队",
-            "跑步机_切换梯队"]
+            "跑步机_切换梯队"
+        ]
     },
-    "跑步机_切换梯队":{
-        "recognition":"OCR",
-        "roi" : [262,45,168,78],
-        "expected":"梯队",
-        "action":"Click",
-        "next":[
+    "跑步机_切换梯队": {
+        "recognition": "OCR",
+        "roi": [
+            262,
+            45,
+            168,
+            78
+        ],
+        "expected": "梯队",
+        "action": "Click",
+        "next": [
             "跑步机_确认部署第二梯队",
             "跑步机_切换梯队"
         ]
     },
-    "跑步机_确认部署第二梯队":{
-        "recognition":"OCR",
-        "roi" : [1119,602,120,63],
-        "expected":"确",
-        "action":"Click",
-        "next":[
+    "跑步机_确认部署第二梯队": {
+        "recognition": "OCR",
+        "roi": [
+            1119,
+            602,
+            120,
+            63
+        ],
+        "expected": "确",
+        "action": "Click",
+        "next": [
             "跑步机_开始作战",
             "跑步机_确认部署第二梯队"
         ]
     },
-    "跑步机_开始作战":{
-        "recognition":"OCR",
-        "roi" : [1005,607,259,101],
-        "expected":"点击指挥部",
-        "action":"Click",
-        "next":[
+    "跑步机_开始作战": {
+        "recognition": "OCR",
+        "roi": [
+            1005,
+            607,
+            259,
+            101
+        ],
+        "expected": "点击指挥部",
+        "action": "Click",
+        "next": [
             "跑步机_计划模式1",
             "跑步机_开始作战"
         ]
     },
-    "跑步机_计划模式1":{
-        "recognition":"OCR",
-        "roi" : [1109,628,142,63],
-        "expected":"结束",
-        "action":"Click",
-        "target" : [26,615,113,33],
-        "next":[
+    "跑步机_计划模式1": {
+        "recognition": "OCR",
+        "roi": [
+            1109,
+            628,
+            142,
+            63
+        ],
+        "expected": "结束",
+        "action": "Click",
+        "target": [
+            26,
+            615,
+            113,
+            33
+        ],
+        "next": [
             "跑步机_点击第一梯队1",
             "跑步机_计划模式1"
         ]
     },
-    "跑步机_点击第一梯队1":{
-        "recognition":"OCR",
-        "roi" : [1108,629,141,64],
-        "expected":"执行",
-        "action":"Click",
-        "target" :[449,365,49,45],
-        "next":[
+    "跑步机_点击第一梯队1": {
+        "recognition": "OCR",
+        "roi": [
+            1108,
+            629,
+            141,
+            64
+        ],
+        "expected": "执行",
+        "action": "Click",
+        "target": [
+            449,
+            365,
+            49,
+            45
+        ],
+        "next": [
             "跑步机_第一回合计划1"
         ]
     },
-    "跑步机_第一回合计划1":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target" : [503,451,38,39],
-        "next":[
+    "跑步机_第一回合计划1": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            503,
+            451,
+            38,
+            39
+        ],
+        "next": [
             "跑步机_计划检测1",
             "跑步机_点击第一梯队1"
         ]
     },
-    "跑步机_计划检测1":{
-        "recognition":"OCR",
-        "roi" : [1099,518,156,65],
-        "expected":"下一",
-        "action":"DoNothing",
-        "next":[
+    "跑步机_计划检测1": {
+        "recognition": "OCR",
+        "roi": [
+            1099,
+            518,
+            156,
+            65
+        ],
+        "expected": "下一",
+        "action": "DoNothing",
+        "next": [
             "跑步机_点击第二梯队1"
         ]
     },
-    "跑步机_点击第二梯队1":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target" :[561,315,45,35],
-        "next":[
+    "跑步机_点击第二梯队1": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            561,
+            315,
+            45,
+            35
+        ],
+        "next": [
             "跑步机_选择第二梯队",
             "跑步机_点击第二梯队1"
         ]
     },
-    "跑步机_选择第二梯队":{
-        "recognition":"OCR",
-        "roi" : [588,263,219,150],
-        "expected" : "选",
-        "action":"Click",
-        "next":[
+    "跑步机_选择第二梯队": {
+        "recognition": "OCR",
+        "roi": [
+            588,
+            263,
+            219,
+            150
+        ],
+        "expected": "选",
+        "action": "Click",
+        "next": [
             "跑步机_第一回合计划2",
             "跑步机_选择第二梯队"
         ]
     },
-    "跑步机_第一回合计划2":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target": [809,327,26,32],
-        "next":[
+    "跑步机_第一回合计划2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            809,
+            327,
+            26,
+            32
+        ],
+        "next": [
             "跑步机_计划检测2",
             "跑步机_第一回合计划2"
         ]
     },
-    "跑步机_计划检测2":{
-        "recognition":"OCR",
-        "roi" : [943,614,166,106],
-        "expected":"1",
-        "action":"DoNothing",
-        "next":[
+    "跑步机_计划检测2": {
+        "recognition": "OCR",
+        "roi": [
+            943,
+            614,
+            166,
+            106
+        ],
+        "expected": "1",
+        "action": "DoNothing",
+        "next": [
             "跑步机_执行计划1"
         ]
     },
-    "跑步机_执行计划1":{
-        "recognition":"OCR",
-        "roi" : [1101,622,156,81],
-        "expected":"执行",
-        "action":"Click",
-        "next":[
+    "跑步机_执行计划1": {
+        "recognition": "OCR",
+        "roi": [
+            1101,
+            622,
+            156,
+            81
+        ],
+        "expected": "执行",
+        "action": "Click",
+        "next": [
             "跑步机_计划结束1",
             "跑步机_执行计划1"
         ]
     },
-    "跑步机_计划结束1":{
-        "recognition":"OCR",
-        "roi" : [1157,115,63,53],
-        "expected":"妖精",
-        "action":"Click",
-        "target":[376,317,44,40],
-        "next":[
+    "跑步机_计划结束1": {
+        "recognition": "OCR",
+        "roi": [
+            1157,
+            115,
+            63,
+            53
+        ],
+        "expected": "妖精",
+        "action": "Click",
+        "target": [
+            376,
+            317,
+            44,
+            40
+        ],
+        "next": [
             "跑步机_部署支援梯队"
         ]
     },
-    "跑步机_部署支援梯队":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target":[376,317,44,40],
-        "next":[
+    "跑步机_部署支援梯队": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            376,
+            317,
+            44,
+            40
+        ],
+        "next": [
             "跑步机_支援梯队",
             "跑步机_切换支援梯队",
             "跑步机_部署支援梯队"
         ]
     },
-    "跑步机_切换支援梯队":{
-        "recognition":"OCR",
-        "roi" : [262,45,168,78],
-        "expected":"梯队",
-        "action":"Click",
-        "next":[
+    "跑步机_切换支援梯队": {
+        "recognition": "OCR",
+        "roi": [
+            262,
+            45,
+            168,
+            78
+        ],
+        "expected": "梯队",
+        "action": "Click",
+        "next": [
             "跑步机_支援梯队",
             "跑步机_切换支援梯队"
         ]
     },
-    "跑步机_支援梯队":{
-        "recognition":"OCR",
-        "roi" : [863,74,189,52],
-        "expected":"支援",
-        "action":"Click",
-        "next":[
+    "跑步机_支援梯队": {
+        "recognition": "OCR",
+        "roi": [
+            863,
+            74,
+            189,
+            52
+        ],
+        "expected": "支援",
+        "action": "Click",
+        "next": [
             "跑步机_选择支援梯队",
             "跑步机_支援梯队"
         ]
     },
-    "跑步机_选择支援梯队":{
-        "recognition":"TemplateMatch",
-        "roi" : [600,144,126,496],
-        "template" : "combat/levelUp/跑步机/白包子.png",
-        "action":"Click",
-        "next":[
+    "跑步机_选择支援梯队": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            600,
+            144,
+            126,
+            496
+        ],
+        "template": "combat/levelUp/跑步机/白包子.png",
+        "action": "Click",
+        "next": [
             "跑步机_确认部署支援梯队",
             "跑步机_选择支援梯队",
             "跑步机_滑动支援梯队"
         ]
     },
-    "跑步机_滑动支援梯队":{
-        "recognition":"DirectHit",
-        "action":"Swipe",
-        "begin" : [661,601,1,1],
-        "end" : [661,217,1,1],
-        "next":[
+    "跑步机_滑动支援梯队": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [
+            661,
+            601,
+            1,
+            1
+        ],
+        "end": [
+            661,
+            217,
+            1,
+            1
+        ],
+        "next": [
             "跑步机_选择支援梯队"
         ]
     },
-    "跑步机_确认部署支援梯队":{
-        "recognition":"OCR",
-        "roi" : [1119,602,120,63],
-        "expected":"确",
-        "action":"Click",
-        "next":[
+    "跑步机_确认部署支援梯队": {
+        "recognition": "OCR",
+        "roi": [
+            1119,
+            602,
+            120,
+            63
+        ],
+        "expected": "确",
+        "action": "Click",
+        "next": [
             "跑步机_确认部署支援梯队",
             "跑步机_切换消灭模式"
         ]
     },
-    "跑步机_切换消灭模式":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target":[385,317,26,27],
-        "next":[
+    "跑步机_切换消灭模式": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            385,
+            317,
+            26,
+            27
+        ],
+        "next": [
             "跑步机_确认消灭模式",
-            "跑步机_切换消灭模式"]
+            "跑步机_切换消灭模式"
+        ]
     },
-    "跑步机_确认消灭模式":{
-        "recognition":"OCR",
-        "roi" : [184,361,141,45],
-        "expected":"敌人",
-        "action":"Click",
-        "next":[
+    "跑步机_确认消灭模式": {
+        "recognition": "OCR",
+        "roi": [
+            184,
+            361,
+            141,
+            45
+        ],
+        "expected": "敌人",
+        "action": "Click",
+        "next": [
             "跑步机_部署第三梯队",
-            "跑步机_切换消灭模式"]
+            "跑步机_切换消灭模式"
+        ]
     },
-    "跑步机_部署第三梯队":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target":[274,375,36,28],
-        "next":[
+    "跑步机_部署第三梯队": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            274,
+            375,
+            36,
+            28
+        ],
+        "next": [
             "跑步机_确认部署第三梯队",
-            "跑步机_部署第三梯队"]
+            "跑步机_部署第三梯队"
+        ]
     },
-    "跑步机_确认部署第三梯队":{
-        "recognition":"OCR",
-        "roi" : [1119,602,120,63],
-        "expected":"确",
-        "action":"Click",
-        "next":[
+    "跑步机_确认部署第三梯队": {
+        "recognition": "OCR",
+        "roi": [
+            1119,
+            602,
+            120,
+            63
+        ],
+        "expected": "确",
+        "action": "Click",
+        "next": [
             "跑步机_结束回合1",
             "跑步机_确认部署第三梯队"
         ]
     },
-    "跑步机_结束回合1":{
-        "recognition":"OCR",
-        "roi" : [1101,619,153,89],
-        "expected":"结束",
-        "action":"Click",
-        "next":[
+    "跑步机_结束回合1": {
+        "recognition": "OCR",
+        "roi": [
+            1101,
+            619,
+            153,
+            89
+        ],
+        "expected": "结束",
+        "action": "Click",
+        "next": [
             "跑步机_结束回合1",
             "跑步机_跳过战斗1"
         ]
     },
-    "跑步机_跳过战斗1":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target": [1156,653,74,46],
-        "next":[
+    "跑步机_跳过战斗1": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            1156,
+            653,
+            74,
+            46
+        ],
+        "next": [
             "跑步机_计划模式2",
             "跑步机_跳过战斗1"
         ]
     },
-    "跑步机_计划模式2":{
-        "recognition":"OCR",
-        "roi" : [402,27,90,64],
-        "expected":"02",
-        "action":"Click",
-        "target":[32,612,101,33],
-        "next":[
+    "跑步机_计划模式2": {
+        "recognition": "OCR",
+        "roi": [
+            402,
+            27,
+            90,
+            64
+        ],
+        "expected": "02",
+        "action": "Click",
+        "target": [
+            32,
+            612,
+            101,
+            33
+        ],
+        "next": [
             "跑步机_点击第二梯队2",
             "跑步机_计划模式2"
         ]
     },
-    "跑步机_点击第二梯队2":{
-        "recognition":"OCR",
-        "roi" : [1105,623,146,71],
-        "expected":"执行",
-        "action":"Click",
-        "target":[622,324,36,33],
-        "next":[
+    "跑步机_点击第二梯队2": {
+        "recognition": "OCR",
+        "roi": [
+            1105,
+            623,
+            146,
+            71
+        ],
+        "expected": "执行",
+        "action": "Click",
+        "target": [
+            622,
+            324,
+            36,
+            33
+        ],
+        "next": [
             "跑步机_第二回合计划1"
         ]
     },
-    "跑步机_第二回合计划1":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target":[737,361,33,31],
-        "next":[
+    "跑步机_第二回合计划1": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            737,
+            361,
+            33,
+            31
+        ],
+        "next": [
             "跑步机_点击第一梯队2",
             "跑步机_点击第二梯队2"
         ]
     },
-    "跑步机_点击第一梯队2":{
-        "recognition":"OCR",
-        "roi" : [1095,521,161,53],
-        "expected":"下一",
-        "action":"Click",
-        "target":[319,454,35,29],
-        "next":[
+    "跑步机_点击第一梯队2": {
+        "recognition": "OCR",
+        "roi": [
+            1095,
+            521,
+            161,
+            53
+        ],
+        "expected": "下一",
+        "action": "Click",
+        "target": [
+            319,
+            454,
+            35,
+            29
+        ],
+        "next": [
             "跑步机_选择第一梯队2",
             "跑步机_点击第一梯队2"
         ]
     },
-    "跑步机_选择第一梯队2":{
-        "recognition":"OCR",
-        "roi" : [399,442,116,56],
-        "expected":"选择",
-        "action":"Click",
-        "next":[
+    "跑步机_选择第一梯队2": {
+        "recognition": "OCR",
+        "roi": [
+            399,
+            442,
+            116,
+            56
+        ],
+        "expected": "选择",
+        "action": "Click",
+        "next": [
             "跑步机_选择第一梯队2",
             "跑步机_第二回合计划2"
         ]
     },
-    "跑步机_第二回合计划2":{
-        "recognition":"OCR",
-        "roi" : [1002,656,45,52],
-        "expected":"5",
-        "action":"Click",
-        "target":[601,433,37,40],
-        "next":[
+    "跑步机_第二回合计划2": {
+        "recognition": "OCR",
+        "roi": [
+            1002,
+            656,
+            45,
+            52
+        ],
+        "expected": "5",
+        "action": "Click",
+        "target": [
+            601,
+            433,
+            37,
+            40
+        ],
+        "next": [
             "跑步机_点击第三梯队2",
             "跑步机_第二回合计划2"
         ]
     },
-    "跑步机_点击第三梯队2":{
-        "recognition":"OCR",
-        "roi" : [1004,660,45,47],
-        "expected":"2",
-        "action":"Click",
-        "target": [273,367,33,39],
-        "next":[
+    "跑步机_点击第三梯队2": {
+        "recognition": "OCR",
+        "roi": [
+            1004,
+            660,
+            45,
+            47
+        ],
+        "expected": "2",
+        "action": "Click",
+        "target": [
+            273,
+            367,
+            33,
+            39
+        ],
+        "next": [
             "跑步机_选择第三梯队2",
             "跑步机_点击第三梯队2"
         ]
     },
-    "跑步机_选择第三梯队2":{
-        "recognition":"OCR",
-        "roi" : [354,360,108,56],
-        "expected":"选择",
-        "action":"Click",
-        "next":[
+    "跑步机_选择第三梯队2": {
+        "recognition": "OCR",
+        "roi": [
+            354,
+            360,
+            108,
+            56
+        ],
+        "expected": "选择",
+        "action": "Click",
+        "next": [
             "跑步机_选择第三梯队2",
             "跑步机_第二回合计划3"
         ]
     },
-    "跑步机_第二回合计划3":{
-        "recognition":"OCR",
-        "roi" : [1002,656,45,52],
-        "expected":"2",
-        "action":"Click",
-        "target": [442,426,37,30],
-        "next":[
+    "跑步机_第二回合计划3": {
+        "recognition": "OCR",
+        "roi": [
+            1002,
+            656,
+            45,
+            52
+        ],
+        "expected": "2",
+        "action": "Click",
+        "target": [
+            442,
+            426,
+            37,
+            30
+        ],
+        "next": [
             "跑步机_下一回合2",
             "跑步机_第二回合计划3"
         ]
     },
-    "跑步机_下一回合2":{
-        "recognition":"OCR",
-        "roi" : [996,659,57,47],
-        "expected":[
+    "跑步机_下一回合2": {
+        "recognition": "OCR",
+        "roi": [
+            996,
+            659,
+            57,
+            47
+        ],
+        "expected": [
             "o",
             "0"
-    ],
-        "action":"Click",
-        "target":[1113,534,128,24],
-        "next":[
+        ],
+        "action": "Click",
+        "target": [
+            1113,
+            534,
+            128,
+            24
+        ],
+        "next": [
             "跑步机_执行计划2",
             "跑步机_下一回合2"
         ]
     },
-    "跑步机_执行计划2":{
-        "recognition":"OCR",
-        "roi" : [982,528,82,46],
-        "expected":"取消",
-        "action":"Click",
-        "target":[1118,639,128,52],
-        "timeout":60000,
-        "next":[
+    "跑步机_执行计划2": {
+        "recognition": "OCR",
+        "roi": [
+            982,
+            528,
+            82,
+            46
+        ],
+        "expected": "取消",
+        "action": "Click",
+        "target": [
+            1118,
+            639,
+            128,
+            52
+        ],
+        "timeout": 60000,
+        "next": [
             "跑步机_执行计划2",
             "跑步机_计划结束2"
         ]
     },
-    "跑步机_计划结束2":{
-        "recognition":"OCR",
-        "roi" : [419,121,110,173],
-        "expected":"7",
-        "action":"Click",
-        "target": [1112,631,138,57],
-        "next":[
+    "跑步机_计划结束2": {
+        "recognition": "OCR",
+        "roi": [
+            419,
+            121,
+            110,
+            173
+        ],
+        "expected": "7",
+        "action": "Click",
+        "target": [
+            1112,
+            631,
+            138,
+            57
+        ],
+        "next": [
             "跑步机_跳过战斗2"
         ]
     },
-    "跑步机_跳过战斗2":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target": [1156,653,74,46],
-        "next":[
+    "跑步机_跳过战斗2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            1156,
+            653,
+            74,
+            46
+        ],
+        "next": [
             "跑步机_点击支援部队",
             "跑步机_跳过战斗2"
         ]
     },
-    "跑步机_点击支援部队":{
-        "recognition":"OCR",
-        "roi" : [407,26,77,64],
-        "expected":"03",
-        "action":"Click",
-        "target":[800,239,35,30],
-        "next":[
+    "跑步机_点击支援部队": {
+        "recognition": "OCR",
+        "roi": [
+            407,
+            26,
+            77,
+            64
+        ],
+        "expected": "03",
+        "action": "Click",
+        "target": [
+            800,
+            239,
+            35,
+            30
+        ],
+        "next": [
             "跑步机_切换待机",
             "跑步机_点击支援部队"
         ]
     },
-    "跑步机_切换待机":{
-        "recognition":"OCR",
-        "roi" : [777,324,80,45],
-        "expected":"待机",
-        "action":"Click",
-        "next":[
+    "跑步机_切换待机": {
+        "recognition": "OCR",
+        "roi": [
+            777,
+            324,
+            80,
+            45
+        ],
+        "expected": "待机",
+        "action": "Click",
+        "next": [
             "跑步机_切换待机",
             "跑步机_部署坦克"
         ]
     },
-    "跑步机_部署坦克":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target":[553,232,47,36],
-        "next":[
+    "跑步机_部署坦克": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            553,
+            232,
+            47,
+            36
+        ],
+        "next": [
             "跑步机_选择重装",
             "跑步机_部署坦克"
         ]
     },
-    "跑步机_选择重装":{
-        "recognition":"OCR",
-        "roi" : [435,47,310,86],
-        "expected":"重装",
-        "action":"Click",
-        "next":[
+    "跑步机_选择重装": {
+        "recognition": "OCR",
+        "roi": [
+            435,
+            47,
+            310,
+            86
+        ],
+        "expected": "重装",
+        "action": "Click",
+        "next": [
             "跑步机_选择机动装甲",
             "跑步机_选择重装"
         ]
     },
-    "跑步机_选择机动装甲":{
-        "recognition":"OCR",
-        "roi" : [131,225,127,66],
-        "expected":"机动",
-        "action":"Click",
-        "next":[
+    "跑步机_选择机动装甲": {
+        "recognition": "OCR",
+        "roi": [
+            131,
+            225,
+            127,
+            66
+        ],
+        "expected": "机动",
+        "action": "Click",
+        "next": [
             "跑步机_选择坦克",
             "跑步机_选择机动装甲"
         ]
     },
-    "跑步机_选择坦克":{
-        "recognition":"OCR",
-        "roi" : [337,266,135,36],
-        "expected":"坦克",
-        "action":"Click",
-        "next":[
+    "跑步机_选择坦克": {
+        "recognition": "OCR",
+        "roi": [
+            337,
+            266,
+            135,
+            36
+        ],
+        "expected": "坦克",
+        "action": "Click",
+        "next": [
             "跑步机_确认部署坦克",
             "跑步机_选择坦克"
         ]
     },
-    "跑步机_确认部署坦克":{
-        "recognition":"OCR",
-        "roi" : [1106,613,112,65],
-        "expected":"部署",
-        "action":"Click",
-        "next":[
+    "跑步机_确认部署坦克": {
+        "recognition": "OCR",
+        "roi": [
+            1106,
+            613,
+            112,
+            65
+        ],
+        "expected": "部署",
+        "action": "Click",
+        "next": [
             "跑步机_确认部署坦克",
             "跑步机_坦克面板"
         ]
     },
-    "跑步机_坦克面板":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target" : [563,239,30,23],
-        "post_delay":300,
-        "next":[
+    "跑步机_坦克面板": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            563,
+            239,
+            30,
+            23
+        ],
+        "post_delay": 300,
+        "next": [
             "跑步机_关闭火力支援",
             "跑步机_坦克面板"
         ]
     },
-    "跑步机_关闭火力支援":{
-        "recognition":"OCR",
-        "roi" : [820,580,152,126],
-        "expected" : "N",
-        "action":"Click",
-        "post_delay":500,
-        "next":[
+    "跑步机_关闭火力支援": {
+        "recognition": "OCR",
+        "roi": [
+            820,
+            580,
+            152,
+            126
+        ],
+        "expected": "N",
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
             "跑步机_关闭火力支援",
             "跑步机_补充能源"
         ]
     },
-    "跑步机_补充能源":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target" : [1138,581,78,34],
-        "next":[
+    "跑步机_补充能源": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            1139,
+            586,
+            65,
+            25
+        ],
+        "next": [
             "跑步机_关闭面板",
             "跑步机_补充能源"
         ]
     },
-    "跑步机_关闭面板":{
-        "recognition":"OCR",
-        "roi" : [591,505,155,128],
-        "expected" : "60/60",
-        "action":"Click",
-        "target" :[913,467,61,37],
-        "next":[
+    "跑步机_关闭面板": {
+        "recognition": "OCR",
+        "roi": [
+            640,
+            553,
+            58,
+            166
+        ],
+        "expected": "60/60",
+        "action": "Click",
+        "target": [
+            913,
+            467,
+            61,
+            37
+        ],
+        "next": [
             "跑步机_计划模式3",
             "跑步机_关闭面板"
         ]
     },
-    "跑步机_计划模式3":{
-        "recognition":"OCR",
-        "roi" : [402,27,90,64],
-        "expected":"03",
-        "action":"Click",
-        "target":[32,612,101,33],
-        "next":[
+    "跑步机_计划模式3": {
+        "recognition": "OCR",
+        "roi": [
+            402,
+            27,
+            90,
+            64
+        ],
+        "expected": "03",
+        "action": "Click",
+        "target": [
+            32,
+            612,
+            101,
+            33
+        ],
+        "next": [
             "跑步机_点击第三梯队3",
             "跑步机_计划模式3"
         ]
     },
-    "跑步机_点击第三梯队3":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target" :[622,341,37,34],
-        "next":[
+    "跑步机_点击第三梯队3": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            622,
+            341,
+            37,
+            34
+        ],
+        "next": [
             "跑步机_选择第三梯队3",
             "跑步机_点击第三梯队3"
         ]
     },
-    "跑步机_选择第三梯队3":{
-        "recognition":"OCR",
-        "roi" : [701,334,113,48],
-        "expected":"选择",
-        "action":"Click",
-        "next":[
+    "跑步机_选择第三梯队3": {
+        "recognition": "OCR",
+        "roi": [
+            701,
+            334,
+            113,
+            48
+        ],
+        "expected": "选择",
+        "action": "Click",
+        "next": [
             "跑步机_选择第三梯队3",
             "跑步机_第三回合计划1"
         ]
     },
-    "跑步机_第三回合计划1":{
-        "recognition":"OCR",
-        "roi" : [1002,656,45,52],
-        "expected":"5",
-        "action":"Click",
-        "target" : [495,367,38,36],
-        "next":[
+    "跑步机_第三回合计划1": {
+        "recognition": "OCR",
+        "roi": [
+            1002,
+            656,
+            45,
+            52
+        ],
+        "expected": "5",
+        "action": "Click",
+        "target": [
+            495,
+            367,
+            38,
+            36
+        ],
+        "next": [
             "跑步机_点击坦克3",
             "跑步机_第三回合计划1"
         ]
     },
-    "跑步机_点击坦克3":{
-        "recognition":"OCR",
-        "roi" : [1082,505,180,83],
-        "expected":"下一",
-        "action":"Click",
-        "target" :[559,223,34,41],
-        "post_delay":300,
-        "next":[
+    "跑步机_点击坦克3": {
+        "recognition": "OCR",
+        "roi": [
+            1082,
+            505,
+            180,
+            83
+        ],
+        "expected": "下一",
+        "action": "Click",
+        "target": [
+            559,
+            223,
+            34,
+            41
+        ],
+        "post_delay": 300,
+        "next": [
             "跑步机_选择坦克3",
             "跑步机_点击坦克3"
         ]
     },
-    "跑步机_选择坦克3":{
-        "recognition":"OCR",
-        "roi" : [645,223,108,56],
-        "expected":"选择",
-        "action":"Click",
-        "next":[
+    "跑步机_选择坦克3": {
+        "recognition": "OCR",
+        "roi": [
+            645,
+            223,
+            108,
+            56
+        ],
+        "expected": "选择",
+        "action": "Click",
+        "next": [
             "跑步机_选择坦克3",
             "跑步机_第三回合计划2"
         ]
     },
-    "跑步机_第三回合计划2":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target" :[675,251,41,36],
-        "next":[
+    "跑步机_第三回合计划2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            675,
+            251,
+            41,
+            36
+        ],
+        "next": [
             "跑步机_下一回合3",
             "跑步机_第三回合计划2"
         ]
     },
-    "跑步机_下一回合3":{
-        "recognition":"OCR",
-        "roi" : [1004,656,66,50],
-        "expected":"40",
-        "action":"Click",
-        "target": [1115,533,129,28],
-        "next":[
+    "跑步机_下一回合3": {
+        "recognition": "OCR",
+        "roi": [
+            1004,
+            656,
+            66,
+            50
+        ],
+        "expected": "40",
+        "action": "Click",
+        "target": [
+            1115,
+            533,
+            129,
+            28
+        ],
+        "next": [
             "跑步机_执行计划3",
             "跑步机_下一回合3"
         ]
     },
-    "跑步机_执行计划3":{
-        "recognition":"OCR",
-        "roi" : [982,528,82,46],
-        "expected":"取消",
-        "action":"Click",
-        "target":[1118,639,128,52],
-        "next":[
+    "跑步机_执行计划3": {
+        "recognition": "OCR",
+        "roi": [
+            982,
+            528,
+            82,
+            46
+        ],
+        "expected": "取消",
+        "action": "Click",
+        "target": [
+            1118,
+            639,
+            128,
+            52
+        ],
+        "next": [
             "跑步机_执行计划3",
             "跑步机_计划结束3"
         ]
     },
-    "跑步机_计划结束3":{
-        "recognition":"OCR",
-        "roi" : [419,121,110,173],
-        "expected":"7",
-        "action":"DoNothing",
-        "next":[
+    "跑步机_计划结束3": {
+        "recognition": "OCR",
+        "roi": [
+            419,
+            121,
+            110,
+            173
+        ],
+        "expected": "7",
+        "action": "DoNothing",
+        "next": [
             "跑步机_跳过战斗3"
         ]
     },
-    "跑步机_跳过战斗3":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target": [1156,653,74,46],
-        "next":[
+    "跑步机_跳过战斗3": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            1156,
+            653,
+            74,
+            46
+        ],
+        "next": [
             "跑步机_计划模式4",
             "跑步机_跳过战斗3"
         ]
     },
-    "跑步机_计划模式4":{
-        "recognition":"OCR",
-        "roi" : [402,27,90,64],
-        "expected":"04",
-        "action":"Click",
-        "target":[32,612,101,33],
-        "next":[
+    "跑步机_计划模式4": {
+        "recognition": "OCR",
+        "roi": [
+            402,
+            27,
+            90,
+            64
+        ],
+        "expected": "04",
+        "action": "Click",
+        "target": [
+            32,
+            612,
+            101,
+            33
+        ],
+        "next": [
             "跑步机_点击坦克4",
             "跑步机_计划模式4"
         ]
     },
-    "跑步机_点击坦克4":{
-        "recognition":"OCR",
-        "roi" : [998,664,46,37],
-        "expected":"7",
-        "action":"Click",
-        "target" :[623,343,33,26],
-        "next":[
+    "跑步机_点击坦克4": {
+        "recognition": "OCR",
+        "roi": [
+            998,
+            664,
+            46,
+            37
+        ],
+        "expected": "7",
+        "action": "Click",
+        "target": [
+            623,
+            343,
+            33,
+            26
+        ],
+        "next": [
             "跑步机_第四回合计划",
             "跑步机_点击坦克4"
         ]
     },
-    "跑步机_第四回合计划":{
-        "recognition":"OCR",
-        "roi" : [998,654,67,52],
-        "expected":"60",
-        "action":"Click",
-        "target" :[560,422,38,40],
-        "next":[
+    "跑步机_第四回合计划": {
+        "recognition": "OCR",
+        "roi": [
+            998,
+            654,
+            67,
+            52
+        ],
+        "expected": "60",
+        "action": "Click",
+        "target": [
+            560,
+            422,
+            38,
+            40
+        ],
+        "next": [
             "跑步机_执行计划4",
             "跑步机_第四回合计划"
         ]
     },
-    "跑步机_执行计划4":{
-        "recognition":"OCR",
-        "roi" : [1088,507,182,78],
-        "expected":"下一",
-        "action":"Click",
-        "target":[1118,639,128,52],
-        "next":[
+    "跑步机_执行计划4": {
+        "recognition": "OCR",
+        "roi": [
+            1088,
+            507,
+            182,
+            78
+        ],
+        "expected": "下一",
+        "action": "Click",
+        "target": [
+            1118,
+            639,
+            128,
+            52
+        ],
+        "next": [
             "跑步机_执行计划4",
             "跑步机_释放迷彩"
         ]
     },
-    "跑步机_释放迷彩":{
-        "recognition":"OCR",
-        "roi" : [1173,356,84,40],
-        "expected":"释放",
-        "action":"Click",
-        "next":[
+    "跑步机_释放迷彩": {
+        "recognition": "OCR",
+        "roi": [
+            1173,
+            356,
+            84,
+            40
+        ],
+        "expected": "释放",
+        "action": "Click",
+        "next": [
             "跑步机_确认释放迷彩",
             "跑步机_释放迷彩"
         ]
     },
-    "跑步机_确认释放迷彩":{
-        "recognition":"OCR",
-        "roi" : [1178,361,69,32],
-        "expected":"取消",
-        "action":"Click",
-        "target": [623,355,32,18],
-        "next":[
+    "跑步机_确认释放迷彩": {
+        "recognition": "OCR",
+        "roi": [
+            1178,
+            361,
+            69,
+            32
+        ],
+        "expected": "取消",
+        "action": "Click",
+        "target": [
+            623,
+            355,
+            32,
+            18
+        ],
+        "next": [
             "跑步机_释放检测",
             "跑步机_确认释放迷彩"
         ]
     },
-    "跑步机_释放检测":{
-        "recognition":"OCR",
-        "roi" : [1168,299,58,52],
-        "expected":"9",
-        "action":"DoNothing",
-        "next":"跑步机_跳过战斗4"
+    "跑步机_释放检测": {
+        "recognition": "OCR",
+        "roi": [
+            1168,
+            299,
+            58,
+            52
+        ],
+        "expected": "9",
+        "action": "DoNothing",
+        "next": "跑步机_跳过战斗4"
     },
-    "跑步机_跳过战斗4":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target":[1106,631,143,60],
-        "next":[
+    "跑步机_跳过战斗4": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            1106,
+            631,
+            143,
+            60
+        ],
+        "next": [
             "跑步机_计划模式7",
             "跑步机_跳过战斗4"
         ]
     },
-    "跑步机_计划模式7":{
-        "recognition":"OCR",
-        "roi" : [402,27,90,64],
-        "expected":"07",
-        "action":"Click",
-        "target":[32,612,101,33],
-        "next":[
+    "跑步机_计划模式7": {
+        "recognition": "OCR",
+        "roi": [
+            402,
+            27,
+            90,
+            64
+        ],
+        "expected": "07",
+        "action": "Click",
+        "target": [
+            32,
+            612,
+            101,
+            33
+        ],
+        "next": [
             "跑步机_点击坦克7",
             "跑步机_计划模式7"
         ]
     },
-    "跑步机_点击坦克7":{
-        "recognition":"OCR",
-        "roi" : [1005,664,37,41],
-        "expected":"7",
-        "action":"Click",
-        "target" :[630,345,25,24],
-        "next":[
+    "跑步机_点击坦克7": {
+        "recognition": "OCR",
+        "roi": [
+            1005,
+            664,
+            37,
+            41
+        ],
+        "expected": "7",
+        "action": "Click",
+        "target": [
+            630,
+            345,
+            25,
+            24
+        ],
+        "next": [
             "跑步机_第七回合计划1",
             "跑步机_点击坦克7"
         ]
     },
-    "跑步机_第七回合计划1":{
-        "recognition":"OCR",
-        "roi" : [998,654,67,52],
-        "expected":"60",
-        "action":"Click",
-        "target" :[560,236,33,30],
-        "next":[
+    "跑步机_第七回合计划1": {
+        "recognition": "OCR",
+        "roi": [
+            998,
+            654,
+            67,
+            52
+        ],
+        "expected": "60",
+        "action": "Click",
+        "target": [
+            560,
+            236,
+            33,
+            30
+        ],
+        "next": [
             "跑步机_执行计划7",
             "跑步机_第七回合计划1"
         ]
     },
-    "跑步机_执行计划7":{
-        "recognition":"OCR",
-        "roi" : [1088,507,182,78],
-        "expected":"下一",
-        "action":"Click",
-        "target":[1118,639,128,52],
-        "next":[
+    "跑步机_执行计划7": {
+        "recognition": "OCR",
+        "roi": [
+            1088,
+            507,
+            182,
+            78
+        ],
+        "expected": "下一",
+        "action": "Click",
+        "target": [
+            1118,
+            639,
+            128,
+            52
+        ],
+        "next": [
             "跑步机_执行计划7",
             "跑步机_撤退坦克"
         ]
     },
-    "跑步机_撤退坦克":{
-        "recognition":"OCR",
-        "roi" : [1168,299,58,52],
-        "expected":"9",
-        "action":"Click",
-        "target": [566,322,34,27],
-        "post_delay":500,
-        "next":[
+    "跑步机_撤退坦克": {
+        "recognition": "OCR",
+        "roi": [
+            1168,
+            299,
+            58,
+            52
+        ],
+        "expected": "9",
+        "action": "Click",
+        "target": [
+            566,
+            322,
+            34,
+            27
+        ],
+        "post_delay": 500,
+        "next": [
             "跑步机_点击撤退",
             "跑步机_撤退坦克"
         ]
     },
-    "跑步机_点击撤退":{
-        "recognition":"OCR",
-        "roi" : [972,641,90,48],
-        "expected":"退",
-        "action":"Click",
-        "next":[
+    "跑步机_点击撤退": {
+        "recognition": "OCR",
+        "roi": [
+            972,
+            641,
+            90,
+            48
+        ],
+        "expected": "退",
+        "action": "Click",
+        "next": [
             "跑步机_确认撤退",
             "跑步机_点击撤退"
         ]
     },
-    "跑步机_确认撤退":{
-        "recognition":"OCR",
-        "roi" : [727,463,90,64],
-        "expected":"确",
-        "action":"Click",
-        "next":[
+    "跑步机_确认撤退": {
+        "recognition": "OCR",
+        "roi": [
+            727,
+            463,
+            90,
+            64
+        ],
+        "expected": "确",
+        "action": "Click",
+        "next": [
             "跑步机_计划模式7-2",
             "跑步机_确认撤退"
         ]
     },
-    "跑步机_计划模式7-2":{
-        "recognition":"OCR",
-        "roi" : [402,27,90,64],
-        "expected":"07",
-        "action":"Click",
-        "target":[32,612,101,33],
-        "next":[
+    "跑步机_计划模式7-2": {
+        "recognition": "OCR",
+        "roi": [
+            402,
+            27,
+            90,
+            64
+        ],
+        "expected": "07",
+        "action": "Click",
+        "target": [
+            32,
+            612,
+            101,
+            33
+        ],
+        "next": [
             "跑步机_点击第三梯队7",
             "跑步机_计划模式7-2"
         ]
     },
-    "跑步机_点击第三梯队7":{
-        "recognition":"OCR",
-        "roi" : [1111,627,139,65],
-        "expected":"执行",
-        "action":"Click",
-        "target":[506,454,29,25],
-        "next":[
+    "跑步机_点击第三梯队7": {
+        "recognition": "OCR",
+        "roi": [
+            1111,
+            627,
+            139,
+            65
+        ],
+        "expected": "执行",
+        "action": "Click",
+        "target": [
+            506,
+            454,
+            29,
+            25
+        ],
+        "next": [
             "跑步机_第七回合计划2",
             "跑步机_点击第三梯队7"
         ]
     },
-    "跑步机_第七回合计划2":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target":[628,433,33,22],
-        "next":[
+    "跑步机_第七回合计划2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            628,
+            433,
+            33,
+            22
+        ],
+        "next": [
             "跑步机_执行计划7-2",
             "跑步机_点击第三梯队7",
             "跑步机_第七回合计划2"
         ]
     },
-    "跑步机_执行计划7-2":{
-        "recognition":"OCR",
-        "roi" : [1088,507,182,78],
-        "expected":"下一",
-        "action":"Click",
-        "target":[1118,639,128,52],
-        "next":[
+    "跑步机_执行计划7-2": {
+        "recognition": "OCR",
+        "roi": [
+            1088,
+            507,
+            182,
+            78
+        ],
+        "expected": "下一",
+        "action": "Click",
+        "target": [
+            1118,
+            639,
+            128,
+            52
+        ],
+        "next": [
             "跑步机_执行计划7-2",
             "跑步机_点击第三梯队7",
             "跑步机_计划结束7"
         ]
     },
-    "跑步机_计划结束7":{
-        "recognition":"OCR",
-        "roi" : [1163,119,41,46],
-        "expected":"妖精",
-        "action":"Click",
-        "target": [1112,631,138,57],
-        "next":[
+    "跑步机_计划结束7": {
+        "recognition": "OCR",
+        "roi": [
+            1163,
+            119,
+            41,
+            46
+        ],
+        "expected": "妖精",
+        "action": "Click",
+        "target": [
+            1112,
+            631,
+            138,
+            57
+        ],
+        "next": [
             "跑步机_计划结束7",
             "跑步机_跳过战斗"
         ]
     },
-    "跑步机_跳过战斗":{
-        "recognition":"DirectHit",
-        "action":"Click",
-        "target": [1112,631,138,57],
-        "next":[
+    "跑步机_跳过战斗": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            1112,
+            631,
+            138,
+            57
+        ],
+        "next": [
             "跑步机_再次作战",
             "跑步机_跳过战斗"
         ]
     },
-    "跑步机_再次作战":{
-        "recognition":"OCR",
-        "roi": [277,572,188,73],
-        "expected":"再次作战",
-        "action":"Click"
+    "跑步机_再次作战": {
+        "recognition": "OCR",
+        "roi": [
+            277,
+            572,
+            188,
+            73
+        ],
+        "expected": "再次作战",
+        "action": "Click"
     }
 }
