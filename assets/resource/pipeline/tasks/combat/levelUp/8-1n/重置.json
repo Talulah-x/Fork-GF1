@@ -67,9 +67,6 @@
         "expected": [
             "重新作战"
         ],
-        "action": "Click",
-        "next": [
-            "81N部署_布置完成"
-        ]
+        "action": "Click"
     }
 }
