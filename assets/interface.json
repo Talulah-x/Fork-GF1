@@ -166,8 +166,9 @@
           "pipeline_override": {
             "81N_选择装备处理方式": {
               "next": [
-                "public拆装备_装备回收"
-              ]
+                "!81N总流程"
+              ],
+              "interrupt": "public拆装备_装备回收"
             }
           }
         }
@@ -741,7 +742,12 @@
             "VP_打捞线终点": {
               "recognition": "DirectHit",
               "action": "Click",
-"target" : [548,210,20,14],
+              "target": [
+                548,
+                210,
+                20,
+                14
+              ],
               "pre_delay": 300,
               "post_delay": 300,
               "next": [
@@ -772,7 +778,12 @@
             "VP_打捞线终点": {
               "recognition": "DirectHit",
               "action": "Click",
-"target" : [801,209,19,16],
+              "target": [
+                801,
+                209,
+                19,
+                16
+              ],
               "pre_delay": 300,
               "post_delay": 300,
               "next": [
