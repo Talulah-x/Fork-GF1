@@ -8,6 +8,7 @@
             114,
             117
         ],
+        "threshold": 0.5,
         "next": [
             "81N部署_确认1队是否已部署"
         ],
@@ -94,9 +95,7 @@
         ],
         "template": "combat/levelUp/8-1N/map_team2.png",
         "rate_limit": 200,
-        "next": [
-
-        ]
+        "next": []
     },
     "81N部署_部署1队": {
         "recognition": "TemplateMatch",
