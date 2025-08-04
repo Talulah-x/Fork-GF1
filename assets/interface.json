@@ -56,7 +56,7 @@
       "entry": "!81N总流程",
       "check": false,
       "doc": "请在第八战役-夜战或者进入8-1N地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8C%E6%89%93%E6%89%8B%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-      "repeatable": false,
+      "repeatable": true,
       "repeat_count": 1,
       "option": [
         "81N_弹药检查版本选择",
@@ -701,10 +701,10 @@
               "recognition": "DirectHit",
               "action": "Click",
               "target": [
-                405,
-                593,
-                17,
-                18
+                421,
+                587,
+                23,
+                16
               ],
               "pre_delay": 300,
               "post_delay": 300,
@@ -751,7 +751,12 @@
             "VP_打捞线终点": {
               "recognition": "DirectHit",
               "action": "Click",
-"target" : [548,210,20,14],
+              "target": [
+                548,
+                210,
+                20,
+                14
+              ],
               "pre_delay": 300,
               "post_delay": 300,
               "next": [
@@ -782,7 +787,12 @@
             "VP_打捞线终点": {
               "recognition": "DirectHit",
               "action": "Click",
-"target" : [801,209,19,16],
+              "target": [
+                801,
+                209,
+                19,
+                16
+              ],
               "pre_delay": 300,
               "post_delay": 300,
               "next": [
