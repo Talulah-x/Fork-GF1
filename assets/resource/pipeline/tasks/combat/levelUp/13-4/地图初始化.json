@@ -51,7 +51,8 @@
             180,
             66
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             556,
             87,

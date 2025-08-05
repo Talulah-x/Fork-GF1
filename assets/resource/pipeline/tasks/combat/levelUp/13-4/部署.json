@@ -69,7 +69,8 @@
             26,
             25
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 500,
         "next": [
             "134部署_部署1队确定",
@@ -88,7 +89,8 @@
             "确定",
             "取消"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": []
     },
     "134部署_部署2队": {
@@ -106,7 +108,8 @@
             2,
             20
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1500,
         "pre_delay": 1500,
         "next": [
@@ -128,7 +131,8 @@
             "确定",
             "取消"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": []
     },
     "134部署_重装机场选择梯队": {
@@ -151,7 +155,8 @@
             2,
             20
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1500,
         "rate_limit": 200,
         "threshold": 0.7,
@@ -194,7 +199,8 @@
         "expected": [
             "取消"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 500,
         "next": "134战斗_开始作战前初始化"
     }

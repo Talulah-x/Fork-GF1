@@ -1,6 +1,6 @@
 {
     "!指挥官后勤": {
-         "next": [
+        "next": [
             "零电荷_进入零电荷",
             "零电荷_主界面进入零电荷",
             "零电荷_常驻活动",
@@ -16,7 +16,8 @@
             102
         ],
         "expected": "战斗",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "零电荷_主界面进入零电荷",
             "零电荷_进入零电荷",
@@ -32,7 +33,8 @@
             410
         ],
         "expected": "常驻活动",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 800,
         "next": [
             "零电荷_点击零电荷",
@@ -48,7 +50,8 @@
             624
         ],
         "expected": "电荷",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 800,
         "next": [
             "零电荷_进入零电荷",
@@ -57,9 +60,15 @@
     },
     "零电荷_进入零电荷": {
         "recognition": "OCR",
-        "roi" : [415,249,522,331],
-        "expected" : "ZERO",
-        "action": "Click",
+        "roi": [
+            415,
+            249,
+            522,
+            331
+        ],
+        "expected": "ZERO",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 200,
         "next": [
             "零电荷_进入打捞关",
@@ -68,11 +77,22 @@
     },
     "零电荷_进入打捞关": {
         "recognition": "OCR",
-        " roi" : [238,101,173,134],
-        "expected" : "Zero",
-        "action": "Click",
+        "roi": [
+            238,
+            101,
+            173,
+            134
+        ],
+        "expected": "Zero",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 400,
-        "target": [17,546,112,42],
+        "target": [
+            17,
+            546,
+            112,
+            42
+        ],
         "next": [
             "零电荷_进入零电荷关卡",
             "零电荷_进入打捞关"
@@ -80,10 +100,21 @@
     },
     "零电荷_进入零电荷关卡": {
         "recognition": "OCR",
-        "roi" : [895,139,340,157],
-        "expected" : "无来由的恐惧瞬间EX",
-        "action": "Click",
-        "target":[1120,391,92,38],
+        "roi": [
+            895,
+            139,
+            340,
+            157
+        ],
+        "expected": "无来由的恐惧瞬间EX",
+        "action": "LongPress",
+        "duration": 20,
+        "target": [
+            1120,
+            391,
+            92,
+            38
+        ],
         "next": [
             "零电荷_初始化地图",
             "零电荷_进入零电荷关卡"
@@ -125,8 +156,14 @@
             78
         ],
         "expected": "战",
-        "action": "Click",
-        "target":[774,127,32,27],
+        "action": "LongPress",
+        "duration": 20,
+        "target": [
+            774,
+            127,
+            32,
+            27
+        ],
         "next": [
             "零电荷_选择梯队",
             "零电荷_部署梯队",
@@ -135,9 +172,15 @@
     },
     "零电荷_选择梯队": {
         "recognition": "OCR",
-        "roi" : [0,6,135,713],
+        "roi": [
+            0,
+            6,
+            135,
+            713
+        ],
         "expected": "10",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "零电荷_确认部署"
         ]
@@ -146,17 +189,33 @@
         "recognition": "OCR",
         "expected": "选",
         "action": "Swipe",
-        "begin" : [75,695,1,1],
-        "end" : [79,60,1,1],
+        "begin": [
+            75,
+            695,
+            1,
+            1
+        ],
+        "end": [
+            79,
+            60,
+            1,
+            1
+        ],
         "next": [
             "零电荷_选择梯队"
         ]
     },
     "零电荷_确认部署": {
         "recognition": "OCR",
-        "roi" : [1125,603,120,68],
+        "roi": [
+            1125,
+            603,
+            120,
+            68
+        ],
         "expected": "确定",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "零电荷_开始作战",
             "零电荷_确认部署"
@@ -164,8 +223,14 @@
     },
     "零电荷_开始作战": {
         "recognition": "OCR",
-        "roi" : [1002,604,277,115],
-        "action": "Click",
+        "roi": [
+            1002,
+            604,
+            277,
+            115
+        ],
+        "action": "LongPress",
+        "duration": 20,
         "expected": [
             "点击指挥"
         ],
@@ -176,8 +241,14 @@
     },
     "零电荷_结束回合": {
         "recognition": "OCR",
-        "roi" : [1002,604,277,115],
-        "action": "Click",
+        "roi": [
+            1002,
+            604,
+            277,
+            115
+        ],
+        "action": "LongPress",
+        "duration": 20,
         "expected": [
             "结"
         ],
@@ -188,8 +259,14 @@
     },
     "零电荷_再次作战": {
         "recognition": "OCR",
-        "roi" : [396,28,94,58],
-        "action": "Click",
+        "roi": [
+            396,
+            28,
+            94,
+            58
+        ],
+        "action": "LongPress",
+        "duration": 20,
         "expected": [
             "02"
         ],
@@ -199,8 +276,14 @@
     },
     "零电荷_人形结算": {
         "recognition": "DirectHit",
-        "action": "Click",
-        "target":[328,608,132,27],
+        "action": "LongPress",
+        "duration": 20,
+        "target": [
+            328,
+            608,
+            132,
+            27
+        ],
         "next": [
             "零电荷_开始作战",
             "零电荷_人形回收",
@@ -208,7 +291,6 @@
         ],
         "timeout": 600000
     },
-    
     "零电荷_人形回收": {
         "recognition": "OCR",
         "expected": "人形回收",
@@ -218,30 +300,43 @@
             248,
             345
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "零电荷_回收角色"
         ]
     },
     "零电荷_回收角色": {
         "recognition": "OCR",
-        "roi" : [300,169,112,60],
+        "roi": [
+            300,
+            169,
+            112,
+            60
+        ],
         "expected": [
             "角色"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "零电荷_智能选择"
         ]
     },
     "零电荷_智能选择": {
         "recognition": "OCR",
-        "roi" : [1093,593,174,106],
+        "roi": [
+            1093,
+            593,
+            174,
+            106
+        ],
         "expected": [
             "智能选择",
             "确定"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "零电荷_智能选择",
             "零电荷_确认回收"
@@ -249,12 +344,23 @@
     },
     "零电荷_确认回收": {
         "recognition": "OCR",
-        "roi" : [1062,203,89,110],
+        "roi": [
+            1062,
+            203,
+            89,
+            110
+        ],
         "expected": [
             "人力"
         ],
-        "action": "Click",
-        "target":[1096,575,110,50],
+        "action": "LongPress",
+        "duration": 20,
+        "target": [
+            1096,
+            575,
+            110,
+            50
+        ],
         "next": [
             "零电荷_导航栏",
             "零电荷_确认回收"
@@ -262,12 +368,23 @@
     },
     "零电荷_导航栏": {
         "recognition": "OCR",
-        "roi" : [278,154,137,87],
+        "roi": [
+            278,
+            154,
+            137,
+            87
+        ],
         "expected": [
             "角色"
         ],
-        "action": "Click",
-        "target":[174,15,82,72],
+        "action": "LongPress",
+        "duration": 20,
+        "target": [
+            174,
+            15,
+            82,
+            72
+        ],
         "next": [
             "零电荷_战斗页面",
             "零电荷_导航栏"
@@ -275,11 +392,17 @@
     },
     "零电荷_战斗页面": {
         "recognition": "OCR",
-        "roi" : [71,222,139,97],
+        "roi": [
+            71,
+            222,
+            139,
+            97
+        ],
         "expected": [
             "斗"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "!指挥官后勤",
             "零电荷_战斗页面"

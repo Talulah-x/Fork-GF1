@@ -10,7 +10,8 @@
         "expected": [
             "编成"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 2000,
         "next": [
             "81N编队_选择2队zas"
@@ -31,7 +32,8 @@
             82,
             123
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_wait_freezes": 1,
         "next": [
             "81N编队_显示全部",
@@ -43,7 +45,8 @@
         "expected": [
             "显示全部"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "81N编队_选择收藏角色"
         ]
@@ -53,7 +56,8 @@
         "expected": [
             "显示收藏"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "81N编队_选择收藏角色确认"
         ]
@@ -63,7 +67,8 @@
         "expected": [
             "确认"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 500,
         "next": [
             "81N编队_点击队伍中的Zas"
@@ -76,7 +81,8 @@
             50,
             41
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "81N编队_点击1队Zas"
@@ -85,7 +91,8 @@
     "81N编队_点击1队Zas": {
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/8-1N/G_team1.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
         "threshold": 0.8,
         "green_mask": true,
@@ -98,7 +105,8 @@
         "expected": [
             "确定"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 600,
         "next": [
             "81N编队_确定",
@@ -114,7 +122,8 @@
             166
         ],
         "template": "combat/levelUp/8-1N/back2map.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "81N战斗_开始作战前初始化",

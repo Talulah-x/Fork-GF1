@@ -64,6 +64,9 @@
         "81N_选择狗粮类型",
         "81N_装备溢出处理",
         "81N_是否开启无限循环"
+      ],
+      "advanced": [
+        "指定装备强化(未完成)"
       ]
     },
     {
@@ -157,6 +160,12 @@
       "repeat_count": 1
     }
   ],
+  "advanced": {
+    "指定装备强化": {
+      "field": ["eqip_names"],
+      "type": "list"
+    }
+  },
   "option": {
     "81N_是否开启无限循环": {
       "cases": [
@@ -327,18 +336,7 @@
           "name": "1",
           "pipeline_override": {
             "捡垃圾_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "1",
-              "action": "Click",
-              "next": [
-                "捡垃圾_确认部署"
-              ]
+              "expected": "1"
             }
           }
         },
@@ -346,18 +344,7 @@
           "name": "2",
           "pipeline_override": {
             "捡垃圾_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "2",
-              "action": "Click",
-              "next": [
-                "捡垃圾_确认部署"
-              ]
+              "expected": "2"
             }
           }
         },
@@ -365,18 +352,7 @@
           "name": "3",
           "pipeline_override": {
             "捡垃圾_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "3",
-              "action": "Click",
-              "next": [
-                "捡垃圾_确认部署"
-              ]
+              "expected": "3"
             }
           }
         },
@@ -384,18 +360,7 @@
           "name": "4",
           "pipeline_override": {
             "捡垃圾_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "4",
-              "action": "Click",
-              "next": [
-                "捡垃圾_确认部署"
-              ]
+              "expected": "4"
             }
           }
         },
@@ -403,18 +368,7 @@
           "name": "5",
           "pipeline_override": {
             "捡垃圾_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "5",
-              "action": "Click",
-              "next": [
-                "捡垃圾_确认部署"
-              ]
+              "expected": "5"
             }
           }
         },
@@ -422,18 +376,7 @@
           "name": "6",
           "pipeline_override": {
             "捡垃圾_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "6",
-              "action": "Click",
-              "next": [
-                "捡垃圾_确认部署"
-              ]
+              "expected": "6"
             }
           }
         },
@@ -441,18 +384,7 @@
           "name": "7",
           "pipeline_override": {
             "捡垃圾_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "7",
-              "action": "Click",
-              "next": [
-                "捡垃圾_确认部署"
-              ]
+              "expected": "7"
             }
           }
         },
@@ -460,18 +392,7 @@
           "name": "8",
           "pipeline_override": {
             "捡垃圾_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "8",
-              "action": "Click",
-              "next": [
-                "捡垃圾_确认部署"
-              ]
+              "expected": "8"
             }
           }
         },
@@ -479,18 +400,7 @@
           "name": "9",
           "pipeline_override": {
             "捡垃圾_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "9",
-              "action": "Click",
-              "next": [
-                "捡垃圾_确认部署"
-              ]
+              "expected": "9"
             }
           }
         },
@@ -505,18 +415,7 @@
           "name": "1",
           "pipeline_override": {
             "零电荷_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "1",
-              "action": "Click",
-              "next": [
-                "零电荷_确认部署"
-              ]
+              "expected": "1"
             }
           }
         },
@@ -524,18 +423,7 @@
           "name": "2",
           "pipeline_override": {
             "零电荷_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "2",
-              "action": "Click",
-              "next": [
-                "零电荷_确认部署"
-              ]
+              "expected": "2"
             }
           }
         },
@@ -543,18 +431,7 @@
           "name": "3",
           "pipeline_override": {
             "零电荷_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "3",
-              "action": "Click",
-              "next": [
-                "零电荷_确认部署"
-              ]
+              "expected": "3"
             }
           }
         },
@@ -562,18 +439,7 @@
           "name": "4",
           "pipeline_override": {
             "零电荷_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "4",
-              "action": "Click",
-              "next": [
-                "零电荷_确认部署"
-              ]
+              "expected": "4"
             }
           }
         },
@@ -581,18 +447,7 @@
           "name": "5",
           "pipeline_override": {
             "零电荷_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "5",
-              "action": "Click",
-              "next": [
-                "零电荷_确认部署"
-              ]
+              "expected": "5"
             }
           }
         },
@@ -600,18 +455,7 @@
           "name": "6",
           "pipeline_override": {
             "零电荷_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "6",
-              "action": "Click",
-              "next": [
-                "零电荷_确认部署"
-              ]
+              "expected": "6"
             }
           }
         },
@@ -619,18 +463,7 @@
           "name": "7",
           "pipeline_override": {
             "零电荷_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "7",
-              "action": "Click",
-              "next": [
-                "零电荷_确认部署"
-              ]
+              "expected": "7"
             }
           }
         },
@@ -638,18 +471,7 @@
           "name": "8",
           "pipeline_override": {
             "零电荷_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "8",
-              "action": "Click",
-              "next": [
-                "零电荷_确认部署"
-              ]
+              "expected": "8"
             }
           }
         },
@@ -657,18 +479,7 @@
           "name": "9",
           "pipeline_override": {
             "零电荷_选择梯队": {
-              "recognition": "OCR",
-              "roi": [
-                0,
-                6,
-                135,
-                713
-              ],
-              "expected": "9",
-              "action": "Click",
-              "next": [
-                "零电荷_确认部署"
-              ]
+              "expected": "9"
             }
           }
         },
@@ -680,37 +491,22 @@
     "选择打捞目标": {
       "cases": [
         {
-          "name": "M1895",
+          "name": "M1895CB",
           "pipeline_override": {
             "VP_打捞线下队": {
-              "recognition": "DirectHit",
-              "action": "Click",
               "target": [
                 421,
                 587,
                 23,
                 16
-              ],
-              "pre_delay": 300,
-              "post_delay": 300,
-              "next": [
-                "VP_确定下队"
               ]
             },
             "VP_打捞线终点": {
-              "recognition": "DirectHit",
-              "action": "Click",
               "target": [
                 296,
                 209,
                 18,
                 16
-              ],
-              "pre_delay": 300,
-              "post_delay": 300,
-              "next": [
-                "VP_判断是否选中终点",
-                "VP_打捞线终点"
               ]
             }
           }
@@ -719,70 +515,40 @@
           "name": "Cx4风暴",
           "pipeline_override": {
             "VP_打捞线下队": {
-              "recognition": "DirectHit",
-              "action": "Click",
               "target": [
                 421,
                 587,
                 23,
                 16
-              ],
-              "pre_delay": 300,
-              "post_delay": 300,
-              "next": [
-                "VP_确定下队"
               ]
             },
             "VP_打捞线终点": {
-              "recognition": "DirectHit",
-              "action": "Click",
               "target": [
                 548,
                 210,
                 20,
                 14
-              ],
-              "pre_delay": 300,
-              "post_delay": 300,
-              "next": [
-                "VP_判断是否选中终点",
-                "VP_打捞线终点"
               ]
             }
           }
         },
         {
-          "name": "SR5",
+          "name": "SRS",
           "pipeline_override": {
             "VP_打捞线下队": {
-              "recognition": "DirectHit",
-              "action": "Click",
               "target": [
                 673,
                 587,
                 23,
                 17
-              ],
-              "pre_delay": 300,
-              "post_delay": 300,
-              "next": [
-                "VP_确定下队"
               ]
             },
             "VP_打捞线终点": {
-              "recognition": "DirectHit",
-              "action": "Click",
               "target": [
                 548,
                 210,
                 20,
                 14
-              ],
-              "pre_delay": 300,
-              "post_delay": 300,
-              "next": [
-                "VP_判断是否选中终点",
-                "VP_打捞线终点"
               ]
             }
           }
@@ -791,34 +557,19 @@
           "name": "AK-74U",
           "pipeline_override": {
             "VP_打捞线下队": {
-              "recognition": "DirectHit",
-              "action": "Click",
               "target": [
                 673,
                 587,
                 23,
                 17
-              ],
-              "pre_delay": 300,
-              "post_delay": 300,
-              "next": [
-                "VP_确定下队"
               ]
             },
             "VP_打捞线终点": {
-              "recognition": "DirectHit",
-              "action": "Click",
               "target": [
                 801,
                 209,
                 19,
                 16
-              ],
-              "pre_delay": 300,
-              "post_delay": 300,
-              "next": [
-                "VP_判断是否选中终点",
-                "VP_打捞线终点"
               ]
             }
           }
@@ -827,34 +578,23 @@
           "name": "TKB-408",
           "pipeline_override": {
             "VP_打捞线下队": {
-              "recognition": "DirectHit",
               "target": [
                 861,
                 282,
                 25,
                 23
               ],
-              "action": "Click",
-              "pre_delay": 800,
-              "next": [
-                "VP_确定下队"
-              ]
+              "pre_delay": 800
             },
             "VP_打捞线终点": {
-              "recognition": "DirectHit",
               "target": [
                 861,
                 587,
                 21,
                 17
               ],
-              "action": "Click",
               "pre_delay": 600,
-              "post_delay": 800,
-              "next": [
-                "VP_判断是否选中终点",
-                "VP_打捞线终点"
-              ]
+              "post_delay": 800
             }
           }
         }

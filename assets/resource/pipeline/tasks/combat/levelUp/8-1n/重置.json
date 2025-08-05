@@ -1,5 +1,4 @@
 {
-
     "81N重置_点击1队图标": {
         "recognition": "TemplateMatch",
         "roi": [
@@ -9,7 +8,8 @@
             243
         ],
         "template": "combat/levelUp/8-1N/map_team1.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "rate_limit": 200,
         "target_offset": [
             -25,
@@ -27,7 +27,8 @@
         "expected": [
             "撤离"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "81N重置_点击1队撤离确定"
         ]
@@ -37,7 +38,8 @@
         "expected": [
             "确定"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 500,
         "next": [
             "81N重置_终止作战菜单"
@@ -50,7 +52,8 @@
             53,
             32
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "81N重置_重新作战",
             "81N重置_终止作战菜单"
@@ -58,6 +61,7 @@
     },
     "81N重置_重新作战": {
         "recognition": "OCR",
+        "timeout": 600000,
         "roi": [
             398,
             459,
@@ -67,9 +71,8 @@
         "expected": [
             "重新作战"
         ],
-        "action": "Click",
-        "next": [
-            
-        ]
+        "action": "LongPress",
+        "duration": 20,
+        "next": []
     }
 }

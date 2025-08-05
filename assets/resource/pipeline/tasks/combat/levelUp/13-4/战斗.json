@@ -27,7 +27,8 @@
         "expected": [
             "开始作战"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 4000,
         "next": [
             "134战斗_点击2队单vv准备补给"
@@ -40,7 +41,8 @@
             8,
             20
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "pre_delay": 1000,
         "post_delay": 1000,
         "next": [
@@ -59,7 +61,8 @@
         "expected": [
             "补给"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "134战斗_取消2队选择"
@@ -70,7 +73,8 @@
         "template": [
             "combat/levelUp/13-4/init.png"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "134战斗_点击1队图标"
@@ -86,7 +90,8 @@
             26,
             25
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_wait_freezes": 1,
         "post_delay": 800,
         "rate_limit": 200,
@@ -123,7 +128,8 @@
         "expected": [
             "取消"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1200,
         "next": [
             "134战斗_点击计划模式"
@@ -136,7 +142,8 @@
             130,
             34
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 500,
         "next": [
             "134战斗_巡游者"
@@ -149,7 +156,8 @@
             24,
             24
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 200,
         "rate_limit": 500,
         "next": [
@@ -182,7 +190,8 @@
             24,
             9
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 200,
         "rate_limit": 200,
         "next": [
@@ -215,7 +224,8 @@
             21,
             6
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 200,
         "rate_limit": 200,
         "green_mask": true,
@@ -250,7 +260,8 @@
             153,
             74
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "timeout": 600000,
         "next": [
             "134重置_再次作战"

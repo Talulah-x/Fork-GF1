@@ -10,7 +10,8 @@
         "expected": [
             "再次作战"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "rate_limit": 1000,
         "next": [
             "134部署_布置完成",
@@ -38,7 +39,8 @@
             "combat/levelUp/13-4/doll_get3.png",
             "combat/levelUp/13-4/doll_get4.png"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "threshold": 0.7,
         "next": [
             "134重置_点击获得角色",

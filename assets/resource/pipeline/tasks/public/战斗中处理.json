@@ -6,7 +6,7 @@
         ],
         "rate_limit": 1000,
         "action": "LongPress",
-        "duration": 500,
+        "duration": 100,
         "target": [
             467,
             480,

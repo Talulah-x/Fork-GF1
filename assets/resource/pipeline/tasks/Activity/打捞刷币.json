@@ -18,7 +18,8 @@
         "expected": [
             "虚粒"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "pre_wait_freezes": 500,
         "post_delay": 2500
     },
@@ -42,7 +43,8 @@
     "VP_点击刷币关": {
         "recognition": "OCR",
         "expected": "真空",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "pre_delay": 1000,
         "post_delay": 1000,
         "next": [
@@ -58,7 +60,8 @@
             132
         ],
         "expected": "出击",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 3000,
         "next": [
             "VP_打捞线下队",
@@ -69,8 +72,24 @@
         ]
     },
     "VP_打捞线下队": {
+        "recognition": "DirectHit",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay": 300,
+        "post_delay": 300,
         "next": [
             "VP_确定下队"
+        ]
+    },
+    "VP_打捞线终点": {
+        "recognition": "DirectHit",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay": 300,
+        "post_delay": 300,
+        "next": [
+            "VP_判断是否选中终点",
+            "VP_打捞线终点"
         ]
     },
     "VP_确定下队": {
@@ -85,7 +104,8 @@
             "Activity/下队确定.png",
             "Activity/下队取消.png"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 800,
         "next": "VP_开始作战"
     },
@@ -109,7 +129,8 @@
             153
         ],
         "expected": "开始作战",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1500,
         "post_wait_freezes": 500,
         "next": "VP_点击梯队1"
@@ -117,7 +138,8 @@
     "VP_点击计划模式": {
         "recognition": "TemplateMatch",
         "template": "Activity/计划模式.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "VP_判断是否计划模式",
             "VP_点击计划模式"
@@ -133,7 +155,8 @@
     "VP_点击梯队1": {
         "recognition": "TemplateMatch",
         "template": "Activity/梯队1.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target_offset": [
             -30,
             30,
@@ -159,12 +182,6 @@
             "VP_点击计划模式"
         ]
     },
-    "VP_打捞线终点": {
-        "next": [
-            "VP_判断是否选中终点",
-            "VP_打捞线终点"
-        ]
-    },
     "VP_判断是否选中终点": {
         "recognition": "OCR",
         "roi": [
@@ -187,81 +204,15 @@
             134
         ],
         "expected": "计划",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 6500,
-        "next": "VP加速结算"
-    },
-    "VP加速结算": {
-        "recognition": "DirectHit",
-        "action": "DoNothing",
-        "post_delay": 200,
-        "timeout": 700000,
-        "next": [
-            "VP_再次作战"
-        ],
-        "interrupt": [
-            "VP_入加速结算",
-            "VP_invert"
-        ]
-    },
-    "VP_invert": {
-        "recognition": "OCR",
-        "action": "DoNothing",
-        "inverse": true,
-        "expected": "HELLO"
-    },
-    "VP_入加速结算": {
-        "recognition": "TemplateMatch",
-        "template": "Activity/加速结算.png",
-        "threshold": 0.5,
-        "roi": [
-            1,
-            1,
-            201,
-            80
-        ],
-        "pre_delay": 10,
-        "action": "Click",
-        "target": [
-            800,
-            312,
-            133,
-            70
-        ],
+        "next": "VP_再次作战",
         "timeout": 600000,
-        "next": [
-            "VP_出加速结算"
-        ],
         "interrupt": [
-            "VP_加速结算1"
+            "public_加速结算进入",
+            "public_不中断计划"
         ]
-    },
-    "VP_出加速结算": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "Activity/战利品.png"
-        ],
-        "action": "Click",
-        "target": [
-            1,
-            1,
-            201,
-            80
-        ],
-        "pre_delay": 500,
-        "post_delay": 8500
-    },
-    "VP_加速结算1": {
-        "recognition": "DirectHit",
-        "target": [
-            800,
-            312,
-            133,
-            70
-        ],
-        "action": "Click",
-        "pre_delay": 1,
-        "post_delay": 1
     },
     "VP_再次作战": {
         "recognition": "OCR",
@@ -274,7 +225,8 @@
         "expected": [
             "再次作战"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 800,
         "rate_limit": 1200,
         "next": [
@@ -289,7 +241,8 @@
     },
     "VP_点击获得角色": {
         "recognition": "DirectHit",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             386,
             620,

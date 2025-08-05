@@ -110,7 +110,8 @@
         ],
         "threshold": 0.6,
         "template": "combat/levelUp/8-1N/port_1.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 500,
         "next": [
             "81N部署_部署1队确定",
@@ -129,7 +130,8 @@
             "确定",
             "取消"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": []
     },
     "81N部署_部署2队": {
@@ -142,7 +144,8 @@
         ],
         "threshold": 0.6,
         "template": "combat/levelUp/8-1N/port_2.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1500,
         "pre_delay": 1500,
         "next": [
@@ -162,7 +165,8 @@
             "确定",
             "取消"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": []
     },
     "81N部署_部署3队": {
@@ -176,7 +180,8 @@
         "threshold": 0.6,
         "post_delay": 1000,
         "template": "combat/levelUp/8-1N/port_h.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "81N部署_部署3队确定"
         ],
@@ -196,7 +201,8 @@
             "确定",
             "取消"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1200
     },
     "81N部署_部署重装": {
@@ -209,7 +215,8 @@
         ],
         "threshold": 0.6,
         "template": "combat/levelUp/8-1N/port_h.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "81N部署_部署重装选择",
             "81N部署_部署重装"
@@ -227,7 +234,8 @@
             265,
             146
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "81N部署_部署重装确定",
             "81N部署_部署重装"
@@ -243,7 +251,8 @@
             69,
             37
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1200
     },
     "81N部署_重装机场选择梯队": {
@@ -275,7 +284,8 @@
         "template": [
             "combat/levelUp/8-1N/map_team2.png"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1500,
         "rate_limit": 200,
         "threshold": 0.7,
@@ -321,7 +331,8 @@
         "expected": [
             "取消"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 500,
         "next": "81N战斗_开始作战前初始化"
     }

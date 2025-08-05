@@ -8,7 +8,8 @@
             139,
             61
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "!装备回收总流程"
         ]
@@ -18,7 +19,8 @@
         "expected": [
             "资源回收"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 800,
         "next": [
             "public拆装备_智能选择点击选择装备"
@@ -33,7 +35,8 @@
             52
         ],
         "template": "storage/选择装备.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "public拆装备_智能选择",
@@ -65,7 +68,8 @@
         "expected": [
             "智能选择"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 400,
         "next": [
             "public拆装备_智能选择装备拆解选择确定"
@@ -82,7 +86,8 @@
         "expected": [
             "确定"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "public拆装备_智能选择回收"
         ]
@@ -98,7 +103,8 @@
         "expected": [
             "回收"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1500,
         "post_wait_freezes": 1,
         "next": [
@@ -112,7 +118,8 @@
             77,
             56
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "public拆装备_手动选择",
@@ -130,7 +137,8 @@
         ]
     },
     "public拆装备_手动选择1": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             80,
             270,
@@ -142,7 +150,8 @@
         ]
     },
     "public拆装备_手动选择2": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             250,
             270,
@@ -154,7 +163,8 @@
         ]
     },
     "public拆装备_手动选择3": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             420,
             270,
@@ -166,7 +176,8 @@
         ]
     },
     "public拆装备_手动选择4": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             590,
             270,
@@ -178,7 +189,8 @@
         ]
     },
     "public拆装备_手动选择5": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             760,
             270,
@@ -190,7 +202,8 @@
         ]
     },
     "public拆装备_手动选择6": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             930,
             270,
@@ -202,7 +215,8 @@
         ]
     },
     "public拆装备_手动选择7": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             80,
             520,
@@ -214,7 +228,8 @@
         ]
     },
     "public拆装备_手动选择8": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             250,
             520,
@@ -226,7 +241,8 @@
         ]
     },
     "public拆装备_手动选择9": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             420,
             520,
@@ -238,7 +254,8 @@
         ]
     },
     "public拆装备_手动选择10": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             590,
             520,
@@ -250,7 +267,8 @@
         ]
     },
     "public拆装备_手动选择11": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             760,
             520,
@@ -262,7 +280,8 @@
         ]
     },
     "public拆装备_手动选择12": {
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             930,
             520,
@@ -279,7 +298,8 @@
         "expected": [
             "确定"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "public拆装备_手动选择回收"
         ]
@@ -295,7 +315,8 @@
         "expected": [
             "回收"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "public拆装备_回收确定"
         ]
@@ -303,8 +324,9 @@
     "public拆装备_回收确定": {
         "recognition": "TemplateMatch",
         "template": "storage/retire_confirm.png",
-        "action": "Click",
-        "post_wait_freezes":500,
+        "action": "LongPress",
+        "duration": 20,
+        "post_wait_freezes": 500,
         "next": [
             "public拆装备_手动选择点击选择装备"
         ]
@@ -327,7 +349,8 @@
             105
         ],
         "template": "storage/navi.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "pre_delay": 800,
         "post_wait_freezes": 200,
         "next": [

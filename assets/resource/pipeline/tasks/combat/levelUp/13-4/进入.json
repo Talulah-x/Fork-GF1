@@ -24,7 +24,8 @@
             834,
             419
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "134进入_普通作战"
         ]
@@ -40,7 +41,8 @@
         "expected": [
             "普通作战"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 3000,
         "next": [
             "134部署_布置完成",

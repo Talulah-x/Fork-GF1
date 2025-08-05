@@ -26,7 +26,8 @@
         "expected": [
             "开始作战"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 3000,
         "next": [
             "81N战斗_点击2队单zas准备补给",
@@ -64,7 +65,8 @@
             0,
             0
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "pre_delay": 1000,
         "post_delay": 1000,
         "rate_limit": 200,
@@ -81,7 +83,8 @@
         "expected": [
             "补给"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 800,
         "next": [
             "81N战斗_点击2队单zas"
@@ -96,7 +99,8 @@
             233
         ],
         "template": "combat/levelUp/8-1N/map_team2.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target_offset": [
             -25,
             15,
@@ -117,7 +121,8 @@
         "expected": [
             "撤离"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 400,
         "next": [
             "81N战斗_点击2队撤离确定"
@@ -129,7 +134,8 @@
             "确定"
         ],
         "post_delay": 800,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "81N战斗_点击1队图标"
         ]
@@ -143,7 +149,8 @@
             261,
             231
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target_offset": [
             -25,
             15,
@@ -186,7 +193,8 @@
             "确定",
             "取消"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1200,
         "next": [
             "81N战斗_点击计划模式"
@@ -197,7 +205,8 @@
         "expected": [
             "计划模式"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1500,
         "next": [
             "81N战斗_炸狗点1"
@@ -212,7 +221,8 @@
             204
         ],
         "template": "combat/levelUp/8-1N/dog1.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "81N战斗_炸狗点1确认",
@@ -230,7 +240,8 @@
         "template": [
             "combat/levelUp/8-1N/port_2.png"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "threshold": 0.55,
         "post_delay": 1000,
         "next": [
@@ -277,7 +288,8 @@
         "expected": [
             "执行计划"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "81N战斗_剩余行动01"
         ],

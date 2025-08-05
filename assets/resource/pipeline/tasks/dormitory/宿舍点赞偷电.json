@@ -17,7 +17,8 @@
             123
         ],
         "expected": "好友",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "宿舍_点击好友",
             "宿舍_宿舍排序"
@@ -33,7 +34,8 @@
         ],
         "expected": "排序方式",
         "pre_delay": 500,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 500,
         "next": [
             "宿舍_数量排序",
@@ -49,7 +51,8 @@
             171
         ],
         "expected": "宿舍数量",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "宿舍_数量排序",
             "宿舍_点击第一个好友"
@@ -64,7 +67,8 @@
             142
         ],
         "expected": "宿舍数量",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             622,
             219,
@@ -85,7 +89,8 @@
             152
         ],
         "expected": "参观",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "宿舍_进入宿舍",
             "!宿舍自动点赞"
@@ -95,7 +100,8 @@
         "recognition": "TemplateMatch",
         "green_mask": true,
         "template": "dormitory/Gbattery.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "threshold": 0.75,
         "next": [
             "宿舍_偷电成功",
@@ -105,7 +111,8 @@
     "宿舍_偷电成功": {
         "recognition": "OCR",
         "expected": "关闭",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": "宿舍_点击点赞"
     },
     "宿舍_点击点赞": {
@@ -117,7 +124,8 @@
             145
         ],
         "expected": "点赞",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 400,
         "next": [
             "宿舍_点击下一个宿舍",
@@ -133,7 +141,8 @@
             145
         ],
         "expected": "留言",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             205,
             635,
@@ -177,7 +186,8 @@
             "dormitory/Gback2.png"
         ],
         "green_mask": true,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "宿舍_返回主菜单",
             "宿舍_点击返回"

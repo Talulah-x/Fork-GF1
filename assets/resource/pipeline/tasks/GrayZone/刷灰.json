@@ -9,7 +9,8 @@
   "灰域_进入灰域": {
     "recognition": "OCR",
     "expected": "灰域探查",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": [
       "灰域_战斗页探查识图",
       "灰域_灰域检测",
@@ -25,7 +26,8 @@
       160
     ],
     "expected": "探查",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": [
       "灰域_灰域检测",
       "灰域_战斗页探查"
@@ -38,7 +40,8 @@
       "GrayZone/进入灰域2.png",
       "GrayZone/进入灰域3.png"
     ],
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": [
       "灰域_战斗页探查识图",
       "灰域_灰域检测"
@@ -70,7 +73,8 @@
       189
     ],
     "expected": "带",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": "灰域_选择地图",
     "interrupt": "灰域_领取奖励"
   },
@@ -83,7 +87,8 @@
       77
     ],
     "expected": "硅状",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": "灰域_确认切换",
     "interrupt": "灰域_领取奖励"
   },
@@ -96,7 +101,8 @@
       225
     ],
     "expected": "确定",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "post_delay": 10000,
     "next": "灰域_灰域检测"
   },
@@ -107,7 +113,8 @@
       "GrayZone/奇遇点2.png",
       "GrayZone/奇遇点3.png"
     ],
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": [
       "灰域_出击奇遇",
       "灰域_检测奇遇"
@@ -122,7 +129,8 @@
       116
     ],
     "expected": "出击",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": [
       "灰域_奇遇代理",
       "灰域_人形回收",
@@ -138,7 +146,8 @@
       170
     ],
     "expected": "代理作战",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": [
       "灰域_代理确认",
       "灰域_奇遇代理"
@@ -153,7 +162,8 @@
       199
     ],
     "expected": "确认",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": [
       "灰域_代理检测",
       "灰域_代理确认"
@@ -188,7 +198,8 @@
   },
   "灰域_加速结算": {
     "recognition": "DirectHit",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "target": [
       1060,
       599,
@@ -203,13 +214,15 @@
   "灰域_人形回收": {
     "recognition": "OCR",
     "expected": "人形回收",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": "灰域_选择角色"
   },
   "灰域_选择角色": {
     "recognition": "OCR",
     "expected": "角色",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": "灰域_智能选择"
   },
   "灰域_智能选择": {
@@ -218,7 +231,8 @@
       "智能",
       "确定"
     ],
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": "灰域_智能选择",
     "interrupt": "灰域_回收"
   },
@@ -231,12 +245,14 @@
       360
     ],
     "expected": "回收",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "next": "灰域_返回灰域"
   },
   "灰域_返回灰域": {
     "recognition": "TemplateMatch",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "template": "GrayZone/导航栏.png",
     "next": [
       "灰域_战斗页面",
@@ -245,7 +261,8 @@
   },
   "灰域_战斗页面": {
     "recognition": "OCR",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "expected": [
       "战斗"
     ],
@@ -257,7 +274,8 @@
   "灰域_领取奖励": {
     "recognition": "TemplateMatch",
     "template": "GrayZone/领取奖励.png",
-    "action": "Click",
+    "action": "LongPress",
+    "duration": 20,
     "target": [
       555,
       50,

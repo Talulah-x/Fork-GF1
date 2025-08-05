@@ -30,7 +30,8 @@
             2,
             20
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "rate_limit": 200,
         "post_delay": 1500,
         "next": [
@@ -50,7 +51,8 @@
             100
         ],
         "template": "combat/levelUp/13-4/dply_team2.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "134部署_弹药检查new",

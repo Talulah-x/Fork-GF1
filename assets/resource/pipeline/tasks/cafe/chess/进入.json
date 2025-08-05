@@ -15,7 +15,8 @@
         "expected": [
             "创建房间"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "确定进入_兵棋进入"
@@ -26,7 +27,8 @@
         "expected": [
             "确定"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "开始游戏_兵棋进入"
         ]
@@ -37,7 +39,8 @@
             "开始游戏"
         ],
         "rate_limit": 5000,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "挂机_兵棋挂机1"
         ]
@@ -45,7 +48,8 @@
     "挂机_兵棋挂机1": {
         "recognition": "DirectHit",
         "pre_delay": 300000,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             559,
             472,
@@ -60,7 +64,8 @@
     "挂机_兵棋挂机2": {
         "recognition": "DirectHit",
         "pre_delay": 300000,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             559,
             472,
@@ -75,7 +80,8 @@
     "挂机_兵棋挂机3": {
         "recognition": "DirectHit",
         "pre_delay": 300000,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             559,
             472,
@@ -90,7 +96,8 @@
     "挂机_兵棋挂机4": {
         "recognition": "DirectHit",
         "pre_delay": 300000,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             559,
             472,
@@ -104,7 +111,8 @@
     },
     "兵棋_时间足够": {
         "recognition": "DirectHit",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             114,
             22,
@@ -125,7 +133,8 @@
             133
         ],
         "expected": "退",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "兵棋_确认退出"
         ]
@@ -139,7 +148,8 @@
             66
         ],
         "expected": "确",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "=兵棋总流程"
         ]
@@ -147,7 +157,8 @@
     "领取奖励_兵棋结束": {
         "recognition": "TemplateMatch",
         "template": "chess/reward.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_wait_freezes": 1,
         "next": [
             "返回开始游戏_兵棋结束"
@@ -156,7 +167,8 @@
     "返回开始游戏_兵棋结束": {
         "recognition": "TemplateMatch",
         "template": "chess/back2restart.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "开始游戏_兵棋进入",
             "返回开始游戏_兵棋结束"

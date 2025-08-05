@@ -10,7 +10,8 @@
         "expected": [
             "装备强化"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "!装备强化总流程"
         ]
@@ -29,7 +30,8 @@
         "expected": [
             "装备强化"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "public装备强化_选择强化的装备"
         ]
@@ -37,7 +39,8 @@
     "public装备强化_选择强化的装备": {
         "recognition": "TemplateMatch",
         "template": "storage/slct_equip.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "target": [
             215,
             310,
@@ -46,18 +49,57 @@
         ],
         "post_delay": 1500,
         "next": [
+            "public装备强化_选择排序方式"
+        ]
+    },
+    "public装备强化_选择排序方式": {
+        "recognition": "OCR",
+        "roi": [
+            1095,
+            149,
+            82,
+            71
+        ],
+        "expected": [
+            "星"
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 500,
+        "next": [
+            "public装备强化_排序完成"
+        ]
+    },
+    "public装备强化_排序完成": {
+        "recognition": "OCR",
+        "roi": [
+            1095,
+            149,
+            82,
+            71
+        ],
+        "expected": [
+            "级",
+            "化"
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 1000,
+        "next": [
             "public装备强化_选择高级装备"
         ]
     },
     "public装备强化_选择高级装备": {
         "recognition": "TemplateMatch",
         "template": [
-            "storage/Geqip.png"
+            "storage/Geqip1.png",
+            "storage/Geqip2.png"
         ],
         "post_delay": 1000,
         "pre_delay": 1000,
         "threshold": 0.9,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "green_mask": true,
         "next": [
             "public装备强化_选择低级装备",
@@ -71,7 +113,8 @@
             48,
             46
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "public装备强化_强制点击至无智能选择"
         ]
@@ -81,7 +124,8 @@
         "expected": [
             "智能选择"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "public装备强化_强制点击至无智能选择",
             "public装备强化_装备强化选择确定"
@@ -92,7 +136,8 @@
         "expected": [
             "确定"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1500,
         "next": [
             "public装备强化_装备强化确定"
@@ -104,7 +149,8 @@
             "确定"
         ],
         "post_delay": 1000,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "next": [
             "public装备强化_装备强化最终确定",
             "public装备强化_进入导航栏"
@@ -115,7 +161,8 @@
         "expected": [
             "确定"
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_wait_freezes": 100,
         "next": [
             "public装备强化_进入导航栏"
@@ -130,7 +177,8 @@
             105
         ],
         "template": "storage/navi.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "pre_delay": 800,
         "post_wait_freezes": 200,
         "next": [
@@ -147,10 +195,9 @@
             200
         ],
         "template": "storage/navi_combat.png",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 20,
         "post_delay": 1000,
-        "next": [
-
-        ]
+        "next": []
     }
 }
