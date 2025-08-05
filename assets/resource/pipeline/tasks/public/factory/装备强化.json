@@ -73,13 +73,12 @@
     "public装备强化_排序完成": {
         "recognition": "OCR",
         "roi": [
-            1095,
-            149,
-            82,
-            71
+            923,
+            207,
+            159,
+            48
         ],
         "expected": [
-            "级",
             "化"
         ],
         "action": "LongPress",
@@ -97,7 +96,7 @@
         ],
         "post_delay": 1000,
         "pre_delay": 1000,
-        "threshold": 0.9,
+        "threshold": 0.75,
         "action": "LongPress",
         "duration": 20,
         "green_mask": true,
@@ -163,7 +162,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_wait_freezes": 100,
+        "post_wait_freezes": 500,
         "next": [
             "public装备强化_进入导航栏"
         ]
