@@ -99,7 +99,10 @@
     "宿舍_偷电": {
         "recognition": "TemplateMatch",
         "green_mask": true,
-        "template": "dormitory/Gbattery.png",
+        "template": [
+            "dormitory/Gbattery1.png",
+            "dormitory/Gbattery2.png"
+        ],
         "action": "LongPress",
         "duration": 20,
         "threshold": 0.75,
