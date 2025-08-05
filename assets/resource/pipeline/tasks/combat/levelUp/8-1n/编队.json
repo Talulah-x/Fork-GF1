@@ -8,7 +8,7 @@
         ],
         "recognition": "OCR",
         "expected": [
-            "队伍编成"
+            "编成"
         ],
         "action": "Click",
         "post_delay": 2000,
@@ -90,10 +90,10 @@
         "threshold": 0.8,
         "green_mask": true,
         "next": [
-            "!确定"
+            "81N编队_确定"
         ]
     },
-    "!确定": {
+    "81N编队_确定": {
         "recognition": "OCR",
         "expected": [
             "确定"
@@ -101,7 +101,7 @@
         "action": "Click",
         "post_delay": 600,
         "next": [
-            "!确定",
+            "81N编队_确定",
             "81N编队_返回地图"
         ]
     },

@@ -1,6 +1,7 @@
 {
     "134战斗_开始作战前初始化": {
         "recognition": "TemplateMatch",
+        "timeout": 600000,
         "roi": [
             70,
             468,

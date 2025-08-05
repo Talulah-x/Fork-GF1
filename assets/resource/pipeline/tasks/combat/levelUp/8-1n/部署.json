@@ -24,6 +24,7 @@
             261,
             231
         ],
+        "threshold": 0.5,
         "template": "combat/levelUp/8-1N/map_team1.png",
         "next": [
             "81N部署_确认2队是否已部署"
@@ -42,6 +43,7 @@
             277,
             233
         ],
+        "threshold": 0.5,
         "template": "combat/levelUp/8-1N/map_team2.png",
         "next": [
             "81N部署_确认3队是否已部署"
@@ -60,6 +62,7 @@
             298,
             316
         ],
+        "threshold": 0.5,
         "template": [
             "combat/levelUp/8-1N/map_team3.png",
             "combat/levelUp/8-1N/map_teamh.png"
@@ -171,7 +174,7 @@
             316
         ],
         "threshold": 0.6,
-        "post_delay":1000,
+        "post_delay": 1000,
         "template": "combat/levelUp/8-1N/port_h.png",
         "action": "Click",
         "next": [

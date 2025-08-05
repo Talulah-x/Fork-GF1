@@ -34,6 +34,14 @@
         ]
     },
     "81N_选择装备处理方式": {
+        "recognition": "OCR",
+        "expected": "装备回收",
+        "roi": [
+            516,
+            313,
+            139,
+            61
+        ],
         "next": [
             "81N进入_点击8-1N"
         ],
@@ -51,7 +59,7 @@
         ],
         "template": "combat/levelUp/8-1N/map_team2.png",
         "target_offset": [
-            -20,
+            -25,
             15,
             0,
             0

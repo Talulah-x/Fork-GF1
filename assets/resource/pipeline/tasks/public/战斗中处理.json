@@ -18,14 +18,14 @@
     "public_加速结算进入": {
         "recognition": "OCR",
         "expected": [
-            "结算"
+            "EXP"
         ],
         "rate_limit": 1000,
         "roi": [
-            0,
-            0,
-            249,
-            122
+            373,
+            575,
+            379,
+            134
         ],
         "action": "Click",
         "target": [

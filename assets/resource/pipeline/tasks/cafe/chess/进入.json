@@ -148,6 +148,7 @@
         "recognition": "TemplateMatch",
         "template": "chess/reward.png",
         "action": "Click",
+        "post_wait_freezes": 1,
         "next": [
             "返回开始游戏_兵棋结束"
         ]
@@ -157,7 +158,8 @@
         "template": "chess/back2restart.png",
         "action": "Click",
         "next": [
-            "开始游戏_兵棋进入"
+            "开始游戏_兵棋进入",
+            "返回开始游戏_兵棋结束"
         ]
     }
 }

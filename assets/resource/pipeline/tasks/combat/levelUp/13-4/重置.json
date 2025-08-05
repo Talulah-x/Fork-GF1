@@ -21,7 +21,8 @@
         "interrupt": [
             "public拆人形_人形回收",
             "public拆人形_导航栏战斗"
-        ]
+        ],
+        "timeout": 600000
     },
     "134重置_点击获得角色": {
         "recognition": "TemplateMatch",

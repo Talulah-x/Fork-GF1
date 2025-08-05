@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "name": "MaaGF1",
-  "version": "v1.4.13",
+  "version": "v1.5.0",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -62,22 +62,23 @@
         "81N_弹药检查版本选择",
         "81N_是否开启结算加速",
         "81N_选择狗粮类型",
-        "81N_装备溢出处理"
+        "81N_装备溢出处理",
+        "81N_是否开启无限循环"
       ]
-    },
-    {
-      "name": "跑步机（WIP，仍需调试）",
-      "entry": "!跑步机总流程",
-      "check": false,
-      "doc": " **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-      "repeatable": false,
-      "repeat_count": 1
     },
     {
       "name": "8-1N地图初始化",
       "entry": "81N地图初始化_拖到左上角",
       "check": false,
       "doc": "请在进入8-1N地图后的界面运行",
+      "repeatable": false,
+      "repeat_count": 1
+    },
+    {
+      "name": "跑步机（WIP，仍需调试）",
+      "entry": "!跑步机总流程",
+      "check": false,
+      "doc": " **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "repeatable": false,
       "repeat_count": 1
     },
@@ -157,6 +158,23 @@
     }
   ],
   "option": {
+    "81N_是否开启无限循环": {
+      "cases": [
+        {
+          "name": "开启无限循环",
+          "pipeline_override": {
+            "81N重置_重新作战": {
+              "next": [
+                "81N部署_布置完成"
+              ]
+            }
+          }
+        },
+        {
+          "name": "关闭无限循环"
+        }
+      ]
+    },
     "81N_装备溢出处理": {
       "cases": [
         {
@@ -193,21 +211,21 @@
     "81N_选择狗粮类型": {
       "cases": [
         {
-          "name": "人形小队（第三梯队）",
-          "pipeline_override": {
-            "81N部署_确认2队是否已部署": {
-              "interrupt": [
-                "81N部署_部署3队"
-              ]
-            }
-          }
-        },
-        {
           "name": "重装小队（BGM-71）",
           "pipeline_override": {
             "81N部署_确认2队是否已部署": {
               "interrupt": [
                 "81N部署_部署重装"
+              ]
+            }
+          }
+        },
+        {
+          "name": "人形小队（第三梯队）",
+          "pipeline_override": {
+            "81N部署_确认2队是否已部署": {
+              "interrupt": [
+                "81N部署_部署3队"
               ]
             }
           }
@@ -221,8 +239,12 @@
           "pipeline_override": {
             "81N战斗_执行计划": {
               "interrupt": [
+                "public_不中断计划",
                 "public_加速结算进入"
               ]
+            },
+            "public_加速结算点击10": {
+              "post_delay": 2000
             }
           }
         },
@@ -243,6 +265,7 @@
           "pipeline_override": {
             "134战斗_执行计划": {
               "interrupt": [
+                "public_不中断计划",
                 "public_加速结算进入"
               ]
             }
