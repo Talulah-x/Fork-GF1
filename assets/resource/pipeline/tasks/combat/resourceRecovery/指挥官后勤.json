@@ -367,24 +367,17 @@
         ]
     },
     "零电荷_导航栏": {
-        "recognition": "OCR",
+        "recognition": "TemplateMatch",
         "roi": [
-            278,
-            154,
-            137,
-            87
+            80,
+            150,
+            150,
+            200
         ],
-        "expected": [
-            "角色"
-        ],
+        "template": "storage/navi_combat.png",
         "action": "LongPress",
-        "duration": 20,
-        "target": [
-            174,
-            15,
-            82,
-            72
-        ],
+        "duration": 500,
+        "pre_delay": 1000,
         "next": [
             "零电荷_战斗页面",
             "零电荷_导航栏"

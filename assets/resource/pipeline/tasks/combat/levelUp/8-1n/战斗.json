@@ -32,23 +32,24 @@
         "next": [
             "81N战斗_点击2队单zas准备补给",
             "81N_选择装备处理方式"
-        ]
+        ],
+        "timeout": 600000
     },
     "81N_选择装备处理方式": {
         "recognition": "OCR",
-        "expected": "装备回收",
         "roi": [
-            516,
-            313,
-            139,
-            61
+            775,
+            290,
+            169,
+            82
+        ],
+        "expected": [
+            "装备强化"
         ],
         "next": [
             "81N进入_点击8-1N"
         ],
-        "interrupt": [
-            "public拆人形_导航栏战斗"
-        ]
+        "interrupt": []
     },
     "81N战斗_点击2队单zas准备补给": {
         "recognition": "TemplateMatch",
@@ -301,7 +302,7 @@
         "recognition": "TemplateMatch",
         "green_mask": true,
         "template": "combat/levelUp/8-1N/Gap01.png",
-        "timeout": 60000,
+        "timeout": 600000,
         "pre_delay": 1000,
         "next": [
             "81N重置_点击1队图标"

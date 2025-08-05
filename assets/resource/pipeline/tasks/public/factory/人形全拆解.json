@@ -35,6 +35,12 @@
             61
         ],
         "template": "storage/选择角色.png",
+        "target": [
+            314,
+            185,
+            36,
+            38
+        ],
         "action": "LongPress",
         "duration": 20,
         "post_delay": 1000,
@@ -101,6 +107,12 @@
             61
         ],
         "template": "storage/选择角色.png",
+        "target": [
+            314,
+            185,
+            36,
+            38
+        ],
         "action": "LongPress",
         "duration": 20,
         "post_delay": 1000,

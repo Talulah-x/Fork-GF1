@@ -162,7 +162,9 @@
   ],
   "advanced": {
     "指定装备强化": {
-      "field": ["eqip_names"],
+      "field": [
+        "eqip_names"
+      ],
       "type": "list"
     }
   },
@@ -191,7 +193,8 @@
           "pipeline_override": {
             "81N_选择装备处理方式": {
               "interrupt": [
-                "public装备强化_装备强化","public装备强化_导航栏战斗"
+                "public装备强化_装备强化",
+                "public装备强化_导航栏战斗"
               ]
             }
           }
@@ -201,7 +204,8 @@
           "pipeline_override": {
             "81N_选择装备处理方式": {
               "interrupts": [
-                "public拆装备_装备回收","public装备强化_导航栏战斗"
+                "public拆装备_装备回收",
+                "public装备强化_导航栏战斗"
               ]
             }
           }
