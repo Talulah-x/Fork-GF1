@@ -108,7 +108,7 @@
             261,
             231
         ],
-        "threshold": 0.6,
+        "threshold": 0.5,
         "template": "combat/levelUp/8-1N/port_1.png",
         "action": "LongPress",
         "duration": 20,
@@ -142,7 +142,7 @@
             277,
             233
         ],
-        "threshold": 0.6,
+        "threshold": 0.5,
         "template": "combat/levelUp/8-1N/port_2.png",
         "action": "LongPress",
         "duration": 20,
@@ -177,7 +177,7 @@
             298,
             316
         ],
-        "threshold": 0.6,
+        "threshold": 0.5,
         "post_delay": 1000,
         "template": "combat/levelUp/8-1N/port_h.png",
         "action": "LongPress",
@@ -308,6 +308,7 @@
         ],
         "template": "combat/levelUp/8-1N/Gnoammo.png",
         "green_mask": true,
+        "threshold": 0.75,
         "next": [
             "81N部署_无弹药不编成"
         ]
@@ -322,6 +323,7 @@
         ],
         "template": "combat/levelUp/8-1N/Gfullammo.png",
         "green_mask": true,
+        "threshold": 0.75,
         "next": [
             "81N编队_点击队伍编成"
         ]

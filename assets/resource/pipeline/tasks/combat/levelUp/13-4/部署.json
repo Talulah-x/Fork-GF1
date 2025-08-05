@@ -58,9 +58,7 @@
         ],
         "template": "combat/levelUp/13-4/map_team2.png",
         "rate_limit": 200,
-        "next": [
-            "134部署_弹药检查new"
-        ]
+        "next": []
     },
     "134部署_部署1队": {
         "target": [
@@ -169,12 +167,13 @@
     "134部署_弹药判断无": {
         "recognition": "TemplateMatch",
         "roi": [
-            150,
-            489,
-            183,
-            99
+            130,
+            439,
+            233,
+            169
         ],
         "template": "combat/levelUp/13-4/Gnoammo.png",
+        "threshold": 0.75,
         "green_mask": true,
         "next": [
             "134部署_无弹药不编成"
@@ -183,12 +182,13 @@
     "134部署_弹药判断有": {
         "recognition": "TemplateMatch",
         "roi": [
-            150,
-            489,
-            183,
-            99
+            130,
+            439,
+            233,
+            169
         ],
         "template": "combat/levelUp/13-4/Gfullammo.png",
+        "threshold": 0.75,
         "green_mask": true,
         "next": [
             "134编队_点击队伍编成"
