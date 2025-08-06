@@ -369,6 +369,24 @@
     "零电荷_导航栏": {
         "recognition": "TemplateMatch",
         "roi": [
+            124,
+            18,
+            120,
+            105
+        ],
+        "template": "storage/navi.png",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay": 800,
+        "post_wait_freezes": 200,
+        "next": [
+            "零电荷_战斗页面",
+            "零电荷_导航栏"
+        ]
+    },
+    "零电荷_战斗页面": {
+        "recognition": "TemplateMatch",
+        "roi": [
             80,
             150,
             150,
@@ -378,24 +396,6 @@
         "action": "LongPress",
         "duration": 500,
         "pre_delay": 1000,
-        "next": [
-            "零电荷_战斗页面",
-            "零电荷_导航栏"
-        ]
-    },
-    "零电荷_战斗页面": {
-        "recognition": "OCR",
-        "roi": [
-            71,
-            222,
-            139,
-            97
-        ],
-        "expected": [
-            "斗"
-        ],
-        "action": "LongPress",
-        "duration": 20,
         "next": [
             "!指挥官后勤",
             "零电荷_战斗页面"

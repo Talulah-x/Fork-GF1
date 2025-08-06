@@ -296,7 +296,8 @@
         ],
         "interrupt": [
             "public_不中断计划"
-        ]
+        ],
+        "timeout": 600000
     },
     "81N战斗_剩余行动01": {
         "recognition": "TemplateMatch",
