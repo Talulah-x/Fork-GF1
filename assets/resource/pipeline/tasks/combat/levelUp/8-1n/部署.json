@@ -227,12 +227,17 @@
     },
     "81N部署_部署重装选择": {
         "recognition": "OCR",
-        "expected": "BGM",
+        "expected": [
+            "BGM",
+            "AGS",
+            "G",
+            "等级"
+        ],
         "roi": [
-            626,
-            97,
-            265,
-            146
+            673,
+            138,
+            165,
+            443
         ],
         "action": "LongPress",
         "duration": 20,
