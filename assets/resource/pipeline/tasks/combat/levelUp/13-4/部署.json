@@ -29,6 +29,7 @@
         ],
         "rate_limit": 100,
         "post_delay": 10,
+        "pre_delay": 1,
         "interrupt": [
             "134部署_部署2队"
         ]
@@ -46,6 +47,7 @@
             "134部署_布置完成"
         ],
         "rate_limit": 100,
+        "pre_delay": 1,
         "post_delay": 10
     },
     "134部署_布置完成": {
@@ -58,6 +60,7 @@
         ],
         "template": "combat/levelUp/13-4/map_team2.png",
         "rate_limit": 200,
+        "pre_delay": 1,
         "next": []
     },
     "134部署_部署1队": {

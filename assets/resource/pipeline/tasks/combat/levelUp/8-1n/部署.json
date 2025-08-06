@@ -9,6 +9,11 @@
             117
         ],
         "threshold": 0.5,
+        "rate_limit": 100,
+        "post_delay": 1,
+        "pre_delay": 1,
+
+
         "next": [
             "81N部署_确认1队是否已部署"
         ],
@@ -29,8 +34,9 @@
         "next": [
             "81N部署_确认2队是否已部署"
         ],
-        "rate_limit": 100,
+        "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "interrupt": [
             "81N部署_部署2队"
         ]
@@ -48,8 +54,9 @@
         "next": [
             "81N部署_确认3队是否已部署"
         ],
-        "rate_limit": 100,
+        "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "interrupt": [
             "81N部署_部署3队"
         ]
@@ -70,8 +77,9 @@
         "next": [
             "81N部署_布置完成"
         ],
-        "rate_limit": 100,
-        "post_delay": 1
+        "rate_limit": 20,
+        "post_delay": 1,
+        "pre_delay": 1
     },
     "81N部署_确认重装是否已部署": {
         "recognition": "TemplateMatch",

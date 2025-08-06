@@ -24,6 +24,7 @@
             834,
             419
         ],
+        "threshold": 0.8,
         "action": "LongPress",
         "duration": 20,
         "next": [
@@ -46,13 +47,15 @@
         "duration": 20,
         "post_delay": 3000,
         "next": [
-            "134部署_布置完成",
             "134部署_部署梯队",
+            "134进入_普通作战",
             "134进入_点击134"
         ],
         "interrupt": [
             "134地图初始化_拖到右上角",
-            "public拆人形_人形回收","public装备强化_导航栏战斗"
-        ]
+            "public拆人形_人形回收",
+            "public装备强化_导航栏战斗"
+        ],
+        "timeout": 600000
     }
 }

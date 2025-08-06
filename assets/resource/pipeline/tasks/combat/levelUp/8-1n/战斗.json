@@ -49,7 +49,8 @@
         "next": [
             "81N进入_点击8-1N"
         ],
-        "interrupt": []
+        "interrupt": [],
+        "timeout": 600000
     },
     "81N战斗_点击2队单zas准备补给": {
         "recognition": "TemplateMatch",

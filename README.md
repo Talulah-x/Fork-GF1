@@ -111,12 +111,14 @@
 |------|----------|
 | ▶️ 8-1N双打手炸狗 | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8C%E6%89%93%E6%89%8B%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
 | ▶️ 13-4双打手拖尸 | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/13-4%E5%8F%8C%E6%89%93%E6%89%8B%E6%8B%96%E5%B0%B8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
+| ▶️ 跑步机 | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
 
 ### 🎣 打捞系统
 
 | 功能 | 开发者 | 手册链接 |
 |------|--------|----------|
 | ▶️ MP41抽薪打捞 | [Ethan Lee](https://github.com/hake971920) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
+| ▶️ 夜战打捞 |[白烛](https://github.com/Talulah-x) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%A4%9C%E6%88%98%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)|
 
 ### 🏠 宿舍功能
 
