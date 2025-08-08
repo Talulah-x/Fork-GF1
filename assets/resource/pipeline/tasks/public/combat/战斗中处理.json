@@ -7,6 +7,7 @@
         "rate_limit": 1000,
         "action": "LongPress",
         "duration": 100,
+        "post_delay": 800,
         "target": [
             467,
             480,
@@ -35,6 +36,7 @@
             21
         ],
         "post_delay": 1,
+        "pre_delay": 500,
         "next": [
             "public_加速结算点击1"
         ]
@@ -48,6 +50,7 @@
         ],
         "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "action": "Click",
         "next": [
             "public_加速结算点击2"
@@ -62,6 +65,7 @@
         ],
         "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "action": "Click",
         "next": [
             "public_加速结算点击3"
@@ -76,6 +80,7 @@
         ],
         "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "action": "Click",
         "next": [
             "public_加速结算点击4"
@@ -90,9 +95,10 @@
         ],
         "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "action": "Click",
         "next": [
-            "public_加速结算点击10"
+            "public_加速结算点击5"
         ]
     },
     "public_加速结算点击5": {
@@ -104,8 +110,11 @@
         ],
         "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "action": "Click",
-        "next": []
+        "next": [
+            "public_加速结算点击6"
+        ]
     },
     "public_加速结算点击6": {
         "target": [
@@ -116,6 +125,7 @@
         ],
         "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "action": "Click",
         "next": [
             "public_加速结算点击7"
@@ -130,6 +140,7 @@
         ],
         "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "action": "Click",
         "next": [
             "public_加速结算点击8"
@@ -144,6 +155,7 @@
         ],
         "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "action": "Click",
         "next": [
             "public_加速结算点击9"
@@ -158,6 +170,7 @@
         ],
         "rate_limit": 20,
         "post_delay": 1,
+        "pre_delay": 1,
         "action": "Click",
         "next": [
             "public_加速结算点击10"

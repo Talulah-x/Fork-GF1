@@ -59,7 +59,7 @@
             152
         ],
         "template": "combat/levelUp/13-4/map_team2.png",
-        "rate_limit": 200,
+        "rate_limit": 100,
         "pre_delay": 1,
         "next": []
     },
@@ -72,7 +72,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 500,
+        "post_delay": 1000,
         "next": [
             "134部署_部署1队确定",
             "134部署_部署1队"
@@ -133,6 +133,7 @@
             "取消"
         ],
         "action": "LongPress",
+        "post_delay": 1000,
         "duration": 20,
         "next": []
     },

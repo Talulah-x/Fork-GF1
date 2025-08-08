@@ -7,6 +7,7 @@
             277,
             233
         ],
+        "threshold": 0.4,
         "template": "combat/levelUp/8-1N/map_team2.png",
         "next": [
             "81N战斗_开始作战"
@@ -28,7 +29,6 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 3000,
         "next": [
             "81N战斗_点击2队单zas准备补给",
             "81N_选择装备处理方式"
@@ -70,7 +70,6 @@
         "action": "LongPress",
         "duration": 20,
         "pre_delay": 1000,
-        "post_delay": 1000,
         "rate_limit": 200,
         "next": [
             "81N战斗_点击补给",
@@ -82,9 +81,16 @@
     },
     "81N战斗_点击补给": {
         "recognition": "OCR",
+        "roi": [
+            1049,
+            505,
+            229,
+            95
+        ],
         "expected": [
             "补给"
         ],
+        "rate_limit": 200,
         "action": "LongPress",
         "duration": 20,
         "post_delay": 800,
@@ -103,13 +109,14 @@
         "template": "combat/levelUp/8-1N/map_team2.png",
         "action": "LongPress",
         "duration": 20,
+        "rate_limit": 200,
         "target_offset": [
             -25,
             15,
             0,
             0
         ],
-        "post_delay": 800,
+        "post_delay": 20,
         "next": [
             "81N战斗_点击2队撤离",
             "81N战斗_点击2队单zas"
@@ -120,12 +127,18 @@
     },
     "81N战斗_点击2队撤离": {
         "recognition": "OCR",
+        "roi": [
+            956,
+            595,
+            101,
+            83
+        ],
         "expected": [
             "撤离"
         ],
+        "rate_limit": 200,
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 400,
         "next": [
             "81N战斗_点击2队撤离确定"
         ]
@@ -135,9 +148,9 @@
         "expected": [
             "确定"
         ],
-        "post_delay": 800,
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 1000,
         "next": [
             "81N战斗_点击1队图标"
         ]
@@ -197,7 +210,6 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 1200,
         "next": [
             "81N战斗_点击计划模式"
         ]
@@ -209,7 +221,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 1500,
+        "post_delay": 200,
         "next": [
             "81N战斗_炸狗点1"
         ]
@@ -222,10 +234,10 @@
             202,
             204
         ],
+        "rate_limit": 200,
         "template": "combat/levelUp/8-1N/dog1.png",
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 1000,
         "next": [
             "81N战斗_炸狗点1确认",
             "81N战斗_炸狗点1"
@@ -239,13 +251,13 @@
             277,
             233
         ],
+        "rate_limit": 200,
         "template": [
             "combat/levelUp/8-1N/port_2.png"
         ],
         "action": "LongPress",
         "duration": 20,
         "threshold": 0.55,
-        "post_delay": 1000,
         "next": [
             "81N战斗_炸狗点2确认",
             "81N战斗_炸狗点2"
@@ -259,6 +271,7 @@
             126,
             113
         ],
+        "rate_limit": 200,
         "template": [
             "combat/levelUp/8-1N/Gap4.png"
         ],
@@ -276,6 +289,7 @@
             126,
             113
         ],
+        "rate_limit": 200,
         "template": [
             "combat/levelUp/8-1N/Gap1.png"
         ],

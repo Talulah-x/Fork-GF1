@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema",
   "!开始打灰": {
     "next": [
       "灰域_进入灰域",
@@ -58,9 +57,11 @@
     ],
     "expected": "带",
     "action": "DoNothing",
-    "next": "灰域_检测奇遇",
+    "next": [
+      "灰域_检测奇遇",
+      "灰域_切换地图"
+    ],
     "interrupt": [
-      "灰域_切换地图",
       "灰域_领取奖励"
     ]
   },
@@ -213,17 +214,35 @@
   },
   "灰域_人形回收": {
     "recognition": "OCR",
+    "roi": [
+      529,
+      253,
+      248,
+      345
+    ],
     "expected": "人形回收",
     "action": "LongPress",
     "duration": 20,
-    "next": "灰域_选择角色"
+    "next": [
+      "灰域_选择角色",
+      "灰域_人形回收"
+    ]
   },
   "灰域_选择角色": {
     "recognition": "OCR",
+    "roi": [
+      322,
+      187,
+      85,
+      47
+    ],
     "expected": "角色",
     "action": "LongPress",
     "duration": 20,
-    "next": "灰域_智能选择"
+    "next": [
+      "灰域_智能选择",
+      "灰域_选择角色"
+    ]
   },
   "灰域_智能选择": {
     "recognition": "OCR",
@@ -233,8 +252,10 @@
     ],
     "action": "LongPress",
     "duration": 20,
-    "next": "灰域_智能选择",
-    "interrupt": "灰域_回收"
+    "next": [
+      "灰域_回收",
+      "灰域_智能选择"
+    ]
   },
   "灰域_回收": {
     "recognition": "OCR",
@@ -247,25 +268,41 @@
     "expected": "回收",
     "action": "LongPress",
     "duration": 20,
-    "next": "灰域_返回灰域"
+    "next": [
+      "灰域_返回灰域",
+      "灰域_回收"
+    ]
   },
   "灰域_返回灰域": {
     "recognition": "TemplateMatch",
+    "roi": [
+      124,
+      18,
+      120,
+      105
+    ],
+    "template": "storage/navi.png",
     "action": "LongPress",
     "duration": 20,
-    "template": "GrayZone/导航栏.png",
+    "pre_delay": 800,
+    "post_wait_freezes": 200,
     "next": [
       "灰域_战斗页面",
       "灰域_返回灰域"
     ]
   },
   "灰域_战斗页面": {
-    "recognition": "OCR",
-    "action": "LongPress",
-    "duration": 20,
-    "expected": [
-      "战斗"
+    "recognition": "TemplateMatch",
+    "roi": [
+      80,
+      150,
+      150,
+      200
     ],
+    "template": "storage/navi_combat.png",
+    "action": "LongPress",
+    "duration": 500,
+    "pre_delay": 1000,
     "next": [
       "灰域_进入灰域",
       "灰域_战斗页面"

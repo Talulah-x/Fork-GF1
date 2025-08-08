@@ -8,6 +8,7 @@
             157,
             108
         ],
+        "threshold": 0.4,
         "template": "combat/levelUp/13-4/map_team2.png",
         "next": [
             "134战斗_开始作战"
@@ -29,7 +30,6 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 4000,
         "next": [
             "134战斗_点击2队单vv准备补给"
         ],
@@ -45,7 +45,6 @@
         "action": "LongPress",
         "duration": 20,
         "pre_delay": 1000,
-        "post_delay": 1000,
         "next": [
             "134战斗_点击补给",
             "134战斗_点击2队单vv准备补给"
@@ -64,7 +63,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 1000,
+        "post_delay": 500,
         "next": [
             "134战斗_取消2队选择"
         ]
@@ -76,7 +75,6 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 1000,
         "next": [
             "134战斗_点击1队图标"
         ],
@@ -131,7 +129,6 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 1200,
         "next": [
             "134战斗_点击计划模式"
         ]
@@ -159,8 +156,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 200,
-        "rate_limit": 500,
+        "rate_limit": 200,
         "next": [
             "134战斗_巡游者_确认",
             "134战斗_巡游者"
@@ -193,7 +189,6 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 200,
         "rate_limit": 200,
         "next": [
             "134战斗_钢狮_确认",

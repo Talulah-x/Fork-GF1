@@ -29,6 +29,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
+        "rate_limit": 200,
         "next": [
             "81N重置_点击1队撤离确定"
         ]
@@ -40,7 +41,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 500,
+        "rate_limit": 200,
         "next": [
             "81N重置_终止作战菜单"
         ]
@@ -53,6 +54,7 @@
             32
         ],
         "action": "LongPress",
+        "rate_limit": 200,
         "duration": 20,
         "next": [
             "81N重置_重新作战",
@@ -73,6 +75,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
+        "rate_limit": 200,
         "next": []
     }
 }

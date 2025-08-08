@@ -41,10 +41,11 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "threshold": 0.7,
+        "rate_limit": 100,
+        "threshold": 0.6,
         "next": [
-            "134重置_点击获得角色",
-            "134重置_再次作战"
+            "134重置_再次作战",
+            "134重置_点击获得角色"
         ],
         "timeout": 40000
     }
