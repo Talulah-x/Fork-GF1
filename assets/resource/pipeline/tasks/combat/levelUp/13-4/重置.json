@@ -21,7 +21,7 @@
         ],
         "interrupt": [
             "public拆人形_人形回收",
-            "public拆人形_导航栏战斗"
+            "public拆人形_导航栏战斗","public_进入导航栏"
         ],
         "timeout": 600000
     },

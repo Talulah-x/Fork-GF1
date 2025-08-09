@@ -115,7 +115,8 @@
         "action": "LongPress",
         "duration": 20,
         "next": [
-            "public装备强化_强制点击至无智能选择"
+            "public装备强化_强制点击至无智能选择",
+            "public装备强化_选择低级装备"
         ]
     },
     "public装备强化_强制点击至无智能选择": {

@@ -1,0 +1,51 @@
+{
+    "public_返回战斗界面": {
+        "recognition": "OCR",
+        "roi": [
+            255,
+            9,
+            285,
+            86
+        ],
+        "expected": [
+            "工厂",
+            "研发",
+            "梯队编成"
+        ],
+        "next": [
+            "public_进入导航栏"
+        ]
+    },
+    "public_进入导航栏": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            124,
+            18,
+            120,
+            105
+        ],
+        "template": "storage/navi.png",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay": 800,
+        "post_wait_freezes": 200,
+        "next": [
+            "public_导航栏战斗",
+            "public_进入导航栏"
+        ]
+    },
+    "public_导航栏战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            80,
+            150,
+            150,
+            200
+        ],
+        "template": "storage/navi_combat.png",
+        "action": "LongPress",
+        "duration": 500,
+        "pre_delay": 1000,
+        "next": []
+    }
+}

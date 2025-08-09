@@ -437,7 +437,7 @@
             208,
             136
         ],
-        "expected": "加",
+        "expected": "标",
         "action": "LongPress",
         "duration": 20,
         "target": [

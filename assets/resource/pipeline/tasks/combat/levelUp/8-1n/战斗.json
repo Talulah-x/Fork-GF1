@@ -53,24 +53,22 @@
         "timeout": 600000
     },
     "81N战斗_点击2队单zas准备补给": {
-        "recognition": "TemplateMatch",
+        "recognition": "OCR",
         "roi": [
-            179,
-            78,
-            277,
-            233
+            1079,
+            590,
+            200,
+            124
         ],
-        "template": "combat/levelUp/8-1N/map_team2.png",
-        "target_offset": [
-            -25,
-            15,
-            0,
-            0
+        "expected": "结束",
+        "target": [
+            336,
+            191,
+            13,
+            12
         ],
         "action": "LongPress",
         "duration": 20,
-        "pre_delay": 1000,
-        "rate_limit": 200,
         "next": [
             "81N战斗_点击补给",
             "81N战斗_点击2队单zas准备补给"
@@ -90,33 +88,21 @@
         "expected": [
             "补给"
         ],
-        "rate_limit": 200,
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 800,
         "next": [
             "81N战斗_点击2队单zas"
         ]
     },
     "81N战斗_点击2队单zas": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            179,
-            78,
-            277,
-            233
+        "target": [
+            336,
+            191,
+            13,
+            12
         ],
-        "template": "combat/levelUp/8-1N/map_team2.png",
         "action": "LongPress",
         "duration": 20,
-        "rate_limit": 200,
-        "target_offset": [
-            -25,
-            15,
-            0,
-            0
-        ],
-        "post_delay": 20,
         "next": [
             "81N战斗_点击2队撤离",
             "81N战斗_点击2队单zas"
@@ -136,7 +122,6 @@
         "expected": [
             "撤离"
         ],
-        "rate_limit": 200,
         "action": "LongPress",
         "duration": 20,
         "next": [
@@ -150,162 +135,114 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 1000,
-        "next": [
-            "81N战斗_点击1队图标"
-        ]
-    },
-    "81N战斗_点击1队图标": {
-        "recognition": "TemplateMatch",
-        "template": "combat/levelUp/8-1N/map_team1.png",
-        "roi": [
-            115,
-            488,
-            261,
-            231
-        ],
-        "action": "LongPress",
-        "duration": 20,
-        "target_offset": [
-            -25,
-            15,
-            0,
-            0
-        ],
-        "post_delay": 800,
-        "rate_limit": 200,
-        "next": [
-            "81N战斗_出现妖精技能释放",
-            "81N战斗_点击1队取消",
-            "81N战斗_点击1队图标"
-        ],
-        "interrupt": [
-            "81N地图初始化_长按修正"
-        ]
-    },
-    "81N战斗_出现妖精技能释放": {
-        "recognition": "OCR",
-        "expected": [
-            "释放"
-        ],
-        "roi": [
-            1075,
-            156,
-            204,
-            437
-        ],
-        "next": "81N战斗_点击计划模式"
-    },
-    "81N战斗_点击1队取消": {
-        "recognition": "OCR",
-        "roi": [
-            1071,
-            592,
-            192,
-            88
-        ],
-        "expected": [
-            "确定",
-            "取消"
-        ],
-        "action": "LongPress",
-        "duration": 20,
         "next": [
             "81N战斗_点击计划模式"
         ]
     },
     "81N战斗_点击计划模式": {
         "recognition": "OCR",
+        "roi": [
+            1088,
+            602,
+            191,
+            112
+        ],
         "expected": [
-            "计划模式"
+            "结束"
         ],
         "action": "LongPress",
         "duration": 20,
         "post_delay": 200,
+        "target": [
+            60,
+            621,
+            23,
+            7
+        ],
+        "next": [
+            "81N战斗_点击1队图标",
+            "81N战斗_点击计划模式"
+        ]
+    },
+    "81N战斗_点击1队图标": {
+        "recognition": "OCR",
+        "expected": "执行",
+        "roi": [
+            1086,
+            606,
+            182,
+            113
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "target": [
+            282,
+            659,
+            20,
+            7
+        ],
         "next": [
             "81N战斗_炸狗点1"
+        ],
+        "interrupt": [
+            "81N地图初始化_长按修正"
         ]
     },
     "81N战斗_炸狗点1": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            165,
-            423,
-            202,
-            204
-        ],
-        "rate_limit": 200,
-        "template": "combat/levelUp/8-1N/dog1.png",
         "action": "LongPress",
         "duration": 20,
+        "target": [
+            261,
+            517,
+            9,
+            5
+        ],
         "next": [
-            "81N战斗_炸狗点1确认",
-            "81N战斗_炸狗点1"
+            "81N战斗_炸狗点2",
+            "81N战斗_点击1队图标"
         ]
     },
     "81N战斗_炸狗点2": {
-        "recognition": "TemplateMatch",
+        "recognition": "OCR",
         "roi": [
-            179,
-            78,
-            277,
-            233
+            1076,
+            491,
+            194,
+            106
         ],
-        "rate_limit": 200,
-        "template": [
-            "combat/levelUp/8-1N/port_2.png"
-        ],
+        "expected": "下一",
         "action": "LongPress",
+        "target": [
+            338,
+            193,
+            13,
+            12
+        ],
         "duration": 20,
-        "threshold": 0.55,
         "next": [
-            "81N战斗_炸狗点2确认",
+            "81N战斗_执行计划",
             "81N战斗_炸狗点2"
-        ]
-    },
-    "81N战斗_炸狗点1确认": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            961,
-            606,
-            126,
-            113
-        ],
-        "rate_limit": 200,
-        "template": [
-            "combat/levelUp/8-1N/Gap4.png"
-        ],
-        "green_mask": true,
-        "threshold": 0.7,
-        "next": [
-            "81N战斗_炸狗点2"
-        ]
-    },
-    "81N战斗_炸狗点2确认": {
-        "recognition": "TemplateMatch",
-        "roi": [
-            961,
-            606,
-            126,
-            113
-        ],
-        "rate_limit": 200,
-        "template": [
-            "combat/levelUp/8-1N/Gap1.png"
-        ],
-        "green_mask": true,
-        "threshold": 0.7,
-        "next": [
-            "81N战斗_执行计划"
         ]
     },
     "81N战斗_执行计划": {
         "recognition": "OCR",
+        "roi": [
+            992,
+            659,
+            69,
+            54
+        ],
         "expected": [
-            "执行计划"
+            "1"
         ],
         "action": "LongPress",
         "duration": 20,
+        "target": [
+            1111,
+            633,
+            69,
+            43
+        ],
         "next": [
             "81N战斗_剩余行动01"
         ],
@@ -315,11 +252,15 @@
         "timeout": 600000
     },
     "81N战斗_剩余行动01": {
-        "recognition": "TemplateMatch",
-        "green_mask": true,
-        "template": "combat/levelUp/8-1N/Gap01.png",
+        "recognition": "OCR",
+        "roi": [
+            1138,
+            104,
+            90,
+            61
+        ],
+        "expected": "妖精",
         "timeout": 600000,
-        "pre_delay": 1000,
         "next": [
             "81N重置_点击1队图标"
         ]

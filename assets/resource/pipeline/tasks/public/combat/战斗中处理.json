@@ -21,14 +21,15 @@
         "expected": [
             "EXP"
         ],
-        "rate_limit": 1000,
+        "rate_limit": 500,
         "roi": [
             373,
             575,
             379,
             134
         ],
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 5,
         "target": [
             372,
             615,
@@ -51,7 +52,8 @@
         "rate_limit": 20,
         "post_delay": 1,
         "pre_delay": 1,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 5,
         "next": [
             "public_加速结算点击2"
         ]
@@ -66,7 +68,8 @@
         "rate_limit": 20,
         "post_delay": 1,
         "pre_delay": 1,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 5,
         "next": [
             "public_加速结算点击3"
         ]
@@ -81,7 +84,8 @@
         "rate_limit": 20,
         "post_delay": 1,
         "pre_delay": 1,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 5,
         "next": [
             "public_加速结算点击4"
         ]
@@ -96,7 +100,8 @@
         "rate_limit": 20,
         "post_delay": 1,
         "pre_delay": 1,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 5,
         "next": [
             "public_加速结算点击5"
         ]
@@ -111,7 +116,8 @@
         "rate_limit": 20,
         "post_delay": 1,
         "pre_delay": 1,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 5,
         "next": [
             "public_加速结算点击6"
         ]
@@ -126,7 +132,8 @@
         "rate_limit": 20,
         "post_delay": 1,
         "pre_delay": 1,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 5,
         "next": [
             "public_加速结算点击7"
         ]
@@ -141,7 +148,8 @@
         "rate_limit": 20,
         "post_delay": 1,
         "pre_delay": 1,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 5,
         "next": [
             "public_加速结算点击8"
         ]
@@ -156,7 +164,8 @@
         "rate_limit": 20,
         "post_delay": 1,
         "pre_delay": 1,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 5,
         "next": [
             "public_加速结算点击9"
         ]
@@ -171,7 +180,8 @@
         "rate_limit": 20,
         "post_delay": 1,
         "pre_delay": 1,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 5,
         "next": [
             "public_加速结算点击10"
         ]
