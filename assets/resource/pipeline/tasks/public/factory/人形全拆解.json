@@ -3,10 +3,10 @@
         "recognition": "OCR",
         "expected": "人形回收",
         "roi": [
-            529,
-            253,
-            248,
-            345
+            191,
+            296,
+            891,
+            59
         ],
         "action": "LongPress",
         "duration": 20,
