@@ -65,17 +65,6 @@
         "duration": 20,
         "post_delay": 500,
         "next": [
-            "134战斗_取消2队选择"
-        ]
-    },
-    "134战斗_取消2队选择": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "combat/levelUp/13-4/init.png"
-        ],
-        "action": "LongPress",
-        "duration": 20,
-        "next": [
             "134战斗_点击1队图标"
         ],
         "interrupt": [
@@ -114,7 +103,10 @@
             204,
             437
         ],
-        "next": "134战斗_点击计划模式"
+        "next": [
+            "134战斗_点击计划模式"
+            
+        ]
     },
     "134战斗_点击1队取消": {
         "recognition": "OCR",
