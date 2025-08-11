@@ -76,7 +76,10 @@
     "expected": "带",
     "action": "LongPress",
     "duration": 20,
-    "next": "灰域_选择地图",
+    "next": [
+      "灰域_选择地图",
+      "灰域_切换地图"
+    ],
     "interrupt": "灰域_领取奖励"
   },
   "灰域_选择地图": {
@@ -110,10 +113,12 @@
   "灰域_检测奇遇": {
     "recognition": "TemplateMatch",
     "template": [
-      "GrayZone/奇遇点1.png",
-      "GrayZone/奇遇点2.png",
-      "GrayZone/奇遇点3.png"
+      "GrayZone/G奇遇点1.png",
+      "GrayZone/G奇遇点2.png",
+      "GrayZone/G奇遇点3.png",
+      "GrayZone/G奇遇点4.png"
     ],
+    "green_mask": true,
     "action": "LongPress",
     "duration": 20,
     "next": [

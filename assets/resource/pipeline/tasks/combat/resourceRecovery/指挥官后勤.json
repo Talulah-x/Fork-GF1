@@ -35,7 +35,8 @@
         "expected": "常驻活动",
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 800,
+        "post_delay": 1000,
+        "post_wait_freezes": 1,
         "next": [
             "零电荷_点击零电荷",
             "零电荷_滑动到零电荷",
@@ -73,7 +74,7 @@
         "expected": "电荷",
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 800,
+        "post_delay": 1000,
         "next": [
             "零电荷_进入零电荷",
             "零电荷_点击零电荷"
@@ -90,7 +91,7 @@
         "expected": "ZERO",
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 200,
+        "post_delay": 1000,
         "next": [
             "零电荷_进入打捞关",
             "零电荷_进入零电荷"
@@ -257,7 +258,8 @@
         ],
         "next": [
             "零电荷_结束回合",
-            "零电荷_开始作战"
+            "零电荷_开始作战",
+            "零电荷_人形结算"
         ]
     },
     "零电荷_结束回合": {
