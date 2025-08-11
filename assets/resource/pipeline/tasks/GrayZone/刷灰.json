@@ -112,12 +112,19 @@
   },
   "灰域_检测奇遇": {
     "recognition": "TemplateMatch",
+    "roi": [
+      260,
+      154,
+      760,
+      423
+    ],
     "template": [
       "GrayZone/G奇遇点1.png",
       "GrayZone/G奇遇点2.png",
       "GrayZone/G奇遇点3.png",
       "GrayZone/G奇遇点4.png"
     ],
+    "threshold": 0.8,
     "green_mask": true,
     "action": "LongPress",
     "duration": 20,
