@@ -107,7 +107,7 @@
     "expected": "确定",
     "action": "LongPress",
     "duration": 20,
-    "post_delay": 10000,
+    "post_delay": 8000,
     "next": "灰域_灰域检测"
   },
   "灰域_检测奇遇": {
@@ -137,9 +137,10 @@
     "duration": 20,
     "next": [
       "灰域_奇遇代理",
-      "灰域_人形回收",
-      "灰域_出击奇遇"
-    ]
+      "灰域_出击奇遇",
+      "灰域_进入灰域"
+    ],
+    "interrupt":"public拆人形_人形回收"
   },
   "灰域_奇遇代理": {
     "recognition": "OCR",
@@ -246,102 +247,6 @@
     "next":[
         "灰域_切换地图",
         "灰域_退出重装点"
-    ]
-  },
-  "灰域_人形回收": {
-    "recognition": "OCR",
-    "roi": [
-      191,
-      296,
-      891,
-      59
-    ],
-    "expected": "人形回收",
-    "action": "LongPress",
-    "duration": 20,
-    "next": [
-      "灰域_选择角色",
-      "灰域_人形回收"
-    ]
-  },
-  "灰域_选择角色": {
-    "recognition": "OCR",
-    "roi": [
-      322,
-      187,
-      85,
-      47
-    ],
-    "expected": "角色",
-    "action": "LongPress",
-    "duration": 20,
-    "next": [
-      "灰域_智能选择",
-      "灰域_选择角色"
-    ]
-  },
-  "灰域_智能选择": {
-    "recognition": "OCR",
-    "expected": [
-      "智能",
-      "确定"
-    ],
-    "action": "LongPress",
-    "duration": 20,
-    "next": [
-      "灰域_回收",
-      "灰域_智能选择"
-    ]
-  },
-  "灰域_回收": {
-    "recognition": "OCR",
-    "roi": [
-      640,
-      360,
-      640,
-      360
-    ],
-    "expected": "回收",
-    "action": "LongPress",
-    "duration": 20,
-    "next": [
-      "灰域_返回灰域",
-      "灰域_回收"
-    ]
-  },
-  "灰域_返回灰域": {
-    "recognition": "TemplateMatch",
-    "roi": [
-      124,
-      18,
-      120,
-      105
-    ],
-    "template": "storage/navi.png",
-    "action": "LongPress",
-    "duration": 20,
-    "pre_delay": 800,
-    "post_wait_freezes": 200,
-    "next": [
-      "灰域_战斗页面",
-      "灰域_返回灰域"
-    ]
-  },
-  "灰域_战斗页面": {
-    "recognition": "TemplateMatch",
-    "roi": [
-      80,
-      150,
-      150,
-      200
-    ],
-    "template": "storage/navi_combat.png",
-    "action": "LongPress",
-    "duration": 500,
-    "pre_delay": 1000,
-    "next": [
-      "灰域_进入灰域",
-      "灰域_战斗页面"
     ]
   },
   "灰域_领取奖励": {
