@@ -109,7 +109,9 @@
       "option": [
         "打灰选择",
         "刷新延迟"
-    ]
+      ],
+      "repeatable": true,
+      "repeat_count": 9999
     },
     {
       "name": "宿舍内自动点击爱心",
