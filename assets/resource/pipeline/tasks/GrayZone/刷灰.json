@@ -150,7 +150,12 @@
       307,
       170
     ],
-    "expected": "代理作战",
+    "expected": [
+      "代",
+      "理",
+      "作",
+      "战"
+    ],
     "action": "LongPress",
     "duration": 20,
     "next": [
