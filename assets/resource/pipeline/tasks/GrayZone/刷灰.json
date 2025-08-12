@@ -79,7 +79,7 @@
     "next": [
       "灰域_选择地图",
       "灰域_切换地图"
-    ],
+  ],
     "interrupt": "灰域_领取奖励"
   },
   "灰域_选择地图": {
@@ -112,20 +112,11 @@
   },
   "灰域_检测奇遇": {
     "recognition": "TemplateMatch",
-    "roi": [
-      260,
-      154,
-      760,
-      423
-    ],
     "template": [
-      "GrayZone/G奇遇点1.png",
-      "GrayZone/G奇遇点2.png",
-      "GrayZone/G奇遇点3.png",
-      "GrayZone/G奇遇点4.png"
+      "GrayZone/奇遇点1.png",
+      "GrayZone/奇遇点2.png",
+      "GrayZone/奇遇点3.png"
     ],
-    "threshold": 0.8,
-    "green_mask": true,
     "action": "LongPress",
     "duration": 20,
     "next": [
@@ -222,6 +213,39 @@
     "next": [
       "灰域_灰域检测",
       "灰域_加速结算"
+    ]
+  },
+    "灰域_点击重装点": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "GrayZone/重装点.png"
+    ],
+    "action": "LongPress",
+    "duration": 20,
+    "post_delay":500,
+    "next": [
+      "灰域_检测炸山",
+      "灰域_退出重装点"
+    ]
+  },
+  "灰域_检测炸山": {
+    "recognition": "OCR",
+    "roi" : [941,351,61,34],
+    "expected":[ 
+        "2B14",
+        "2B",
+        "14"
+    ],
+    "action": "DoNothing",
+    "timeout":1000
+  },
+  "灰域_退出重装点": {
+    "action": "LongPress",
+    "duration":20,
+    "target": [1156,637,29,27],
+    "next":[
+        "灰域_切换地图",
+        "灰域_退出重装点"
     ]
   },
   "灰域_人形回收": {
