@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "name": "MaaGF1",
-  "version": "v1.5.8",
+  "version": "v1.5.9",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -82,7 +82,7 @@
       "entry": "!跑步机总流程",
       "check": false,
       "doc": " **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-      "repeatable": false,
+      "repeatable": true,
       "repeat_count": 1
     },
     {
@@ -102,12 +102,11 @@
       "repeat_count": 1
     },
     {
-      "name": "灰域彩蛋点刷奖励循环",
+      "name": "灰域探查",
       "entry": "!开始打灰",
       "check": false,
       "doc": "在主界面或者刚进入灰域界面执行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%87%AA%E5%8A%A8%E6%89%93%E7%81%B0%E5%A5%96%E5%8A%B1%E5%85%B3%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-      "repeatable": true,
-      "repeat_count": 9999
+      "option": "打灰选择"
     },
     {
       "name": "宿舍内自动点击爱心",
@@ -659,6 +658,36 @@
           "pipeline_override": {
             "!夜战打捞": {
               "next": "!M240L打捞"
+            }
+          }
+        }
+      ]
+    },
+    "打灰选择": {
+      "cases": [
+        {
+          "name": "彩蛋"
+        },
+        {
+          "name": "彩蛋+炸山",
+          "pipeline_override": {
+            "灰域_灰域检测": {
+              "next": [
+                "灰域_检测奇遇",
+                "灰域_点击重装点",
+                "灰域_切换地图"
+              ]
+            }
+          }
+        },
+        {
+          "name": "炸山",
+          "pipeline_override": {
+            "灰域_灰域检测": {
+              "next": [
+                "灰域_点击重装点",
+                "灰域_切换地图"
+              ]
             }
           }
         }
