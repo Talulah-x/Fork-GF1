@@ -240,13 +240,8 @@
     },
     "跑步机_部署第一梯队": {
         "recognition": "OCR",
-        "roi": [
-            142,
-            35,
-            106,
-            53
-        ],
-        "expected": "明",
+        "roi" : [922,504,357,215],
+        "expected": "点击指挥部",
         "action": "LongPress",
         "duration":10,
         "target": [
@@ -280,13 +275,8 @@
     },
     "跑步机_部署第二梯队": {
         "recognition": "OCR",
-        "roi": [
-            142,
-            35,
-            106,
-            53
-        ],
-        "expected": "明",
+        "roi" : [922,504,357,215],
+        "expected": "点击指挥部",
         "action": "LongPress",
         "duration":10,
         "target": [
