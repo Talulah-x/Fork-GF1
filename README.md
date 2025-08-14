@@ -18,7 +18,7 @@
 
 ## ⚠️ 项目状态说明
 
-**MaaGF1_Test** 是专为**少女前线Steam版**设计的自动化工具库。作为新生项目：
+**MaaGF1** 项目是专为**少女前线电脑端**设计的自动化工具。作为新生项目：
 
 ```!
 🚧 当前状态：
@@ -75,8 +75,8 @@
 ### ⚠️ 重要注意事项
 
 1. **鼠标占用问题**
-   - 现象：执行时系统鼠标被占用
-   - 紧急解决方案：
+   - 现象：执行时系统鼠标被占用（~丹小姐抢鼠标~）
+   - 解决方案：
 
      ```快捷键
      Win + ↓ (连续按至窗口最小化)
@@ -98,7 +98,7 @@
 2. 解压文件
 3. 运行 `MFAAvalonia.exe`
 4. 选择「少女前线」窗口
-5. 选择脚本（循环次数保持为"1"）
+5. 选择脚本，查看并调整对应设置
 6. 点击开始运行
 
 ---
@@ -119,6 +119,8 @@
 |------|--------|----------|
 | ▶️ MP41抽薪打捞 | [Ethan Lee](https://github.com/hake971920) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
 | ▶️ 夜战打捞 |[白烛](https://github.com/Talulah-x) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%A4%9C%E6%88%98%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)|
+| ▶️ M240打捞 | [Kobe Bryant](https://github.com/LIUBEI1233) | [手册暂无](https://github.com/LeonNagant/MaaGF1_Test) |
+| ▶️ 防御者打捞 | [Kobe Bryant](https://github.com/LIUBEI1233) | [手册暂无](https://github.com/LeonNagant/MaaGF1_Test) |
 
 ### 🏠 宿舍功能
 
