@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "name": "MaaGF1",
-  "version": "v1.5.9",
+  "version": "v1.5.11",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -86,13 +86,10 @@
       "repeat_count": 1
     },
     {
-      "name": "常驻人形打捞",
-      "entry": "!常驻人形打捞",
+      "name": "MP41抽薪打捞",
+      "entry": "!MP41打捞_总流程",
       "check": false,
       "doc": "请在裂变链接第五章能点击到“斩牙行动II战斗EX”位置或者进入该地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-      "option": [
-      "选择常驻人形打捞目标"
-      ],
       "repeatable": false,
       "repeat_count": 1
     },
@@ -111,6 +108,7 @@
       "doc": "在主界面或者刚进入灰域界面执行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%87%AA%E5%8A%A8%E6%89%93%E7%81%B0%E5%A5%96%E5%8A%B1%E5%85%B3%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "option": [
         "打灰选择",
+        "打灰地图选择",
         "刷新延迟"
       ],
       "repeatable": true,
@@ -660,39 +658,17 @@
               "next": "!7-4打捞"
             }
           }
+        },
+        {
+          "name": "M240L",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!M240L打捞"
+            }
+          }
         }
       ]
     },
-    
-    "选择常驻人形打捞目标":{
-            "cases":[
-                {
-                    "name":"MP41",
-                    "pipeline_override":{
-                        "常驻人形打捞":{
-                             "next":"!MP41打捞_总流程"
-                        }
-                    }
-                },
-                {
-                    "name":"M240L",
-                    "pipeline_override":{
-                        "常驻人形打捞":{
-                             "next":"!M240L打捞"
-                        }
-                    }
-                },
-                {
-                    "name":"防卫者",
-                    "pipeline_override":{
-                        "常驻人形打捞":{
-                             "next":"!防卫者打捞"
-                        }
-                    }
-                }
-            ]
-        },
-    
     "打灰选择": {
       "cases": [
         {
@@ -723,6 +699,21 @@
         }
       ]
     },
+    "打灰地图选择": {
+      "cases": [
+        {
+          "name": "硅状带"
+        },
+        {
+          "name": "结晶带",
+          "pipeline_override": {
+            "灰域_选择地图": {
+              "expected": "硅状"
+            }
+          }
+        }
+      ]
+    },
     "刷新延迟": {
       "cases": [
         {
@@ -747,5 +738,4 @@
       ]
     }
   }
-
 }
