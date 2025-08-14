@@ -124,15 +124,7 @@
         ]
     },
     "跑步机_滑动到跑步机地图": {
-        "recognition": "OCR",
-        "roi": [
-            75,
-            282,
-            29,
-            32
-        ],
         "action": "Swipe",
-        "expected": "3",
         "begin": [
             373,
             338,
@@ -145,6 +137,7 @@
             1,
             1
         ],
+        "pre_delay": 1000,
         "post_delay": 1000,
         "next": [
             "跑步机_点击跑步机关卡",
@@ -279,6 +272,7 @@
         "expected": "确",
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 200,
         "next": [
             "跑步机_部署第二梯队",
             "跑步机_确认部署第一梯队"
@@ -308,12 +302,7 @@
     },
     "跑步机_切换梯队": {
         "recognition": "OCR",
-        "roi": [
-            262,
-            45,
-            168,
-            78
-        ],
+        "roi" : [171,23,598,118],
         "expected": "梯队",
         "action": "LongPress",
         "duration": 20,
@@ -333,6 +322,7 @@
         "expected": "确",
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 200,
         "next": [
             "跑步机_开始作战",
             "跑步机_确认部署第二梯队"
@@ -544,12 +534,7 @@
     },
     "跑步机_切换支援梯队": {
         "recognition": "OCR",
-        "roi": [
-            262,
-            45,
-            168,
-            78
-        ],
+        "roi" : [171,23,598,118],
         "expected": "梯队",
         "action": "LongPress",
         "duration": 20,
@@ -1052,12 +1037,7 @@
     },
     "跑步机_选择重装": {
         "recognition": "OCR",
-        "roi": [
-            435,
-            47,
-            310,
-            86
-        ],
+        "roi" : [171,23,598,118],
         "expected": "重装",
         "action": "LongPress",
         "duration": 20,
