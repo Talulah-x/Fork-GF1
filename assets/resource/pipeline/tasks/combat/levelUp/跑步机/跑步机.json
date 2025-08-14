@@ -124,7 +124,15 @@
         ]
     },
     "跑步机_滑动到跑步机地图": {
+        "recognition": "OCR",
+        "roi": [
+            75,
+            282,
+            29,
+            32
+        ],
         "action": "Swipe",
+        "expected": "3",
         "begin": [
             373,
             338,
@@ -137,7 +145,6 @@
             1,
             1
         ],
-        "pre_delay": 1000,
         "post_delay": 1000,
         "next": [
             "跑步机_点击跑步机关卡",
@@ -272,7 +279,6 @@
         "expected": "确",
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 200,
         "next": [
             "跑步机_部署第二梯队",
             "跑步机_确认部署第一梯队"
@@ -302,7 +308,12 @@
     },
     "跑步机_切换梯队": {
         "recognition": "OCR",
-        "roi" : [171,23,598,118],
+        "roi": [
+            262,
+            45,
+            168,
+            78
+        ],
         "expected": "梯队",
         "action": "LongPress",
         "duration": 20,
@@ -322,7 +333,6 @@
         "expected": "确",
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 200,
         "next": [
             "跑步机_开始作战",
             "跑步机_确认部署第二梯队"
@@ -444,6 +454,7 @@
         "expected": "选",
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 500,
         "next": [
             "跑步机_第一回合计划2",
             "跑步机_选择第二梯队"
@@ -534,7 +545,12 @@
     },
     "跑步机_切换支援梯队": {
         "recognition": "OCR",
-        "roi" : [171,23,598,118],
+        "roi": [
+            262,
+            45,
+            168,
+            78
+        ],
         "expected": "梯队",
         "action": "LongPress",
         "duration": 20,
@@ -809,6 +825,7 @@
         "expected": "选择",
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 500,
         "next": [
             "跑步机_选择第一梯队2",
             "跑步机_第二回合计划2"
@@ -870,6 +887,7 @@
         "expected": "选择",
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 500,
         "next": [
             "跑步机_选择第三梯队2",
             "跑步机_第二回合计划3"
@@ -1037,7 +1055,12 @@
     },
     "跑步机_选择重装": {
         "recognition": "OCR",
-        "roi" : [171,23,598,118],
+        "roi": [
+            435,
+            47,
+            310,
+            86
+        ],
         "expected": "重装",
         "action": "LongPress",
         "duration": 20,
@@ -1215,6 +1238,7 @@
         "expected": "选择",
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 500,
         "next": [
             "跑步机_第三回合计划1",
             "跑步机_选择第三梯队3"
@@ -1276,6 +1300,7 @@
         "expected": "选择",
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 500,
         "next": [
             "跑步机_选择坦克3",
             "跑步机_第三回合计划2"
