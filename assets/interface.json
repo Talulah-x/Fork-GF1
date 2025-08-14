@@ -1,9 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "name": "MaaGF1",
-
   "version": "v1.5.12",
-
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -88,15 +86,13 @@
       "repeat_count": 1
     },
     {
-      "name": "MP41抽薪打捞",
-      "entry": "!MP41打捞_总流程",
+      "name": "常驻人形打捞",
+      "entry": "!常驻人形打捞",
       "check": false,
       "doc": "请在裂变链接第五章能点击到“斩牙行动II战斗EX”位置或者进入该地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-
       "option": [
-          "选择常驻人形打捞目标"
+        "选择常驻人形打捞目标"
       ],
-
       "repeatable": false,
       "repeat_count": 1
     },
@@ -519,7 +515,12 @@
           "name": "左二 Cx4风暴",
           "pipeline_override": {
             "虚粒子对_计划点": {
-              "target": [651,118,9,11]
+              "target": [
+                651,
+                118,
+                9,
+                11
+              ]
             }
           }
         },
@@ -527,10 +528,20 @@
           "name": "左三 SRS",
           "pipeline_override": {
             "虚粒子对_点击梯队": {
-              "target":[779,495,6,13]
+              "target": [
+                779,
+                495,
+                6,
+                13
+              ]
             },
             "虚粒子对_计划点": {
-              "target": [651,118,9,11]
+              "target": [
+                651,
+                118,
+                9,
+                11
+              ]
             }
           }
         },
@@ -538,10 +549,20 @@
           "name": "左四 AK-74U",
           "pipeline_override": {
             "虚粒子对_点击梯队": {
-              "target":[779,495,6,13]
+              "target": [
+                779,
+                495,
+                6,
+                13
+              ]
             },
             "虚粒子对_计划点": {
-              "target":[906,120,6,9]
+              "target": [
+                906,
+                120,
+                6,
+                9
+              ]
             }
           }
         },
@@ -549,10 +570,20 @@
           "name": "右一 TKB-408",
           "pipeline_override": {
             "虚粒子对_点击梯队": {
-              "target":[969,193,5,7]
+              "target": [
+                969,
+                193,
+                5,
+                7
+              ]
             },
             "虚粒子对_计划点": {
-              "target":[968,496,7,8]
+              "target": [
+                968,
+                496,
+                7,
+                8
+              ]
             }
           }
         }
@@ -609,40 +640,32 @@
               "next": "!7-4打捞"
             }
           }
+        }
+      ]
+    },
+    "选择常驻人形打捞目标": {
+      "cases": [
+        {
+          "name": "MP41",
+          "pipeline_override": {
+            "!常驻人形打捞": {
+              "next": "!MP41打捞_总流程"
+            }
+          }
         },
         {
           "name": "M240L",
           "pipeline_override": {
-            "!夜战打捞": {
+            "!常驻人形打捞": {
               "next": "!M240L打捞"
             }
           }
-        }
-      ]
-    },
-    "选择常驻人形打捞目标":{
-      "cases":[
-            {
-              "name":"MP41",
-              "pipeline_override":{
-                  "!常驻人形打捞":{
-                        "next":"!MP41打捞_总流程"
-                }
-              }
-            },
-          {
-              "name":"M240L",
-              "pipeline_override":{
-                  "!常驻人形打捞":{
-                        "next":"!M240L打捞"
-                }
-              }
-            },
-          {
-              "name":"防卫者",
-              "pipeline_override":{
-                  "!常驻人形打捞":{
-                        "next":"!防卫者打捞"
+        },
+        {
+          "name": "防卫者",
+          "pipeline_override": {
+            "!常驻人形打捞": {
+              "next": "!防卫者打捞"
             }
           }
         }
