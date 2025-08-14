@@ -106,11 +106,11 @@
         "recognition": "OCR",
         "roi": [
             1112,
-            627,
-            97,
-            64
+            530,
+            72,
+            42
         ],
-        "expected": "执行",
+        "expected": "下一",
         "pre_delay": 300,
         "post_delay": 300,
         "action": "LongPress",
