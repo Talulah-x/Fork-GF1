@@ -79,14 +79,6 @@
         ]
     },
     "M240L打捞_计划点": {
-        "recognition": "OCR",
-        "roi": [
-            1020,
-            623,
-            211,
-            79
-        ],
-        "expected": "执行",
         "action": "LongPress",
         "duration": 20,
         "pre_delay": 300,
@@ -102,7 +94,7 @@
             "M240L打捞_执行计划"
         ]
     },
-     "M240L打捞_执行计划": {
+    "M240L打捞_执行计划": {
         "recognition": "OCR",
         "roi": [
             1112,
