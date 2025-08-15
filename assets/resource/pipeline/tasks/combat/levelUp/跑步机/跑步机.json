@@ -737,13 +737,7 @@
         "expected": "执行",
         "action": "LongPress",
         "duration":10,
-        "post_delay": 500,
-        "target": [
-            622,
-            324,
-            36,
-            33
-        ],
+        "target":[631,345,15,11],
         "next": [
             "跑步机_第二回合计划1"
         ]
@@ -752,12 +746,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            737,
-            361,
-            33,
-            31
-        ],
+        "target":[748,367,12,19],
         "next": [
             "跑步机_取消选中2",
             "跑步机_点击第二梯队2"
@@ -776,7 +765,7 @@
         "duration":10,
         "target":[24,118,34,46],
         "next": [
-            "跑步机_点击第二梯队1"
+            "跑步机_点击第一梯队2"
         ]
     },
     "跑步机_点击第一梯队2": {
@@ -790,7 +779,7 @@
         "expected": "下一",
         "action": "LongPress",
         "duration":10,
-        "target":[328,460,13,15],
+        "target":[327,463,15,14],
         "next": [
             "跑步机_第二回合计划2",
             "跑步机_点击第一梯队2"
@@ -807,7 +796,7 @@
         "expected": "5",
         "action": "LongPress",
         "duration":10,
-        "target":[611,441,15,15],
+        "target":[610,440,17,17],
         "next": [
             "跑步机_取消选中3",
             "跑步机_点击第一梯队2"
