@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "name": "MaaGF1",
-  "version": "v1.5.13",
+  "version": "v1.5.14",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -741,8 +741,7 @@
             "灰域_灰域检测": {
               "next": [
                 "灰域_检测奇遇",
-                "灰域_点击重装点",
-                "灰域_切换地图"
+                "灰域_点击重装点"
               ]
             }
           }
@@ -752,8 +751,7 @@
           "pipeline_override": {
             "灰域_灰域检测": {
               "next": [
-                "灰域_点击重装点",
-                "灰域_切换地图"
+                "灰域_点击重装点"
               ]
             }
           }
@@ -770,17 +768,6 @@
           "pipeline_override": {
             "灰域_选择地图": {
               "expected": "结"
-            }
-          }
-        },
-        {
-          "name": "炸山",
-          "pipeline_override": {
-            "灰域_灰域检测": {
-              "next": [
-                "灰域_点击重装点",
-                "灰域_切换地图"
-              ]
             }
           }
         }
@@ -810,5 +797,4 @@
       ]
     }
   }
-
 }
