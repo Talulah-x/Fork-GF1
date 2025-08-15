@@ -44,8 +44,7 @@
     "next": [
       "灰域_战斗页探查识图",
       "灰域_灰域检测"
-    ],
-    "interrupt": "灰域_领取奖励"
+    ]
   },
   "灰域_灰域检测": {
     "recognition": "OCR",
@@ -58,11 +57,10 @@
     "expected": "带",
     "action": "DoNothing",
     "next": [
-      "灰域_检测奇遇",
-      "灰域_切换地图"
+      "灰域_检测奇遇"
     ],
     "interrupt": [
-      "灰域_领取奖励"
+      "灰域_切换地图"
     ]
   },
   "灰域_切换地图": {
@@ -79,8 +77,7 @@
     "next": [
       "灰域_选择地图",
       "灰域_切换地图"
-    ],
-    "interrupt": "灰域_领取奖励"
+    ]
   },
   "灰域_选择地图": {
     "recognition": "OCR",
@@ -91,8 +88,7 @@
     "next": [
       "灰域_选择地图",
       "灰域_确认切换"
-    ],
-    "interrupt": "灰域_领取奖励"
+    ]
   },
   "灰域_确认切换": {
     "recognition": "OCR",
@@ -105,11 +101,7 @@
     "expected": "确定",
     "action": "LongPress",
     "duration": 20,
-    "post_delay": 8000,
-    "next":[
-      "灰域_灰域检测",
-      "灰域_确认切换"
-    ] 
+    "post_delay": 8000
   },
   "灰域_检测奇遇": {
     "recognition": "TemplateMatch",
@@ -221,7 +213,7 @@
       70
     ],
     "next": [
-      "灰域_灰域检测",
+      "灰域_领取奖励",
       "灰域_加速结算"
     ]
   },
@@ -269,15 +261,16 @@
     ]
   },
   "灰域_领取奖励": {
-    "recognition": "TemplateMatch",
-    "template": "GrayZone/领取奖励.png",
+    "recognition": "OCR",
+    "roi" : [185,60,354,636],
+    "expected":[
+      "领取",
+      "积分"
+    ],
     "action": "LongPress",
     "duration": 20,
-    "target": [
-      555,
-      50,
-      45,
-      45
-    ]
+    "target":[1130,581,56,45],
+    "post_delay":1500,
+    "next":"灰域_灰域检测"
   }
 }
