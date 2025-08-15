@@ -98,7 +98,14 @@
     },
     "宿舍_偷电": {
         "recognition": "TemplateMatch",
+        "roi": [
+            75,
+            291,
+            396,
+            272
+        ],
         "green_mask": true,
+        "rate_limit": 100,
         "template": [
             "dormitory/Gbattery1.png",
             "dormitory/Gbattery2.png"
@@ -113,6 +120,13 @@
     },
     "宿舍_偷电成功": {
         "recognition": "OCR",
+        "roi": [
+            611,
+            489,
+            99,
+            62
+        ],
+        "rate_limit": 100,
         "expected": "关闭",
         "action": "LongPress",
         "duration": 20,
@@ -127,9 +141,9 @@
             145
         ],
         "expected": [
-            "点",
             "ke"
         ],
+        "rate_limit": 100,
         "action": "LongPress",
         "duration": 20,
         "post_delay": 800,
@@ -149,6 +163,7 @@
         "expected": "留言",
         "action": "LongPress",
         "duration": 20,
+        "rate_limit": 100,
         "target": [
             205,
             635,
