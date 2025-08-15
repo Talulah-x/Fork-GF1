@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "name": "MaaGF1",
-  "version": "v1.5.12",
+  "version": "v1.5.13",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -610,6 +610,30 @@
     "选择夜战打捞地图": {
       "cases": [
         {
+          "name": "1-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!1-4打捞"
+            }
+          }
+        },
+        {
+          "name": "2-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!2-4打捞"
+            }
+          }
+        },
+        {
+          "name": "3-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!3-4打捞"
+            }
+          }
+        },
+        {
           "name": "4-4",
           "pipeline_override": {
             "!夜战打捞": {
@@ -685,6 +709,32 @@
                 "灰域_点击重装点",
                 "灰域_切换地图"
               ]
+            }
+          }
+        },
+        {
+          "name": "炸山",
+          "pipeline_override": {
+            "灰域_灰域检测": {
+              "next": [
+                "灰域_点击重装点",
+                "灰域_切换地图"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "打灰地图选择": {
+      "cases": [
+        {
+          "name": "硅状带"
+        },
+        {
+          "name": "结晶带",
+          "pipeline_override": {
+            "灰域_选择地图": {
+              "expected": "结"
             }
           }
         },
