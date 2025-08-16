@@ -240,13 +240,8 @@
     },
     "跑步机_部署第一梯队": {
         "recognition": "OCR",
-        "roi": [
-            142,
-            35,
-            106,
-            53
-        ],
-        "expected": "明",
+        "roi" : [922,504,357,215],
+        "expected": "点击指挥部",
         "action": "LongPress",
         "duration":10,
         "target": [
@@ -272,6 +267,7 @@
         "expected": "确",
         "action": "LongPress",
         "duration":10,
+        "post_delay": 200,
         "next": [
             "跑步机_部署第二梯队",
             "跑步机_确认部署第一梯队"
@@ -279,13 +275,8 @@
     },
     "跑步机_部署第二梯队": {
         "recognition": "OCR",
-        "roi": [
-            142,
-            35,
-            106,
-            53
-        ],
-        "expected": "明",
+        "roi" : [922,504,357,215],
+        "expected": "点击指挥部",
         "action": "LongPress",
         "duration":10,
         "target": [
@@ -301,12 +292,7 @@
     },
     "跑步机_切换梯队": {
         "recognition": "OCR",
-        "roi": [
-            262,
-            45,
-            168,
-            78
-        ],
+        "roi" : [171,23,598,118],
         "expected": "梯队",
         "action": "LongPress",
         "duration":10,
@@ -326,6 +312,7 @@
         "expected": "确",
         "action": "LongPress",
         "duration":10,
+        "post_delay": 200,
         "next": [
             "跑步机_开始作战",
             "跑步机_确认部署第二梯队"
