@@ -144,10 +144,10 @@
         ],
         "interrupt": [
             "public拆人形_人形回收",
-            "点击获得角色"
+            "M240L打捞-点击获得角色"
         ]
     },
-    "点击获得角色": {
+    "M240L打捞-点击获得角色": {
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 20,
