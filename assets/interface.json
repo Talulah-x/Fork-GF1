@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "name": "MaaGF1",
-  "version": "v1.5.14",
+  "version": "v1.5.17",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -83,6 +83,9 @@
       "entry": "!跑步机总流程",
       "check": false,
       "doc": " **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "option": [
+        "跑步机修复选择"
+      ],
       "repeatable": true,
       "repeat_count": 1
     },
@@ -727,14 +730,6 @@
               "next": "!防卫者打捞"
             }
           }
-        },
-        {
-          "name": "6-4e圣捞",
-          "pipeline_override": {
-            "!常驻人形打捞": {
-              "next": "!6-4e打捞总流程"
-            }
-          }
         }
       ]
     },
@@ -803,8 +798,35 @@
           }
         }
       ]
+    },
+    "跑步机修复选择": {
+      "cases": [
+        {
+          "name": "陷阱妖精"
+        },
+        {
+          "name": "迷彩坦克",
+          "pipeline_override": {
+            "跑步机_切换待机": {
+              "next": [
+                "跑步机_切换待机",
+                "跑步机_计划模式3"
+              ]
+            }
+          }
+        },
+        {
+          "name": "不修复",
+          "pipeline_override": {
+            "跑步机_切换待机": {
+              "next": [
+                "跑步机_切换待机",
+                "跑步机_跳过战斗"
+              ]
+            }
+          }
+        }
+      ]
     }
   }
-
 }
-
