@@ -57,10 +57,11 @@
     "expected": "带",
     "action": "DoNothing",
     "next": [
-      "灰域_检测奇遇"
+      "灰域_检测奇遇",
+      "灰域_切换地图"
     ],
     "interrupt": [
-      "灰域_切换地图"
+      "灰域_领取奖励"
     ]
   },
   "灰域_切换地图": {
@@ -101,7 +102,10 @@
     "expected": "确定",
     "action": "LongPress",
     "duration": 20,
-    "post_delay": 8000
+    "post_delay": 8000,
+    "next": [
+      "灰域_灰域检测"
+    ]
   },
   "灰域_检测奇遇": {
     "recognition": "TemplateMatch",
@@ -141,19 +145,15 @@
   "灰域_奇遇代理": {
     "recognition": "OCR",
     "roi": [
-      703,
-      550,
-      307,
-      170
-    ],
-    "expected": [
-      "代",
-      "理",
-      "作",
-      "战"
-    ],
+            1005,
+            607,
+            259,
+            101
+        ],
+    "expected": "点击指挥部",
     "action": "LongPress",
     "duration": 20,
+    "target":[867,650,64,30],
     "next": [
       "灰域_代理确认",
       "灰域_奇遇代理"
@@ -171,36 +171,9 @@
     "action": "LongPress",
     "duration": 20,
     "next": [
-      "灰域_代理检测",
+      "灰域_加速结算",
       "灰域_代理确认"
     ]
-  },
-  "灰域_代理检测": {
-    "recognition": "OCR",
-    "roi": [
-      454,
-      5,
-      300,
-      177
-    ],
-    "expected": "代理介入中",
-    "action": "DoNothing",
-    "next": [
-      "灰域_战斗检测",
-      "灰域_代理检测"
-    ]
-  },
-  "灰域_战斗检测": {
-    "recognition": "OCR",
-    "roi": [
-      25,
-      137,
-      626,
-      387
-    ],
-    "expected": "自身损失",
-    "action": "DoNothing",
-    "next": "灰域_加速结算"
   },
   "灰域_加速结算": {
     "recognition": "DirectHit",
@@ -213,9 +186,17 @@
       70
     ],
     "next": [
-      "灰域_领取奖励",
+      "灰域_结算检测",
       "灰域_加速结算"
     ]
+  },
+  "灰域_结算检测": {
+    "recognition": "OCR",
+    "roi" : [424,604,75,51],
+    "expected": "积分",
+    "action": "DoNothing",
+    "post_delay":1000,
+    "next": "灰域_领取奖励"
   },
   "灰域_点击重装点": {
     "recognition": "TemplateMatch",
@@ -261,17 +242,11 @@
     ]
   },
   "灰域_领取奖励": {
-    "recognition": "OCR",
-    "roi" : [8,32,630,687],
-    "expected":[
-      "领取",
-      "积分"
-    ],
     "action": "LongPress",
     "duration": 20,
     "target":[1130,581,56,45],
     "pre_delay":500,
-    "post_delay":1000,
+    "post_delay":500,
     "next":"灰域_灰域检测"
   }
 }
