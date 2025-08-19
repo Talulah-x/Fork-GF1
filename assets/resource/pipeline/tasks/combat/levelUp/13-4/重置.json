@@ -13,7 +13,6 @@
         "action": "LongPress",
         "duration": 20,
         "rate_limit": 1000,
-
         "timeout": 600000
     },
     "134重置_点击获得角色": {
@@ -24,6 +23,12 @@
             413,
             619
         ],
+        "target": [
+            375,
+            618,
+            70,
+            12
+        ],
         "template": [
             "combat/levelUp/13-4/doll_get0.png",
             "combat/levelUp/13-4/doll_get2.png",
@@ -32,8 +37,9 @@
         ],
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 500,
         "rate_limit": 100,
-        "threshold": 0.6,
+        "threshold": 0.7,
         "next": [
             "134重置_再次作战",
             "134重置_点击获得角色"
