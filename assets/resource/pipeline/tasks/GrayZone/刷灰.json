@@ -193,7 +193,10 @@
     "expected": "积分",
     "action": "Click",
     "target":[1130,581,56,45],
-    "post_delay":1000
+    "post_delay":1000,
+    "next": [
+      "!开始打灰"
+    ]
   },
   "灰域_点击重装点": {
     "recognition": "TemplateMatch",
