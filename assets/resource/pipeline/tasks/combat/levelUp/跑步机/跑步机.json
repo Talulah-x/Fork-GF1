@@ -267,7 +267,7 @@
         "expected": "确",
         "action": "LongPress",
         "duration":10,
-        "post_delay": 200,
+        "post_delay": 300,
         "next": [
             "跑步机_部署第二梯队",
             "跑步机_确认部署第一梯队"
@@ -285,7 +285,7 @@
             63,
             51
         ],
-        "post_delay":500,
+        "post_delay": 300,
         "next": [
             "跑步机_部署第二梯队",
             "跑步机_切换梯队"
@@ -313,7 +313,7 @@
         "expected": "确",
         "action": "LongPress",
         "duration":10,
-        "post_delay": 200,
+        "post_delay": 300,
         "next": [
             "跑步机_开始作战",
             "跑步机_确认部署第二梯队"
@@ -368,7 +368,7 @@
         "expected": "执行",
         "action": "LongPress",
         "duration":10,
-        "post_delay":500,
+        "post_delay": 300,
         "target": [
             449,
             365,
@@ -418,6 +418,7 @@
             45,
             35
         ],
+        "post_delay": 300,
         "next": [
             "跑步机_选择第二梯队",
             "跑步机_点击第二梯队1"
@@ -450,6 +451,7 @@
             26,
             32
         ],
+        "post_delay": 300,
         "next": [
             "跑步机_计划检测2",
             "跑步机_第一回合计划2"
@@ -677,7 +679,7 @@
         "expected": "确",
         "action": "LongPress",
         "duration":10,
-        "post_delay": 200,
+        "post_delay": 300,
         "next": [
             "跑步机_结束回合1",
             "跑步机_确认部署第三梯队"
@@ -765,6 +767,7 @@
             36,
             33
         ],
+        "post_delay": 300,
         "next": [
             "跑步机_第二回合计划1"
         ]
@@ -801,6 +804,7 @@
             35,
             29
         ],
+        "post_delay": 300,
         "next": [
             "跑步机_选择第一梯队2",
             "跑步机_点击第一梯队2"
@@ -862,6 +866,7 @@
             33,
             39
         ],
+        "post_delay": 300,
         "next": [
             "跑步机_选择第三梯队2",
             "跑步机_点击第三梯队2"
@@ -1058,6 +1063,7 @@
         "action": "LongPress",
         "duration":10,
         "target":[1196,400,30,9],
+        "post_delay": 300,
         "next": [
             "跑步机_放置技能",
             "跑步机_强化兽夹"
@@ -1071,8 +1077,7 @@
         "duration":10,
         "target":[556,430,15,18],
         "next": [
-            "跑步机_技能检测",
-            "跑步机_放置技能"
+            "跑步机_技能检测"
         ]
     },
     "跑步机_技能检测":{
@@ -1113,6 +1118,7 @@
         "action": "LongPress",
         "duration":10,
         "target":[634,350,14,16],
+        "post_delay": 300,
         "next": [
             "跑步机_第三回合计划1",
             "跑步机_点击第三梯队3"
@@ -1376,6 +1382,7 @@
         "action": "LongPress",
         "duration":10,
         "target":[572,226,17,5],
+        "post_delay": 300,
         "next": [
             "跑步机_第四回合计划",
             "跑步机_点击坦克4"
