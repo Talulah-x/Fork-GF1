@@ -285,6 +285,7 @@
             63,
             51
         ],
+        "post_delay":500,
         "next": [
             "跑步机_部署第二梯队",
             "跑步机_切换梯队"
@@ -367,7 +368,7 @@
         "expected": "执行",
         "action": "LongPress",
         "duration":10,
-        "post_delay": 500,
+        "post_delay":500,
         "target": [
             449,
             365,
@@ -389,11 +390,11 @@
             39
         ],
         "next": [
-            "跑步机_取消选中1",
+            "跑步机_计划检测1",
             "跑步机_点击第一梯队1"
         ]
     },
-    "跑步机_取消选中1": {
+    "跑步机_计划检测1": {
         "recognition": "OCR",
         "roi": [
             1099,
@@ -402,9 +403,7 @@
             65
         ],
         "expected": "下一",
-        "action": "LongPress",
-        "duration":10,
-        "target":[129,334,41,36],
+        "action": "DoNothing",
         "next": [
             "跑步机_点击第二梯队1"
         ]
@@ -420,8 +419,25 @@
             35
         ],
         "next": [
-            "跑步机_第一回合计划2",
+            "跑步机_选择第二梯队",
             "跑步机_点击第二梯队1"
+        ]
+    },
+    "跑步机_选择第二梯队": {
+        "recognition": "OCR",
+        "roi": [
+            588,
+            263,
+            219,
+            150
+        ],
+        "expected": "选",
+        "action": "LongPress",
+        "duration":10,
+        "post_delay":500,
+        "next": [
+            "跑步机_第一回合计划2",
+            "跑步机_选择第二梯队"
         ]
     },
     "跑步机_第一回合计划2": {
@@ -494,7 +510,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration":10,
-        "post_delay": 200,
+        "post_delay": 1000,
         "target": [
             376,
             317,
@@ -509,11 +525,16 @@
     },
     "跑步机_切换支援梯队": {
         "recognition": "OCR",
-        "roi" : [171,23,598,118],
+        "roi": [
+            262,
+            45,
+            168,
+            78
+        ],
         "expected": "梯队",
         "action": "LongPress",
         "duration":10,
-        "post_delay": 500,
+        "post_delay": 1000,
         "next": [
             "跑步机_支援梯队",
             "跑步机_切换支援梯队"
@@ -530,6 +551,7 @@
         "expected": "支援",
         "action": "LongPress",
         "duration":10,
+        "post_delay": 1000,
         "next": [
             "跑步机_选择支援梯队",
             "跑步机_滑动支援梯队",
@@ -607,7 +629,7 @@
             26,
             27
         ],
-        "post_delay": 1000,
+        "post_delay": 500,
         "next": [
             "跑步机_确认消灭模式",
             "跑步机_切换消灭模式"
@@ -655,7 +677,7 @@
         "expected": "确",
         "action": "LongPress",
         "duration":10,
-        "post_delay":200,
+        "post_delay": 200,
         "next": [
             "跑步机_结束回合1",
             "跑步机_确认部署第三梯队"
@@ -737,7 +759,12 @@
         "expected": "执行",
         "action": "LongPress",
         "duration":10,
-        "target":[631,345,15,11],
+        "target": [
+            622,
+            324,
+            36,
+            33
+        ],
         "next": [
             "跑步机_第二回合计划1"
         ]
@@ -746,26 +773,15 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration":10,
-        "target":[748,367,12,19],
-        "next": [
-            "跑步机_取消选中2",
-            "跑步机_点击第二梯队2"
-        ]
-    },
-    "跑步机_取消选中2": {
-        "recognition": "OCR",
-        "roi": [
-            1099,
-            518,
-            156,
-            65
+        "target": [
+            737,
+            361,
+            33,
+            31
         ],
-        "expected": "下一",
-        "action": "LongPress",
-        "duration":10,
-        "target":[24,118,34,46],
         "next": [
-            "跑步机_点击第一梯队2"
+            "跑步机_点击第一梯队2",
+            "跑步机_点击第二梯队2"
         ]
     },
     "跑步机_点击第一梯队2": {
@@ -779,10 +795,32 @@
         "expected": "下一",
         "action": "LongPress",
         "duration":10,
-        "target":[327,463,15,14],
+        "target": [
+            319,
+            454,
+            35,
+            29
+        ],
         "next": [
-            "跑步机_第二回合计划2",
+            "跑步机_选择第一梯队2",
             "跑步机_点击第一梯队2"
+        ]
+    },
+    "跑步机_选择第一梯队2": {
+        "recognition": "OCR",
+        "roi": [
+            399,
+            442,
+            116,
+            56
+        ],
+        "expected": "选择",
+        "action": "LongPress",
+        "duration":10,
+        "post_delay":500,
+        "next": [
+            "跑步机_选择第一梯队2",
+            "跑步机_第二回合计划2"
         ]
     },
     "跑步机_第二回合计划2": {
@@ -796,26 +834,15 @@
         "expected": "5",
         "action": "LongPress",
         "duration":10,
-        "target":[610,440,17,17],
-        "next": [
-            "跑步机_取消选中3",
-            "跑步机_点击第一梯队2"
-        ]
-    },
-    "跑步机_取消选中3": {
-        "recognition": "OCR",
-        "roi": [
-            1004,
-            660,
-            45,
-            47
+        "target": [
+            601,
+            433,
+            37,
+            40
         ],
-        "expected": "2",
-        "action": "LongPress",
-        "duration":10,
-        "target":[24,118,34,46],
         "next": [
-            "跑步机_点击第三梯队2"
+            "跑步机_点击第三梯队2",
+            "跑步机_第二回合计划2"
         ]
     },
     "跑步机_点击第三梯队2": {
@@ -829,10 +856,32 @@
         "expected": "2",
         "action": "LongPress",
         "duration":10,
-        "target":[277,379,23,17],
+        "target": [
+            273,
+            367,
+            33,
+            39
+        ],
         "next": [
-            "跑步机_第二回合计划3",
+            "跑步机_选择第三梯队2",
             "跑步机_点击第三梯队2"
+        ]
+    },
+    "跑步机_选择第三梯队2": {
+        "recognition": "OCR",
+        "roi": [
+            354,
+            360,
+            108,
+            56
+        ],
+        "expected": "选择",
+        "action": "LongPress",
+        "duration":10,
+        "post_delay":500,
+        "next": [
+            "跑步机_选择第三梯队2",
+            "跑步机_第二回合计划3"
         ]
     },
     "跑步机_第二回合计划3": {
@@ -846,7 +895,12 @@
         "expected": "2",
         "action": "LongPress",
         "duration":10,
-        "target":[449,431,17,17],
+        "target": [
+            442,
+            426,
+            37,
+            30
+        ],
         "next": [
             "跑步机_下一回合2",
             "跑步机_第二回合计划3"
@@ -965,7 +1019,7 @@
             35,
             30
         ],
-        "post_delay": 1000,
+        "post_delay": 500,
         "next": [
             "跑步机_切换待机",
             "跑步机_点击支援部队"
@@ -982,154 +1036,52 @@
         "expected": "待机",
         "action": "LongPress",
         "duration":10,
+        "post_delay":1000,
         "next": [
             "跑步机_切换待机",
-            "跑步机_部署坦克"
+            "跑步机_陷阱妖精修复"
         ]
     },
-    "跑步机_部署坦克": {
-        "recognition": "DirectHit",
+    "跑步机_陷阱妖精修复": {
         "action": "LongPress",
         "duration":10,
-        "target": [
-            553,
-            232,
-            47,
-            36
-        ],
+        "target": [633,350,13,11],
         "next": [
-            "跑步机_选择重装",
-            "跑步机_部署坦克"
+            "跑步机_强化兽夹",
+            "跑步机_陷阱妖精修复"
         ]
     },
-    "跑步机_选择重装": {
+    "跑步机_强化兽夹":{
         "recognition": "OCR",
-        "roi" : [171,23,598,118],
-        "expected": "重装",
+        "roi" : [1154,341,108,55],
+        "expected": "强化兽夹",
         "action": "LongPress",
         "duration":10,
+        "target":[1196,400,30,9],
         "next": [
-            "跑步机_选择机动装甲",
-            "跑步机_选择重装"
+            "跑步机_放置技能",
+            "跑步机_强化兽夹"
         ]
     },
-    "跑步机_选择机动装甲": {
+    "跑步机_放置技能":{
         "recognition": "OCR",
-        "roi": [
-            131,
-            225,
-            127,
-            66
-        ],
-        "expected": "机动",
+        "roi" : [1127,347,144,105],
+        "expected": "取消",
         "action": "LongPress",
         "duration":10,
+        "target":[556,430,15,18],
         "next": [
-            "跑步机_选择坦克",
-            "跑步机_选择机动装甲"
+            "跑步机_技能检测",
+            "跑步机_放置技能"
         ]
     },
-    "跑步机_选择坦克": {
+    "跑步机_技能检测":{
         "recognition": "OCR",
-        "roi": [
-            337,
-            266,
-            135,
-            36
-        ],
-        "expected": "坦克",
-        "action": "LongPress",
-        "duration":10,
+        "roi" : [1127,347,144,105],
+        "expected": "中",
+        "action": "DoNothing",
         "next": [
-            "跑步机_确认部署坦克",
-            "跑步机_选择坦克"
-        ]
-    },
-    "跑步机_确认部署坦克": {
-        "recognition": "OCR",
-        "roi": [
-            1106,
-            613,
-            112,
-            65
-        ],
-        "expected": "部署",
-        "action": "LongPress",
-        "duration":10,
-        "next": [
-            "跑步机_确认部署坦克",
-            "跑步机_坦克面板"
-        ]
-    },
-    "跑步机_坦克面板": {
-        "recognition": "DirectHit",
-        "action": "LongPress",
-        "duration":10,
-        "target": [
-            563,
-            239,
-            30,
-            23
-        ],
-        "post_delay": 1000,
-        "next": [
-            "跑步机_关闭火力支援",
-            "跑步机_坦克面板"
-        ]
-    },
-    "跑步机_关闭火力支援": {
-        "recognition": "OCR",
-        "roi": [
-            820,
-            580,
-            152,
-            126
-        ],
-        "expected": "N",
-        "action": "LongPress",
-        "duration":10,
-        "post_delay": 1000,
-        "next": [
-            "跑步机_关闭火力支援",
-            "跑步机_补充能源"
-        ]
-    },
-    "跑步机_补充能源": {
-        "recognition": "DirectHit",
-        "action": "LongPress",
-        "duration":10,
-        "post_delay": 1000,
-        "target": [
-            1139,
-            586,
-            65,
-            25
-        ],
-        "next": [
-            "跑步机_关闭面板",
-            "跑步机_补充能源"
-        ]
-    },
-    "跑步机_关闭面板": {
-        "recognition": "OCR",
-        "roi": [
-            640,
-            553,
-            58,
-            166
-        ],
-        "expected": "60/60",
-        "action": "LongPress",
-        "duration":10,
-        "target": [
-            913,
-            467,
-            61,
-            37
-        ],
-        "next": [
-            "跑步机_计划模式3",
-            "跑步机_关闭面板"
+            "跑步机_跳过战斗"
         ]
     },
     "跑步机_计划模式3": {
@@ -1150,130 +1102,42 @@
             33
         ],
         "next": [
-            "跑步机_取消选中4",
+            "跑步机_点击第三梯队3",
             "跑步机_计划模式3"
         ]
     },
-    "跑步机_取消选中4": {
-        "recognition": "OCR",
-        "roi" : [1052,551,227,168],
-        "expected": "执行",
-        "action": "LongPress",
-        "duration":10,
-        "target":[24,118,34,46],
-        "next": [
-            "跑步机_点击第三梯队3"
-        ]
-    },
     "跑步机_点击第三梯队3": {
-        "recognition": "DirectHit",
+        "recognition": "OCR",
+        "roi" : [1079,592,200,127],
+        "expected":"执行",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            622,
-            341,
-            37,
-            34
-        ],
+        "target":[634,350,14,16],
         "next": [
             "跑步机_第三回合计划1",
             "跑步机_点击第三梯队3"
         ]
     },
     "跑步机_第三回合计划1": {
-        "recognition": "OCR",
-        "roi": [
-            1002,
-            656,
-            45,
-            52
-        ],
-        "expected": "5",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            495,
-            367,
-            38,
-            36
-        ],
+        "target":[507,375,17,19],
         "next": [
-            "跑步机_取消选中5",
+            "跑步机_下一回合3",
             "跑步机_点击第三梯队3"
         ]
     },
-    "跑步机_取消选中5": {
-        "recognition": "OCR",
+    "跑步机_下一回合3":{
+    "recognition": "OCR",
         "roi": [
-            1082,
-            505,
-            180,
-            83
+            1088,
+            507,
+            182,
+            78
         ],
         "expected": "下一",
         "action": "LongPress",
         "duration":10,
-        "target":[24,118,34,46],
-        "next": [
-            "跑步机_点击坦克3"
-        ]
-    },
-    "跑步机_点击坦克3": {
-        "recognition": "OCR",
-        "roi": [
-            1082,
-            505,
-            180,
-            83
-        ],
-        "expected": "下一",
-        "action": "LongPress",
-        "duration":10,
-        "target": [
-            559,
-            223,
-            34,
-            41
-        ],
-        "next": [
-            "跑步机_第三回合计划2",
-            "跑步机_点击坦克3"
-        ]
-    },
-    "跑步机_第三回合计划2": {
-        "recognition": "OCR",
-        "roi" : [915,542,211,177],
-        "expected":"用",
-        "action": "LongPress",
-        "duration":10,
-        "target": [
-            675,
-            251,
-            41,
-            36
-        ],
-        "next": [
-            "跑步机_下一回合3",
-            "跑步机_第三回合计划2"
-        ]
-    },
-    "跑步机_下一回合3": {
-        "recognition": "OCR",
-        "roi": [
-            1004,
-            656,
-            66,
-            50
-        ],
-        "expected": "40",
-        "action": "LongPress",
-        "duration":10,
-        "target": [
-            1115,
-            533,
-            129,
-            28
-        ],
         "next": [
             "跑步机_执行计划3",
             "跑步机_下一回合3"
@@ -1326,11 +1190,11 @@
             46
         ],
         "next": [
-            "跑步机_计划模式4",
+            "跑步机_部署坦克",
             "跑步机_跳过战斗3"
         ]
     },
-    "跑步机_计划模式4": {
+    "跑步机_部署坦克": {
         "recognition": "OCR",
         "roi": [
             402,
@@ -1339,6 +1203,159 @@
             64
         ],
         "expected": "04",
+        "action": "LongPress",
+        "duration":10,
+        "target":[574,214,15,17],
+        "post_delay":500,
+        "next": [
+            "跑步机_选择重装",
+            "跑步机_部署坦克"
+        ]
+    },
+    "跑步机_选择重装": {
+        "recognition": "OCR",
+        "roi": [
+            435,
+            47,
+            310,
+            86
+        ],
+        "expected": "重装",
+        "action": "LongPress",
+        "duration":10,
+        "next": [
+            "跑步机_选择机动装甲",
+            "跑步机_选择重装"
+        ]
+    },
+    "跑步机_选择机动装甲": {
+        "recognition": "OCR",
+        "roi": [
+            131,
+            225,
+            127,
+            66
+        ],
+        "expected": "机动",
+        "action": "LongPress",
+        "duration":10,
+        "next": [
+            "跑步机_选择坦克",
+            "跑步机_选择机动装甲"
+        ]
+    },
+    "跑步机_选择坦克": {
+        "recognition": "OCR",
+        "roi": [
+            337,
+            266,
+            135,
+            36
+        ],
+        "expected": "坦克",
+        "action": "LongPress",
+        "duration":10,
+        "next": [
+            "跑步机_确认部署坦克",
+            "跑步机_选择坦克"
+        ]
+    },
+    "跑步机_确认部署坦克": {
+        "recognition": "OCR",
+        "roi": [
+            1106,
+            613,
+            112,
+            65
+        ],
+        "expected": "部署",
+        "action": "LongPress",
+        "duration":10,
+        "post_delay":200,
+        "next": [
+            "跑步机_确认部署坦克",
+            "跑步机_坦克面板"
+        ]
+    },
+    "跑步机_坦克面板": {
+        "recognition": "OCR",
+        "roi": [
+            402,
+            27,
+            90,
+            64
+        ],
+        "expected": "04",
+        "action": "LongPress",
+        "duration":10,
+        "target":[573,218,11,7],
+        "pre_delay":300,
+        "post_delay": 500,
+        "next": [
+            "跑步机_关闭火力支援",
+            "跑步机_坦克面板"
+        ]
+    },
+    "跑步机_关闭火力支援": {
+        "recognition": "OCR",
+        "roi": [
+            820,
+            580,
+            152,
+            126
+        ],
+        "expected": "N",
+        "action": "LongPress",
+        "duration":10,
+        "post_delay": 500,
+        "next": [
+            "跑步机_关闭火力支援",
+            "跑步机_补充能源"
+        ]
+    },
+    "跑步机_补充能源": {
+        "recognition": "DirectHit",
+        "action": "LongPress",
+        "duration":10,
+        "post_delay": 500,
+        "target": [
+            1139,
+            586,
+            65,
+            25
+        ],
+        "next": [
+            "跑步机_关闭面板",
+            "跑步机_补充能源"
+        ]
+    },
+    "跑步机_关闭面板": {
+        "recognition": "OCR",
+        "roi": [
+            640,
+            553,
+            58,
+            166
+        ],
+        "expected": "60/60",
+        "action": "LongPress",
+        "duration":10,
+        "target": [
+            913,
+            467,
+            61,
+            37
+        ],
+        "post_delay": 500,
+        "next": [
+            "跑步机_计划模式4",
+            "跑步机_关闭面板"
+        ]
+    },
+    "跑步机_计划模式4": {
+        "recognition": "OCR",
+        "roi" : [1051,580,228,139],
+        "expected": "结束",
         "action": "LongPress",
         "duration":10,
         "target": [
@@ -1354,21 +1371,11 @@
     },
     "跑步机_点击坦克4": {
         "recognition": "OCR",
-        "roi": [
-            998,
-            664,
-            46,
-            37
-        ],
-        "expected": "7",
+        "roi" : [1051,580,228,139],
+        "expected": "执行",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            623,
-            343,
-            33,
-            26
-        ],
+        "target":[572,226,17,5],
         "next": [
             "跑步机_第四回合计划",
             "跑步机_点击坦克4"
@@ -1385,12 +1392,7 @@
         "expected": "60",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            560,
-            422,
-            38,
-            40
-        ],
+        "target":[636,323,15,15],
         "next": [
             "跑步机_执行计划4",
             "跑步机_第四回合计划"
@@ -1472,12 +1474,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            1106,
-            631,
-            143,
-            60
-        ],
+        "target":[1119,640,102,44],
         "next": [
             "跑步机_计划模式7",
             "跑步机_跳过战斗4"
@@ -1507,21 +1504,11 @@
     },
     "跑步机_点击坦克7": {
         "recognition": "OCR",
-        "roi": [
-            1005,
-            664,
-            37,
-            41
-        ],
-        "expected": "7",
+        "roi" : [1051,580,228,139],
+        "expected": "执行",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            630,
-            345,
-            25,
-            24
-        ],
+        "target":[639,365,15,9],
         "next": [
             "跑步机_第七回合计划1",
             "跑步机_点击坦克7"
@@ -1538,12 +1525,7 @@
         "expected": "60",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            560,
-            236,
-            33,
-            30
-        ],
+        "target":[578,252,5,14],
         "next": [
             "跑步机_执行计划7",
             "跑步机_第七回合计划1"
@@ -1582,13 +1564,8 @@
         "expected": "9",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            566,
-            322,
-            34,
-            27
-        ],
-        "post_delay":1000,
+        "target":[575,329,11,14],
+        "post_delay": 500,
         "next": [
             "跑步机_点击撤退",
             "跑步机_撤退坦克"
@@ -1659,12 +1636,7 @@
         "expected": "执行",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            506,
-            454,
-            29,
-            25
-        ],
+        "target":[511,465,17,10],
         "next": [
             "跑步机_第七回合计划2",
             "跑步机_点击第三梯队7"
@@ -1674,16 +1646,10 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            628,
-            433,
-            33,
-            22
-        ],
+        "target":[640,439,10,8],
         "next": [
             "跑步机_执行计划7-2",
-            "跑步机_点击第三梯队7",
-            "跑步机_第七回合计划2"
+            "跑步机_点击第三梯队7"
         ]
     },
     "跑步机_执行计划7-2": {
@@ -1755,6 +1721,7 @@
             56
         ],
         "expected": "再次作战",
-        "action": "Click"
+        "action": "Click",
+        "interrupt":"public拆人形_人形回收"
     }
 }

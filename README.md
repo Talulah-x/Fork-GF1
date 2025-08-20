@@ -119,8 +119,9 @@
 |------|--------|----------|
 | ▶️ MP41抽薪打捞 | [Ethan Lee](https://github.com/hake971920) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
 | ▶️ 夜战打捞 |[白烛](https://github.com/Talulah-x) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%A4%9C%E6%88%98%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)|
-| ▶️ M240打捞 | [Kobe Bryant](https://github.com/LIUBEI1233) | [手册暂无](https://github.com/LeonNagant/MaaGF1_Test) |
-| ▶️ 防御者打捞 | [Kobe Bryant](https://github.com/LIUBEI1233) | [手册暂无](https://github.com/LeonNagant/MaaGF1_Test) |
+| ▶️ M240打捞 | [Kobe Bryant](https://github.com/LIUBEI1233) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
+| ▶️ 防御者打捞 | [Kobe Bryant](https://github.com/LIUBEI1233) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
+| ▶️ 6-4E维克托打捞 | [Kobe Bryant](https://github.com/LIUBEI1233) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
 
 ### 🏠 宿舍功能
 

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "name": "MaaGF1",
-  "version": "v1.5.14",
+  "version": "v1.5.17",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -83,6 +83,9 @@
       "entry": "!跑步机总流程",
       "check": false,
       "doc": " **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "option": [
+        "跑步机修复选择"
+      ],
       "repeatable": true,
       "repeat_count": 1
     },
@@ -90,7 +93,7 @@
       "name": "常驻人形打捞",
       "entry": "!常驻人形打捞",
       "check": false,
-      "doc": "请在裂变链接第五章能点击到“斩牙行动II战斗EX”位置或者进入该地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "doc": "请在阅读对应使用说明后运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "option": [
         "选择常驻人形打捞目标"
       ],
@@ -191,14 +194,15 @@
             "134重置_再次作战": {
               "next": [
                 "134部署_布置完成",
+                "134进入_普通作战",
                 "134进入_点击134",
-                "134重置_再次作战",
-                "134重置_点击获得角色"
+                "134重置_再次作战"
               ],
               "interrupt": [
                 "public拆人形_人形回收",
                 "public拆人形_导航栏战斗",
-                "public_进入导航栏"
+                "public_进入导航栏",
+                "134重置_再战连点1"
               ]
             }
           }
@@ -727,6 +731,14 @@
               "next": "!防卫者打捞"
             }
           }
+        },
+        {
+          "name": "6-4e圣捞",
+          "pipeline_override": {
+            "!常驻人形打捞": {
+              "next": "!6-4e打捞总流程"
+            }
+          }
         }
       ]
     },
@@ -791,6 +803,35 @@
           "pipeline_override": {
             "灰域_确认切换": {
               "post_delay": 10000
+            }
+          }
+        }
+      ]
+    },
+    "跑步机修复选择": {
+      "cases": [
+        {
+          "name": "陷阱妖精"
+        },
+        {
+          "name": "迷彩坦克",
+          "pipeline_override": {
+            "跑步机_切换待机": {
+              "next": [
+                "跑步机_切换待机",
+                "跑步机_计划模式3"
+              ]
+            }
+          }
+        },
+        {
+          "name": "不修复",
+          "pipeline_override": {
+            "跑步机_切换待机": {
+              "next": [
+                "跑步机_切换待机",
+                "跑步机_跳过战斗"
+              ]
             }
           }
         }
