@@ -6,7 +6,8 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "点击指挥部进行",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "next": [
             "7-4打捞_点击梯队",
             "7-4打捞_开始作战"
@@ -16,7 +17,8 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "结束",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[443,474,19,23],
         "next": [
             "7-4打捞_补给",
@@ -27,7 +29,8 @@
         "recognition": "OCR",
         "roi" : [1156,524,98,67],
         "expected": "补给",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "next": [
             "7-4打捞_计划模式",
             "7-4打捞_补给"
@@ -37,7 +40,8 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "结束",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[51,619,21,9],
         "next": [
             "7-4打捞_计划点",
@@ -48,7 +52,8 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "执行",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[500,385,19,19],
         "next": [
             "7-4打捞_执行计划",
@@ -59,7 +64,8 @@
         "recognition": "OCR",
         "roi" : [1084,507,168,85],
         "expected" : "下一",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[1109,637,123,43],
         "next": [
             "7-4打捞_点击机场",
@@ -71,7 +77,8 @@
         "roi" : [969,625,123,85],
         "expected" : "3",
         "pre_delay":2000,
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[441,439,26,22],
         "next": [
             "7-4打捞_部署梯队",
@@ -82,7 +89,8 @@
         "recognition": "OCR",
         "roi" : [484,297,162,121],
         "expected" : "部署",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "next": [
             "7-4打捞_确认部署",
             "7-4打捞_部署梯队"
@@ -97,7 +105,8 @@
             63
         ],
         "expected": "确",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "next": [
             "7-4打捞_点击机场1",
             "7-4打捞_确认部署"
@@ -107,7 +116,8 @@
         "recognition": "OCR",
         "roi" : [1085,612,192,104],
         "expected" : "结束",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[445,350,16,16],
         "next": [
             "7-4打捞_补给1",
@@ -118,7 +128,8 @@
         "recognition": "OCR",
         "roi" : [1156,524,98,67],
         "expected": "补给",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "next": [
             "7-4打捞_计划模式1",
             "7-4打捞_补给1"
@@ -128,7 +139,8 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "结束",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[51,619,21,9],
         "next": [
             "7-4打捞_点击boss队",
@@ -139,7 +151,8 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "执行",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "post_delay":1000,
         "target" :[502,253,13,18],
         "next": [
@@ -151,7 +164,8 @@
         "recognition": "OCR",
         "roi" : [556,220,127,83],
         "expected": "选择",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "next": [
             "7-4打捞_计划点1",
             "7-4打捞_选择boss队"
@@ -161,7 +175,8 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "执行",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[604,278,23,15],
         "next": [
             "7-4打捞_点击清杂队",
@@ -172,7 +187,8 @@
         "recognition": "OCR",
         "roi" : [1086,502,181,83],
         "expected": "下一",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "post_delay":1000,
         "target" :[444,348,19,15],
         "next": [
@@ -184,7 +200,8 @@
         "recognition": "OCR",
         "roi" : [491,305,141,103],
         "expected": "选择",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "next": [
             "7-4打捞_计划点2",
             "7-4打捞_选择清杂队"
@@ -194,7 +211,8 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "执行",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[606,280,21,19],
         "next": [
             "7-4打捞_下一回合",
@@ -205,7 +223,8 @@
         "recognition": "OCR",
         "roi" : [968,649,81,69],
         "expected": "-1",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[1135,537,69,18],
         "next": [
             "7-4打捞_执行计划1",
@@ -216,7 +235,8 @@
         "recognition": "OCR",
         "roi" : [944,504,139,86],
         "expected" : "取消",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[1109,637,123,43],
         "timeout":100000,
         "next": [
@@ -228,7 +248,8 @@
         "recognition": "OCR",
         "roi" : [391,22,121,84],
         "expected": "02",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[51,619,21,9],
         "next": [
             "7-4打捞_点击清杂队2",
@@ -239,7 +260,8 @@
         "recognition": "OCR",
         "roi" : [1086,604,185,115],
         "expected": "执行",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "post_delay":1000,
         "target" :[604,346,20,19],
         "next": [
@@ -247,7 +269,8 @@
         ]
     },
     "7-4打捞_2计划点1":{
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" : [890,331,16,16],
         "next": [
             "7-4打捞_点击boss队2",
@@ -258,7 +281,8 @@
         "recognition": "OCR",
         "roi" : [1073,504,194,77],
         "expected": "下一",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "post_delay":1000,
         "target" :[501,325,19,15],
         "next": [
@@ -270,14 +294,16 @@
         "recognition": "OCR",
         "roi" : [534,278,160,108],
         "expected": "选择",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "next": [
             "7-4打捞_2计划点2",
             "7-4打捞_选择boss队2"
         ]
     },
     "7-4打捞_2计划点2":{
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target": [999,346,19,28],
         "next": [
             "7-4打捞_下一回合2",
@@ -288,7 +314,8 @@
         "recognition": "OCR",
         "roi" : [970,652,81,63],
         "expected": "-6",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[1135,537,69,18],
         "next": [
             "7-4打捞_执行计划2",
@@ -299,7 +326,8 @@
         "recognition": "OCR",
         "roi" : [944,504,139,86],
         "expected" : "取消",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[1109,637,123,43],
         "timeout":300000,
         "next": [
@@ -311,13 +339,15 @@
         "recognition": "OCR",
         "roi" : [330,606,128,34],
         "expected" : "再次",
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "next": [
             "7-4打捞_点击"
         ]
     },
     "7-4打捞_点击":{
-        "action": "Click",
+        "action": "LongPress",
+        "duration": 10,
         "target" :[371,616,40,9],
         "next": [
             "7-4打捞_开始作战",
