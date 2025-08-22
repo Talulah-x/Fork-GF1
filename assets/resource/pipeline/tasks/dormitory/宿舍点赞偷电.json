@@ -112,7 +112,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "threshold": 0.75,
+        "threshold": 0.65,
         "next": [
             "宿舍_偷电成功",
             "宿舍_点击点赞"
@@ -170,7 +170,7 @@
             59,
             57
         ],
-        "post_delay": 800,
+        "post_delay": 1500,
         "next": [
             "宿舍_完成点赞回主菜单",
             "宿舍_点击好友",

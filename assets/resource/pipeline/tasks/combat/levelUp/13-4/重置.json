@@ -10,12 +10,88 @@
         "expected": [
             "再次作战"
         ],
+        "rate_limit": 1000,
+        "timeout": 600000,
+        "next": [
+            "134重置_再战连点1"
+        ]
+    },
+    "134重置_再战连点1": {
+        "recognition": "OCR",
+        "roi": [
+            277,
+            572,
+            188,
+            73
+        ],
+        "expected": [
+            "再次作战"
+        ],
+        "target": [
+            375,
+            618,
+            70,
+            12
+        ],
         "action": "LongPress",
         "duration": 20,
         "rate_limit": 1000,
+        "post_delay": 50,
+        "pre_delay": 1,
+        "next": [
+            "134重置_再战连点2"
+        ],
         "timeout": 600000
     },
-    "134重置_再战连点1": {
+    "134重置_再战连点2": {
+        "target": [
+            375,
+            618,
+            70,
+            12
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "rate_limit": 1000,
+        "post_delay": 50,
+        "pre_delay": 1,
+        "next": [
+            "134重置_再战连点3"
+        ]
+    },
+    "134重置_再战连点3": {
+        "target": [
+            375,
+            618,
+            70,
+            12
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "rate_limit": 1000,
+        "post_delay": 50,
+        "pre_delay": 1,
+        "next": [
+            "134重置_再战连点7"
+        ]
+    },
+    "134重置_再战连点4": {
+        "target": [
+            375,
+            618,
+            70,
+            12
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "rate_limit": 1000,
+        "post_delay": 50,
+        "pre_delay": 1,
+        "next": [
+            "134重置_再战连点5"
+        ]
+    },
+    "134重置_再战连点5": {
         "target": [
             375,
             618,
@@ -27,10 +103,10 @@
         "rate_limit": 1000,
         "post_delay": 100,
         "next": [
-            "134重置_再战连点2"
+            "134重置_再战连点6"
         ]
     },
-    "134重置_再战连点2": {
+    "134重置_再战连点6": {
         "target": [
             375,
             618,
@@ -39,7 +115,23 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "rate_limit": 1000
+        "rate_limit": 1000,
+        "post_delay": 100,
+        "next": [
+            "134重置_再战连点7"
+        ]
+    },
+    "134重置_再战连点7": {
+        "target": [
+            375,
+            618,
+            70,
+            12
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "rate_limit": 1000,
+        "post_delay": 1000
     },
     "134重置_点击获得角色": {
         "recognition": "TemplateMatch",
@@ -66,10 +158,27 @@
         "post_delay": 500,
         "rate_limit": 100,
         "threshold": 0.7,
-        "next": [
-            "134重置_再次作战",
-            "134重置_点击获得角色"
-        ],
         "timeout": 40000
+    },
+    "134重置_单击再次作战": {
+        "recognition": "OCR",
+        "target": [
+            375,
+            618,
+            70,
+            12
+        ],
+        "roi": [
+            277,
+            572,
+            188,
+            73
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "expected": [
+            "再次作战"
+        ],
+        "rate_limit": 1000
     }
 }
