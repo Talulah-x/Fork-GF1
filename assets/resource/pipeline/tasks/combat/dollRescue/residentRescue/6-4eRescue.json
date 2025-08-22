@@ -458,6 +458,20 @@
         "target" : [614,352,14,14],
         "post_delay":400,
         "next":[
+            "6-4e-Round4-确认选中打捞队",
+            "6-4e-Round4-点击打捞队"
+        ]
+    },
+    "6-4e-Round4-确认选中打捞队":{
+        "recognition": "OCR",
+        "roi" : [1141,614,88,48],
+        "expected":"取消",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay":400,
+        "target" : [1141,614,88,48],
+        "post_delay": 400,
+        "next":[
             "6-4e-Round4-点击计划模式"
         ]
     },
@@ -806,6 +820,20 @@
         "pre_delay":400,
         "target" : [739,351,12,15],
         "post_delay":400,
+        "next":[
+            "6-4e-Round7-确认选中打捞队",
+            "6-4e-Round7-点击打捞队"
+        ]
+    },
+    "6-4e-Round7-确认选中打捞队":{
+        "recognition": "OCR",
+        "roi" : [1141,614,88,48],
+        "expected":"取消",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay":400,
+        "target" : [1141,614,88,48],
+        "post_delay": 400,
         "next":[
             "6-4e-Round7-点击计划模式"
         ]
