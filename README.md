@@ -169,6 +169,13 @@
 
 ## 相关项
 
+### ?
+
+<p align="center">
+          <img alt="地图示例" src="https://cdn.jsdelivr.net/gh/LeonNagant/MaaGF1_Test/example_img/doll_rescure/6-4eRescue_1.png" width="700">
+          <br><em>面对作战失败的指挥官我修院，佐佐翀淳平给出的惩罚是</em>
+        </p>
+
 ### 感谢 [FMddl-MAAutoGirlsFrontLine](https://github.com/Fufu-OuO/FMddl-MAAutoGirlsFrontLine) 开发组对本项目的支持与贡献
 
  感谢所有参与开发、测试的贡献者和用户！
