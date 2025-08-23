@@ -172,7 +172,7 @@
 ### ?
 
 <p align="center">
-          <img src="https://cdn.jsdelivr.net/gh/LeonNagant/MaaGF1_Test/example_img/icon/666.png" width="1280" height="720" alt="LOGO">
+          <img src="https://cdn.jsdelivr.net/gh/Liubei1233/MaaGF1_Test/example_img/icon/666.png" width="1280" height="720" alt="LOGO">
           <br><em>面对作战失败的指挥官我修院，佐佐翀淳平给出的惩罚是</em>
         </p>
 
