@@ -167,9 +167,22 @@
     "expected": "确认",
     "action": "LongPress",
     "duration": 10,
+    "post_delay": 45000,
+    "timeout": 90000,
     "next": [
-      "灰域_加速结算",
+      "灰域_加速结算检测",
       "灰域_代理确认"
+    ]
+  },
+  "灰域_加速结算检测": {
+    "recognition": "OCR",
+    "roi" : [158,276,118,73],
+    "expected": "歼灭敌人",
+    "action": "Click",
+    "target":[1130,581,56,45],
+    "next": [
+      "灰域_加速结算检测",
+      "灰域_加速结算"
     ]
   },
   "灰域_加速结算": {
@@ -193,10 +206,10 @@
     "expected": "积分",
     "action": "Click",
     "target":[1130,581,56,45],
-    "post_delay":3000,
+    "post_delay":5000,
     "next": [
       "灰域_领取奖励",
-      "!开始打灰"
+      "灰域_灰域检测"
     ]
   },
   "灰域_点击重装点": {
@@ -248,6 +261,7 @@
     "expected": "领取",
     "action": "LongPress",
     "duration": 10,
-    "target":[1130,581,56,45]
+    "target":[1130,581,56,45],
+    "next":"灰域_灰域检测"
   }
 }
