@@ -186,62 +186,11 @@
             32,
             27
         ],
+        "post_delay":500,
         "next": [
-            "零电荷_选择梯队",
-            "零电荷_部署梯队",
-            "零电荷_滑动梯队"
-        ]
-    },
-    "零电荷_选择梯队": {
-        "recognition": "OCR",
-        "roi": [
-            0,
-            6,
-            135,
-            713
+            "零电荷_开始作战"
         ],
-        "expected": "10",
-        "action": "LongPress",
-        "duration": 20,
-        "next": [
-            "零电荷_确认部署"
-        ]
-    },
-    "零电荷_滑动梯队": {
-        "recognition": "OCR",
-        "expected": "选",
-        "action": "Swipe",
-        "begin": [
-            75,
-            695,
-            1,
-            1
-        ],
-        "end": [
-            79,
-            60,
-            1,
-            1
-        ],
-        "next": [
-            "零电荷_选择梯队"
-        ]
-    },
-    "零电荷_确认部署": {
-        "recognition": "OCR",
-        "roi": [
-            1125,
-            603,
-            120,
-            68
-        ],
-        "expected": "确定",
-        "action": "LongPress",
-        "duration": 20,
-        "next": [
-            "零电荷_开始作战",
-            "零电荷_确认部署"
-        ]
+        "interrupt":"!public梯队部署"
     },
     "零电荷_开始作战": {
         "recognition": "OCR",

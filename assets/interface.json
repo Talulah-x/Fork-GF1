@@ -93,7 +93,7 @@
       "name": "常驻人形打捞",
       "entry": "!常驻人形打捞",
       "check": false,
-      "doc": "请在裂变链接第五章能点击到“斩牙行动II战斗EX”位置或者进入该地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "doc": "[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "option": [
         "选择常驻人形打捞目标"
       ],
@@ -143,16 +143,16 @@
       "check": false,
       "doc": "⚠️打开记录缩放，将地图缩放至最小并拉从最左下向右上拉至地图边缘后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "option": [
-        "捡垃圾-部署第几梯队"
+        "部署梯队选择"
       ]
     },
     {
       "name": "指挥官后勤",
       "entry": "!指挥官后勤",
       "check": false,
-      "doc": "进入零电荷，部署第十梯队，运行前需要手动下一次梯队并运行。[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "doc": "⚠️打开记录缩放，将地图缩放至最小并拉从最左下向右上拉至地图边缘后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "option": [
-        "零电荷-部署第几梯队"
+        "部署梯队选择"
       ]
     },
     {
@@ -384,164 +384,85 @@
         }
       ]
     },
-    "捡垃圾-部署第几梯队": {
-      "cases": [
-        {
-          "name": "1",
-          "pipeline_override": {
-            "捡垃圾_选择梯队": {
-              "expected": "1"
-            }
-          }
+    "部署梯队选择": {
+            "cases": [
+                {
+                    "name": "1"
+                },
+                {
+                    "name": "2",
+                    "pipeline_override": {
+                        "public梯队部署_选择梯队": {
+                            "expected": "2"
+                        }
+                    }
+                },
+                {
+                    "name": "3",
+                    "pipeline_override": {
+                        "public梯队部署_选择梯队": {
+                            "expected": "3"
+                        }
+                    }
+                },
+                {
+                    "name": "4",
+                    "pipeline_override": {
+                        "public梯队部署_选择梯队": {
+                            "expected": "4"
+                        }
+                    }
+                },
+                {
+                    "name": "5",
+                    "pipeline_override": {
+                        "public梯队部署_选择梯队": {
+                            "expected": "5"
+                        }
+                    }
+                },
+                {
+                    "name": "6",
+                    "pipeline_override": {
+                        "public梯队部署_选择梯队": {
+                            "expected": "6"
+                        }
+                    }
+                },
+                {
+                    "name": "7",
+                    "pipeline_override": {
+                        "public梯队部署_选择梯队": {
+                            "expected": "7"
+                        }
+                    }
+                },
+                {
+                    "name": "8",
+                    "pipeline_override": {
+                        "public梯队部署_选择梯队": {
+                            "expected": "8"
+                        }
+                    }
+                },
+                {
+                    "name": "9",
+                    "pipeline_override": {
+                        "public梯队部署_选择梯队": {
+                            "expected": "9"
+                        }
+                    }
+                },
+                {
+                    "name": "10",
+                    "pipeline_override": {
+                        "public梯队部署_选择梯队": {
+                            "expected": "10"
+                        }
+                    }
+                }
+            ]
         },
-        {
-          "name": "2",
-          "pipeline_override": {
-            "捡垃圾_选择梯队": {
-              "expected": "2"
-            }
-          }
-        },
-        {
-          "name": "3",
-          "pipeline_override": {
-            "捡垃圾_选择梯队": {
-              "expected": "3"
-            }
-          }
-        },
-        {
-          "name": "4",
-          "pipeline_override": {
-            "捡垃圾_选择梯队": {
-              "expected": "4"
-            }
-          }
-        },
-        {
-          "name": "5",
-          "pipeline_override": {
-            "捡垃圾_选择梯队": {
-              "expected": "5"
-            }
-          }
-        },
-        {
-          "name": "6",
-          "pipeline_override": {
-            "捡垃圾_选择梯队": {
-              "expected": "6"
-            }
-          }
-        },
-        {
-          "name": "7",
-          "pipeline_override": {
-            "捡垃圾_选择梯队": {
-              "expected": "7"
-            }
-          }
-        },
-        {
-          "name": "8",
-          "pipeline_override": {
-            "捡垃圾_选择梯队": {
-              "expected": "8"
-            }
-          }
-        },
-        {
-          "name": "9",
-          "pipeline_override": {
-            "捡垃圾_选择梯队": {
-              "expected": "9"
-            }
-          }
-        },
-        {
-          "name": "10"
-        }
-      ]
-    },
-    "零电荷-部署第几梯队": {
-      "cases": [
-        {
-          "name": "1",
-          "pipeline_override": {
-            "零电荷_选择梯队": {
-              "expected": "1"
-            }
-          }
-        },
-        {
-          "name": "2",
-          "pipeline_override": {
-            "零电荷_选择梯队": {
-              "expected": "2"
-            }
-          }
-        },
-        {
-          "name": "3",
-          "pipeline_override": {
-            "零电荷_选择梯队": {
-              "expected": "3"
-            }
-          }
-        },
-        {
-          "name": "4",
-          "pipeline_override": {
-            "零电荷_选择梯队": {
-              "expected": "4"
-            }
-          }
-        },
-        {
-          "name": "5",
-          "pipeline_override": {
-            "零电荷_选择梯队": {
-              "expected": "5"
-            }
-          }
-        },
-        {
-          "name": "6",
-          "pipeline_override": {
-            "零电荷_选择梯队": {
-              "expected": "6"
-            }
-          }
-        },
-        {
-          "name": "7",
-          "pipeline_override": {
-            "零电荷_选择梯队": {
-              "expected": "7"
-            }
-          }
-        },
-        {
-          "name": "8",
-          "pipeline_override": {
-            "零电荷_选择梯队": {
-              "expected": "8"
-            }
-          }
-        },
-        {
-          "name": "9",
-          "pipeline_override": {
-            "零电荷_选择梯队": {
-              "expected": "9"
-            }
-          }
-        },
-        {
-          "name": "10"
-        }
-      ]
-    },
     "活动打捞_选择打捞目标": {
       "cases": [
         {
@@ -843,4 +764,5 @@
       ]
     }
   }
+
 }
