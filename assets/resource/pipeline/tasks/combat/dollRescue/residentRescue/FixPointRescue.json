@@ -66,7 +66,7 @@
         "action": "LongPress",
         "duration": 20,
         "target" : [1041,626,178,65],
-        "post_delay":2000,
+        "post_delay":3000,
         "next":[
             "三维流形-退出任务简报"
         ]
