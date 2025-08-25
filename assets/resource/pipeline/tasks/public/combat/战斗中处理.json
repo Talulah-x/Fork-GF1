@@ -29,7 +29,7 @@
             134
         ],
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "target": [
             372,
             615,
@@ -37,7 +37,7 @@
             21
         ],
         "pre_delay": 600,
-        "post_delay": 1,
+        "post_delay": 20,
         "next": [
             "public_加速结算点击1"
         ]
@@ -49,10 +49,10 @@
             80,
             21
         ],
-        "post_delay": 1,
-        "pre_delay": 1,
+        "post_delay": 20,
+        "pre_delay": 20,
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "next": [
             "public_加速结算点击2"
         ]
@@ -64,10 +64,10 @@
             80,
             21
         ],
-        "post_delay": 1,
-        "pre_delay": 1,
+        "post_delay": 20,
+        "pre_delay": 20,
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "next": [
             "public_加速结算点击3"
         ]
@@ -79,10 +79,10 @@
             80,
             21
         ],
-        "post_delay": 1,
-        "pre_delay": 1,
+        "post_delay": 20,
+        "pre_delay": 20,
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "next": [
             "public_加速结算点击4"
         ]
@@ -94,10 +94,10 @@
             80,
             21
         ],
-        "post_delay": 1,
-        "pre_delay": 1,
+        "post_delay": 20,
+        "pre_delay": 20,
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "next": [
             "public_加速结算点击5"
         ]
@@ -109,70 +109,70 @@
             80,
             21
         ],
-        "post_delay": 1,
-        "pre_delay": 1,
+        "post_delay": 20,
+        "pre_delay": 20,
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "next": [
             "public_加速结算点击6"
         ]
     },
     "public_加速结算点击6": {
         "target": [
-            1230,
-            320,
-            36,
-            149
+            372,
+            615,
+            80,
+            21
         ],
-        "post_delay": 1,
-        "pre_delay": 1,
+        "post_delay": 20,
+        "pre_delay": 20,
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "next": [
             "public_加速结算点击7"
         ]
     },
     "public_加速结算点击7": {
         "target": [
-            1230,
-            320,
-            36,
-            149
+            372,
+            615,
+            80,
+            21
         ],
-        "post_delay": 1,
-        "pre_delay": 1,
+        "post_delay": 20,
+        "pre_delay": 20,
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "next": [
             "public_加速结算点击8"
         ]
     },
     "public_加速结算点击8": {
         "target": [
-            1230,
-            320,
-            36,
-            149
+            372,
+            615,
+            80,
+            21
         ],
-        "post_delay": 1,
-        "pre_delay": 1,
+        "post_delay": 20,
+        "pre_delay": 20,
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "next": [
             "public_加速结算点击9"
         ]
     },
     "public_加速结算点击9": {
         "target": [
-            1230,
-            320,
-            36,
-            149
+            372,
+            615,
+            80,
+            21
         ],
-        "post_delay": 1,
-        "pre_delay": 1,
+        "post_delay": 20,
+        "pre_delay": 20,
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "next": [
             "public_加速结算点击10"
         ]
@@ -185,7 +185,7 @@
             21
         ],
         "action": "LongPress",
-        "duration": 10,
+        "duration": 20,
         "next": [
             "public_加速后等待"
         ],
