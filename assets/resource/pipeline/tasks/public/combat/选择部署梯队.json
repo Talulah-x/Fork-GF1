@@ -15,7 +15,7 @@
     },
     "public梯队部署_选择梯队": {
         "recognition": "OCR",
-        "roi":[69,0,51,714],
+        "roi" : [71,0,61,695],
         "expected": "1",
         "action": "LongPress",
         "duration": 10,
