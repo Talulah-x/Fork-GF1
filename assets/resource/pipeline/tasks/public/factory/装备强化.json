@@ -165,7 +165,7 @@
         "duration": 20,
         "post_wait_freezes": 500,
         "next": [
-            "public装备强化_进入导航栏"
+            "public_进入导航栏"
         ]
     },
     "public装备强化_进入导航栏": {

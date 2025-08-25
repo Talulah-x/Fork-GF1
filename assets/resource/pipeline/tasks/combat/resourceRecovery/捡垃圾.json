@@ -235,64 +235,11 @@
             38,
             39
         ],
+        "post_delay":500,
         "next": [
-            "捡垃圾_选择梯队",
-            "捡垃圾_部署梯队",
-            "捡垃圾_滑动梯队"
-        ]
-    },
-    "捡垃圾_选择梯队": {
-        "recognition": "OCR",
-        "roi": [
-            0,
-            6,
-            135,
-            713
+            "捡垃圾_开始作战"
         ],
-        "expected": "10",
-        "action": "LongPress",
-        "duration": 20,
-        "next": [
-            "捡垃圾_确认部署"
-        ]
-    },
-    "捡垃圾_滑动梯队": {
-        "recognition": "OCR",
-        "expected": "选",
-        "action": "Swipe",
-        "begin": [
-            75,
-            695,
-            1,
-            1
-        ],
-        "end": [
-            79,
-            60,
-            1,
-            1
-        ],
-        "post_delay": 1000,
-        "next": [
-            "捡垃圾_选择梯队"
-        ]
-    },
-    "捡垃圾_确认部署": {
-        "recognition": "OCR",
-        "roi": [
-            1125,
-            603,
-            120,
-            68
-        ],
-        "expected": "确定",
-        "action": "LongPress",
-        "duration": 20,
-        "post_delay": 400,
-        "next": [
-            "捡垃圾_开始作战",
-            "捡垃圾_确认部署"
-        ]
+        "interrupt":"!public梯队部署"
     },
     "捡垃圾_开始作战": {
         "recognition": "OCR",
