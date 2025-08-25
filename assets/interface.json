@@ -93,7 +93,7 @@
       "name": "常驻人形打捞",
       "entry": "!常驻人形打捞",
       "check": false,
-      "doc": "[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/MP41%E6%8A%BD%E8%96%AA%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "doc": "[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
       "option": [
         "选择常驻人形打捞目标"
       ],
@@ -766,3 +766,4 @@
   }
 
 }
+
