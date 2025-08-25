@@ -66,7 +66,7 @@
         "action": "LongPress",
         "duration": 20,
         "target" : [1041,626,178,65],
-        "post_delay":3000,
+        "post_delay":4000,
         "next":[
             "三维流形-退出任务简报"
         ]
@@ -75,13 +75,14 @@
         "recognition": "OCR",
         "roi" : [256,186,149,47],
         "expected":"任务目标",
-        "pre_delay":200,
+        "pre_delay":600,
         "action": "LongPress",
-        "duration": 20,
-        "target" : [57,99,102,42],
+        "duration": 30,
+        "target" : [79,108,29,26],
         "post_delay":400,
         "next":[
-            "三维流形-选中铁血梯队"
+            "三维流形-选中铁血梯队",
+            "三维流形-退出任务简报"
         ]
     },
     "三维流形-选中铁血梯队":{
