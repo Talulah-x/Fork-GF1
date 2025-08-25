@@ -50,13 +50,8 @@
   },
   "灰域_灰域检测": {
     "recognition": "OCR",
-    "roi": [
-      0,
-      531,
-      293,
-      189
-    ],
-    "expected": "带",
+    "roi" : [777,73,118,71],
+    "expected": "变化",
     "action": "DoNothing",
     "next": [
       "灰域_检测奇遇",
