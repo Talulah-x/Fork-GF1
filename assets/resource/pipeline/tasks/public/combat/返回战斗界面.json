@@ -91,9 +91,8 @@
             "战斗",
             "COMBAT"
         ],
-        "action": "LongPress",
-        "duration": 20,
-        "post_delay": 3000,
+        "action": "DoNothing",
+        "post_delay": 1000,
         "next": []
     },
     "public_点击作战任务": {
