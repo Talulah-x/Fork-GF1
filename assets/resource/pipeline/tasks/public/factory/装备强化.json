@@ -18,6 +18,12 @@
     },
     "!装备强化总流程": {
         "recognition": "OCR",
+        "roi":[
+            299,
+            8,
+            171,
+            85
+        ],
         "expected": [
             "研发"
         ],
@@ -27,6 +33,12 @@
     },
     "public装备强化_点击装备强化": {
         "recognition": "OCR",
+        "roi":[
+            5,
+            185,
+            180,
+            100
+        ],
         "expected": [
             "装备强化"
         ],
@@ -37,17 +49,15 @@
         ]
     },
     "public装备强化_选择强化的装备": {
-        "recognition": "TemplateMatch",
-        "template": "storage/slct_equip.png",
         "action": "LongPress",
         "duration": 20,
         "target": [
-            215,
-            310,
-            10,
-            40
+            266,
+            323,
+            117,
+            142
         ],
-        "post_delay": 1500,
+        "post_delay": 500,
         "next": [
             "public装备强化_选择排序方式"
         ]
@@ -83,7 +93,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 1000,
+        "post_delay": 500,
         "next": [
             "public装备强化_选择高级装备"
         ]
@@ -94,8 +104,8 @@
             "storage/Geqip1.png",
             "storage/Geqip2.png"
         ],
-        "post_delay": 1000,
-        "pre_delay": 1000,
+        "post_delay": 500,
+        "pre_delay": 500,
         "threshold": 0.75,
         "action": "LongPress",
         "duration": 20,
@@ -121,11 +131,18 @@
     },
     "public装备强化_强制点击至无智能选择": {
         "recognition": "OCR",
+        "roi":[
+            1094,
+            464,
+            171,
+            118
+        ],
         "expected": [
             "智能选择"
         ],
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 50,
         "next": [
             "public装备强化_强制点击至无智能选择",
             "public装备强化_装备强化选择确定"
@@ -133,22 +150,34 @@
     },
     "public装备强化_装备强化选择确定": {
         "recognition": "OCR",
+        "roi":[
+            1088,
+            590,
+            177,
+            121
+        ],
         "expected": [
             "确定"
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 1500,
+        "post_delay": 500,
         "next": [
             "public装备强化_装备强化确定"
         ]
     },
     "public装备强化_装备强化确定": {
         "recognition": "OCR",
+        "roi":[
+            1088,
+            599,
+            177,
+            79
+        ],
         "expected": [
             "确定"
         ],
-        "post_delay": 1000,
+        "post_delay": 500,
         "action": "LongPress",
         "duration": 20,
         "next": [
@@ -158,6 +187,12 @@
     },
     "public装备强化_装备强化最终确定": {
         "recognition": "OCR",
+        "roi":[
+            680,
+            587,
+            180,
+            76
+        ],
         "expected": [
             "确定"
         ],
@@ -179,7 +214,7 @@
         "template": "storage/navi.png",
         "action": "LongPress",
         "duration": 20,
-        "pre_delay": 800,
+        "pre_delay": 500,
         "post_wait_freezes": 200,
         "next": [
             "public装备强化_导航栏战斗",
