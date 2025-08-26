@@ -96,7 +96,17 @@
     "expected": "确定",
     "action": "LongPress",
     "duration": 10,
-    "post_delay": 8000,
+    "post_delay": 3000,
+    "next": [
+      "灰域_检测"
+    ]
+  },
+  "灰域_检测": {
+    "recognition": "OCR",
+    "roi" : [777,73,118,71],
+    "expected": "变化",
+    "action": "DoNothing",
+    "post_delay": 5000,
     "next": [
       "灰域_灰域检测"
     ]
