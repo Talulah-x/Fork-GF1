@@ -167,15 +167,8 @@
 
 [![Contributors](https://contrib.rocks/image?repo=LeonNagant/MaaGF1_Test&show_noncode=true)](https://github.com/LeonNagant/MaaGF1_Test/graphs/contributors)
 
-## 相关项
+### 相关项目
 
-### ?
+#### 感谢 [FMddl-MAAutoGirlsFrontLine](https://github.com/Fufu-OuO/FMddl-MAAutoGirlsFrontLine) 开发组对本项目的支持与贡献
 
-<p align="center">
-          <img src="https://github.com/LIUBEI1233/MaaGF1_Test/blob/main/example_img/icon/666.png?raw=true" width="1280" height="720" alt="LOGO">
-          <br><em>面对作战失败的指挥官我修院，佐佐翀淳平给出的惩罚是</em>
-        </p>
-
-### 感谢 [FMddl-MAAutoGirlsFrontLine](https://github.com/Fufu-OuO/FMddl-MAAutoGirlsFrontLine) 开发组对本项目的支持与贡献
-
- 感谢所有参与开发、测试的贡献者和用户！
+#### 感谢所有参与开发、测试的贡献者和用户！
