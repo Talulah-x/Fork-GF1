@@ -623,6 +623,14 @@
           }
         },
         {
+          "name": "8-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!8-4打捞"
+            }
+          }
+        },
+        {
           "name": "9-4",
           "pipeline_override": {
             "!夜战打捞": {
@@ -721,28 +729,28 @@
       ]
     },
     "刷新延迟": {
-      "cases": [
-        {
-          "name": "8秒"
+            "cases": [
+                {
+                    "name": "5秒"
+                },
+                {
+                    "name": "6秒",
+                    "pipeline_override": {
+                        "灰域_检测": {
+                            "post_delay": 6000
+                        }
+                    }
+                },
+                {
+                    "name": "7秒",
+                    "pipeline_override": {
+                        "灰域_检测": {
+                            "post_delay": 7000
+                        }
+                    }
+                }
+            ]
         },
-        {
-          "name": "9秒",
-          "pipeline_override": {
-            "灰域_确认切换": {
-              "post_delay": 9000
-            }
-          }
-        },
-        {
-          "name": "10秒",
-          "pipeline_override": {
-            "灰域_确认切换": {
-              "post_delay": 10000
-            }
-          }
-        }
-      ]
-    },
     "跑步机修复选择": {
       "cases": [
         {
@@ -775,4 +783,6 @@
   }
 
 }
+
+
 
