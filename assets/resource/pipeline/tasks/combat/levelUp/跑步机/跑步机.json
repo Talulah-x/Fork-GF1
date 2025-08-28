@@ -1730,6 +1730,8 @@
         ],
         "expected": "再次作战",
         "action": "Click",
+        "timeout":1000,
+        "next":"跑步机_再次作战",
         "interrupt":"public拆人形_人形回收"
     }
 }
