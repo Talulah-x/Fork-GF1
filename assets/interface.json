@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "name": "MaaGF1",
-  "version": "v1.5.18",
+  "version": "v1.5.22-fix",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -161,11 +161,23 @@
       "check": false,
       "doc": "进入关卡将地图缩放至最小并拉至左下边缘后部署梯队开始运行",
       "option": [
-        "活动打捞_选择打捞目标",
-        "活动打捞_是否开启结算加速"
+        "虚粒子对_选择打捞目标",
+        "虚粒子对_是否开启结算加速"
       ],
       "repeatable": true,
       "repeat_count": 1
+    },
+    {
+      "name": "蝴蝶星云打捞",
+      "entry": "!蝴蝶星云打捞",
+      "check": false,
+      "doc": "进入关卡将地图缩放至最小并拉至左下边缘后部署梯队开始运行",
+      "option": [
+        "蝴蝶星云_选择打捞目标",
+        "蝴蝶星云_是否开启结算加速"
+      ],
+      "repeatable": true,
+      "repeat_count": 4
     },
     {
       "name": "夜战打捞",
@@ -324,9 +336,6 @@
         {
           "name": "启用结算加速",
           "pipeline_override": {
-            "public_加速结算点击10": {
-              "post_delay": 8000
-            },
             "134战斗_执行计划": {
               "interrupt": [
                 "public_不中断计划",
@@ -464,7 +473,7 @@
         }
       ]
     },
-    "活动打捞_选择打捞目标": {
+    "虚粒子对_选择打捞目标": {
       "cases": [
         {
           "name": "左一 M1895 CB"
@@ -547,7 +556,7 @@
         }
       ]
     },
-    "活动打捞_是否开启结算加速": {
+    "虚粒子对_是否开启结算加速": {
       "cases": [
         {
           "name": "关闭"
@@ -556,6 +565,94 @@
           "name": "开启",
           "pipeline_override": {
             "虚粒子对_执行计划": {
+              "interrupt": [
+                "public_不中断计划",
+                "public_加速结算进入"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "蝴蝶星云_选择打捞目标": {
+      "cases": [
+        {
+          "name": "第一行 FARA 83"
+        },
+        {
+          "name": "第二行 CZ2000",
+          "pipeline_override": {
+            "蝴蝶星云_点击梯队": {
+              "target": [
+                460,
+                262,
+                11,
+                11
+              ]
+            },
+            "蝴蝶星云_计划点": {
+              "target": [
+                803,
+                261,
+                12,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "name": "第三行 SL8",
+          "pipeline_override": {
+            "蝴蝶星云_点击梯队": {
+              "target": [
+                457,
+                369,
+                21,
+                14
+              ]
+            },
+            "蝴蝶星云_计划点": {
+              "target": [
+                805,
+                369,
+                12,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "name": "第四行 VHS",
+          "pipeline_override": {
+            "蝴蝶星云_点击梯队": {
+              "target": [
+                458,
+                460,
+                20,
+                15
+              ]
+            },
+            "蝴蝶星云_计划点": {
+              "target": [
+                802,
+                464,
+                17,
+                11
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "蝴蝶星云_是否开启结算加速": {
+      "cases": [
+        {
+          "name": "关闭"
+        },
+        {
+          "name": "开启",
+          "pipeline_override": {
+            "蝴蝶星云_执行计划": {
               "interrupt": [
                 "public_不中断计划",
                 "public_加速结算进入"
@@ -672,14 +769,6 @@
           "pipeline_override": {
             "!常驻人形打捞": {
               "next": "!6-4e打捞总流程"
-            }
-          }
-        },
-        {
-          "name": "静风点-贝蒂数抽薪",
-          "pipeline_override": {
-            "!常驻人形打捞": {
-              "next": "!静风点-贝蒂数抽薪打捞"
             }
           }
         }
