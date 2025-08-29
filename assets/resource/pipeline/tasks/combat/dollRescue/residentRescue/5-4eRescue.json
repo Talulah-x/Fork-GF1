@@ -83,7 +83,8 @@
         "action": "LongPress",
         "duration": 20,
         "target" : [1138,646,75,35],
-        "post_delay":115000,
+        "post_delay":25000,
+        "timeout":110000,
         "next":[
             "5-4e再次作战"
         ]
