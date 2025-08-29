@@ -207,13 +207,11 @@
           }
         },
         {
-          "name": "关闭无限循环",
+          "name": "指定次数（满仓停止）",
           "pipeline_override": {
             "134重置_再战连点7": {
-              "next": [
-                "134重置_再次作战",
-                "134重置_点击获得角色"
-              ]
+              "next": [],
+              "interrupt": []
             }
           }
         }
@@ -326,6 +324,9 @@
         {
           "name": "启用结算加速",
           "pipeline_override": {
+            "public_加速结算点击10": {
+              "post_delay": 8000
+            },
             "134战斗_执行计划": {
               "interrupt": [
                 "public_不中断计划",
@@ -385,84 +386,84 @@
       ]
     },
     "部署梯队选择": {
-            "cases": [
-                {
-                    "name": "1"
-                },
-                {
-                    "name": "2",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "2"
-                        }
-                    }
-                },
-                {
-                    "name": "3",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "3"
-                        }
-                    }
-                },
-                {
-                    "name": "4",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "4"
-                        }
-                    }
-                },
-                {
-                    "name": "5",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "5"
-                        }
-                    }
-                },
-                {
-                    "name": "6",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "6"
-                        }
-                    }
-                },
-                {
-                    "name": "7",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "7"
-                        }
-                    }
-                },
-                {
-                    "name": "8",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "8"
-                        }
-                    }
-                },
-                {
-                    "name": "9",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "9"
-                        }
-                    }
-                },
-                {
-                    "name": "10",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "10"
-                        }
-                    }
-                }
-            ]
+      "cases": [
+        {
+          "name": "1"
         },
+        {
+          "name": "2",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "2"
+            }
+          }
+        },
+        {
+          "name": "3",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "3"
+            }
+          }
+        },
+        {
+          "name": "4",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "4"
+            }
+          }
+        },
+        {
+          "name": "5",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "5"
+            }
+          }
+        },
+        {
+          "name": "6",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "6"
+            }
+          }
+        },
+        {
+          "name": "7",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "7"
+            }
+          }
+        },
+        {
+          "name": "8",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "8"
+            }
+          }
+        },
+        {
+          "name": "9",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "9"
+            }
+          }
+        },
+        {
+          "name": "10",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "10"
+            }
+          }
+        }
+      ]
+    },
     "活动打捞_选择打捞目标": {
       "cases": [
         {
@@ -682,7 +683,6 @@
             }
           }
         }
-        
       ]
     },
     "打灰选择": {
@@ -729,28 +729,28 @@
       ]
     },
     "刷新延迟": {
-            "cases": [
-                {
-                    "name": "5秒"
-                },
-                {
-                    "name": "6秒",
-                    "pipeline_override": {
-                        "灰域_检测": {
-                            "post_delay": 6000
-                        }
-                    }
-                },
-                {
-                    "name": "7秒",
-                    "pipeline_override": {
-                        "灰域_检测": {
-                            "post_delay": 7000
-                        }
-                    }
-                }
-            ]
+      "cases": [
+        {
+          "name": "5秒"
         },
+        {
+          "name": "6秒",
+          "pipeline_override": {
+            "灰域_检测": {
+              "post_delay": 6000
+            }
+          }
+        },
+        {
+          "name": "7秒",
+          "pipeline_override": {
+            "灰域_检测": {
+              "post_delay": 7000
+            }
+          }
+        }
+      ]
+    },
     "跑步机修复选择": {
       "cases": [
         {
@@ -781,8 +781,4 @@
       ]
     }
   }
-
 }
-
-
-

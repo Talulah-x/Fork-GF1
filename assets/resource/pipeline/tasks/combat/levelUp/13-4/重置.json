@@ -1,4 +1,21 @@
 {
+    "134重置_提前再次作战": {
+        "recognition": "OCR",
+        "roi": [
+            68,
+            667,
+            75,
+            45
+        ],
+        "expected": [
+            "20"
+        ],
+        "rate_limit": 1000,
+        "timeout": 600000,
+        "next": [
+            "134重置_再战连点2"
+        ]
+    },
     "134重置_再次作战": {
         "recognition": "OCR",
         "roi": [
@@ -34,9 +51,9 @@
             12
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 10,
         "rate_limit": 1000,
-        "post_delay": 50,
+        "post_delay": 20,
         "pre_delay": 1,
         "next": [
             "134重置_再战连点2"
@@ -51,9 +68,9 @@
             12
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 10,
         "rate_limit": 1000,
-        "post_delay": 50,
+        "post_delay": 20,
         "pre_delay": 1,
         "next": [
             "134重置_再战连点3"
@@ -67,12 +84,12 @@
             12
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 10,
         "rate_limit": 1000,
-        "post_delay": 50,
+        "post_delay": 20,
         "pre_delay": 1,
         "next": [
-            "134重置_再战连点7"
+            "134重置_再战连点4"
         ]
     },
     "134重置_再战连点4": {
@@ -83,9 +100,9 @@
             12
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 10,
         "rate_limit": 1000,
-        "post_delay": 50,
+        "post_delay": 20,
         "pre_delay": 1,
         "next": [
             "134重置_再战连点5"
@@ -99,9 +116,9 @@
             12
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 10,
         "rate_limit": 1000,
-        "post_delay": 100,
+        "post_delay": 20,
         "next": [
             "134重置_再战连点6"
         ]
@@ -114,9 +131,9 @@
             12
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 10,
         "rate_limit": 1000,
-        "post_delay": 100,
+        "post_delay": 20,
         "next": [
             "134重置_再战连点7"
         ]
@@ -129,7 +146,7 @@
             12
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 10,
         "rate_limit": 1000,
         "post_delay": 1000
     },
@@ -154,7 +171,7 @@
             "combat/levelUp/13-4/doll_get4.png"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 10,
         "post_delay": 500,
         "rate_limit": 100,
         "threshold": 0.7,
@@ -175,7 +192,7 @@
             73
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 10,
         "expected": [
             "再次作战"
         ],

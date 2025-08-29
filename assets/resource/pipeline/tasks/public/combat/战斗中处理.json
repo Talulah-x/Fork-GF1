@@ -189,8 +189,7 @@
         "next": [
             "public_加速后等待"
         ],
-        "pre_delay": 1,
-        "post_delay": 10000
+        "pre_delay": 1
     },
     "public_加速后等待": {}
 }
