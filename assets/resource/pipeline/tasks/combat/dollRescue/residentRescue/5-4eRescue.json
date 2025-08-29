@@ -1,0 +1,121 @@
+{
+    "!5-4e打捞总流程":{
+        "next":[
+            "5-4e开始作战"
+        ]
+    },
+    "5-4e开始作战":{
+        "recognition": "OCR",
+        "roi": [1020,623,211,79],
+        "doc": "开始战斗按钮",
+        "expected": "点击指挥部进行",
+        "action": "LongPress",
+        "duration": 20,
+        "next": [
+            "5-4e点击打捞队",
+            "5-4e开始作战"
+        ]
+    },
+    "5-4e点击打捞队":{
+        "recognition": "OCR",
+        "roi": [1109,639,74,52],
+        "expected": "结束",
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 500,
+        "target" : [793,135,15,15],
+        "next": [
+            "5-4e补给打捞队",
+            "5-4e点击打捞队"
+        ]
+    },
+    "5-4e补给打捞队":{
+        "recognition": "OCR",
+        "roi": [1156,534,98,67],
+        "expected": "补给",
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 800,
+        "next": [
+            "5-4e点击计划模式"
+        ]
+    },
+    "5-4e点击计划模式":{
+        "recognition": "OCR",
+        "roi": [1163,117,42,26],
+        "expected": "妖精",
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 300,
+        "target" : [37,622,74,18],
+        "next":[
+            "5-4e点击boss"
+        ]
+    },
+    "5-4e点击boss":{
+        "recognition": "OCR",
+        "roi" : [1109,640,73,45],
+        "expected": "执行",
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 300,
+        "target" : [240,157,16,16],
+        "next":[
+            "5-4e点击下一回合"
+        ]
+    },
+    "5-4e点击下一回合":{
+        "recognition": "OCR",
+        "roi" : [1111,531,73,39],
+        "expected": "下一",
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 300,
+        "target" : [1111,531,73,39],
+        "next":[
+            "5-4e执行计划"
+        ]
+    },
+    "5-4e执行计划":{
+        "recognition": "OCR",
+        "roi" : [985,531,78,40],
+        "expected": "取消",
+        "action": "LongPress",
+        "duration": 20,
+        "target" : [1138,646,75,35],
+        "post_delay":115000,
+        "next":[
+            "5-4e再次作战"
+        ]
+    },
+    "5-4e再次作战":{
+        "recognition": "OCR",
+        "roi" : [366,610,100,27],
+        "expected": "再次作战",
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 3000,
+        "target" : [366,610,100,27],
+        "next":[
+            "5-4e开始作战"
+        ],
+         "interrupt": [
+            "5-4e-点击获得角色"
+        ]
+    },
+    "5-4e-点击获得角色": {
+        "recognition": "DirectHit",
+        "action": "LongPress",
+        "duration": 20,
+        "target": [
+            386,
+            620,
+            1,
+            1
+        ],
+        "pre_delay": 100,
+        "timeout": 600000
+    }
+}
+
+
