@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "name": "MaaGF1",
-  "version": "v1.5.22-fix",
+  "version": "v1.5.24",
   "url": "https://github.com/LeonNagant/MaaGF1_Test",
   "mirrorchyan_rid": null,
   "mirrorchyan_multiplatform": false,
@@ -772,6 +772,14 @@
           "pipeline_override": {
             "!常驻人形打捞": {
               "next": "!6-4e打捞总流程"
+            }
+          }
+        },
+        {
+          "name": "5-6/5-4e圣捞",
+          "pipeline_override": {
+            "!常驻人形打捞": {
+              "next": "!5-4e打捞总流程"
             }
           }
         }
