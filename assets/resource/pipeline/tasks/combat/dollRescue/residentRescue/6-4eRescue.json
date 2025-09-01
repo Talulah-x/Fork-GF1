@@ -141,7 +141,8 @@
         "action": "LongPress",
         "duration": 20,
         "target" : [1118,640,120,45],
-        "post_delay":12000,
+        "post_delay":10000,
+        "timeout":200000,
         "next":[
             "6-4e-Round2-选中开路队"
         ]
@@ -259,7 +260,8 @@
         "action": "LongPress",
         "duration": 20,
         "target" : [1116,642,101,42],
-        "post_delay": 30000,
+        "post_delay": 25000,
+        "timeout":200000,
         "next":[
            "6-4e-Round2-点击指挥部"
         ]
@@ -442,7 +444,8 @@
         "action": "LongPress",
         "duration": 20,
         "target" : [1119,640,95,48],
-        "post_delay":130000,
+        "post_delay":100000,
+        "timeout":200000,
         "next":[
             "6-4e-Round4-点击打捞队"
         ]
@@ -585,7 +588,8 @@
         "action": "LongPress",
         "duration": 20,
         "target" : [1112,641,108,43],
-        "post_delay": 130000,
+        "post_delay": 100000,
+        "timeout":200000,
         "next":[
             "6-4e-Round5-点击打捞队"
         ]
@@ -804,7 +808,8 @@
         "duration":20,
         "pre_delay":200,
         "target" : [1128,642,96,42],
-        "post_delay":200000,
+        "post_delay":170000,
+        "timeout":200000,
         "next":[
             "6-4e-Round7-点击打捞队"
         ]
