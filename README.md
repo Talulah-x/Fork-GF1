@@ -118,7 +118,7 @@
 
 | 功能 | 开发者 | 手册链接 |
 |------|--------|----------|
-| ▶️ 常驻人形打捞 | [Ethan Lee](https://github.com/hake971920),[坠机の科比](https://github.com/LIUBEI1233) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
+| ▶️ 常驻人形打捞 | [Ethan Lee](https://github.com/hake971920), [坠机の科比](https://github.com/LIUBEI1233) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
 | ▶️ 夜战打捞 |[白烛](https://github.com/Talulah-x) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%A4%9C%E6%88%98%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)|
 
 ### 🏠 宿舍功能
