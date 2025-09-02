@@ -400,7 +400,12 @@
     "部署梯队选择": {
       "cases": [
         {
-          "name": "1"
+          "name": "1",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "1"
+            }
+          }
         },
         {
           "name": "2",
