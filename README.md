@@ -135,7 +135,7 @@
 | ▶️ 自动打灰奖励关 | [do_e](https://github.com/isla23), [白烛](https://github.com/Talulah-x) | [手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%87%AA%E5%8A%A8%E6%89%93%E7%81%B0%E5%A5%96%E5%8A%B1%E5%85%B3%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
 | ▶️ 裂变链接捡垃圾 | [白烛](https://github.com/Talulah-x) | [手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
 | ▶️ 指挥官后勤 | [白烛](https://github.com/Talulah-x) | [手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
-| ▶️ 虚粒子对活动打捞活动打捞 | [do_e](https://github.com/isla23) | [手册暂无](https://github.com/LeonNagant/MaaGF1_Test) |
+| ▶️ 限时活动打捞 | [do_e](https://github.com/isla23), [白烛](https://github.com/Talulah-x) | [暂无手册](https://github.com/LeonNagant/MaaGF1_Test) |
 
 ---
 
