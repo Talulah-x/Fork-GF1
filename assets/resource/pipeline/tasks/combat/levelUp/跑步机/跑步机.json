@@ -776,12 +776,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            737,
-            361,
-            33,
-            31
-        ],
+        "target":[735,359,11,11],
         "next": [
             "跑步机_点击第一梯队2",
             "跑步机_点击第二梯队2"
@@ -838,12 +833,7 @@
         "expected": "5",
         "action": "LongPress",
         "duration":10,
-        "target": [
-            601,
-            433,
-            37,
-            40
-        ],
+        "target":[612,431,13,8],
         "next": [
             "跑步机_点击第三梯队2",
             "跑步机_第二回合计划2"
