@@ -952,13 +952,15 @@
     },
     "跑步机_计划结束2": {
         "recognition": "OCR",
-        "roi": [
-            419,
-            121,
-            110,
-            173
+        "expected": [
+            "EXP"
         ],
-        "expected": "7",
+        "roi": [
+            373,
+            575,
+            379,
+            134
+        ],
         "action": "LongPress",
         "duration":10,
         "target": [
@@ -1164,13 +1166,15 @@
     },
     "跑步机_计划结束3": {
         "recognition": "OCR",
-        "roi": [
-            419,
-            121,
-            110,
-            173
+        "expected": [
+            "EXP"
         ],
-        "expected": "7",
+        "roi": [
+            373,
+            575,
+            379,
+            134
+        ],
         "action": "DoNothing",
         "next": [
             "跑步机_跳过战斗3"
