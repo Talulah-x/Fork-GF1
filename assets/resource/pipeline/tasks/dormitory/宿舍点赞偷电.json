@@ -126,7 +126,8 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "threshold": 0.65,
+        "threshold": 0.75,
+        "post_delay": 1000,
         "next": [
             "宿舍_偷电成功",
             "宿舍_偷电"
