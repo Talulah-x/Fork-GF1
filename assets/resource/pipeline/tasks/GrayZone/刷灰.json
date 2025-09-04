@@ -263,8 +263,8 @@
   },
   "灰域_领取奖励": {
     "recognition": "OCR",
-    "roi" : [73,203,183,61],
-    "expected": "领取",
+    "roi" : [0,69,652,354],
+    "expected": ["领取","型"],
     "action": "LongPress",
     "duration": 10,
     "target":[1130,581,56,45],
