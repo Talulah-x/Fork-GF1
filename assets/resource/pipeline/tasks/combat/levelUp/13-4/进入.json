@@ -54,5 +54,23 @@
             "public_返回战斗界面"
         ],
         "timeout": 600000
+    },
+    "134进入_点击作战任务": {
+        "recognition": "OCR",
+        "roi": [
+            42,
+            97,
+            149,
+            353
+        ],
+        "expected": [
+            "作战任务"
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "next": [
+            "134进入_点击134"
+        ],
+        "timeout": 600000
     }
 }
