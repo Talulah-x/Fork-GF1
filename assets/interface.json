@@ -105,7 +105,7 @@
       "entry": "=兵棋总流程",
       "check": false,
       "doc": "请在咖啡馆点击兵棋桌后或兵棋房间内运行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%85%B5%E6%A3%8B%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-      "repeatable": false,
+      "repeatable": true,
       "repeat_count": 1
     },
     {
