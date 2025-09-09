@@ -1,906 +1,914 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "name": "MaaGF1",
-    "version": "v1.5.26-fix",
-    "url": "https://github.com/LeonNagant/MaaGF1_Test",
-    "mirrorchyan_rid": null,
-    "mirrorchyan_multiplatform": false,
-    "custom_title": "MaaGF1",
-    "controller": [
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "class_regex": ".*",
-                "window_regex": "少女前线",
-                "input": 1,
-                "screencap": 1
-            }
-        },
-        {
-            "name": "模拟器",
-            "type": "Adb"
-        }
-    ],
-    "resource": [
-        {
-            "name": "官服",
-            "path": [
-                "{PROJECT_DIR}/resource/"
-            ]
-        }
-    ],
-    "task": [
-        {
-            "name": "13-4循环",
-            "entry": "!134总流程",
-            "check": false,
-            "doc": "请在第十三战役-普通界面或者进入13-4地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/13-4%E5%8F%8C%E6%89%93%E6%89%8B%E6%8B%96%E5%B0%B8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-            "repeatable": true,
-            "repeat_count": 1,
-            "option": [
-                "134_弹药检查版本选择",
-                "134_是否开启结算加速",
-                "134_是否开启无限循环"
-            ]
-        },
-        {
-            "name": "13-4地图初始化",
-            "entry": "134地图初始化_拖到右上角",
-            "check": false,
-            "doc": "请在进入13-4地图后的界面运行",
-            "repeatable": false,
-            "repeat_count": 1
-        },
-        {
-            "name": "8-1N循环",
-            "entry": "!81N总流程",
-            "check": false,
-            "doc": "请在第八战役-夜战或者进入8-1N地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8C%E6%89%93%E6%89%8B%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-            "repeatable": true,
-            "repeat_count": 1,
-            "option": [
-                "81N_弹药检查版本选择",
-                "81N_是否开启结算加速",
-                "81N_选择狗粮类型",
-                "81N_装备溢出处理",
-                "81N_是否开启无限循环"
-            ],
-            "advanced": [
-                "指定装备强化(未完成)"
-            ]
-        },
-        {
-            "name": "8-1N地图初始化",
-            "entry": "81N地图初始化_拖到左上角",
-            "check": false,
-            "doc": "请在进入8-1N地图后的界面运行",
-            "repeatable": false,
-            "repeat_count": 1
-        },
-        {
-            "name": "跑步机（WIP，仍需调试）",
-            "entry": "!跑步机总流程",
-            "check": false,
-            "doc": " **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-            "option": [
-                "跑步机修复选择"
-            ],
-            "repeatable": true,
-            "repeat_count": 1
-        },
-        {
-            "name": "常驻人形打捞",
-            "entry": "!常驻人形打捞",
-            "check": false,
-            "doc": "[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-            "option": [
-                "选择常驻人形打捞目标"
-            ],
-            "repeatable": false,
-            "repeat_count": 1
-        },
-        {
-            "name": "兵棋挂机循环",
-            "entry": "=兵棋总流程",
-            "check": false,
-            "doc": "请在咖啡馆点击兵棋桌后或兵棋房间内运行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%85%B5%E6%A3%8B%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-            "repeatable": true,
-            "repeat_count": 1
-        },
-        {
-            "name": "灰域探查",
-            "entry": "!开始打灰",
-            "check": false,
-            "doc": "在主界面或者刚进入灰域界面执行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%87%AA%E5%8A%A8%E6%89%93%E7%81%B0%E5%A5%96%E5%8A%B1%E5%85%B3%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-            "option": [
-                "打灰选择",
-                "打灰地图选择",
-                "刷新延迟",
-                "拆解选择"
-            ],
-            "repeatable": true,
-            "repeat_count": 9999
-        },
-        {
-            "name": "宿舍内自动点击爱心",
-            "entry": "!点击爱心",
-            "check": false,
-            "doc": "一直点爱心直到识别不到爱心",
-            "repeatable": false,
-            "repeat_count": 1
-        },
-        {
-            "name": "宿舍自动点赞",
-            "entry": "!宿舍自动点赞",
-            "check": false,
-            "doc": "从主界面开始运行，偷电，点赞并参观下一个宿舍直到无赞可点",
-            "repeatable": false,
-            "repeat_count": 1
-        },
-        {
-            "name": "裂变链接捡垃圾",
-            "entry": "!裂变链接捡垃圾",
-            "check": false,
-            "doc": "⚠️打开记录缩放，将地图缩放至最小并拉从最左下向右上拉至地图边缘后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-            "option": [
-                "部署梯队选择"
-            ]
-        },
-        {
-            "name": "指挥官后勤",
-            "entry": "!指挥官后勤",
-            "check": false,
-            "doc": "⚠️打开记录缩放，将地图缩放至最小并拉从最左下向右上拉至地图边缘后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-            "option": [
-                "部署梯队选择"
-            ]
-        },
-        {
-            "name": "虚粒子对打捞",
-            "entry": "!虚粒子对打捞",
-            "check": false,
-            "doc": "进入关卡将地图缩放至最小并拉至左下边缘后部署梯队开始运行",
-            "option": [
-                "虚粒子对_选择打捞目标",
-                "虚粒子对_是否开启结算加速"
-            ],
-            "repeatable": true,
-            "repeat_count": 1
-        },
-        {
-            "name": "蝴蝶星云打捞",
-            "entry": "!蝴蝶星云打捞",
-            "check": false,
-            "doc": "进入关卡将地图缩放至最小并拉至左下边缘后部署梯队开始运行",
-            "option": [
-                "蝴蝶星云_选择打捞目标",
-                "蝴蝶星云_是否开启结算加速"
-            ],
-            "repeatable": true,
-            "repeat_count": 4
-        },
-        {
-            "name": "夜战打捞",
-            "entry": "!夜战打捞",
-            "check": false,
-            "doc": "在夜战地图运行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%A4%9C%E6%88%98%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
-            "option": [
-                "选择夜战打捞地图"
-            ]
-        }
-    ],
-    "advanced": {
-        "指定装备强化": {
-            "field": [
-                "eqip_names"
-            ],
-            "type": "list"
-        }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "MaaGF1",
+  "version": "v1.5.25",
+  "url": "https://github.com/LeonNagant/MaaGF1_Test",
+  "mirrorchyan_rid": null,
+  "mirrorchyan_multiplatform": false,
+  "custom_title": "MaaGF1",
+  "controller": [
+    {
+      "name": "桌面端",
+      "type": "Win32",
+      "win32": {
+        "class_regex": ".*",
+        "window_regex": "少女前线",
+        "input": 1,
+        "screencap": 1
+      }
     },
-    "option": {
-        "134_是否开启无限循环": {
-            "cases": [
-                {
-                    "name": "开启无限循环",
-                    "pipeline_override": {
-                        "134重置_再战连点7": {
-                            "next": [
-                                "134部署_布置完成",
-                                "134进入_普通作战",
-                                "134进入_点击134",
-                                "134进入_点击作战任务"
-                            ],
-                            "interrupt": [
-                                "134重置_点击获得角色",
-                                "public拆人形_人形回收",
-                                "134重置_单击再次作战",
-                                "public_返回战斗界面"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "指定次数（满仓停止）",
-                    "pipeline_override": {
-                        "134重置_再战连点7": {
-                            "next": [],
-                            "interrupt": []
-                        }
-                    }
-                }
-            ]
-        },
-        "81N_是否开启无限循环": {
-            "cases": [
-                {
-                    "name": "开启无限循环",
-                    "pipeline_override": {
-                        "81N重置_重新作战": {
-                            "next": [
-                                "81N部署_点击2队new"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "关闭无限循环"
-                }
-            ]
-        },
-        "81N_装备溢出处理": {
-            "cases": [
-                {
-                    "name": "专属装备强化",
-                    "pipeline_override": {
-                        "81N_选择装备处理方式": {
-                            "interrupt": [
-                                "public装备强化_装备强化",
-                                "public_返回战斗界面"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "拆解（锁上需保留装备）",
-                    "pipeline_override": {
-                        "81N_选择装备处理方式": {
-                            "interrupt": [
-                                "public拆装备_装备回收",
-                                "public_返回战斗界面"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "结束任务",
-                    "pipeline_override": {
-                        "81N_选择装备处理方式": {
-                            "timeout": 1000,
-                            "interrupt": []
-                        }
-                    }
-                }
-            ]
-        },
-        "81N_选择狗粮类型": {
-            "cases": [
-                {
-                    "name": "重装小队（BGM-71）",
-                    "pipeline_override": {
-                        "81N部署_确认2队是否已部署": {
-                            "interrupt": [
-                                "81N部署_部署重装"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "人形小队（第三梯队）",
-                    "pipeline_override": {
-                        "81N部署_确认2队是否已部署": {
-                            "interrupt": [
-                                "81N部署_部署3队"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "81N_是否开启结算加速": {
-            "cases": [
-                {
-                    "name": "启用结算加速",
-                    "pipeline_override": {
-                        "81N战斗_执行计划": {
-                            "interrupt": [
-                                "public_不中断计划",
-                                "public_加速结算进入"
-                            ]
-                        },
-                        "public_加速结算点击10": {
-                            "post_delay": 2000
-                        }
-                    }
-                },
-                {
-                    "name": "关闭结算加速",
-                    "pipeline_override": {
-                        "81N战斗_执行计划": {
-                            "post_delay": 65000
-                        }
-                    }
-                }
-            ]
-        },
-        "134_是否开启结算加速": {
-            "cases": [
-                {
-                    "name": "启用结算加速",
-                    "pipeline_override": {
-                        "134战斗_执行计划": {
-                            "interrupt": [
-                                "public_不中断计划",
-                                "public_加速结算进入"
-                            ]
-                        },
-                        "public_加速结算点击10": {
-                            "post_delay": 10000
-                        }
-                    }
-                },
-                {
-                    "name": "关闭结算加速",
-                    "pipeline_override": {
-                        "134战斗_执行计划": {
-                            "post_delay": 65000
-                        }
-                    }
-                }
-            ]
-        },
-        "81N_弹药检查版本选择": {
-            "cases": [
-                {
-                    "name": "启用新版弹药识别",
-                    "pipeline_override": {
-                        "81N部署_布置完成": {
-                            "next": "81N部署_弹药检查new"
-                        }
-                    }
-                },
-                {
-                    "name": "启用旧版弹药识别",
-                    "pipeline_override": {
-                        "81N部署_布置完成": {
-                            "next": "81N部署_弹药检查"
-                        }
-                    }
-                }
-            ]
-        },
-        "134_弹药检查版本选择": {
-            "cases": [
-                {
-                    "name": "启用新版弹药识别",
-                    "pipeline_override": {
-                        "134部署_布置完成": {
-                            "next": "134部署_弹药检查new"
-                        }
-                    }
-                },
-                {
-                    "name": "启用旧版弹药识别",
-                    "pipeline_override": {
-                        "134部署_布置完成": {
-                            "next": "134部署_弹药检查"
-                        }
-                    }
-                }
-            ]
-        },
-        "部署梯队选择": {
-            "cases": [
-                {
-                    "name": "1",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "1"
-                        }
-                    }
-                },
-                {
-                    "name": "2",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "2"
-                        }
-                    }
-                },
-                {
-                    "name": "3",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "3"
-                        }
-                    }
-                },
-                {
-                    "name": "4",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "4"
-                        }
-                    }
-                },
-                {
-                    "name": "5",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "5"
-                        }
-                    }
-                },
-                {
-                    "name": "6",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "6"
-                        }
-                    }
-                },
-                {
-                    "name": "7",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "7"
-                        }
-                    }
-                },
-                {
-                    "name": "8",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "8"
-                        }
-                    }
-                },
-                {
-                    "name": "9",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "9"
-                        }
-                    }
-                },
-                {
-                    "name": "10",
-                    "pipeline_override": {
-                        "public梯队部署_选择梯队": {
-                            "expected": "10"
-                        }
-                    }
-                }
-            ]
-        },
-        "虚粒子对_选择打捞目标": {
-            "cases": [
-                {
-                    "name": "左一 M1895 CB"
-                },
-                {
-                    "name": "左二 Cx4风暴",
-                    "pipeline_override": {
-                        "虚粒子对_计划点": {
-                            "target": [
-                                651,
-                                118,
-                                9,
-                                11
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "左三 SRS",
-                    "pipeline_override": {
-                        "虚粒子对_点击梯队": {
-                            "target": [
-                                779,
-                                495,
-                                6,
-                                13
-                            ]
-                        },
-                        "虚粒子对_计划点": {
-                            "target": [
-                                651,
-                                118,
-                                9,
-                                11
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "左四 AK-74U",
-                    "pipeline_override": {
-                        "虚粒子对_点击梯队": {
-                            "target": [
-                                779,
-                                495,
-                                6,
-                                13
-                            ]
-                        },
-                        "虚粒子对_计划点": {
-                            "target": [
-                                906,
-                                120,
-                                6,
-                                9
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "右一 TKB-408",
-                    "pipeline_override": {
-                        "虚粒子对_点击梯队": {
-                            "target": [
-                                969,
-                                193,
-                                5,
-                                7
-                            ]
-                        },
-                        "虚粒子对_计划点": {
-                            "target": [
-                                968,
-                                496,
-                                7,
-                                8
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "虚粒子对_是否开启结算加速": {
-            "cases": [
-                {
-                    "name": "关闭"
-                },
-                {
-                    "name": "开启",
-                    "pipeline_override": {
-                        "虚粒子对_执行计划": {
-                            "interrupt": [
-                                "public_不中断计划",
-                                "public_加速结算进入"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "蝴蝶星云_选择打捞目标": {
-            "cases": [
-                {
-                    "name": "第一行 FARA 83"
-                },
-                {
-                    "name": "第二行 CZ2000",
-                    "pipeline_override": {
-                        "蝴蝶星云_点击梯队": {
-                            "target": [
-                                460,
-                                262,
-                                11,
-                                11
-                            ]
-                        },
-                        "蝴蝶星云_计划点": {
-                            "target": [
-                                803,
-                                261,
-                                12,
-                                13
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "第三行 SL8",
-                    "pipeline_override": {
-                        "蝴蝶星云_点击梯队": {
-                            "target": [
-                                457,
-                                369,
-                                21,
-                                14
-                            ]
-                        },
-                        "蝴蝶星云_计划点": {
-                            "target": [
-                                805,
-                                369,
-                                12,
-                                14
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "第四行 VHS",
-                    "pipeline_override": {
-                        "蝴蝶星云_点击梯队": {
-                            "target": [
-                                458,
-                                460,
-                                20,
-                                15
-                            ]
-                        },
-                        "蝴蝶星云_计划点": {
-                            "target": [
-                                802,
-                                464,
-                                17,
-                                11
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "蝴蝶星云_是否开启结算加速": {
-            "cases": [
-                {
-                    "name": "关闭"
-                },
-                {
-                    "name": "开启",
-                    "pipeline_override": {
-                        "蝴蝶星云_执行计划": {
-                            "interrupt": [
-                                "public_不中断计划",
-                                "public_加速结算进入"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "选择夜战打捞地图": {
-            "cases": [
-                {
-                    "name": "1-4",
-                    "pipeline_override": {
-                        "!夜战打捞": {
-                            "next": "!1-4打捞"
-                        }
-                    }
-                },
-                {
-                    "name": "2-4",
-                    "pipeline_override": {
-                        "!夜战打捞": {
-                            "next": "!2-4打捞"
-                        }
-                    }
-                },
-                {
-                    "name": "3-4",
-                    "pipeline_override": {
-                        "!夜战打捞": {
-                            "next": "!3-4打捞"
-                        }
-                    }
-                },
-                {
-                    "name": "4-4",
-                    "pipeline_override": {
-                        "!夜战打捞": {
-                            "next": "!4-4打捞"
-                        }
-                    }
-                },
-                {
-                    "name": "5-4",
-                    "pipeline_override": {
-                        "!夜战打捞": {
-                            "next": "!5-4打捞"
-                        }
-                    }
-                },
-                {
-                    "name": "6-4",
-                    "pipeline_override": {
-                        "!夜战打捞": {
-                            "next": "!6-4打捞"
-                        }
-                    }
-                },
-                {
-                    "name": "7-4",
-                    "pipeline_override": {
-                        "!夜战打捞": {
-                            "next": "!7-4打捞"
-                        }
-                    }
-                },
-                {
-                    "name": "8-4",
-                    "pipeline_override": {
-                        "!夜战打捞": {
-                            "next": "!8-4打捞"
-                        }
-                    }
-                },
-                {
-                    "name": "9-4",
-                    "pipeline_override": {
-                        "!夜战打捞": {
-                            "next": "!9-4打捞"
-                        }
-                    }
-                }
-            ]
-        },
-        "选择常驻人形打捞目标": {
-            "cases": [
-                {
-                    "name": "MP41",
-                    "pipeline_override": {
-                        "!常驻人形打捞": {
-                            "next": "!MP41打捞_总流程"
-                        }
-                    }
-                },
-                {
-                    "name": "M240L",
-                    "pipeline_override": {
-                        "!常驻人形打捞": {
-                            "next": "!M240L打捞"
-                        }
-                    }
-                },
-                {
-                    "name": "防卫者",
-                    "pipeline_override": {
-                        "!常驻人形打捞": {
-                            "next": "!防卫者打捞"
-                        }
-                    }
-                },
-                {
-                    "name": "6-4e圣捞",
-                    "pipeline_override": {
-                        "!常驻人形打捞": {
-                            "next": "!6-4e打捞总流程"
-                        }
-                    }
-                },
-                {
-                    "name": "5-6/5-4e圣捞",
-                    "pipeline_override": {
-                        "!常驻人形打捞": {
-                            "next": "!5-4e打捞总流程"
-                        }
-                    }
-                }
-            ]
-        },
-        "打灰选择": {
-            "cases": [
-                {
-                    "name": "彩蛋"
-                },
-                {
-                    "name": "彩蛋+炸山",
-                    "pipeline_override": {
-                        "灰域_灰域检测": {
-                            "next": [
-                                "灰域_检测奇遇",
-                                "灰域_点击重装点"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "炸山",
-                    "pipeline_override": {
-                        "灰域_灰域检测": {
-                            "next": [
-                                "灰域_点击重装点"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "打灰地图选择": {
-            "cases": [
-                {
-                    "name": "硅状带"
-                },
-                {
-                    "name": "结晶带",
-                    "pipeline_override": {
-                        "灰域_选择地图": {
-                            "expected": "结"
-                        }
-                    }
-                }
-            ]
-        },
-        "刷新延迟": {
-            "cases": [
-                {
-                    "name": "5秒"
-                },
-                {
-                    "name": "6秒",
-                    "pipeline_override": {
-                        "灰域_检测": {
-                            "post_delay": 6000
-                        }
-                    }
-                },
-                {
-                    "name": "7秒",
-                    "pipeline_override": {
-                        "灰域_检测": {
-                            "post_delay": 7000
-                        }
-                    }
-                }
-            ]
-        },
-        "拆解选择": {
-            "cases": [
-                {
-                    "name": "仅拆解2星"
-                },
-                {
-                    "name": "拆解全部",
-                    "pipeline_override": {
-                        "灰域_出击奇遇": {
-                            "interrupt":["public拆人形_人形回收"]
-                        }
-                    }
-                }
-            ]
-        },
-        "跑步机修复选择": {
-            "cases": [
-                {
-                    "name": "陷阱妖精"
-                },
-                {
-                    "name": "迷彩坦克",
-                    "pipeline_override": {
-                        "跑步机_切换待机": {
-                            "next": [
-                                "跑步机_切换待机",
-                                "跑步机_计划模式3"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "不修复",
-                    "pipeline_override": {
-                        "跑步机_切换待机": {
-                            "next": [
-                                "跑步机_切换待机",
-                                "跑步机_跳过战斗"
-                            ]
-                        }
-                    }
-                }
-            ]
-        }
+    {
+      "name": "模拟器",
+      "type": "Adb"
     }
+  ],
+  "resource": [
+    {
+      "name": "官服",
+      "path": [
+        "{PROJECT_DIR}/resource/"
+      ]
+    }
+  ],
+  "task": [
+    {
+      "name": "13-4循环",
+      "entry": "!134总流程",
+      "check": false,
+      "doc": "请在第十三战役-普通界面或者进入13-4地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/13-4%E5%8F%8C%E6%89%93%E6%89%8B%E6%8B%96%E5%B0%B8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "repeatable": true,
+      "repeat_count": 1,
+      "option": [
+        "134_弹药检查版本选择",
+        "134_是否开启结算加速",
+        "134_是否开启无限循环"
+      ]
+    },
+    {
+      "name": "13-4地图初始化",
+      "entry": "134地图初始化_拖到右上角",
+      "check": false,
+      "doc": "请在进入13-4地图后的界面运行",
+      "repeatable": false,
+      "repeat_count": 1
+    },
+    {
+      "name": "8-1N循环",
+      "entry": "!81N总流程",
+      "check": false,
+      "doc": "请在第八战役-夜战或者进入8-1N地图后的界面运行， **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8C%E6%89%93%E6%89%8B%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "repeatable": true,
+      "repeat_count": 1,
+      "option": [
+        "81N_弹药检查版本选择",
+        "81N_是否开启结算加速",
+        "81N_选择狗粮类型",
+        "81N_装备溢出处理",
+        "81N_是否开启无限循环"
+      ],
+      "advanced": [
+        "指定装备强化(未完成)"
+      ]
+    },
+    {
+      "name": "8-1N地图初始化",
+      "entry": "81N地图初始化_拖到左上角",
+      "check": false,
+      "doc": "请在进入8-1N地图后的界面运行",
+      "repeatable": false,
+      "repeat_count": 1
+    },
+    {
+      "name": "跑步机（WIP，仍需调试）",
+      "entry": "!跑步机总流程",
+      "check": false,
+      "doc": " **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "option": [
+        "跑步机修复选择"
+      ],
+      "repeatable": true,
+      "repeat_count": 1
+    },
+    {
+      "name": "常驻人形打捞",
+      "entry": "!常驻人形打捞",
+      "check": false,
+      "doc": "[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "option": [
+        "选择常驻人形打捞目标"
+      ],
+      "repeatable": false,
+      "repeat_count": 1
+    },
+    {
+      "name": "兵棋挂机循环",
+      "entry": "=兵棋总流程",
+      "check": false,
+      "doc": "请在咖啡馆点击兵棋桌后或兵棋房间内运行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%85%B5%E6%A3%8B%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "repeatable": true,
+      "repeat_count": 1
+    },
+    {
+      "name": "灰域探查",
+      "entry": "!开始打灰",
+      "check": false,
+      "doc": "在主界面或者刚进入灰域界面执行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%87%AA%E5%8A%A8%E6%89%93%E7%81%B0%E5%A5%96%E5%8A%B1%E5%85%B3%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "option": [
+        "打灰选择",
+        "打灰地图选择",
+        "刷新延迟",
+        "拆解选择"
+      ],
+      "repeatable": true,
+      "repeat_count": 9999
+    },
+    {
+      "name": "宿舍内自动点击爱心",
+      "entry": "!点击爱心",
+      "check": false,
+      "doc": "一直点爱心直到识别不到爱心",
+      "repeatable": false,
+      "repeat_count": 1
+    },
+    {
+      "name": "宿舍自动点赞",
+      "entry": "!宿舍自动点赞",
+      "check": false,
+      "doc": "从主界面开始运行，偷电，点赞并参观下一个宿舍直到无赞可点",
+      "repeatable": false,
+      "repeat_count": 1
+    },
+    {
+      "name": "裂变链接捡垃圾",
+      "entry": "!裂变链接捡垃圾",
+      "check": false,
+      "doc": "⚠️打开记录缩放，将地图缩放至最小并拉从最左下向右上拉至地图边缘后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "option": [
+        "部署梯队选择"
+      ]
+    },
+    {
+      "name": "指挥官后勤",
+      "entry": "!指挥官后勤",
+      "check": false,
+      "doc": "⚠️打开记录缩放，将地图缩放至最小并拉从最左下向右上拉至地图边缘后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "option": [
+        "部署梯队选择"
+      ]
+    },
+    {
+      "name": "虚粒子对打捞",
+      "entry": "!虚粒子对打捞",
+      "check": false,
+      "doc": "进入关卡将地图缩放至最小并拉至左下边缘后部署梯队开始运行",
+      "option": [
+        "虚粒子对_选择打捞目标",
+        "虚粒子对_是否开启结算加速"
+      ],
+      "repeatable": true,
+      "repeat_count": 1
+    },
+    {
+      "name": "蝴蝶星云打捞",
+      "entry": "!蝴蝶星云打捞",
+      "check": false,
+      "doc": "进入关卡将地图缩放至最小并拉至左下边缘后部署梯队开始运行",
+      "option": [
+        "蝴蝶星云_选择打捞目标",
+        "蝴蝶星云_是否开启结算加速"
+      ],
+      "repeatable": true,
+      "repeat_count": 4
+    },
+    {
+      "name": "夜战打捞",
+      "entry": "!夜战打捞",
+      "check": false,
+      "doc": "在夜战地图运行，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%A4%9C%E6%88%98%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+      "option": [
+        "选择夜战打捞地图"
+      ]
+    }
+  ],
+  "advanced": {
+    "指定装备强化": {
+      "field": [
+        "eqip_names"
+      ],
+      "type": "list"
+    }
+  },
+  "option": {
+    "134_是否开启无限循环": {
+      "cases": [
+        {
+          "name": "开启无限循环",
+          "pipeline_override": {
+            "134重置_再战连点7": {
+              "next": [
+                "134部署_布置完成",
+                "134进入_普通作战",
+                "134进入_点击134",
+                "134进入_点击作战任务"
+              ],
+              "interrupt": [
+                "134重置_点击获得角色",
+                "public拆人形_人形回收",
+                "134重置_单击再次作战",
+                "public_返回战斗界面"
+              ]
+            }
+          }
+        },
+        {
+          "name": "指定次数（满仓停止）",
+          "pipeline_override": {
+            "134重置_再战连点7": {
+              "next": [],
+              "interrupt": []
+            }
+          }
+        }
+      ]
+    },
+    "81N_是否开启无限循环": {
+      "cases": [
+        {
+          "name": "开启无限循环",
+          "pipeline_override": {
+            "81N重置_重新作战": {
+              "next": [
+                "81N部署_点击2队new"
+              ]
+            }
+          }
+        },
+        {
+          "name": "关闭无限循环"
+        }
+      ]
+    },
+    "81N_装备溢出处理": {
+      "cases": [
+        {
+          "name": "专属装备强化",
+          "pipeline_override": {
+            "81N_选择装备处理方式": {
+              "interrupt": [
+                "public装备强化_装备强化",
+                "public_返回战斗界面"
+              ]
+            }
+          }
+        },
+        {
+          "name": "拆解（锁上需保留装备）",
+          "pipeline_override": {
+            "81N_选择装备处理方式": {
+              "interrupt": [
+                "public拆装备_装备回收",
+                "public_返回战斗界面"
+              ]
+            }
+          }
+        },
+        {
+          "name": "结束任务",
+          "pipeline_override": {
+            "81N_选择装备处理方式": {
+              "timeout": 1000,
+              "interrupt": []
+            }
+          }
+        }
+      ]
+    },
+    "81N_选择狗粮类型": {
+      "cases": [
+        {
+          "name": "重装小队（BGM-71）",
+          "pipeline_override": {
+            "81N部署_确认2队是否已部署": {
+              "interrupt": [
+                "81N部署_部署重装"
+              ]
+            }
+          }
+        },
+        {
+          "name": "人形小队（第三梯队）",
+          "pipeline_override": {
+            "81N部署_确认2队是否已部署": {
+              "interrupt": [
+                "81N部署_部署3队"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "81N_是否开启结算加速": {
+      "cases": [
+        {
+          "name": "启用结算加速",
+          "pipeline_override": {
+            "81N战斗_执行计划": {
+              "interrupt": [
+                "public_不中断计划",
+                "public_加速结算进入"
+              ]
+            },
+            "public_加速结算点击10": {
+              "post_delay": 2000
+            }
+          }
+        },
+        {
+          "name": "关闭结算加速",
+          "pipeline_override": {
+            "81N战斗_执行计划": {
+              "post_delay": 65000
+            }
+          }
+        }
+      ]
+    },
+    "134_是否开启结算加速": {
+      "cases": [
+        {
+          "name": "启用结算加速",
+          "pipeline_override": {
+            "134战斗_执行计划": {
+              "interrupt": [
+                "public_不中断计划",
+                "public_加速结算进入"
+              ]
+            },
+            "public_加速结算点击10": {
+              "post_delay": 10000
+            }
+          }
+        },
+        {
+          "name": "关闭结算加速",
+          "pipeline_override": {
+            "134战斗_执行计划": {
+              "post_delay": 65000
+            }
+          }
+        }
+      ]
+    },
+    "81N_弹药检查版本选择": {
+      "cases": [
+        {
+          "name": "启用新版弹药识别",
+          "pipeline_override": {
+            "81N部署_布置完成": {
+              "next": "81N部署_弹药检查new"
+            }
+          }
+        },
+        {
+          "name": "启用旧版弹药识别",
+          "pipeline_override": {
+            "81N部署_布置完成": {
+              "next": "81N部署_弹药检查"
+            }
+          }
+        }
+      ]
+    },
+    "134_弹药检查版本选择": {
+      "cases": [
+        {
+          "name": "启用新版弹药识别",
+          "pipeline_override": {
+            "134部署_布置完成": {
+              "next": "134部署_弹药检查new"
+            }
+          }
+        },
+        {
+          "name": "启用旧版弹药识别",
+          "pipeline_override": {
+            "134部署_布置完成": {
+              "next": "134部署_弹药检查"
+            }
+          }
+        }
+      ]
+    },
+    "部署梯队选择": {
+      "cases": [
+        {
+          "name": "1",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "1"
+            }
+          }
+        },
+        {
+          "name": "2",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "2"
+            }
+          }
+        },
+        {
+          "name": "3",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "3"
+            }
+          }
+        },
+        {
+          "name": "4",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "4"
+            }
+          }
+        },
+        {
+          "name": "5",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "5"
+            }
+          }
+        },
+        {
+          "name": "6",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "6"
+            }
+          }
+        },
+        {
+          "name": "7",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "7"
+            }
+          }
+        },
+        {
+          "name": "8",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "8"
+            }
+          }
+        },
+        {
+          "name": "9",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "9"
+            }
+          }
+        },
+        {
+          "name": "10",
+          "pipeline_override": {
+            "public梯队部署_选择梯队": {
+              "expected": "10"
+            }
+          }
+        }
+      ]
+    },
+    "虚粒子对_选择打捞目标": {
+      "cases": [
+        {
+          "name": "左一 M1895 CB"
+        },
+        {
+          "name": "左二 Cx4风暴",
+          "pipeline_override": {
+            "虚粒子对_计划点": {
+              "target": [
+                651,
+                118,
+                9,
+                11
+              ]
+            }
+          }
+        },
+        {
+          "name": "左三 SRS",
+          "pipeline_override": {
+            "虚粒子对_点击梯队": {
+              "target": [
+                779,
+                495,
+                6,
+                13
+              ]
+            },
+            "虚粒子对_计划点": {
+              "target": [
+                651,
+                118,
+                9,
+                11
+              ]
+            }
+          }
+        },
+        {
+          "name": "左四 AK-74U",
+          "pipeline_override": {
+            "虚粒子对_点击梯队": {
+              "target": [
+                779,
+                495,
+                6,
+                13
+              ]
+            },
+            "虚粒子对_计划点": {
+              "target": [
+                906,
+                120,
+                6,
+                9
+              ]
+            }
+          }
+        },
+        {
+          "name": "右一 TKB-408",
+          "pipeline_override": {
+            "虚粒子对_点击梯队": {
+              "target": [
+                969,
+                193,
+                5,
+                7
+              ]
+            },
+            "虚粒子对_计划点": {
+              "target": [
+                968,
+                496,
+                7,
+                8
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "虚粒子对_是否开启结算加速": {
+      "cases": [
+        {
+          "name": "关闭"
+        },
+        {
+          "name": "开启",
+          "pipeline_override": {
+            "虚粒子对_执行计划": {
+              "interrupt": [
+                "public_不中断计划",
+                "public_加速结算进入"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "蝴蝶星云_选择打捞目标": {
+      "cases": [
+        {
+          "name": "第一行 FARA 83"
+        },
+        {
+          "name": "第二行 CZ2000",
+          "pipeline_override": {
+            "蝴蝶星云_点击梯队": {
+              "target": [
+                460,
+                262,
+                11,
+                11
+              ]
+            },
+            "蝴蝶星云_计划点": {
+              "target": [
+                803,
+                261,
+                12,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "name": "第三行 SL8",
+          "pipeline_override": {
+            "蝴蝶星云_点击梯队": {
+              "target": [
+                457,
+                369,
+                21,
+                14
+              ]
+            },
+            "蝴蝶星云_计划点": {
+              "target": [
+                805,
+                369,
+                12,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "name": "第四行 VHS",
+          "pipeline_override": {
+            "蝴蝶星云_点击梯队": {
+              "target": [
+                458,
+                460,
+                20,
+                15
+              ]
+            },
+            "蝴蝶星云_计划点": {
+              "target": [
+                802,
+                464,
+                17,
+                11
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "蝴蝶星云_是否开启结算加速": {
+      "cases": [
+        {
+          "name": "关闭"
+        },
+        {
+          "name": "开启",
+          "pipeline_override": {
+            "蝴蝶星云_执行计划": {
+              "interrupt": [
+                "public_不中断计划",
+                "public_加速结算进入"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "选择夜战打捞地图": {
+      "cases": [
+        {
+          "name": "1-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!1-4打捞"
+            }
+          }
+        },
+        {
+          "name": "2-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!2-4打捞"
+            }
+          }
+        },
+        {
+          "name": "3-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!3-4打捞"
+            }
+          }
+        },
+        {
+          "name": "4-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!4-4打捞"
+            }
+          }
+        },
+        {
+          "name": "5-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!5-4打捞"
+            }
+          }
+        },
+        {
+          "name": "6-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!6-4打捞"
+            }
+          }
+        },
+        {
+          "name": "7-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!7-4打捞"
+            }
+          }
+        },
+        {
+          "name": "8-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!8-4打捞"
+            }
+          }
+        },
+        {
+          "name": "9-4",
+          "pipeline_override": {
+            "!夜战打捞": {
+              "next": "!9-4打捞"
+            }
+          }
+        }
+      ]
+    },
+    "选择常驻人形打捞目标": {
+      "cases": [
+        {
+          "name": "MP41",
+          "pipeline_override": {
+            "!常驻人形打捞": {
+              "next": "!MP41打捞_总流程"
+            }
+          }
+        },
+        {
+          "name": "M240L",
+          "pipeline_override": {
+            "!常驻人形打捞": {
+              "next": "!M240L打捞"
+            }
+          }
+        },
+        {
+          "name": "防卫者",
+          "pipeline_override": {
+            "!常驻人形打捞": {
+              "next": "!防卫者打捞"
+            }
+          }
+        },
+        {
+          "name": "4-6/4-4e圣捞",
+          "pipeline_override": {
+            "!常驻人形打捞": {
+              "next": "!4-4e打捞总流程"
+            }
+          }
+        },
+        {
+          "name": "5-6/5-4e圣捞",
+          "pipeline_override": {
+            "!常驻人形打捞": {
+              "next": "!5-4e打捞总流程"
+            }
+          }
+        },
+        {
+          "name": "6-4e圣捞",
+          "pipeline_override": {
+            "!常驻人形打捞": {
+              "next": "!6-4e打捞总流程"
+            }
+          }
+        }
+      ]
+    },
+    "打灰选择": {
+      "cases": [
+        {
+          "name": "彩蛋"
+        },
+        {
+          "name": "彩蛋+炸山",
+          "pipeline_override": {
+            "灰域_灰域检测": {
+              "next": [
+                "灰域_检测奇遇",
+                "灰域_点击重装点"
+              ]
+            }
+          }
+        },
+        {
+          "name": "炸山",
+          "pipeline_override": {
+            "灰域_灰域检测": {
+              "next": [
+                "灰域_点击重装点"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "打灰地图选择": {
+      "cases": [
+        {
+          "name": "硅状带"
+        },
+        {
+          "name": "结晶带",
+          "pipeline_override": {
+            "灰域_选择地图": {
+              "expected": "结"
+            }
+          }
+        }
+      ]
+    },
+    "刷新延迟": {
+      "cases": [
+        {
+          "name": "5秒"
+        },
+        {
+          "name": "6秒",
+          "pipeline_override": {
+            "灰域_检测": {
+              "post_delay": 6000
+            }
+          }
+        },
+        {
+          "name": "7秒",
+          "pipeline_override": {
+            "灰域_检测": {
+              "post_delay": 7000
+            }
+          }
+        }
+      ]
+    },
+    "拆解选择": {
+      "cases": [
+        {
+          "name": "仅拆解2星"
+        },
+        {
+          "name": "拆解全部",
+          "pipeline_override": {
+            "灰域_出击奇遇": {
+              "interrupt":"public拆人形_人形回收"
+            }
+          }
+        }
+      ]
+    },
+    "跑步机修复选择": {
+      "cases": [
+        {
+          "name": "陷阱妖精"
+        },
+        {
+          "name": "迷彩坦克",
+          "pipeline_override": {
+            "跑步机_切换待机": {
+              "next": [
+                "跑步机_切换待机",
+                "跑步机_计划模式3"
+              ]
+            }
+          }
+        },
+        {
+          "name": "不修复",
+          "pipeline_override": {
+            "跑步机_切换待机": {
+              "next": [
+                "跑步机_切换待机",
+                "跑步机_跳过战斗"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
 }
