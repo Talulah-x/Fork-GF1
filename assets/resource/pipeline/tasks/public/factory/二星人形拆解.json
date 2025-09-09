@@ -77,7 +77,40 @@
         "post_delay": 200,
         "timeout": 2000,
         "next": [
+            "public二星人形回收_进入导航栏",
             "public二星人形回收_确认回收"
         ]
+    },
+    "public二星人形回收_进入导航栏": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            124,
+            18,
+            120,
+            105
+        ],
+        "template": "storage/navi.png",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay": 800,
+        "post_wait_freezes": 200,
+        "next": [
+            "public二星人形回收_导航栏战斗",
+            "public二星人形回收_进入导航栏"
+        ]
+    },
+    "public二星人形回收_导航栏战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            80,
+            150,
+            150,
+            200
+        ],
+        "template": "storage/navi_combat.png",
+        "action": "LongPress",
+        "duration": 500,
+        "pre_delay": 1000,
+        "next": []
     }
 }
