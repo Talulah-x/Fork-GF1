@@ -116,7 +116,8 @@
       "option": [
         "打灰选择",
         "打灰地图选择",
-        "刷新延迟"
+        "刷新延迟",
+        "拆解选择"
       ],
       "repeatable": true,
       "repeat_count": 9999
@@ -860,6 +861,21 @@
           "pipeline_override": {
             "灰域_检测": {
               "post_delay": 7000
+            }
+          }
+        }
+      ]
+    },
+    "拆解选择": {
+      "cases": [
+        {
+          "name": "仅拆解2星"
+        },
+        {
+          "name": "拆解全部",
+          "pipeline_override": {
+            "灰域_出击奇遇": {
+              "interrupt":"public拆人形_人形回收"
             }
           }
         }
