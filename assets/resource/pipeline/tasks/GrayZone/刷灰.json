@@ -50,9 +50,11 @@
     ]
   },
   "灰域_灰域检测": {
-    "recognition": "OCR",
-    "roi" : [777,73,118,71],
-    "expected": "变化",
+    "recognition": "TemplateMatch",
+    "roi" : [47,339,52,53],
+    "template":[
+      "GrayZone/灰域检测.png"
+    ],
     "action": "DoNothing",
     "next": [
       "灰域_检测奇遇",
@@ -103,9 +105,11 @@
     ]
   },
   "灰域_检测": {
-    "recognition": "OCR",
-    "roi" : [777,73,118,71],
-    "expected": "变化",
+    "recognition": "TemplateMatch",
+    "roi" : [47,339,52,53],
+    "template":[
+      "GrayZone/灰域检测.png"
+    ],
     "action": "DoNothing",
     "post_delay": 5000,
     "next": [
