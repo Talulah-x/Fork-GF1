@@ -462,7 +462,7 @@
     },
     "花海Round-2-掉落结算2":{
         "recognition": "OCR",
-        "roi" : [38,164,42,45],
+        "roi" : [23,162,58,54],
         "expected":"枪",
         "pre_delay":600,
         "action": "LongPress",
