@@ -18,7 +18,7 @@
         "expected": "战斗",
         "action": "LongPress",
         "duration":10,
-        "post_delay":500,
+        "post_delay":1000,
         "next": [
             "跑步机_主界面进入跑步机",
             "跑步机_进入裂变链接",
