@@ -31,6 +31,7 @@
         ],
         "expected": "战斗",
         "action": "LongPress",
+        "post_delay":1000,
         "duration": 20,
         "next": [
             "跑步机_主界面进入跑步机",
@@ -114,6 +115,7 @@
             1,
             1
         ],
+        "post_delay":500,
         "next": [
             "跑步机_进入第三章",
             "跑步机_滑动到第三章"
@@ -168,6 +170,7 @@
         ],
         "expected": "E",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_进入跑步机关卡",
@@ -191,6 +194,7 @@
             94,
             32
         ],
+        "post_delay":500,
         "next": [
             "跑步机_初始化地图",
             "跑步机_进入跑步机关卡",
@@ -207,6 +211,7 @@
         ],
         "expected": "确",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_初始化地图",
@@ -235,6 +240,7 @@
             1,
             1
         ],
+        "post_delay":500,
         "next": [
             "跑步机_梯队部署完成",
             "跑步机_部署第一梯队"
@@ -250,6 +256,7 @@
         ],
         "expected": "2",
         "action": "DoNothing",
+        "post_delay":500,
         "next": "跑步机_开始作战"
     },
     "跑步机_部署第一梯队": {
@@ -269,6 +276,7 @@
             62,
             60
         ],
+        "post_delay":500,
         "next": [
             "跑步机_部署第一梯队",
             "跑步机_确认部署第一梯队",
@@ -309,7 +317,7 @@
             63,
             51
         ],
-        "post_delay": 300,
+        "post_delay":500,
         "next": [
             "跑步机_部署第二梯队",
             "跑步机_切换梯队"
@@ -325,6 +333,7 @@
         ],
         "expected": "梯队",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_确认部署第二梯队",
@@ -358,6 +367,7 @@
         ],
         "expected": "点击指挥部",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_计划模式1",
@@ -374,6 +384,7 @@
         ],
         "expected": "结束",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             26,
@@ -404,6 +415,7 @@
             49,
             45
         ],
+        "post_delay":500,
         "next": [
             "跑步机_第一回合计划1"
         ]
@@ -418,6 +430,7 @@
             38,
             39
         ],
+        "post_delay":500,
         "next": [
             "跑步机_计划检测1",
             "跑步机_点击第一梯队1"
@@ -433,6 +446,7 @@
         ],
         "expected": "下一",
         "action": "DoNothing",
+        "post_delay":500,
         "next": [
             "跑步机_点击第二梯队1"
         ]
@@ -447,7 +461,7 @@
             45,
             35
         ],
-        "post_delay": 300,
+        "post_delay":500,
         "next": [
             "跑步机_选择第二梯队",
             "跑步机_点击第二梯队1"
@@ -480,7 +494,7 @@
             26,
             32
         ],
-        "post_delay": 300,
+        "post_delay":500,
         "next": [
             "跑步机_计划检测2",
             "跑步机_第一回合计划2"
@@ -496,6 +510,7 @@
         ],
         "expected": "1",
         "action": "DoNothing",
+        "post_delay":500,
         "next": [
             "跑步机_执行计划1"
         ]
@@ -534,6 +549,7 @@
             44,
             40
         ],
+        "post_delay":500,
         "next": [
             "跑步机_部署支援梯队"
         ]
@@ -600,6 +616,7 @@
         ],
         "template": "combat/levelUp/跑步机/白包子.png",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_确认部署支援梯队",
@@ -678,6 +695,8 @@
         ],
         "expected": "敌人",
         "action": "LongPress",
+
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_部署第三梯队",
@@ -694,6 +713,7 @@
             36,
             28
         ],
+        "post_delay":500,
         "next": [
             "跑步机_确认部署第三梯队",
             "跑步机_部署第三梯队"
@@ -726,6 +746,7 @@
         ],
         "expected": "结束",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_结束回合1",
@@ -742,6 +763,7 @@
             74,
             46
         ],
+        "post_delay":500,
         "next": [
             "跑步机_计划模式2",
             "跑步机_歼灭模式1",
@@ -759,6 +781,7 @@
         "expected": "灭",
         "action": "LongPress",
         "duration": 20,
+        "post_delay":500,
         "next": [
             "跑步机_计划模式2",
             "跑步机_跳过战斗1"
@@ -774,6 +797,7 @@
         ],
         "expected": "02",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             32,
@@ -796,6 +820,7 @@
         ],
         "expected": "执行",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             622,
@@ -812,6 +837,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 20,
+        "post_delay":500,
         "target": [
             735,
             359,
@@ -833,6 +859,7 @@
         ],
         "expected": "下一",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             319,
@@ -874,6 +901,7 @@
         "expected": "5",
         "action": "LongPress",
         "duration": 20,
+        "post_delay":500,
         "target": [
             612,
             431,
@@ -902,7 +930,7 @@
             33,
             39
         ],
-        "post_delay": 300,
+        "post_delay":500,
         "next": [
             "跑步机_选择第三梯队2",
             "跑步机_点击第三梯队2"
@@ -935,6 +963,7 @@
         ],
         "expected": "2",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             442,
@@ -960,6 +989,7 @@
             "0"
         ],
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             1113,
@@ -1008,6 +1038,7 @@
             134
         ],
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             1112,
@@ -1045,6 +1076,7 @@
         ],
         "expected": "灭",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_点击支援部队",
@@ -1068,7 +1100,7 @@
             35,
             30
         ],
-        "post_delay": 500,
+        "post_delay": 1000,
         "next": [
             "跑步机_切换待机",
             "跑步机_点击支援部队"
@@ -1093,6 +1125,9 @@
     },
     "跑步机_陷阱妖精修复": {
         "action": "LongPress",
+        "duration":10,
+        "target": [633,350,13,11],
+        "post_delay":500,
         "duration": 20,
         "target": [
             633,
@@ -1100,6 +1135,7 @@
             13,
             11
         ],
+        "post_delay":500,
         "next": [
             "跑步机_强化兽夹",
             "跑步机_陷阱妖精修复"
@@ -1115,6 +1151,9 @@
         ],
         "expected": "强化兽夹",
         "action": "LongPress",
+        "duration":10,
+        "target":[1196,400,30,9],
+        "post_delay":500,
         "duration": 20,
         "target": [
             1196,
@@ -1122,7 +1161,7 @@
             30,
             9
         ],
-        "post_delay": 300,
+        "post_delay": 500,
         "next": [
             "跑步机_放置技能",
             "跑步机_强化兽夹"
@@ -1138,6 +1177,7 @@
         ],
         "expected": "取消",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             556,
@@ -1159,6 +1199,7 @@
         ],
         "expected": "中",
         "action": "DoNothing",
+        "post_delay":500,
         "next": [
             "跑步机_跳过战斗"
         ]
@@ -1173,6 +1214,7 @@
         ],
         "expected": "03",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             32,
@@ -1202,7 +1244,7 @@
             14,
             16
         ],
-        "post_delay": 300,
+        "post_delay": 500,
         "next": [
             "跑步机_第三回合计划1",
             "跑步机_点击第三梯队3"
@@ -1210,6 +1252,7 @@
     },
     "跑步机_第三回合计划1": {
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             507,
@@ -1232,6 +1275,7 @@
         ],
         "expected": "下一",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_执行计划3",
@@ -1248,6 +1292,7 @@
         ],
         "expected": "取消",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             1118,
@@ -1272,6 +1317,7 @@
             134
         ],
         "action": "DoNothing",
+        "post_delay":500,
         "next": [
             "跑步机_跳过战斗3"
         ]
@@ -1279,6 +1325,7 @@
     "跑步机_跳过战斗3": {
         "recognition": "DirectHit",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             1156,
@@ -1324,6 +1371,7 @@
         ],
         "expected": "重装",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_选择机动装甲",
@@ -1340,6 +1388,7 @@
         ],
         "expected": "机动",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_选择坦克",
@@ -1356,6 +1405,7 @@
         ],
         "expected": "坦克",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_确认部署坦克",
@@ -1372,6 +1422,7 @@
         ],
         "expected": "部署",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "post_delay": 1000,
         "next": [
@@ -1469,6 +1520,7 @@
         ],
         "expected": "结束",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             32,
@@ -1498,7 +1550,7 @@
             17,
             5
         ],
-        "post_delay": 300,
+        "post_delay": 500,
         "next": [
             "跑步机_第四回合计划",
             "跑步机_点击坦克4"
@@ -1521,6 +1573,7 @@
             15,
             15
         ],
+        "post_delay":500,
         "next": [
             "跑步机_执行计划4",
             "跑步机_第四回合计划"
@@ -1536,6 +1589,7 @@
         ],
         "expected": "下一",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             1118,
@@ -1558,6 +1612,7 @@
         ],
         "expected": "释放",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_确认释放迷彩",
@@ -1574,6 +1629,7 @@
         ],
         "expected": "取消",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             623,
@@ -1596,6 +1652,7 @@
         ],
         "expected": "9",
         "action": "DoNothing",
+        "post_delay":500,
         "next": "跑步机_跳过战斗4"
     },
     "跑步机_跳过战斗4": {
@@ -1623,6 +1680,7 @@
         ],
         "expected": "07",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             32,
@@ -1652,6 +1710,7 @@
             15,
             9
         ],
+        "post_delay":500,
         "next": [
             "跑步机_第七回合计划1",
             "跑步机_点击坦克7"
@@ -1667,6 +1726,7 @@
         ],
         "expected": "60",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             578,
@@ -1689,6 +1749,7 @@
         ],
         "expected": "下一",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             1118,
@@ -1734,6 +1795,7 @@
         ],
         "expected": "退",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_确认撤退",
@@ -1750,6 +1812,7 @@
         ],
         "expected": "确",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "next": [
             "跑步机_计划模式7-2",
@@ -1766,6 +1829,7 @@
         ],
         "expected": "07",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             32,
@@ -1788,6 +1852,7 @@
         ],
         "expected": "执行",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             511,
@@ -1803,6 +1868,7 @@
     "跑步机_第七回合计划2": {
         "recognition": "DirectHit",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             640,
@@ -1825,6 +1891,7 @@
         ],
         "expected": "下一",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             1118,
@@ -1848,6 +1915,7 @@
         ],
         "expected": "妖精",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             1112,
@@ -1863,6 +1931,7 @@
     "跑步机_跳过战斗": {
         "recognition": "DirectHit",
         "action": "LongPress",
+        "post_delay":500,
         "duration": 20,
         "target": [
             1112,
@@ -1885,6 +1954,7 @@
         ],
         "expected": "再次作战",
         "action": "Click",
+        "post_delay":500,
         "timeout": 1000,
         "next": "跑步机_再次作战",
         "interrupt": "public拆人形_人形回收"
