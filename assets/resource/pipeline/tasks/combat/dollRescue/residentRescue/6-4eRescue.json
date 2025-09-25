@@ -51,8 +51,8 @@
     },
     "6-4e点击指挥部0":{
         "recognition": "OCR",
-        "roi" : [1043,666,96,28],
-        "expected":"点击指挥部",
+        "roi" : [1037,621,94,47],
+        "expected":"开始",
         "action": "LongPress",
         "duration": 20,
         "target" : [472,429,16,16],
