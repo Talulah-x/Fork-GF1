@@ -4,13 +4,8 @@
     },
     "M240L打捞_开始作战": {
         "recognition": "OCR",
-        "roi": [
-            1020,
-            623,
-            211,
-            79
-        ],
-        "expected": "点击指挥部进行",
+        "roi" : [1037,621,94,47],
+        "expected":"开始",
         "action": "LongPress",
         "duration": 20,
         "next": [

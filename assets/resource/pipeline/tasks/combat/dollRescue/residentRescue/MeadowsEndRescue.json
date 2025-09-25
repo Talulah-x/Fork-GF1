@@ -67,8 +67,8 @@
      },
      "花海点击左1机场":{
         "recognition": "OCR",
-        "roi" : [1043,666,96,28],
-        "expected":"点击指挥部",
+        "roi" : [1037,621,94,47],
+        "expected":"开始",
         "action": "LongPress",
         "duration": 20,
         "target" : [532,342,13,13],
