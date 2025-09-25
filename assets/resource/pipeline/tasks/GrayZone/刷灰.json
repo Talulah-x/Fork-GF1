@@ -51,7 +51,7 @@
   },
   "灰域_灰域检测": {
     "recognition": "TemplateMatch",
-    "roi" : [47,339,52,53],
+    "roi" : [46,429,52,53],
     "template":[
       "GrayZone/灰域检测.png"
     ],
@@ -106,7 +106,7 @@
   },
   "灰域_检测": {
     "recognition": "TemplateMatch",
-    "roi" : [47,339,52,53],
+    "roi" : [46,429,52,53],
     "template":[
       "GrayZone/灰域检测.png"
     ],
