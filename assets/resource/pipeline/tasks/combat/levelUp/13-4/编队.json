@@ -11,7 +11,7 @@
             "编成"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "134编队_选择2队",
             "134编队_点击队伍编成"
@@ -33,7 +33,7 @@
             33
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_wait_freezes": 1,
         "next": [
             "134编队_显示全部",
@@ -49,7 +49,7 @@
             78
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_wait_freezes": 1,
         "next": [
             "134编队_显示全部",
@@ -68,7 +68,7 @@
             "显示全部"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "134编队_选择收藏角色"
         ]
@@ -86,7 +86,7 @@
             "收藏"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "134编队_选择收藏角色确认"
         ]
@@ -103,7 +103,7 @@
             69
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "134编队_点击队伍中的打手"
         ]
@@ -116,7 +116,7 @@
             41
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 200,
         "next": [
             "134编队_点击1队打手"
@@ -126,7 +126,7 @@
         "recognition": "TemplateMatch",
         "template": "combat/levelUp/13-4/G_team1.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 500,
         "threshold": 0.8,
         "green_mask": true,
@@ -146,7 +146,7 @@
             "确定"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 400,
         "next": [
             "134编队_确定",
@@ -163,7 +163,7 @@
         ],
         "template": "combat/levelUp/13-4/back2map.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 1500,
         "next": [
             "134战斗_开始作战前初始化",

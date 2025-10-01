@@ -12,7 +12,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/FixPointRescue/三维流形.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             754,
             276,
@@ -35,7 +35,7 @@
         "expected": "确",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1141,
             401,
@@ -62,7 +62,7 @@
         "expected": "点击指挥部进行",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             745,
             312,
@@ -86,7 +86,7 @@
         "expected": "确定",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1122,
             620,
@@ -109,7 +109,7 @@
         "expected": "开始",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1041,
             626,
@@ -156,7 +156,7 @@
         "template": "combat/dollRescue/residentRescue/FixPointRescue/行动点数14.png",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             745,
             312,
@@ -180,7 +180,7 @@
         "expected": "补给",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1159,
             533,
@@ -203,7 +203,7 @@
         "expected": "抽薪",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             37,
             620,
@@ -226,7 +226,7 @@
         "template": "combat/dollRescue/residentRescue/FixPointRescue/计划点数14.png",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             697,
             312,
@@ -249,7 +249,7 @@
         "expected": "下",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             545,
             310,
@@ -272,7 +272,7 @@
         "template": "combat/dollRescue/residentRescue/FixPointRescue/计划点数10.png",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1133,
             644,
@@ -295,7 +295,7 @@
         "expected": "抽薪",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1185,
             277,
@@ -318,7 +318,7 @@
         "expected": "取消",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             494,
             404,
@@ -362,7 +362,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/FixPointRescue/行动点数11.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             278,
             24,
@@ -384,7 +384,7 @@
         ],
         "expected": "确定",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             728,
             470,
@@ -399,7 +399,7 @@
     "三维流形-积分结算": {
         "recognition": "DirectHit",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             710,
             517,

@@ -14,7 +14,7 @@
             42
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 5000,
         "next": [],
         "timeout": 5000
@@ -41,7 +41,7 @@
             "恢复游戏"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [],
         "timeout": 5000
     },
@@ -63,7 +63,7 @@
             400
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [],
         "timeout": 5000
     },
@@ -106,7 +106,7 @@
             10
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "兵棋战斗_检查金币数量",
             "兵棋战斗_买卡",
@@ -152,7 +152,7 @@
             34
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 6000,
         "next": [
             "兵棋战斗_买卡",
@@ -197,7 +197,7 @@
             44
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [],
         "timeout": 3000
     },
@@ -211,7 +211,7 @@
             145
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "兵棋战斗_右下识别区"

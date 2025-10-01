@@ -47,7 +47,7 @@
             "最"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             628,
             599,
@@ -69,7 +69,7 @@
         ],
         "expected": "普通作战",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             955,
             568,
@@ -95,7 +95,7 @@
         ],
         "expected": "开始",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             472,
             429,
@@ -118,7 +118,7 @@
         ],
         "expected": "确定",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 200,
         "target": [
             1141,
@@ -141,7 +141,7 @@
         ],
         "expected": "取消",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 200,
         "target": [
             1141,
@@ -164,7 +164,7 @@
         ],
         "expected": "开始",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1040,
             629,
@@ -190,7 +190,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/行动点数02.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             472,
             429,
@@ -213,7 +213,7 @@
         ],
         "expected": "补给",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             1160,
@@ -237,7 +237,7 @@
         "expected": "妖精",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             490,
             360,
@@ -260,7 +260,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/行动点数01.png",
         "pre_delay": 600,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             474,
             430,
@@ -283,7 +283,7 @@
         "expected": "部署",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             559,
             417,
@@ -305,7 +305,7 @@
         ],
         "expected": "确定",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 300,
         "target": [
             1141,
@@ -329,7 +329,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/行动点数00.png",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1118,
             640,
@@ -353,7 +353,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/回合02.png",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             490,
             360,
@@ -377,7 +377,7 @@
         ],
         "expected": "取消",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             1141,
@@ -400,7 +400,7 @@
         ],
         "expected": "妖精",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             31,
@@ -423,7 +423,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/计划点数3.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             535,
@@ -447,7 +447,7 @@
         "expected": "下一",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             472,
             427,
@@ -470,7 +470,7 @@
         "expected": "选择",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             563,
             418,
@@ -492,7 +492,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/计划点数2.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             488,
             358,
@@ -515,7 +515,7 @@
         "expected": "移动",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             332,
             346,
@@ -538,7 +538,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/计划点数1.png",
         "pre_delay": 500,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1116,
             642,
@@ -562,7 +562,7 @@
         "expected": "妖精",
         "pre_delay": 500,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             472,
             429,
@@ -585,7 +585,7 @@
         "expected": "部署",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             559,
             417,
@@ -607,7 +607,7 @@
         ],
         "expected": "确定",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 300,
         "target": [
             1141,
@@ -630,7 +630,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/行动点数00.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             472,
@@ -654,7 +654,7 @@
         ],
         "expected": "补给",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             1160,
@@ -677,7 +677,7 @@
         ],
         "expected": "妖精",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             31,
@@ -701,7 +701,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/计划点数0.png",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             540,
             277,
@@ -723,7 +723,7 @@
         "expected": "选择",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 500,
         "target": [
             630,
@@ -746,7 +746,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/计划点数0.png",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             613,
             148,
@@ -769,7 +769,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/计划点数-2.png",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             475,
             427,
@@ -792,7 +792,7 @@
         "expected": "选择",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             564,
             417,
@@ -815,7 +815,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/计划点数-2.png",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             612,
             149,
@@ -838,7 +838,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/计划点数-6.png",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1116,
             533,
@@ -861,7 +861,7 @@
         "expected": "取消",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1119,
             640,
@@ -888,7 +888,7 @@
         "threshold": [
             0.9
         ],
-        "duration": 50,
+        "duration": 20,
         "target": [
             614,
             352,
@@ -911,7 +911,7 @@
         ],
         "expected": "取消",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             1141,
@@ -934,7 +934,7 @@
         ],
         "expected": "妖精",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             32,
@@ -958,7 +958,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R4计划点数4.png",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             543,
             166,
@@ -981,7 +981,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R4计划点数2.png",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             613,
             422,
@@ -1003,7 +1003,7 @@
         ],
         "expected": "选择",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 800,
         "target": [
             703,
@@ -1027,7 +1027,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R4计划点数2.png",
         "pre_delay": 400,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             614,
             262,
@@ -1042,7 +1042,7 @@
     "6-4e-Round4-点击下一回合": {
         "pre_delay": 800,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1124,
             536,
@@ -1065,7 +1065,7 @@
         "expected": "取消",
         "pre_delay": 800,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             543,
             166,
@@ -1088,7 +1088,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R4计划点数-1.png",
         "pre_delay": 800,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             613,
             260,
@@ -1111,7 +1111,7 @@
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R4计划点数-2.png",
         "pre_delay": 800,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1112,
             641,
@@ -1134,7 +1134,7 @@
         ],
         "expected": "妖精",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             543,
@@ -1157,7 +1157,7 @@
         ],
         "expected": "选择",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             633,
@@ -1180,7 +1180,7 @@
         ],
         "expected": "妖精",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             543,
@@ -1204,7 +1204,7 @@
         ],
         "expected": "补给",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             1161,
@@ -1227,7 +1227,7 @@
         ],
         "expected": "妖精",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             31,
@@ -1250,7 +1250,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R5计划点数6.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             424,
@@ -1273,7 +1273,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R5计划点数5.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             717,
@@ -1296,7 +1296,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R5计划点数2.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             615,
@@ -1319,7 +1319,7 @@
         ],
         "expected": "选择",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             706,
@@ -1342,7 +1342,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R5计划点数2.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             581,
@@ -1357,7 +1357,7 @@
     },
     "6-4e-Round5-点击打捞队2": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 800,
         "target": [
             546,
@@ -1380,7 +1380,7 @@
         ],
         "expected": "选择",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 200,
         "target": [
             634,
@@ -1403,7 +1403,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R5计划点数0.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             1120,
@@ -1426,7 +1426,7 @@
         ],
         "expected": "取消",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 200,
         "target": [
             1109,
@@ -1449,7 +1449,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R5计划点数-3.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             1007,
@@ -1472,7 +1472,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R5计划点数-8.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             1120,
@@ -1495,7 +1495,7 @@
         ],
         "expected": "取消",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 200,
         "target": [
             1128,
@@ -1522,7 +1522,7 @@
             0.9
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             739,
@@ -1546,7 +1546,7 @@
         ],
         "expected": "取消",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             1141,
@@ -1569,7 +1569,7 @@
         ],
         "expected": "妖精",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             31,
@@ -1592,7 +1592,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R7计划点数7.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             421,
@@ -1615,7 +1615,7 @@
         ],
         "template": "combat/dollRescue/residentRescue/6-4eRescue/R7计划点数0.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             1117,
@@ -1638,7 +1638,7 @@
         ],
         "expected": "取消",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 200,
         "target": [
             1128,
@@ -1646,7 +1646,7 @@
             96,
             42
         ],
-        "post_delay": 30000,
+        "post_delay": 35000,
         "next": [
             "6-4e-点击获得角色"
         ]
@@ -1661,7 +1661,7 @@
         ],
         "expected": "再次作战",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             386,
             620,
@@ -1687,41 +1687,14 @@
         "action": "LongPress",
         "duration": 15,
         "target": [
-            366,
-            609,
-            94,
-            27
+            788,
+            181,
+            90,
+            90
         ],
         "post_delay": 600,
         "next": [
-            "6-4e再次作战",
-            "6-4e-点击获得勋章",
-            "6-4e-点击获得角色1"
-        ]
-    },
-    "6-4e-点击获得勋章": {
-        "recognition": "OCR",
-        "roi": [
-            249,
-            202,
-            56,
-            55
-        ],
-        "expected": "品",
-        "pre_delay": 600,
-        "action": "LongPress",
-        "duration": 15,
-        "target": [
-            366,
-            609,
-            94,
-            27
-        ],
-        "post_delay": 600,
-        "next": [
-            "6-4e再次作战",
-            "6-4e-点击获得勋章",
-            "6-4e-点击获得角色1"
+            "6-4e再次作战"
         ]
     },
     "6-4e再次作战": {
@@ -1734,7 +1707,7 @@
         ],
         "expected": "再次作战",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 200,
         "target": [
             366,
@@ -1742,7 +1715,7 @@
             94,
             27
         ],
-        "post_delay": 5000,
+        "post_delay": 8000,
         "next": [
             "6-4e开始作战",
             "6-4e-点击获得角色",

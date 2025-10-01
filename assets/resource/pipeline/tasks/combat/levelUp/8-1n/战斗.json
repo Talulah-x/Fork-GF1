@@ -28,7 +28,7 @@
             "开始作战"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N战斗_点击2队单zas准备补给",
             "81N_选择装备处理方式"
@@ -68,7 +68,7 @@
             12
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N战斗_点击补给",
             "81N战斗_点击2队单zas准备补给"
@@ -89,7 +89,7 @@
             "补给"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N战斗_点击2队单zas"
         ]
@@ -102,7 +102,7 @@
             12
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N战斗_点击2队撤离",
             "81N战斗_点击2队单zas"
@@ -123,7 +123,7 @@
             "撤离"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N战斗_点击2队撤离确定"
         ]
@@ -134,7 +134,7 @@
             "确定"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N战斗_点击计划模式"
         ]
@@ -151,7 +151,7 @@
             "结束"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 200,
         "target": [
             60,
@@ -174,7 +174,7 @@
             113
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             282,
             659,
@@ -190,7 +190,7 @@
     },
     "81N战斗_炸狗点1": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             261,
             517,
@@ -218,7 +218,7 @@
             13,
             12
         ],
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N战斗_执行计划",
             "81N战斗_炸狗点2"
@@ -236,7 +236,7 @@
             "1"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1111,
             633,

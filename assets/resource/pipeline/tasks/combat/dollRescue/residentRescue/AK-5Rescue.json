@@ -44,7 +44,7 @@
         ],
         "expected": "突围",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             628,
             599,
@@ -66,7 +66,7 @@
         ],
         "expected": "普通作战",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             955,
             568,
@@ -92,7 +92,7 @@
         ],
         "expected": "开始",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             458,
             247,
@@ -115,7 +115,7 @@
         ],
         "expected": "确定",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 200,
         "target": [
             1141,
@@ -138,7 +138,7 @@
         ],
         "expected": "部署",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 200,
         "target": [
             237,
@@ -161,7 +161,7 @@
         ],
         "expected": "开始",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             637,
             334,
@@ -183,7 +183,7 @@
         ],
         "expected": "确定",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 200,
         "target": [
             1141,
@@ -207,7 +207,7 @@
         "expected": "开始",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1041,
             626,
@@ -234,7 +234,7 @@
         "template": "combat/dollRescue/residentRescue/Ak-5Rescue/行动点数04.png",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             458,
             249,
@@ -258,7 +258,7 @@
         "expected": "补给",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1159,
             533,
@@ -280,7 +280,7 @@
         ],
         "expected": "妖精",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 400,
         "target": [
             31,
@@ -304,7 +304,7 @@
         "template": "combat/dollRescue/residentRescue/Ak-5Rescue/计划点数4.png",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             542,
             160,
@@ -327,7 +327,7 @@
         "expected": "下一",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             458,
             247,
@@ -350,7 +350,7 @@
         "template": "combat/dollRescue/residentRescue/Ak-5Rescue/计划点数0.png",
         "pre_delay": 200,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1130,
             644,
@@ -373,7 +373,7 @@
         "expected": "妖精",
         "pre_delay": 1000,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             456,
             352,
@@ -395,7 +395,7 @@
         ],
         "expected": "离",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 300,
         "target": [
             938,
@@ -417,7 +417,7 @@
         ],
         "expected": "确",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 300,
         "target": [
             727,
@@ -439,7 +439,7 @@
         ],
         "expected": "2",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 1000,
         "target": [
             288,
@@ -462,7 +462,7 @@
         ],
         "expected": "重新",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 3000,
         "target": [
             429,

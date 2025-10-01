@@ -117,7 +117,7 @@
         "threshold": 0.5,
         "template": "combat/levelUp/8-1N/port_1.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 500,
         "next": [
             "81N部署_部署1队确定",
@@ -137,7 +137,7 @@
             "取消"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": []
     },
     "81N部署_部署2队": {
@@ -151,7 +151,7 @@
         "threshold": 0.5,
         "template": "combat/levelUp/8-1N/port_2.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N部署_部署2队确定",
             "81N部署_部署2队"
@@ -170,7 +170,7 @@
             "取消"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": []
     },
     "81N部署_部署3队": {
@@ -184,7 +184,7 @@
         "threshold": 0.5,
         "template": "combat/levelUp/8-1N/port_h.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N部署_部署3队确定"
         ],
@@ -205,7 +205,7 @@
             "取消"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 1000
     },
     "81N部署_部署重装": {
@@ -219,7 +219,7 @@
         "threshold": 0.6,
         "template": "combat/levelUp/8-1N/port_h.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N部署_部署重装选择",
             "81N部署_部署重装"
@@ -243,7 +243,7 @@
             443
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N部署_部署重装确定",
             "81N部署_部署重装"
@@ -260,7 +260,7 @@
             37
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 1000
     },
     "81N部署_重装机场选择梯队": {
@@ -293,7 +293,7 @@
             "combat/levelUp/8-1N/map_team2.png"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "rate_limit": 200,
         "threshold": 0.7,
         "next": [
@@ -341,7 +341,7 @@
             "取消"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 500,
         "next": "81N战斗_开始作战前初始化"
     }

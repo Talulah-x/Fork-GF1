@@ -47,7 +47,7 @@
         ],
         "template": "storage/navi.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 800,
         "post_wait_freezes": 200,
         "next": [
@@ -105,7 +105,7 @@
         ],
         "expected": "作战任务",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": []
     },
     "public_点击普通难度": {
@@ -121,7 +121,7 @@
             "NORMAL"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": []
     }
 }

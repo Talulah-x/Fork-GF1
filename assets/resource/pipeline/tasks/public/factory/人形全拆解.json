@@ -9,7 +9,7 @@
             59
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "!人形回收总流程"
         ]
@@ -26,7 +26,7 @@
             "资源回收"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 800,
         "next": [
             "public拆人形_智能选择点击选择角色"
@@ -48,7 +48,7 @@
             38
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "public拆人形_智能选择",
@@ -69,7 +69,7 @@
             "智能选择"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 400,
         "next": [
             "public拆人形_智能选择人形拆解选择确定"
@@ -81,7 +81,7 @@
             "确定"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "public拆人形_智能选择回收"
         ]
@@ -98,7 +98,7 @@
             "回收"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 2000,
         "next": [
             "public拆人形_手动选择点击选择角色"
@@ -120,7 +120,7 @@
             38
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 1000,
         "next": [
             "public拆人形_手动选择",
@@ -139,7 +139,7 @@
     },
     "public拆人形_手动选择1": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -154,7 +154,7 @@
     },
     "public拆人形_手动选择2": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -169,7 +169,7 @@
     },
     "public拆人形_手动选择3": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -184,7 +184,7 @@
     },
     "public拆人形_手动选择4": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -199,7 +199,7 @@
     },
     "public拆人形_手动选择5": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -214,7 +214,7 @@
     },
     "public拆人形_手动选择6": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -229,7 +229,7 @@
     },
     "public拆人形_手动选择7": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -244,7 +244,7 @@
     },
     "public拆人形_手动选择8": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -259,7 +259,7 @@
     },
     "public拆人形_手动选择9": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -274,7 +274,7 @@
     },
     "public拆人形_手动选择10": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -289,7 +289,7 @@
     },
     "public拆人形_手动选择11": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -304,7 +304,7 @@
     },
     "public拆人形_手动选择12": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 20,
         "pre_delay": 20,
         "target": [
@@ -324,7 +324,7 @@
             "确定"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "public拆人形_手动选择回收"
         ]
@@ -341,7 +341,7 @@
             "回收"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "public拆人形_回收确定"
         ]
@@ -350,7 +350,7 @@
         "recognition": "TemplateMatch",
         "template": "storage/retire_confirm.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_wait_freezes": 500,
         "next": [
             "public拆人形_手动选择点击选择角色"
@@ -375,7 +375,7 @@
         ],
         "template": "storage/navi.png",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 800,
         "post_wait_freezes": 200,
         "next": [

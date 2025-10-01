@@ -187,7 +187,7 @@
     "蝴蝶星云_结算加速": {
         "recognition": "DirectHit",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             328,
             608,

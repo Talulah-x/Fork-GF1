@@ -4,15 +4,10 @@
     },
     "M240L打捞_开始作战": {
         "recognition": "OCR",
-        "roi": [
-            1037,
-            621,
-            94,
-            47
-        ],
-        "expected": "开始",
+        "roi" : [1037,621,94,47],
+        "expected":"开始",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "M240L打捞_点击梯队",
             "M240L打捞_开始作战"
@@ -28,7 +23,7 @@
         ],
         "expected": "结束",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             649,
             241,
@@ -50,7 +45,7 @@
         ],
         "expected": "补给",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 600,
         "next": [
             "M240L打捞_计划模式",
@@ -67,7 +62,7 @@
         ],
         "expected": "结束",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             51,
             619,
@@ -80,7 +75,7 @@
     },
     "M240L打捞_计划点": {
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "pre_delay": 300,
         "post_delay": 300,
         "timeout": 30000,
@@ -106,7 +101,7 @@
         "pre_delay": 300,
         "post_delay": 300,
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             1112,
             627,
@@ -130,7 +125,7 @@
             "再次作战"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "post_delay": 800,
         "rate_limit": 1200,
         "target": [
@@ -149,7 +144,7 @@
     "M240L打捞-点击获得角色": {
         "recognition": "DirectHit",
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "target": [
             386,
             620,

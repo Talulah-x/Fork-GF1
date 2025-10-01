@@ -1,13 +1,8 @@
 {
     "81N重置_点击1队图标": {
         "action": "LongPress",
-        "duration": 50,
-        "target": [
-            585,
-            271,
-            10,
-            19
-        ],
+        "duration": 20,
+        "target":[585,271,10,19],
         "next": [
             "81N重置_点击1队撤离",
             "81N重置_点击1队图标"
@@ -15,34 +10,24 @@
     },
     "81N重置_点击1队撤离": {
         "recognition": "OCR",
-        "roi": [
-            884,
-            606,
-            189,
-            81
-        ],
+        "roi" : [884,606,189,81],
         "expected": [
             "撤离"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N重置_点击1队撤离确定"
         ]
     },
     "81N重置_点击1队撤离确定": {
         "recognition": "OCR",
-        "roi": [
-            665,
-            429,
-            189,
-            127
-        ],
+        "roi" : [665,429,189,127],
         "expected": [
             "确定"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N重置_终止作战菜单"
         ]
@@ -56,7 +41,7 @@
         ],
         "action": "LongPress",
         "rate_limit": 200,
-        "duration": 50,
+        "duration": 20,
         "next": [
             "81N重置_重新作战",
             "81N重置_终止作战菜单"
@@ -75,7 +60,7 @@
             "重新"
         ],
         "action": "LongPress",
-        "duration": 50,
+        "duration": 20,
         "rate_limit": 200,
         "next": []
     }
