@@ -36,7 +36,7 @@
             1
         ],
         "pre_delay": 500,
-        "post_delay": 1,
+        "post_delay": 100,
         "next": [
             "public_加速结算点击1"
         ]
@@ -48,7 +48,7 @@
             1,
             1
         ],
-        "post_delay": 1,
+        "post_delay": 100,
         "pre_delay": 1,
         "action": "LongPress",
         "duration": 10,
@@ -63,7 +63,7 @@
             1,
             1
         ],
-        "post_delay": 1,
+        "post_delay": 100,
         "pre_delay": 1,
         "action": "LongPress",
         "duration": 10,
@@ -78,7 +78,7 @@
             1,
             1
         ],
-        "post_delay": 1,
+        "post_delay": 100,
         "pre_delay": 1,
         "action": "LongPress",
         "duration": 10,
@@ -93,7 +93,7 @@
             1,
             1
         ],
-        "post_delay": 1,
+        "post_delay": 100,
         "pre_delay": 1,
         "action": "LongPress",
         "duration": 10,
@@ -108,7 +108,7 @@
             1,
             1
         ],
-        "post_delay": 1,
+        "post_delay": 100,
         "pre_delay": 1,
         "action": "LongPress",
         "duration": 10,
