@@ -4,10 +4,15 @@
     },
     "防卫者打捞_开始作战": {
         "recognition": "OCR",
-        "roi" : [1037,621,94,47],
-        "expected":"开始",
+        "roi": [
+            1037,
+            621,
+            94,
+            47
+        ],
+        "expected": "开始",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "防卫者打捞_点击打捞队",
             "防卫者打捞_开始作战"
@@ -24,7 +29,7 @@
         "doc": "结束回合按钮",
         "expected": "结束",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 500,
         "target": [
             680,
@@ -47,7 +52,7 @@
         ],
         "expected": "补给",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 600,
         "next": [
             "防卫者打捞_计划模式"
@@ -63,7 +68,7 @@
         ],
         "expected": "结束",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 300,
         "target": [
             51,
@@ -86,7 +91,7 @@
         "doc": "执行计划按钮",
         "expected": "执行",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "pre_delay": 300,
         "post_delay": 300,
         "timeout": 30000,
@@ -110,7 +115,7 @@
         ],
         "expected": "执行",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "pre_delay": 300,
         "post_delay": 300,
         "timeout": 30000,
@@ -126,7 +131,7 @@
     },
     "防卫者打捞_执行计划": {
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 300,
         "target": [
             1110,
@@ -149,7 +154,7 @@
         ],
         "expected": "妖精",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 300,
         "target": [
             633,
@@ -171,7 +176,7 @@
         ],
         "expected": "离",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 300,
         "target": [
             938,
@@ -193,7 +198,7 @@
         ],
         "expected": "确",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 300,
         "target": [
             727,
@@ -216,7 +221,7 @@
         "expected": "2",
         "doc": "已消灭敌方数量",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 300,
         "target": [
             288,
@@ -238,7 +243,7 @@
         ],
         "expected": "重新",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 300,
         "target": [
             429,

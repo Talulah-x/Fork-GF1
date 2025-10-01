@@ -37,7 +37,7 @@
             "创建房间"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "next": [
             "兵棋进入_设置非公开",
@@ -56,7 +56,7 @@
             "公开"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "target": [
             408,
             483,
@@ -79,7 +79,7 @@
             "确定"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "兵棋进入_开始游戏"
         ]
@@ -96,7 +96,7 @@
             "开始游戏"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "兵棋重置_领取奖励",
             "兵棋进入_开始游戏"
@@ -119,7 +119,7 @@
             288
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "expected": [
             "领取奖励",
             "活跃对局"
@@ -137,7 +137,7 @@
             45
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "兵棋重置_取消退出",
             "兵棋重置_重复点击至取消"
@@ -155,7 +155,7 @@
             "取消"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "pre_delay": 500,
         "next": []

@@ -17,7 +17,7 @@
         ],
         "expected": "战斗",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "零电荷_主界面进入零电荷",
             "零电荷_进入零电荷",
@@ -34,7 +34,7 @@
         ],
         "expected": "常驻活动",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "post_wait_freezes": 1,
         "next": [
@@ -73,7 +73,7 @@
         ],
         "expected": "电荷",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "next": [
             "零电荷_进入零电荷",
@@ -90,7 +90,7 @@
         ],
         "expected": "ZERO",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "next": [
             "零电荷_进入打捞关",
@@ -107,7 +107,7 @@
         ],
         "expected": "Zero",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 400,
         "target": [
             17,
@@ -130,7 +130,7 @@
         ],
         "expected": "无来由",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "target": [
             1120,
             391,
@@ -179,18 +179,18 @@
         ],
         "expected": "战",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "target": [
             774,
             127,
             32,
             27
         ],
-        "post_delay":500,
+        "post_delay": 500,
         "next": [
             "零电荷_开始作战"
         ],
-        "interrupt":"!public梯队部署"
+        "interrupt": "!public梯队部署"
     },
     "零电荷_开始作战": {
         "recognition": "OCR",
@@ -201,7 +201,7 @@
             115
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "expected": [
             "点击指挥"
         ],
@@ -220,7 +220,7 @@
             115
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "expected": [
             "结"
         ],
@@ -238,7 +238,7 @@
             58
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "expected": [
             "02"
         ],
@@ -249,7 +249,7 @@
     "零电荷_人形结算": {
         "recognition": "DirectHit",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "target": [
             328,
             608,
@@ -273,7 +273,7 @@
             59
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "零电荷_回收角色"
         ]
@@ -290,7 +290,7 @@
             "角色"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "零电荷_智能选择"
         ]
@@ -308,7 +308,7 @@
             "确定"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "零电荷_智能选择",
             "零电荷_确认回收"
@@ -326,7 +326,7 @@
             "人力"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "target": [
             1096,
             575,
@@ -348,7 +348,7 @@
         ],
         "template": "storage/navi.png",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "pre_delay": 800,
         "post_wait_freezes": 200,
         "next": [

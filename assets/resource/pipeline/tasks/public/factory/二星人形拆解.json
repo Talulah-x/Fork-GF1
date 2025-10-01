@@ -91,7 +91,7 @@
         ],
         "template": "storage/navi.png",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "pre_delay": 800,
         "post_wait_freezes": 200,
         "next": [

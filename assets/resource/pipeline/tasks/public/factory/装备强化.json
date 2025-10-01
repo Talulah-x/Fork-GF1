@@ -11,14 +11,14 @@
             "装备强化"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "!装备强化总流程"
         ]
     },
     "!装备强化总流程": {
         "recognition": "OCR",
-        "roi":[
+        "roi": [
             299,
             8,
             171,
@@ -33,7 +33,7 @@
     },
     "public装备强化_点击装备强化": {
         "recognition": "OCR",
-        "roi":[
+        "roi": [
             5,
             185,
             180,
@@ -43,14 +43,14 @@
             "装备强化"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "public装备强化_选择强化的装备"
         ]
     },
     "public装备强化_选择强化的装备": {
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "target": [
             266,
             323,
@@ -74,7 +74,7 @@
             "星"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 500,
         "next": [
             "public装备强化_排序完成"
@@ -92,7 +92,7 @@
             "化"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 500,
         "next": [
             "public装备强化_选择高级装备"
@@ -108,7 +108,7 @@
         "pre_delay": 500,
         "threshold": 0.75,
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "green_mask": true,
         "next": [
             "public装备强化_选择低级装备",
@@ -123,7 +123,7 @@
             46
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "public装备强化_强制点击至无智能选择",
             "public装备强化_选择低级装备"
@@ -131,7 +131,7 @@
     },
     "public装备强化_强制点击至无智能选择": {
         "recognition": "OCR",
-        "roi":[
+        "roi": [
             1094,
             464,
             171,
@@ -141,7 +141,7 @@
             "智能选择"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 50,
         "next": [
             "public装备强化_强制点击至无智能选择",
@@ -150,7 +150,7 @@
     },
     "public装备强化_装备强化选择确定": {
         "recognition": "OCR",
-        "roi":[
+        "roi": [
             1088,
             590,
             177,
@@ -160,7 +160,7 @@
             "确定"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 500,
         "next": [
             "public装备强化_装备强化确定"
@@ -168,7 +168,7 @@
     },
     "public装备强化_装备强化确定": {
         "recognition": "OCR",
-        "roi":[
+        "roi": [
             1088,
             599,
             177,
@@ -179,7 +179,7 @@
         ],
         "post_delay": 500,
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "public装备强化_装备强化最终确定",
             "public装备强化_进入导航栏"
@@ -187,7 +187,7 @@
     },
     "public装备强化_装备强化最终确定": {
         "recognition": "OCR",
-        "roi":[
+        "roi": [
             680,
             587,
             180,
@@ -197,7 +197,7 @@
             "确定"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_wait_freezes": 500,
         "next": [
             "public_进入导航栏"
@@ -213,7 +213,7 @@
         ],
         "template": "storage/navi.png",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "pre_delay": 500,
         "post_wait_freezes": 200,
         "next": [
@@ -231,7 +231,7 @@
         ],
         "template": "storage/navi_combat.png",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "next": []
     }

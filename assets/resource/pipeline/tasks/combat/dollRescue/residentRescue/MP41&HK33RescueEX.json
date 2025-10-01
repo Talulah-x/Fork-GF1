@@ -8,7 +8,7 @@
     "MP41打捞_MP41打捞": {
         "recognition": "TemplateMatch",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/斩牙行动战斗EX.png"
         ],
@@ -22,7 +22,7 @@
     "MP41打捞_点击确认出击": {
         "recognition": "TemplateMatch",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/确认出击.png"
         ],
@@ -37,7 +37,7 @@
         "recognition": "TemplateMatch",
         "template": "combat/dollRescue/residentRescue/MP41&HK33RescueEX/情报点确定.png",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "MP41打捞_点击机场"
         ]
@@ -94,7 +94,7 @@
     "MP41打捞_点击机场": {
         "recognition": "TemplateMatch",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/机场.png"
         ],
@@ -125,7 +125,7 @@
             "取消"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "MP41打捞_点击指挥部"
         ]
@@ -133,7 +133,7 @@
     "MP41打捞_点击指挥部": {
         "recognition": "TemplateMatch",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/指挥部.png"
         ],
@@ -159,7 +159,7 @@
             "取消"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "next": [
             "MP41打捞_开始作战"
@@ -202,7 +202,7 @@
             "开始作战"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "MP41打捞_人形回收",
             "MP41打捞_选中铁血"
@@ -216,7 +216,7 @@
             20
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "roi": [
             264,
             292,
@@ -241,7 +241,7 @@
             "补给"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_wait_freezes": 100,
         "next": [
             "MP41打捞_点击抽薪1"
@@ -250,7 +250,7 @@
     "MP41打捞_点击抽薪1": {
         "recognition": "TemplateMatch",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/抽薪.png"
         ],
@@ -278,7 +278,7 @@
             15
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "MP41打捞_一判",
             "MP41打捞_跳过获得角色1",
@@ -302,7 +302,7 @@
             "combat/levelUp/13-4/doll_get4.png"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "threshold": 0.7,
         "next": [
             "MP41打捞_跳过获得角色1",
@@ -314,7 +314,7 @@
     "MP41打捞_判定失败结算": {
         "recognition": "TemplateMatch",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/判定失败.png"
         ],
@@ -337,7 +337,7 @@
             "combat/levelUp/13-4/doll_get4.png"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "MP41打捞_点击抽薪2",
             "MP41打捞_判定成功1"
@@ -358,7 +358,7 @@
             "combat/levelUp/13-4/doll_get4.png"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "MP41打捞_点击抽薪2",
             "MP41打捞_判定成功2"
@@ -367,7 +367,7 @@
     "MP41打捞_点击抽薪2": {
         "recognition": "TemplateMatch",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/抽薪.png"
         ],
@@ -392,7 +392,7 @@
             "combat/levelUp/13-4/doll_get4.png"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "threshold": 0.75,
         "next": [
             "MP41打捞_跳过获得角色2",
@@ -419,7 +419,7 @@
             15
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "MP41打捞_二判",
             "MP41打捞_跳过获得角色2",
@@ -431,7 +431,7 @@
     "MP41打捞_判定失败结算2": {
         "recognition": "TemplateMatch",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/判定失败.png"
         ],
@@ -454,7 +454,7 @@
             "combat/levelUp/13-4/doll_get4.png"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "MP41打捞_点击铁血",
             "MP41打捞_判定成功12"
@@ -475,7 +475,7 @@
             "combat/levelUp/13-4/doll_get4.png"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "MP41打捞_点击铁血",
             "MP41打捞_判定成功22"
@@ -484,7 +484,7 @@
     "MP41打捞_点击铁血": {
         "recognition": "TemplateMatch",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/第2梯队.png"
         ],
@@ -512,7 +512,7 @@
             "撤离"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_wait_freezes": 100,
         "next": [
             "MP41打捞_确认撤离"
@@ -521,7 +521,7 @@
     "MP41打捞_确认撤离": {
         "recognition": "TemplateMatch",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "template": [
             "combat/dollRescue/residentRescue/MP41&HK33RescueEX/确认撤离.png"
         ],
@@ -537,7 +537,7 @@
             "终作战"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_wait_freezes": 100,
         "next": [
             "MP41打捞_点击重新作战"
@@ -555,7 +555,7 @@
             "重新作战"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_wait_freezes": 6,
         "next": [
             "MP41打捞_开始作战"
@@ -571,7 +571,7 @@
             59
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "!MP41打捞_人形回收总流程"
         ]
@@ -593,7 +593,7 @@
             23
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "rate_limit": 2000,
         "next": [
             "MP41打捞_智能选择"
@@ -605,7 +605,7 @@
             "智能选择"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 400,
         "next": [
             "MP41打捞_人形拆解选择确定"
@@ -617,7 +617,7 @@
             "确定"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 800,
         "next": [
             "MP41打捞_回收"
@@ -635,7 +635,7 @@
             "回收"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 800,
         "next": [
             "MP41打捞_进入导航栏"
@@ -651,7 +651,7 @@
         ],
         "template": "storage/navi.png",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "pre_delay": 800,
         "post_wait_freezes": 200,
         "next": [
@@ -669,7 +669,7 @@
         ],
         "template": "storage/navi_combat.png",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "next": [
             "MP41打捞_导航栏战斗",
@@ -680,7 +680,7 @@
         "recognition": "OCR",
         "expected": "常驻",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "next": [
             "MP41打捞_进入章节"
@@ -690,7 +690,7 @@
         "recognition": "TemplateMatch",
         "template": "combat/dollRescue/residentRescue/MP41&HK33RescueEX/进入章节.png",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "next": [
             "!MP41打捞_总流程"

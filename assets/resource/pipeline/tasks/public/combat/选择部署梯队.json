@@ -1,21 +1,32 @@
-{   "!public梯队部署":{
-        "next":[
+{
+    "!public梯队部署": {
+        "next": [
             "public梯队部署_选择梯队",
             "public梯队部署_滑动梯队"
         ],
-        "interrupt":"public梯队部署_切换梯队"
-},
+        "interrupt": "public梯队部署_切换梯队"
+    },
     "public梯队部署_切换梯队": {
         "recognition": "OCR",
-        "roi" : [150,29,639,111],
+        "roi": [
+            150,
+            29,
+            639,
+            111
+        ],
         "expected": "梯队",
         "action": "LongPress",
         "duration": 10,
-        "post_delay":500
+        "post_delay": 500
     },
     "public梯队部署_选择梯队": {
         "recognition": "OCR",
-        "roi" : [71,0,61,695],
+        "roi": [
+            71,
+            0,
+            61,
+            695
+        ],
         "action": "LongPress",
         "duration": 10,
         "next": [
@@ -24,7 +35,12 @@
     },
     "public梯队部署_滑动梯队": {
         "recognition": "OCR",
-        "roi" : [160,588,187,91],
+        "roi": [
+            160,
+            588,
+            187,
+            91
+        ],
         "expected": "队伍编成",
         "action": "Swipe",
         "begin": [
@@ -39,7 +55,7 @@
             1,
             1
         ],
-        "post_delay":1000,
+        "post_delay": 1000,
         "next": [
             "public梯队部署_选择梯队"
         ]
@@ -61,5 +77,4 @@
             "public梯队部署_确认部署"
         ]
     }
-
 }

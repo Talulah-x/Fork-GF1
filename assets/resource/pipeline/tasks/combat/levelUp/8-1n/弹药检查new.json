@@ -33,7 +33,7 @@
             0
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "rate_limit": 200,
         "next": [
             "81N编队_点击队伍编成",
@@ -50,7 +50,7 @@
         ],
         "template": "combat/levelUp/8-1N/dply_team2.png",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "81N部署_弹药检查new",
             "81N部署_点击部署界面2队new"

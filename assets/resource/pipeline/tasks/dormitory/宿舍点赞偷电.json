@@ -16,7 +16,7 @@
         ],
         "expected": "好友",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "宿舍_点击好友",
             "宿舍_宿舍排序"
@@ -33,7 +33,7 @@
         "expected": "排序方式",
         "pre_delay": 500,
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 500,
         "next": [
             "宿舍_数量排序",
@@ -50,7 +50,7 @@
         ],
         "expected": "宿舍数量",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "宿舍_数量排序",
             "宿舍_点击第一个好友"
@@ -66,7 +66,7 @@
         ],
         "expected": "宿舍数量",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "target": [
             622,
             219,
@@ -88,23 +88,23 @@
         ],
         "expected": "参观",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "宿舍_进入宿舍",
             "!宿舍自动点赞"
         ]
     },
-    "宿舍_识别参观":{
+    "宿舍_识别参观": {
         "recognition": "OCR",
-        "roi":[
+        "roi": [
             2,
             619,
             199,
             89
         ],
-        "expected":"参观",
-        "action":"DoNothing",
-        "next":[
+        "expected": "参观",
+        "action": "DoNothing",
+        "next": [
             "宿舍_偷电",
             "宿舍_点击点赞",
             "宿舍_点击下一个宿舍"
@@ -125,7 +125,7 @@
             "dormitory/Gbattery2.png"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "threshold": 0.75,
         "post_delay": 1000,
         "next": [
@@ -144,7 +144,7 @@
         "rate_limit": 100,
         "expected": "关闭",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "next": [
             "宿舍_点击点赞",
             "宿舍_偷电成功"
@@ -163,7 +163,7 @@
         ],
         "rate_limit": 100,
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 800,
         "next": [
             "宿舍_点击点赞",
@@ -180,7 +180,7 @@
         ],
         "expected": "留言",
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "rate_limit": 100,
         "target": [
             205,
@@ -210,7 +210,7 @@
     },
     "宿舍_返回主菜单": {
         "recognition": "OCR",
-        "roi":[
+        "roi": [
             833,
             83,
             405,
@@ -225,7 +225,7 @@
             "dormitory/Gback1.png",
             "dormitory/Gback2.png"
         ],
-        "roi":[
+        "roi": [
             41,
             8,
             126,
@@ -233,8 +233,8 @@
         ],
         "green_mask": true,
         "action": "LongPress",
-        "duration": 20,
-        "post_wait_freezes":500,
+        "duration": 50,
+        "post_wait_freezes": 500,
         "next": [
             "宿舍_返回主菜单",
             "宿舍_点击返回"

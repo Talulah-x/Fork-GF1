@@ -15,7 +15,7 @@
         "template": "combat/levelUp/8-1N/run8_1N.png",
         "green_mask": true,
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 1000,
         "next": [
             "81N进入_普通作战",
@@ -34,7 +34,7 @@
             "普通作战"
         ],
         "action": "LongPress",
-        "duration": 20,
+        "duration": 50,
         "post_delay": 3000,
         "next": [
             "81N部署_部署梯队",
