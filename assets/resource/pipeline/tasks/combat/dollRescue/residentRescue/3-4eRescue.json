@@ -10,7 +10,7 @@
         "begin": [180, 120, 1, 1],
         "end": [900, 700, 1, 1],
         "duration": 200,
-        "post_delay": 1000,
+        "post_delay": 100,
         "next": [
             "3-4e拖动操作2"
         ]
@@ -20,19 +20,8 @@
         "action": "Swipe",
         "begin": [180, 120, 1, 1],
         "end": [900, 700, 1, 1],
-        "duration": 200,
-        "post_delay": 1000,
-        "next": [
-            "3-4e拖动操作3"
-        ]
-    },
-    "3-4e拖动操作3":{
-        "recognition": "DirectHit",
-        "action": "Swipe", 
-        "begin": [180, 120, 1, 1],
-        "end": [900, 700, 1, 1],
-        "duration": 200,
-        "post_delay": 1000,
+        "duration": 100,
+        "post_delay": 100,
         "next": [
             "3-4e开始作战"
         ]
@@ -43,9 +32,23 @@
         "expected":"开始",
         "action": "LongPress",
         "duration": 20,
+        "post_delay": 2000,
         "next": [
-            "3-4e点击打捞队",
+            "3-4e循环拖动操作",
             "3-4e开始作战"
+        ]
+    },
+    "3-4e循环拖动操作":{
+        "recognition": "OCR",
+        "roi": [1109,639,74,52],
+        "expected": "结束",
+        "action": "Swipe", 
+        "begin": [180, 120, 1, 1],
+        "end": [900, 700, 1, 1],
+        "duration": 100,
+        "post_delay": 100,
+        "next": [
+            "3-4e点击打捞队"
         ]
     },
     "3-4e点击打捞队":{
@@ -103,7 +106,7 @@
         "action": "LongPress",
         "duration": 20,
         "post_delay": 300,
-        "target" : [684,707,16,16],
+        "target" : [680,700,16,16],
         "next":[
             "3-4e点击下一回合"
         ]
