@@ -15,11 +15,13 @@
     },
     "public梯队部署_选择梯队": {
         "recognition": "OCR",
-        "roi" : [71,0,61,695],
+        "roi" : [53,7,89,707],
         "action": "LongPress",
         "duration": 10,
+        "post_delay":1000,
         "next": [
-            "public梯队部署_确认部署"
+            "public梯队部署_检测梯队人形",
+            "public梯队部署_选择梯队"
         ]
     },
     "public梯队部署_滑动梯队": {
@@ -44,6 +46,14 @@
             "public梯队部署_选择梯队"
         ]
     },
+    "public梯队部署_检测梯队人形": {
+        "recognition": "OCR",
+        "roi" : [150,426,186,60],
+        "expected" : "布伦·坦",
+        "next": [
+            "public梯队部署_确认部署"
+        ]
+    },
     "public梯队部署_确认部署": {
         "recognition": "OCR",
         "roi": [
@@ -61,5 +71,4 @@
             "public梯队部署_确认部署"
         ]
     }
-
 }
