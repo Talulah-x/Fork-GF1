@@ -16,13 +16,14 @@
         "expected": [
             "第"
         ],
-        "action": "Click",
+        "action": "LongPress",
         "target": [
             965,
             173,
             39,
             28
         ],
+        "duration": 50,
         "post_delay": 400,
         "next": [
             "1_6_进入关卡"
@@ -41,6 +42,7 @@
         ],
         "expected": "除草行动",
         "action": "LongPress",
+        "duration": 50,
         "post_delay": 500,
         "next": [
             "1_6_普通作战"
@@ -140,7 +142,7 @@
         "expected": "结束",
         "action": "LongPress",
         "duration": 50,
-        "post_delay": 500,
+        "post_delay": 800,
         "target": [
             266,
             300,
@@ -187,54 +189,55 @@
             18
         ],
         "next": [
-            "1_6_点击计划点1"
+            "1_6_点击计划点1",
+            "1_6_点击计划点2"
         ]
     },
     "1_6_点击计划点1": {
         "recognition": "OCR",
         "roi": [
-            1109,
-            640,
-            73,
-            45
+            996,
+            655,
+            58,
+            55
         ],
-        "expected": "执行",
+        "expected": "2",
         "action": "LongPress",
         "duration": 50,
         "post_delay": 300,
         "target": [
-            509,
-            683,
-            18,
-            14
+            379,
+            616,
+            17,
+            17
         ],
         "next": [
-            "1_6_点击计划点2"
+            "1_6_点击下一回合1"
         ]
     },
     "1_6_点击计划点2": {
         "recognition": "OCR",
         "roi": [
-            1109,
-            640,
-            73,
-            45
+            996,
+            655,
+            58,
+            55
         ],
-        "expected": "执行",
+        "expected": "3",
         "action": "LongPress",
         "duration": 50,
         "post_delay": 300,
         "target": [
-            622,
-            567,
-            14,
-            14
+            804,
+            317,
+            19,
+            15
         ],
         "next": [
-            "1_6_点击下一回合"
+            "1_6_点击下一回合1"
         ]
     },
-    "1_6_点击下一回合": {
+    "1_6_点击下一回合1": {
         "recognition": "OCR",
         "roi": [
             1111,
@@ -282,11 +285,36 @@
     "1_6_战斗加速": {
         "rate_limit": 2000,
         "next": [
+            "1_6_round3",
             "1_6_再次作战"
         ],
         "interrupt": [
             "public_加速结算进入",
             "1_6_wait"
+        ]
+    },
+    "1_6_round3": {
+        "recognition": "OCR",
+        "roi": [
+            591,
+            328,
+            19,
+            31
+        ],
+        "expected": "1",
+        "action": "LongPress",
+        "target": [
+            562,
+            363,
+            15,
+            15
+        ],
+        "duration": 50,
+        "pre_delay": 1000,
+        "post_delay": 500,
+        "next": [
+            "1_6_补给打手",
+            "1_6_round3"
         ]
     },
     "1_6_wait": {
