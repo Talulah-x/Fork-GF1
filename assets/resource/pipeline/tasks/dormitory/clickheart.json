@@ -10,7 +10,7 @@
                 "template": "dormitory/Gheart.png",
                 "threshold": 0.7,
                 "action": "LongPress",
-                "duration": 20,
+                "duration": 50,
                 "rate_limit": 50,
                 "pre_delay": 10,
                 "green_mask": true,

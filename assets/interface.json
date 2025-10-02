@@ -79,7 +79,7 @@
             "repeat_count": 1
         },
         {
-            "name": "跑步机（WIP，仍需调试）",
+            "name": "跑步机",
             "entry": "!跑步机总流程",
             "check": false,
             "doc": " **要求地图缩放到最小** ，[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
@@ -145,7 +145,12 @@
             "doc": "⚠️打开记录缩放，将地图缩放至最小并拉从最左下向右上拉至地图边缘后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
             "option": [
                 "部署梯队选择"
-            ]
+            ],
+            "advanced": [
+                "目标梯队一号位人形"
+            ],
+            "repeatable": true,
+            "repeat_count": 9999
         },
         {
             "name": "指挥官后勤",
@@ -154,7 +159,12 @@
             "doc": "⚠️打开记录缩放，将地图缩放至最小并拉从最左下向右上拉至地图边缘后手动运行一次再开始脚本[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
             "option": [
                 "部署梯队选择"
-            ]
+            ],
+            "advanced": [
+                "目标梯队一号位人形"
+            ],
+            "repeatable": true,
+            "repeat_count": 9999
         },
         {
             "name": "虚粒子对打捞",
@@ -193,9 +203,23 @@
     "advanced": {
         "指定装备强化": {
             "field": [
-                "eqip_names"
+                "装备名称"
             ],
-            "type": "list"
+            "type": "string",
+            "default": "111",
+            "pipeline_override": {}
+        },
+        "目标梯队一号位人形": {
+            "field": [
+                "一号位人形名称"
+            ],
+            "type": "string",
+            "default": "布伦·坦",
+            "pipeline_override": {
+                "public梯队部署_检测梯队人形": {
+                    "expected": "{一号位人形名称}"
+                }
+            }
         }
     },
     "option": {
@@ -787,6 +811,10 @@
                     "pipeline_override": {
                         "!常驻人形打捞": {
                             "next": "!3-4e打捞总流程"
+                    "name": "1-6圣捞(普通难度)",
+                    "pipeline_override": {
+                        "!常驻人形打捞": {
+                            "next": "!1_6_打捞总流程"
                         }
                     }
                 },
@@ -843,7 +871,8 @@
                         "灰域_灰域检测": {
                             "next": [
                                 "灰域_检测奇遇",
-                                "灰域_点击重装点"
+                                "灰域_点击重装点",
+                                "灰域_切换地图"
                             ]
                         }
                     }
@@ -853,7 +882,8 @@
                     "pipeline_override": {
                         "灰域_灰域检测": {
                             "next": [
-                                "灰域_点击重装点"
+                                "灰域_点击重装点",
+                                "灰域_切换地图"
                             ]
                         }
                     }

@@ -6,7 +6,7 @@
       "灰域_灰域检测",
       "灰域_奇遇代理"
     ],
-    "interrupt":"灰域_领取奖励"
+    "interrupt": "灰域_领取奖励"
   },
   "灰域_进入灰域": {
     "recognition": "OCR",
@@ -51,8 +51,13 @@
   },
   "灰域_灰域检测": {
     "recognition": "TemplateMatch",
-    "roi" : [46,515,54,56],
-    "template":[
+    "roi": [
+      46,
+      515,
+      54,
+      56
+    ],
+    "template": [
       "GrayZone/灰域检测.png"
     ],
     "action": "DoNothing",
@@ -79,7 +84,12 @@
   },
   "灰域_选择地图": {
     "recognition": "OCR",
-    "roi" : [603,315,580,122],
+    "roi": [
+      603,
+      315,
+      580,
+      122
+    ],
     "expected": "硅状",
     "action": "LongPress",
     "duration": 10,
@@ -106,8 +116,13 @@
   },
   "灰域_检测": {
     "recognition": "TemplateMatch",
-    "roi" : [46,515,54,56],
-    "template":[
+    "roi": [
+      46,
+      515,
+      54,
+      56
+    ],
+    "template": [
       "GrayZone/灰域检测.png"
     ],
     "action": "DoNothing",
@@ -154,7 +169,12 @@
   },
   "灰域_奇遇代理": {
     "recognition": "OCR",
-    "roi" : [393,0,107,95],
+    "roi": [
+      393,
+      0,
+      107,
+      95
+    ],
     "expected": [
       "0",
       "回",
@@ -162,7 +182,12 @@
     ],
     "action": "LongPress",
     "duration": 10,
-    "target":[867,650,64,30],
+    "target": [
+      867,
+      650,
+      64,
+      30
+    ],
     "next": [
       "灰域_代理确认",
       "灰域_奇遇代理"
@@ -188,10 +213,20 @@
   },
   "灰域_加速结算检测": {
     "recognition": "OCR",
-    "roi" : [158,276,118,73],
+    "roi": [
+      158,
+      276,
+      118,
+      73
+    ],
     "expected": "歼灭敌人",
     "action": "Click",
-    "target":[1130,581,56,45],
+    "target": [
+      1130,
+      581,
+      56,
+      45
+    ],
     "next": [
       "灰域_加速结算检测",
       "灰域_加速结算"
@@ -214,11 +249,21 @@
   },
   "灰域_结算检测": {
     "recognition": "OCR",
-    "roi" : [424,604,75,51],
+    "roi": [
+      424,
+      604,
+      75,
+      51
+    ],
     "expected": "积分",
     "action": "Click",
-    "target":[1130,581,56,45],
-    "post_delay":5000,
+    "target": [
+      1130,
+      581,
+      56,
+      45
+    ],
+    "post_delay": 5000,
     "next": [
       "灰域_领取奖励",
       "灰域_灰域检测"
@@ -269,11 +314,24 @@
   },
   "灰域_领取奖励": {
     "recognition": "OCR",
-    "roi" : [0,69,652,354],
-    "expected": ["领取","型"],
+    "roi": [
+      0,
+      69,
+      652,
+      354
+    ],
+    "expected": [
+      "领取",
+      "型"
+    ],
     "action": "LongPress",
     "duration": 10,
-    "target":[1130,581,56,45],
-    "next":"灰域_灰域检测"
+    "target": [
+      1130,
+      581,
+      56,
+      45
+    ],
+    "next": "灰域_灰域检测"
   }
 }

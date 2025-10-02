@@ -4,8 +4,13 @@
     },
     "防卫者打捞_开始作战": {
         "recognition": "OCR",
-        "roi" : [1037,621,94,47],
-        "expected":"开始",
+        "roi": [
+            1037,
+            621,
+            94,
+            47
+        ],
+        "expected": "开始",
         "action": "LongPress",
         "duration": 20,
         "next": [
