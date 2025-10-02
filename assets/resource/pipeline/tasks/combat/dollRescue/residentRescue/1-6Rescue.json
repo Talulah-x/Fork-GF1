@@ -1,11 +1,11 @@
 {
-    "!5-4e打捞总流程": {
+    "!1_6_打捞总流程": {
         "next": [
-            "5-4菜单",
-            "5-4e开始作战"
+            "1_6_菜单",
+            "1_6_开始作战"
         ]
     },
-    "5-4菜单": {
+    "1_6_菜单": {
         "recognition": "OCR",
         "roi": [
             515,
@@ -14,31 +14,39 @@
             60
         ],
         "expected": [
-            "第五"
+            "第"
         ],
+        "action": "Click",
+        "target": [
+            965,
+            173,
+            39,
+            28
+        ],
+        "post_delay": 400,
         "next": [
-            "5-4e_进入关卡"
+            "1_6_进入关卡"
         ],
         "interrupt": [
-            "5-4e_选图下拉"
+            "1_6_选图下拉"
         ]
     },
-    "5-4e_进入关卡": {
-        "recognition": "TemplateMatch",
+    "1_6_进入关卡": {
+        "recognition": "OCR",
         "roi": [
-            455,
-            229,
-            219,
-            490
+            640,
+            575,
+            149,
+            137
         ],
-        "template": "combat/dollRescue/residentRescue/5-4eRescue/entry.png",
+        "expected": "除草行动",
         "action": "LongPress",
-        "duration": 50,
+        "post_delay": 500,
         "next": [
-            "5-4e_普通作战"
+            "1_6_普通作战"
         ]
     },
-    "5-4e_选图下拉": {
+    "1_6_选图下拉": {
         "action": "Swipe",
         "begin": [
             700,
@@ -52,9 +60,23 @@
             1,
             1
         ],
-        "duration": 500
+        "duration": 300
     },
-    "5-4e_普通作战": {
+    "1_6_部署打手": {
+        "action": "LongPress",
+        "duration": 50,
+        "target": [
+            266,
+            300,
+            14,
+            14
+        ],
+        "next": [
+            "1_6_打手部署确定",
+            "1_6_部署打手"
+        ]
+    },
+    "1_6_普通作战": {
         "recognition": "OCR",
         "roi": [
             828,
@@ -69,24 +91,10 @@
         "duration": 50,
         "post_delay": 3000,
         "next": [
-            "5-4e_部署打捞队"
+            "1_6_部署打手"
         ]
     },
-    "5-4e_部署打捞队": {
-        "action": "LongPress",
-        "duration": 50,
-        "target": [
-            797,
-            138,
-            6,
-            7
-        ],
-        "next": [
-            "5-4e_打捞队部署确定",
-            "5-4e_部署打捞队"
-        ]
-    },
-    "5-4e_打捞队部署确定": {
+    "1_6_打手部署确定": {
         "recognition": "OCR",
         "roi": [
             1071,
@@ -102,43 +110,10 @@
         "post_delay": 1000,
         "duration": 50,
         "next": [
-            "5-4e_部署狗粮队"
+            "1_6_开始作战"
         ]
     },
-    "5-4e_部署狗粮队": {
-        "action": "LongPress",
-        "duration": 50,
-        "target": [
-            775,
-            689,
-            7,
-            9
-        ],
-        "next": [
-            "5-4e_部署狗粮队确定",
-            "5-4e_部署狗粮队"
-        ]
-    },
-    "5-4e_部署狗粮队确定": {
-        "recognition": "OCR",
-        "roi": [
-            1071,
-            592,
-            192,
-            88
-        ],
-        "expected": [
-            "确定",
-            "取消"
-        ],
-        "action": "LongPress",
-        "post_delay": 1000,
-        "duration": 50,
-        "next": [
-            "5-4e开始作战"
-        ]
-    },
-    "5-4e开始作战": {
+    "1_6_开始作战": {
         "recognition": "OCR",
         "roi": [
             1037,
@@ -149,12 +124,12 @@
         "expected": "开始",
         "action": "LongPress",
         "duration": 50,
+        "post_delay": 2000,
         "next": [
-            "5-4e点击打捞队",
-            "5-4e开始作战"
+            "1_6_点击打手"
         ]
     },
-    "5-4e点击打捞队": {
+    "1_6_点击打手": {
         "recognition": "OCR",
         "roi": [
             1109,
@@ -167,17 +142,17 @@
         "duration": 50,
         "post_delay": 500,
         "target": [
-            793,
-            135,
-            15,
-            15
+            266,
+            300,
+            14,
+            14
         ],
         "next": [
-            "5-4e补给打捞队",
-            "5-4e点击打捞队"
+            "1_6_补给打手",
+            "1_6_点击打手"
         ]
     },
-    "5-4e补给打捞队": {
+    "1_6_补给打手": {
         "recognition": "OCR",
         "roi": [
             1156,
@@ -190,10 +165,10 @@
         "duration": 50,
         "post_delay": 800,
         "next": [
-            "5-4e点击计划模式"
+            "1_6_点击计划模式"
         ]
     },
-    "5-4e点击计划模式": {
+    "1_6_点击计划模式": {
         "recognition": "OCR",
         "roi": [
             1163,
@@ -212,10 +187,10 @@
             18
         ],
         "next": [
-            "5-4e点击boss"
+            "1_6_点击计划点1"
         ]
     },
-    "5-4e点击boss": {
+    "1_6_点击计划点1": {
         "recognition": "OCR",
         "roi": [
             1109,
@@ -228,16 +203,38 @@
         "duration": 50,
         "post_delay": 300,
         "target": [
-            240,
-            157,
-            16,
-            16
+            509,
+            683,
+            18,
+            14
         ],
         "next": [
-            "5-4e点击下一回合"
+            "1_6_点击计划点2"
         ]
     },
-    "5-4e点击下一回合": {
+    "1_6_点击计划点2": {
+        "recognition": "OCR",
+        "roi": [
+            1109,
+            640,
+            73,
+            45
+        ],
+        "expected": "执行",
+        "action": "LongPress",
+        "duration": 50,
+        "post_delay": 300,
+        "target": [
+            622,
+            567,
+            14,
+            14
+        ],
+        "next": [
+            "1_6_点击下一回合"
+        ]
+    },
+    "1_6_点击下一回合": {
         "recognition": "OCR",
         "roi": [
             1111,
@@ -256,10 +253,10 @@
             39
         ],
         "next": [
-            "5-4e执行计划"
+            "1_6_执行计划"
         ]
     },
-    "5-4e执行计划": {
+    "1_6_执行计划": {
         "recognition": "OCR",
         "roi": [
             985,
@@ -276,25 +273,26 @@
             75,
             35
         ],
-        "post_delay": 10000,
-        "timeout": 110000,
+        "post_delay": 8000,
+        "timeout": 100000,
         "next": [
-            "5-4e计划加速"
+            "1_6_战斗加速"
         ]
     },
-    "5-4e计划加速": {
+    "1_6_战斗加速": {
+        "rate_limit": 2000,
         "next": [
-            "5-4e再次作战"
+            "1_6_再次作战"
         ],
         "interrupt": [
             "public_加速结算进入",
-            "5-4e计划加速wait"
+            "1_6_wait"
         ]
     },
-    "5-4e计划加速wait": {
-        "post_delay": 1300
+    "1_6_wait": {
+        "post_delay": 1500
     },
-    "5-4e再次作战": {
+    "1_6_再次作战": {
         "recognition": "OCR",
         "roi": [
             277,
@@ -305,17 +303,17 @@
         "expected": "再次作战",
         "action": "LongPress",
         "duration": 50,
+        "pre_delay": 200,
         "target": [
             332,
             591,
             1,
             1
         ],
-        "rate_limit": 1200,
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
-            "5-4菜单",
-            "5-4e开始作战"
+            "1_6_开始作战",
+            "1_6_菜单"
         ],
         "interrupt": [
             "public二星人形回收_人形回收",
