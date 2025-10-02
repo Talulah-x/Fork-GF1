@@ -1,7 +1,23 @@
 {
     "!5-4e打捞总流程": {
         "next": [
+            "5-4菜单",
             "5-4e开始作战"
+        ]
+    },
+    "5-4菜单": {
+        "recognition": "OCR",
+        "roi": [
+            515,
+            132,
+            89,
+            60
+        ],
+        "expected": [
+            "第五"
+        ],
+        "next": [
+            "5-4e_进入关卡"
         ],
         "interrupt": [
             "5-4e_选图下拉"
@@ -260,84 +276,23 @@
             75,
             35
         ],
-        "post_delay": 25000,
+        "post_delay": 10000,
         "timeout": 110000,
         "next": [
-            "5-4e-点击获得角色"
+            "5-4e计划加速"
         ]
     },
-    "5-4e-点击获得角色": {
-        "recognition": "OCR",
-        "roi": [
-            277,
-            572,
-            188,
-            73
-        ],
-        "expected": "再次作战",
-        "action": "LongPress",
-        "duration": 50,
-        "target": [
-            386,
-            620,
-            1,
-            1
-        ],
-        "pre_delay": 100,
+    "5-4e计划加速": {
         "next": [
-            "5-4e再次作战",
-            "5-4e-点击获得角色1"
+            "5-4e再次作战"
+        ],
+        "interrupt": [
+            "public_加速结算进入",
+            "5-4e计划加速wait"
         ]
     },
-    "5-4e-点击获得角色1": {
-        "recognition": "OCR",
-        "roi": [
-            23,
-            162,
-            58,
-            54
-        ],
-        "expected": "枪",
-        "pre_delay": 600,
-        "action": "LongPress",
-        "duration": 15,
-        "target": [
-            366,
-            609,
-            94,
-            27
-        ],
-        "post_delay": 600,
-        "next": [
-            "5-4e再次作战",
-            "5-4e-点击获得勋章",
-            "5-4e-点击获得角色1"
-        ]
-    },
-    "5-4e-点击获得勋章": {
-        "recognition": "OCR",
-        "roi": [
-            249,
-            202,
-            56,
-            55
-        ],
-        "expected": "品",
-        "pre_delay": 600,
-        "action": "LongPress",
-        "duration": 15,
-        "target": [
-            366,
-            609,
-            94,
-            27
-        ],
-        "post_delay": 600,
-        "next": [
-            "5-4e再次作战",
-            "5-4e-点击获得勋章",
-            "5-4e-点击获得角色1"
-        ]
+    "5-4e计划加速wait": {
+        "post_delay": 1300
     },
     "5-4e再次作战": {
         "recognition": "OCR",
@@ -350,20 +305,21 @@
         "expected": "再次作战",
         "action": "LongPress",
         "duration": 50,
-        "pre_delay": 200,
         "target": [
-            366,
-            609,
-            94,
-            27
+            332,
+            591,
+            1,
+            1
         ],
-        "post_delay": 5000,
+        "rate_limit": 1200,
+        "post_delay": 1000,
         "next": [
-            "!5-4e打捞总流程",
-            "5-4e-点击获得角色"
+            "5-4菜单",
+            "5-4e开始作战"
         ],
         "interrupt": [
-            "public二星人形回收_人形回收"
+            "public二星人形回收_人形回收",
+            "public_关卡结算点击1"
         ]
     }
 }
