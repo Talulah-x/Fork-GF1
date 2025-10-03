@@ -1,8 +1,21 @@
 {
     "!2-4e打捞总流程":{
         "next":[
-            "2-4e拖动操作1"
+            "2-4e地图缩放"
         ]
+    },
+    "2-4e地图缩放": {
+        "recognition": "DirectHit",
+        "action": "Command",
+        "exec": "powershell",
+        "args": [
+            "-ExecutionPolicy", "Bypass",
+            "-File", "{RESOURCE_DIR}/../tools/scroll.ps1",
+            "-ScrollCount", "100",
+            "-Direction", "down"
+        ],
+        "post_delay": 500,
+        "next": ["2-4e拖动操作1"]
     },
     "2-4e拖动操作1":{
         "recognition": "DirectHit",
