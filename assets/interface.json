@@ -811,6 +811,10 @@
                     "pipeline_override": {
                         "!常驻人形打捞": {
                             "next": "!3-4e打捞总流程"
+                        }
+                    }
+                },
+                {
                     "name": "1-6圣捞(普通难度)",
                     "pipeline_override": {
                         "!常驻人形打捞": {
