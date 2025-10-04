@@ -12,7 +12,7 @@
         ],
         "post_delay": 1,
         "pre_delay": 1,
-        "rate_limit": 1000,
+        "rate_limit": 500,
         "timeout": 600000,
         "next": [
             "134重置_再战连点2"
@@ -31,7 +31,7 @@
         ],
         "post_delay": 1,
         "pre_delay": 1,
-        "rate_limit": 1000,
+        "rate_limit": 500,
         "timeout": 600000,
         "next": [
             "134重置_再战连点1"
@@ -56,8 +56,8 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "rate_limit": 1000,
-        "post_delay": 20,
+
+        "post_delay": 1,
         "pre_delay": 1,
         "next": [
             "134重置_再战连点2"
@@ -66,15 +66,15 @@
     },
     "134重置_再战连点2": {
         "target": [
-            375,
-            618,
-            70,
-            12
+            400,
+            624,
+            1,
+            1
         ],
         "action": "LongPress",
         "duration": 20,
-        "rate_limit": 1000,
-        "post_delay": 20,
+
+        "post_delay": 10,
         "pre_delay": 1,
         "next": [
             "134重置_再战连点3"
@@ -82,15 +82,14 @@
     },
     "134重置_再战连点3": {
         "target": [
-            375,
-            618,
-            70,
-            12
+            400,
+            624,
+            1,
+            1
         ],
         "action": "LongPress",
         "duration": 20,
-        "rate_limit": 1000,
-        "post_delay": 20,
+        "post_delay": 10,
         "pre_delay": 1,
         "next": [
             "134重置_再战连点4"
@@ -98,15 +97,14 @@
     },
     "134重置_再战连点4": {
         "target": [
-            375,
-            618,
-            70,
-            12
+            400,
+            624,
+            1,
+            1
         ],
         "action": "LongPress",
         "duration": 20,
-        "rate_limit": 1000,
-        "post_delay": 20,
+        "post_delay": 10,
         "pre_delay": 1,
         "next": [
             "134重置_再战连点5"
@@ -114,45 +112,70 @@
     },
     "134重置_再战连点5": {
         "target": [
-            375,
-            618,
-            70,
-            12
+            400,
+            624,
+            1,
+            1   
         ],
         "action": "LongPress",
         "duration": 20,
-        "rate_limit": 1000,
-        "post_delay": 20,
+        "post_delay": 10,
         "next": [
             "134重置_再战连点6"
         ]
     },
     "134重置_再战连点6": {
         "target": [
-            375,
-            618,
-            70,
-            12
+            400,
+            624,
+            1,
+            1
         ],
         "action": "LongPress",
         "duration": 20,
-        "rate_limit": 1000,
-        "post_delay": 20,
+        "post_delay": 10,
         "next": [
             "134重置_再战连点7"
         ]
     },
     "134重置_再战连点7": {
         "target": [
-            375,
-            618,
-            70,
-            12
+            400,
+            624,
+            1,
+            1
         ],
         "action": "LongPress",
         "duration": 20,
-        "rate_limit": 1000,
-        "post_delay": 1000
+        "post_delay": 10,
+        "next": [
+            "134重置_再战连点8"
+        ]
+    },
+    "134重置_再战连点8": {
+        "target": [
+            400,
+            624,
+            1,
+            1
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 10,
+        "next": [
+            "134重置_再战连点9"
+        ]
+    },
+    "134重置_再战连点9": {
+        "target": [
+            400,
+            624,
+            1,
+            1
+        ],
+        "action": "LongPress",
+        "duration": 100,
+        "post_delay": 200
     },
     "134重置_点击获得角色": {
         "recognition": "TemplateMatch",
@@ -163,10 +186,10 @@
             619
         ],
         "target": [
-            375,
-            618,
-            70,
-            12
+            400,
+            624,
+            1,
+            1
         ],
         "template": [
             "combat/levelUp/13-4/doll_get0.png",
