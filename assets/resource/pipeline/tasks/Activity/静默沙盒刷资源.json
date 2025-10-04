@@ -1,0 +1,75 @@
+{
+    "!静默沙盒刷资源": {
+        "next": [
+            "静默沙盒_主循环"
+        ]
+    },
+    "静默沙盒_主循环": {
+        "recognition": "DirectHit",
+        "action": "DoNothing", 
+        "next": [
+            "静默沙盒_开始作战"
+        ]
+    },
+    "静默沙盒_开始作战": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/00_skip.png",
+        "roi": [0, 0, 1280, 720],
+        "threshold": 0.7,
+        "action": "LongPress",
+        "duration": 10,
+        "timeout": 5000,
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "静默沙盒_点击跳过"
+        ]
+    },
+    "静默沙盒_点击跳过": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [1231, 30, 15, 15],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_缩小地图"
+        ]
+    },
+    "静默沙盒_缩小地图": {
+        "recognition": "DirectHit",
+        "action": "Command",
+        "exec": "powershell",
+        "args": [
+            "-ExecutionPolicy", "Bypass",
+            "-File", "{RESOURCE_DIR}/../tools/scroll.ps1",
+            "-ScrollCount", "100",
+            "-Direction", "down"
+        ],
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_地图平移1"
+        ]
+    },
+    "静默沙盒_地图平移1":{
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [280, 600, 1, 1],
+        "end": [1000, 110, 1, 1],
+        "duration": 200,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_地图平移2"
+        ]
+    },
+    "静默沙盒_地图平移2":{
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [280, 600, 1, 1],
+        "end": [1000, 110, 1, 1],
+        "duration": 200,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_缩小地图"
+        ]
+    }
+}
