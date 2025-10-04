@@ -194,7 +194,7 @@
             "name": "静默沙盒刷资源(WIP)",
             "entry": "!静默沙盒刷资源",
             "check": false,
-            "doc": "Placeholder"
+            "doc": "TODO: 静默沙盒刷资源.md(on github)"
         },
         {
             "name": "夜战打捞",

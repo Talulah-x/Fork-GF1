@@ -134,7 +134,7 @@ public class MouseWheelHelper {
     for ($i = 0; $i -lt $ScrollCount; $i++) {
         [MouseWheelHelper]::mouse_event([MouseWheelHelper]::MOUSEEVENTF_WHEEL, 0, 0, $wheelDelta, [System.UIntPtr]::Zero)
         Write-Host "Scroll $($i + 1)/$ScrollCount completed"
-        Start-Sleep -Milliseconds 3
+        Start-Sleep -Milliseconds 1
     }
     
     Write-Host "All operations completed successfully"
