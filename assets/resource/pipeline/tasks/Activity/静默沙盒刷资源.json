@@ -231,7 +231,7 @@
     },
     "静默沙盒_任务简报": {
         "recognition": "TemplateMatch",
-        "template": "./sandbox_resource/02_close_brief_cropped.png",
+        "template": "./sandbox_resource/03_close_brief_cropped.png",
         "roi": [50, 150, 150, 350],
         "threshold": 0.8,
         "action": "LongPress",

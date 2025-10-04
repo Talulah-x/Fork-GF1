@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "name": "MaaGF1",
-    "version": "v1.5.29",
+    "version": "v1.5.33-fix",
     "url": "https://github.com/LeonNagant/MaaGF1_Test",
     "mirrorchyan_rid": null,
     "mirrorchyan_multiplatform": false,
@@ -191,7 +191,7 @@
             "repeat_count": 4
         },
         {
-            "name": "静默沙盒刷资源",
+            "name": "静默沙盒刷资源(WIP)",
             "entry": "!静默沙盒刷资源",
             "check": false,
             "doc": "Placeholder"
