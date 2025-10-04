@@ -13,9 +13,9 @@
     },
     "静默沙盒_剧情对话_00": {
         "recognition": "TemplateMatch",
-        "template": "./sandbox_resource/00_skip.png",
-        "roi": [0, 0, 1280, 720],
-        "threshold": 0.8,
+        "template": "./sandbox_resource/00_skip_cropped.png",
+        "roi": [0, 0, 100, 100],
+        "threshold": 0.95,
         "action": "LongPress",
         "duration": 10,
         "timeout": 5000,
@@ -76,21 +76,20 @@
         "recognition": "OCR",
         "roi" : [1037,621,94,47],
         "expected":"开始",
-        "action": "LongPress",
-        "duration": 20,
-        "target" : [483,536,16,16],
+        "action": "Click",
+        "target" : [483,536,1,1],
         "post_delay":200,
         "next": [
             "静默沙盒_部署铁血_R_部署_点击确定",
-            "静默沙盒_部署铁血_R_已部署_点击取消"
+            "静默沙盒_部署铁血_R_已部署_点击取消",
+            "静默沙盒_部署铁血_R_重装部队_被选中"
         ]
     },
     "静默沙盒_部署铁血_R_部署_点击确定":{
         "recognition": "OCR",
         "roi" : [1141,612,86,50],
         "expected":"确定",
-        "action": "LongPress",
-        "duration": 20,
+        "action": "Click",
         "pre_delay":200,
         "target" : [1141,612,86,50],
         "post_delay":400,
@@ -102,8 +101,7 @@
         "recognition": "OCR",
         "roi" : [1141,612,86,50],
         "expected":"取消",
-        "action": "LongPress",
-        "duration": 20,
+        "action": "Click",
         "pre_delay":200,
         "target" : [1141,612,86,50],
         "post_delay":400,
@@ -111,25 +109,48 @@
             "静默沙盒_部署铁血_L_点击机场"
         ]
     },
+    "静默沙盒_部署铁血_R_重装部队_被选中":{
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/01_deploy_cropped.png",
+        "roi": [50, 150, 200, 150],
+        "threshold": 0.95,
+        "action": "LongPress",
+        "duration": 10,
+        "timeout": 5000,
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "静默沙盒_部署铁血_R_重装部队_切换到普通梯队"
+        ]
+    },
+    "静默沙盒_部署铁血_R_重装部队_切换到普通梯队": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [300, 95, 15, 15],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_部署铁血_R_部署_点击确定"
+        ]
+    },
     "静默沙盒_部署铁血_L_点击机场":{
         "recognition": "OCR",
         "roi" : [1037,621,94,47],
         "expected":"开始",
-        "action": "LongPress",
-        "duration": 20,
-        "target" : [408,460,16,16],
+        "action": "Click",
+        "target" : [408,455,1,1],
         "post_delay":200,
         "next": [
             "静默沙盒_部署铁血_L_部署_点击确定",
-            "静默沙盒_部署铁血_L_已部署_点击取消"
+            "静默沙盒_部署铁血_L_已部署_点击取消",
+            "静默沙盒_部署铁血_L_重装部队_被选中"
         ]
     },
     "静默沙盒_部署铁血_L_部署_点击确定":{
         "recognition": "OCR",
         "roi" : [1141,612,86,50],
         "expected":"确定",
-        "action": "LongPress",
-        "duration": 20,
+        "action": "Click",
         "pre_delay":200,
         "target" : [1141,612,86,50],
         "post_delay":400,
@@ -141,8 +162,7 @@
         "recognition": "OCR",
         "roi" : [1141,612,86,50],
         "expected":"取消",
-        "action": "LongPress",
-        "duration": 20,
+        "action": "Click",
         "pre_delay":200,
         "target" : [1141,612,86,50],
         "post_delay":400,
@@ -150,12 +170,35 @@
             "静默沙盒_作战开始"
         ]
     },
+    "静默沙盒_部署铁血_L_重装部队_被选中":{
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/01_deploy_cropped.png",
+        "roi": [50, 150, 200, 150],
+        "threshold": 0.95,
+        "action": "LongPress",
+        "duration": 10,
+        "timeout": 5000,
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "静默沙盒_部署铁血_L_重装部队_切换到普通梯队"
+        ]
+    },
+    "静默沙盒_部署铁血_L_重装部队_切换到普通梯队": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [300, 95, 15, 15],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_部署铁血_L_部署_点击确定"
+        ]
+    },
     "静默沙盒_作战开始":{
         "recognition": "OCR",
         "roi" : [1042,624,88,45],
         "expected":"开始",
-        "action": "LongPress",
-        "duration": 20,
+        "action": "Click",
         "target" : [1040,629,179,61],
         "post_delay": 2000,
         "next":[
@@ -164,8 +207,8 @@
     },
     "静默沙盒_剧情对话_01": {
         "recognition": "TemplateMatch",
-        "template": "./sandbox_resource/01_skip.png",
-        "roi": [0, 0, 1280, 720],
+        "template": "./sandbox_resource/02_skip_cropped.png",
+        "roi": [200, 550, 800, 100],
         "threshold": 0.8,
         "action": "LongPress",
         "duration": 10,
@@ -188,8 +231,8 @@
     },
     "静默沙盒_任务简报": {
         "recognition": "TemplateMatch",
-        "template": "./sandbox_resource/02_close_brief.png",
-        "roi": [0, 0, 1280, 720],
+        "template": "./sandbox_resource/02_close_brief_cropped.png",
+        "roi": [50, 150, 150, 350],
         "threshold": 0.8,
         "action": "LongPress",
         "duration": 10,
@@ -205,6 +248,334 @@
         "action": "Click",
         "target": [97, 122, 15, 15],
         "pre_delay": 500,
-        "post_delay": 500
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_初始状态判断"
+        ]
+    },
+    "静默沙盒_战斗阶段_初始状态判断": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/04_turn1_cropped.png",
+        "roi": [980, 620, 100, 90],
+        "threshold": 0.8,
+        "action": "LongPress",
+        "duration": 10,
+        "timeout": 5000,
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_点击计划"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_点击计划": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [80, 630, 15, 15],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击梯队"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击梯队": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [483,536,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击目标地点"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击目标地点": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [560,536,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击空白位置"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击空白位置": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [305,605,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击梯队"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击梯队": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [408,455,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击目标地点"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击目标地点": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [408,380,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击空白位置"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击空白位置": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [305,605,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_指挥官_点击梯队"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_指挥官_点击梯队": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [750,192,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_指挥官_杂鱼_R"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_指挥官_杂鱼_R": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [860,233,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_指挥官_杂鱼_U"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_指挥官_杂鱼_U": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [785,82,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_指挥官_返回初始位置"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_指挥官_返回初始位置": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [750,192,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_1_执行计划"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_1_执行计划": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [1185,675,1,1],
+        "pre_delay": 500,
+        "post_delay": 10000,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_制造补给_判断"
+        ]
+    },
+    "静默沙盒_战斗阶段_指挥官_制造补给_判断": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/05_create_cropped.png",
+        "roi": [50, 250, 100, 100],
+        "threshold": 0.8,
+        "action": "LongPress",
+        "duration": 10,
+        "timeout": 10000,
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_制造补给_点击制造"
+        ]
+    },
+    "静默沙盒_战斗阶段_指挥官_制造补给_点击制造": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [100,520,1,1],
+        "pre_delay": 500,
+        "post_delay": 2000,
+        "next": [
+            "静默沙盒_地图平移3"
+        ]
+    },
+    "静默沙盒_地图平移3":{
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [280, 600, 1, 1],
+        "end": [1000, 110, 1, 1],
+        "duration": 200,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_点击空白位置"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_点击空白位置": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [305,605,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_点击计划"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_点击计划": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [80, 630, 15, 15],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [750,192,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_指挥官_点击目标地点"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_指挥官_点击目标地点": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [633,310,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_执行计划"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_执行计划": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [1185,675,1,1],
+        "pre_delay": 500,
+        "post_delay": 5000,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_判断"
+        ]
+    },
+    "静默沙盒_战斗阶段_指挥官_执行补给_判断": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/06_supply_cropped.png",
+        "roi": [20, 200, 150, 150],
+        "threshold": 0.8,
+        "action": "LongPress",
+        "duration": 10,
+        "timeout": 5000,
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_使用装置"
+        ]
+    },
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_使用装置": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [100,455,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_点击梯队"
+        ]
+    },
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_点击梯队": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [558,588,1,1],
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_使用装置"
+        ]
+    },
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_使用装置": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [100,455,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_点击梯队"
+        ]
+    },
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_点击梯队": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [408,433,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_结算"
+        ]
+    },
+    "静默沙盒_结算": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [315,50,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_结算_确定"
+        ]
+    },
+    "静默沙盒_结算_确定": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [740,500,1,1],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_再次作战_1"
+        ]
+    },
+    "静默沙盒_再次作战_1":{
+        "recognition": "OCR",
+        "roi" : [366,610,100,27],
+        "expected": "再次作战",
+        "action": "Click",
+        "post_delay": 3000,
+        "target" : [366,610,100,27],
+        "next":[
+            "静默沙盒_再次作战_2"
+        ]
+    },
+    "静默沙盒_再次作战_2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target" : [366,610,100,27],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_再次作战_3"
+        ]
+    },
+    "静默沙盒_再次作战_3":{
+        "recognition": "OCR",
+        "roi" : [366,610,100,27],
+        "expected": "再次作战",
+        "action": "Click",
+        "post_delay": 3000,
+        "target" : [366,610,100,27],
+        "next":[
+            "静默沙盒_主循环"
+        ]
     }
 }
