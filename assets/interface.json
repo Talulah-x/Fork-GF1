@@ -191,6 +191,12 @@
             "repeat_count": 4
         },
         {
+            "name": "静默沙盒刷资源",
+            "entry": "!静默沙盒刷资源",
+            "check": false,
+            "doc": "Placeholder"
+        },
+        {
             "name": "夜战打捞",
             "entry": "!夜战打捞",
             "check": false,

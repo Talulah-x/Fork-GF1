@@ -1,0 +1,210 @@
+{
+    "!静默沙盒刷资源": {
+        "next": [
+            "静默沙盒_主循环"
+        ]
+    },
+    "静默沙盒_主循环": {
+        "recognition": "DirectHit",
+        "action": "DoNothing", 
+        "next": [
+            "静默沙盒_剧情对话_00"
+        ]
+    },
+    "静默沙盒_剧情对话_00": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/00_skip.png",
+        "roi": [0, 0, 1280, 720],
+        "threshold": 0.8,
+        "action": "LongPress",
+        "duration": 10,
+        "timeout": 5000,
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "静默沙盒_点击跳过_00"
+        ]
+    },
+    "静默沙盒_点击跳过_00": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [1231, 30, 15, 15],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_缩小地图"
+        ]
+    },
+    "静默沙盒_缩小地图": {
+        "recognition": "DirectHit",
+        "action": "Command",
+        "exec": "powershell",
+        "args": [
+            "-ExecutionPolicy", "Bypass",
+            "-File", "{RESOURCE_DIR}/../tools/scroll.ps1",
+            "-ScrollCount", "100",
+            "-Direction", "down"
+        ],
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_地图平移1"
+        ]
+    },
+    "静默沙盒_地图平移1":{
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [280, 600, 1, 1],
+        "end": [1000, 110, 1, 1],
+        "duration": 200,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_地图平移2"
+        ]
+    },
+    "静默沙盒_地图平移2":{
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [280, 600, 1, 1],
+        "end": [1000, 110, 1, 1],
+        "duration": 200,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_部署铁血_R_点击机场"
+        ]
+    },
+    "静默沙盒_部署铁血_R_点击机场":{
+        "recognition": "OCR",
+        "roi" : [1037,621,94,47],
+        "expected":"开始",
+        "action": "LongPress",
+        "duration": 20,
+        "target" : [483,536,16,16],
+        "post_delay":200,
+        "next": [
+            "静默沙盒_部署铁血_R_部署_点击确定",
+            "静默沙盒_部署铁血_R_已部署_点击取消"
+        ]
+    },
+    "静默沙盒_部署铁血_R_部署_点击确定":{
+        "recognition": "OCR",
+        "roi" : [1141,612,86,50],
+        "expected":"确定",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay":200,
+        "target" : [1141,612,86,50],
+        "post_delay":400,
+        "next":[
+            "静默沙盒_部署铁血_L_点击机场"
+        ]
+    },
+    "静默沙盒_部署铁血_R_已部署_点击取消":{
+        "recognition": "OCR",
+        "roi" : [1141,612,86,50],
+        "expected":"取消",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay":200,
+        "target" : [1141,612,86,50],
+        "post_delay":400,
+        "next":[
+            "静默沙盒_部署铁血_L_点击机场"
+        ]
+    },
+    "静默沙盒_部署铁血_L_点击机场":{
+        "recognition": "OCR",
+        "roi" : [1037,621,94,47],
+        "expected":"开始",
+        "action": "LongPress",
+        "duration": 20,
+        "target" : [408,460,16,16],
+        "post_delay":200,
+        "next": [
+            "静默沙盒_部署铁血_L_部署_点击确定",
+            "静默沙盒_部署铁血_L_已部署_点击取消"
+        ]
+    },
+    "静默沙盒_部署铁血_L_部署_点击确定":{
+        "recognition": "OCR",
+        "roi" : [1141,612,86,50],
+        "expected":"确定",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay":200,
+        "target" : [1141,612,86,50],
+        "post_delay":400,
+        "next":[
+            "静默沙盒_作战开始"
+        ]
+    },
+    "静默沙盒_部署铁血_L_已部署_点击取消":{
+        "recognition": "OCR",
+        "roi" : [1141,612,86,50],
+        "expected":"取消",
+        "action": "LongPress",
+        "duration": 20,
+        "pre_delay":200,
+        "target" : [1141,612,86,50],
+        "post_delay":400,
+        "next":[
+            "静默沙盒_作战开始"
+        ]
+    },
+    "静默沙盒_作战开始":{
+        "recognition": "OCR",
+        "roi" : [1042,624,88,45],
+        "expected":"开始",
+        "action": "LongPress",
+        "duration": 20,
+        "target" : [1040,629,179,61],
+        "post_delay": 2000,
+        "next":[
+            "静默沙盒_剧情对话_01"
+        ]
+    },
+    "静默沙盒_剧情对话_01": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/01_skip.png",
+        "roi": [0, 0, 1280, 720],
+        "threshold": 0.8,
+        "action": "LongPress",
+        "duration": 10,
+        "timeout": 5000,
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "静默沙盒_点击跳过_01"
+        ]
+    },
+    "静默沙盒_点击跳过_01": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [1231, 30, 15, 15],
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "静默沙盒_任务简报"
+        ]
+    },
+    "静默沙盒_任务简报": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/02_close_brief.png",
+        "roi": [0, 0, 1280, 720],
+        "threshold": 0.8,
+        "action": "LongPress",
+        "duration": 10,
+        "timeout": 5000,
+        "pre_delay": 500,
+        "post_delay": 1000,
+        "next": [
+            "静默沙盒_关闭简报"
+        ]
+    },
+    "静默沙盒_关闭简报": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [97, 122, 15, 15],
+        "pre_delay": 500,
+        "post_delay": 500
+    }
+}
