@@ -305,6 +305,26 @@
             "1",
             "2"
         ],
+        "rate_limit": 1500,
+        "pre_delay": 1000,
+        "post_delay": 1500,
+        "next": [
+            "1_6_round3_1",
+            "1_6_round3"
+        ],
+        "timeout": 60000
+    },
+    "1_6_round3_1": {
+        "recognition": "OCR",
+        "roi": [
+            988,
+            646,
+            91,
+            63
+        ],
+        "expected": [
+            "03"
+        ],
         "action": "LongPress",
         "target": [
             562,
