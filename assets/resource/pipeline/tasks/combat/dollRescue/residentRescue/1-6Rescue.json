@@ -296,12 +296,15 @@
     "1_6_round3": {
         "recognition": "OCR",
         "roi": [
-            591,
-            328,
-            19,
-            31
+            203,
+            673,
+            23,
+            33
         ],
-        "expected": "1",
+        "expected": [
+            "1",
+            "2"
+        ],
         "action": "LongPress",
         "target": [
             562,
