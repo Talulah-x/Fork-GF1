@@ -580,6 +580,7 @@
         "post_delay": 100,
         "next": [
             "静默沙盒_战斗阶段_计划模式_2_检查回合2",
+            "静默沙盒_战斗阶段_计划模式_2_检查回合5",
             "静默沙盒_战斗阶段_计划模式_2_继续循环"
         ]
     },
@@ -597,7 +598,22 @@
             "静默沙盒_战斗阶段_计划模式_2_执行计划"
         ]
     },
-    // else 剩余回合 != 2，重新执行计划模式
+    // else if 剩余回合 == 5，取消计划模式 && 重新执行计划模式
+    "静默沙盒_战斗阶段_计划模式_2_检查回合5": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/04_end5_cropped.png",
+        "roi": [980, 620, 100, 90],
+        "threshold": 0.9,
+        "action": "Click",
+        "target": [80, 630, 15, 15],
+        "timeout": 1000,
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_Begin"
+        ]
+    },
+    // else 剩余回合 != 2 && != 5，重新执行计划模式
     "静默沙盒_战斗阶段_计划模式_2_继续循环": {
         "recognition": "DirectHit",
         "action": "DoNothing",
