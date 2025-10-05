@@ -431,7 +431,7 @@
     "静默沙盒_战斗阶段_计划模式_1_检查回合5": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_end5_cropped.png",
-        "roi": [980, 620, 100, 90],
+        "roi": [1000, 660, 50, 50],
         "threshold": 0.9,
         "action": "DoNothing",
         "timeout": 1000,
@@ -638,7 +638,7 @@
     "静默沙盒_战斗阶段_计划模式_2_检查回合2": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_end2_cropped.png",
-        "roi": [980, 620, 100, 90],
+        "roi": [1000, 660, 50, 50],
         "threshold": 0.9,
         "action": "DoNothing",
         "timeout": 1000,
@@ -652,7 +652,7 @@
     "静默沙盒_战斗阶段_计划模式_2_检查回合5": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_end5_cropped.png",
-        "roi": [980, 620, 100, 90],
+        "roi": [1000, 660, 50, 50],
         "threshold": 0.9,
         "action": "Click",
         "target": [80, 630, 15, 15],
