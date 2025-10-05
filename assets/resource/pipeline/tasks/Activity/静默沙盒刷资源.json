@@ -431,7 +431,7 @@
     "静默沙盒_战斗阶段_计划模式_1_检查回合5": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_end5_cropped.png",
-        "roi": [980, 620, 100, 90],
+        "roi": [1000, 660, 50, 50],
         "threshold": 0.9,
         "action": "DoNothing",
         "timeout": 1000,
@@ -465,7 +465,7 @@
     "静默沙盒_战斗阶段_指挥官_制造补给_判断": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/05_create_cropped.png",
-        "roi": [50, 250, 100, 100],
+        "roi": [30, 430, 100, 40],
         "threshold": 0.8,
         "action": "DoNothing",
         "timeout": 10000,
@@ -556,9 +556,59 @@
     "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队": {
         "recognition": "DirectHit",
         "action": "Click",
-        "target" : [747,192,0,0],
+        "target": [747, 192, 0, 0],
         "pre_delay": 500,
-        "post_delay": 500,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_count_1"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_count_1": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [747, 192, 0, 0],
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_count_2"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_count_2": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [747, 192, 0, 0],
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_count_3"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_count_3": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [747, 192, 0, 0],
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_count_4"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_count_4": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [747, 192, 0, 0],
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_count_5"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_count_5": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [747, 192, 0, 0],
+        "pre_delay": 100,
+        "post_delay": 100,
         "next": [
             "静默沙盒_战斗阶段_计划模式_2_指挥官_点击目标地点"
         ]
@@ -566,7 +616,7 @@
     "静默沙盒_战斗阶段_计划模式_2_指挥官_点击目标地点": {
         "recognition": "DirectHit",
         "action": "Click",
-        "target" : [633,310,0,0],
+        "target": [633, 310, 0, 0],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
@@ -588,7 +638,7 @@
     "静默沙盒_战斗阶段_计划模式_2_检查回合2": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_end2_cropped.png",
-        "roi": [980, 620, 100, 90],
+        "roi": [1000, 660, 50, 50],
         "threshold": 0.9,
         "action": "DoNothing",
         "timeout": 1000,
@@ -602,7 +652,7 @@
     "静默沙盒_战斗阶段_计划模式_2_检查回合5": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_end5_cropped.png",
-        "roi": [980, 620, 100, 90],
+        "roi": [1000, 660, 50, 50],
         "threshold": 0.9,
         "action": "Click",
         "target": [80, 630, 15, 15],
@@ -648,7 +698,7 @@
     "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_判断_使用装置": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/06_supply_cropped.png",
-        "roi": [20, 200, 150, 150],
+        "roi": [30, 430, 100, 40],
         "threshold": 0.8,
         "action": "DoNothing",
         "timeout": 5000,
@@ -682,7 +732,7 @@
         "recognition": "DirectHit",
         "action": "DoNothing",
         "pre_delay": 1000,
-        "post_delay": 100,
+        "post_delay": 1000,
         "next": [
             "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_检查补给状态",
             "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_重新补给"
@@ -727,7 +777,7 @@
     "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_判断_使用装置": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/06_supply_cropped.png",
-        "roi": [20, 200, 150, 150],
+        "roi": [30, 430, 100, 40],
         "threshold": 0.8,
         "action": "DoNothing",
         "timeout": 5000,
@@ -761,7 +811,7 @@
         "recognition": "DirectHit",
         "action": "DoNothing",
         "pre_delay": 1000,
-        "post_delay": 100,
+        "post_delay": 1000,
         "next": [
             "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_检查补给状态",
             "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_重新补给"
