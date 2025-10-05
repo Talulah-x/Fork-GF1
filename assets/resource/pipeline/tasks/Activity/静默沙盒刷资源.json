@@ -261,7 +261,7 @@
             "静默沙盒_战斗阶段_计划模式_1_Begin"
         ]
     },
-    // 第一轮战斗 Begin
+// 第一轮战斗 Begin
     "静默沙盒_战斗阶段_计划模式_1_Begin": {
         "recognition": "DirectHit",
         // 点击空白位置
@@ -273,7 +273,7 @@
             "静默沙盒_战斗阶段_计划模式_1_点击计划_Begin"
         ]
     },
-    /// 计划模式 Begin
+/// 计划模式 Begin
     "静默沙盒_战斗阶段_计划模式_1_点击计划_Begin": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -316,7 +316,7 @@
             "静默沙盒_战斗阶段_计划模式_1_点击计划_Begin"
         ]
     },
-    /// 计划模式 End
+/// 计划模式 End
     "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击梯队": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -461,7 +461,7 @@
             "静默沙盒_战斗阶段_指挥官_制造补给_判断"
         ]
     },
-    // 第一轮战斗 第一轮战斗End
+// 第一轮战斗 第一轮战斗End
     "静默沙盒_战斗阶段_指挥官_制造补给_判断": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/05_create_cropped.png",
@@ -494,29 +494,65 @@
         "duration": 100,
         "post_delay": 100,
         "next": [
-            "静默沙盒_战斗阶段_计划模式_2_点击空白位置"
+            "静默沙盒_战斗阶段_计划模式_2_Begin"
         ]
     },
-    "静默沙盒_战斗阶段_计划模式_2_点击空白位置": {
+// 第二轮战斗 Begin
+    "静默沙盒_战斗阶段_计划模式_2_Begin": {
         "recognition": "DirectHit",
+        // 点击空白位置
         "action": "Click",
         "target" : [305,605,0,0],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
-            "静默沙盒_战斗阶段_计划模式_2_点击计划"
+            "静默沙盒_战斗阶段_计划模式_2_点击计划_Begin"
         ]
     },
-    "静默沙盒_战斗阶段_计划模式_2_点击计划": {
+/// 计划模式 Begin
+    "静默沙盒_战斗阶段_计划模式_2_点击计划_Begin": {
         "recognition": "DirectHit",
         "action": "Click",
         "target": [80, 630, 15, 15],
         "pre_delay": 500,
-        "post_delay": 500,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_点击计划_生效判断"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_点击计划_生效判断": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_点击计划_检查是否进入计划模式",
+            "静默沙盒_战斗阶段_计划模式_2_点击计划_重新点击"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_点击计划_检查是否进入计划模式": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/04_planning_cropped.png",
+        "roi": [1100, 640, 100, 50],
+        "threshold": 0.9,
+        "action": "DoNothing",
+        "timeout": 1000,
+        "pre_delay": 100,
+        "post_delay": 100,
         "next": [
             "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队"
         ]
     },
+    "静默沙盒_战斗阶段_计划模式_2_点击计划_重新点击": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_点击计划_Begin"
+        ]
+    },
+/// 计划模式 End
     "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队": {
         "recognition": "DirectHit",
         "action": "Click",
@@ -534,20 +570,82 @@
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
+            "静默沙盒_战斗阶段_计划模式_2_回合判断"
+        ]
+    },
+    "静默沙盒_战斗阶段_计划模式_2_回合判断": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_检查回合2",
+            "静默沙盒_战斗阶段_计划模式_2_检查回合5",
+            "静默沙盒_战斗阶段_计划模式_2_继续循环"
+        ]
+    },
+    // if 剩余回合 == 2，则进行计划
+    "静默沙盒_战斗阶段_计划模式_2_检查回合2": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/04_end2_cropped.png",
+        "roi": [980, 620, 100, 90],
+        "threshold": 0.9,
+        "action": "DoNothing",
+        "timeout": 1000,
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
             "静默沙盒_战斗阶段_计划模式_2_执行计划"
+        ]
+    },
+    // else if 剩余回合 == 5，取消计划模式 && 重新执行计划模式
+    "静默沙盒_战斗阶段_计划模式_2_检查回合5": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/04_end5_cropped.png",
+        "roi": [980, 620, 100, 90],
+        "threshold": 0.9,
+        "action": "Click",
+        "target": [80, 630, 15, 15],
+        "timeout": 1000,
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_Begin"
+        ]
+    },
+    // else 剩余回合 != 2 && != 5，重新执行计划模式
+    "静默沙盒_战斗阶段_计划模式_2_继续循环": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_计划模式_2_Begin"
         ]
     },
     "静默沙盒_战斗阶段_计划模式_2_执行计划": {
         "recognition": "DirectHit",
         "action": "Click",
-        "target" : [1185,675,0,0],
+        "target": [1185, 675, 0, 0],
         "pre_delay": 500,
-        "post_delay": 5000,
+        "post_delay": 10000,
         "next": [
-            "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_判断"
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_Begin"
         ]
     },
-    "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_判断": {
+// 第二轮战斗 End
+
+// 补给铁血 R Begin
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_Begin": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_判断_使用装置"
+        ]
+    },
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_判断_使用装置": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/06_supply_cropped.png",
         "roi": [20, 200, 150, 150],
@@ -577,10 +675,56 @@
         "pre_delay": 500,
         "post_delay": 1000,
         "next": [
-            "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_判断"
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_补给是否成功"
         ]
     },
-    "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_判断": {
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_补给是否成功": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 1000,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_检查补给状态",
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_重新补给"
+        ]
+    },
+    // if 右侧（1梯队）补给成功，则开始补给左侧梯队
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_检查补给状态": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/07_end_r_cropped.png",
+        "roi": [600, 550, 80, 20],
+        "threshold": 0.9,
+        "action": "DoNothing",
+        "timeout": 1000,
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_Begin"
+        ]
+    },
+    // else 重新执行右侧补给逻辑
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_重新补给": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_Begin"
+        ]
+    },
+// 补给铁血 R End
+
+// 补给铁血 L Begin
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_Begin": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_判断_使用装置"
+        ]
+    },
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_判断_使用装置": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/06_supply_cropped.png",
         "roi": [20, 200, 150, 150],
@@ -610,9 +754,44 @@
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_补给是否成功"
+        ]
+    },
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_补给是否成功": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 1000,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_检查补给状态",
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_重新补给"
+        ]
+    },
+    // if 左侧（2梯队）补给成功，尝试结算
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_检查补给状态": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/07_end_l_cropped.png",
+        "roi": [450, 400, 80, 20],
+        "threshold": 0.9,
+        "action": "DoNothing",
+        "timeout": 1000,
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
             "静默沙盒_结算_判断"
         ]
     },
+    // else 重新执行右侧补给逻辑
+    "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_重新补给": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
+            "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_Begin"
+        ]
+    },
+// 补给铁血 L End
     "静默沙盒_结算_判断": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/07_end_cropped.png",
