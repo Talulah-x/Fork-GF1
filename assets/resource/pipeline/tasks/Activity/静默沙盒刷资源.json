@@ -17,7 +17,7 @@
         "roi": [0, 0, 100, 100],
         "threshold": 0.95,
         "action": "DoNothing",
-        "timeout": 5000,
+        "timeout": 20000,
         "pre_delay": 500,
         "post_delay": 100,
         "next": [
@@ -28,11 +28,23 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 20,
-        "target": [1231, 30, 15, 15],
+        "target": [1231, 30, 0, 0],
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
+            "静默沙盒_剧情对话_00_验证",
             "静默沙盒_缩小地图"
+        ]
+    },
+    "静默沙盒_剧情对话_00_验证": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/00_skip_cropped.png",
+        "roi": [0, 0, 100, 100],
+        "threshold": 0.95,
+        "action": "DoNothing",
+        "timeout": 20000,
+        "next": [
+            "静默沙盒_点击跳过_00"
         ]
     },
     "静默沙盒_缩小地图": {
@@ -118,7 +130,7 @@
         "roi": [50, 150, 200, 150],
         "threshold": 0.95,
         "action": "DoNothing",
-        "timeout": 5000,
+        "timeout": 20000,
         "pre_delay": 500,
         "post_delay": 100,
         "next": [
@@ -129,7 +141,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 20,
-        "target": [300, 95, 15, 15],
+        "target": [300, 95, 0, 0],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
@@ -182,7 +194,7 @@
         "roi": [50, 150, 200, 150],
         "threshold": 0.95,
         "action": "DoNothing",
-        "timeout": 5000,
+        "timeout": 20000,
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -193,7 +205,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 20,
-        "target": [300, 95, 15, 15],
+        "target": [300, 95, 0, 0],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
@@ -218,7 +230,7 @@
         "roi": [200, 550, 800, 100],
         "threshold": 0.8,
         "action": "DoNothing",
-        "timeout": 5000,
+        "timeout": 20000,
         "pre_delay": 500,
         "post_delay": 100,
         "next": [
@@ -227,13 +239,24 @@
     },
     "静默沙盒_点击跳过_01": {
         "recognition": "DirectHit",
-        "action": "LongPress",
-        "duration": 20,
-        "target": [1231, 30, 15, 15],
+        "action": "Click",
+        "target": [1231, 30, 0, 0],
         "pre_delay": 100,
-        "post_delay": 100,
+        "post_delay": 500,
         "next": [
+            "静默沙盒_剧情对话_01_验证",
             "静默沙盒_任务简报"
+        ]
+    },
+    "静默沙盒_剧情对话_01_验证": {
+        "recognition": "TemplateMatch",
+        "template": "./sandbox_resource/02_skip_cropped.png",
+        "roi": [200, 550, 800, 100],
+        "threshold": 0.8,
+        "action": "DoNothing",
+        "timeout": 20000,
+        "next": [
+            "静默沙盒_点击跳过_01"
         ]
     },
     "静默沙盒_任务简报": {
@@ -242,7 +265,7 @@
         "roi": [50, 150, 150, 350],
         "threshold": 0.8,
         "action": "DoNothing",
-        "timeout": 5000,
+        "timeout": 20000,
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -253,7 +276,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 20,
-        "target": [97, 122, 15, 15],
+        "target": [97, 122, 0, 0],
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -266,7 +289,7 @@
         "roi": [980, 620, 100, 90],
         "threshold": 0.8,
         "action": "DoNothing",
-        "timeout": 5000,
+        "timeout": 20000,
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -291,7 +314,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 20,
-        "target": [80, 630, 15, 15],
+        "target": [80, 630, 0, 0],
         "pre_delay": 500,
         "post_delay": 100,
         "next": [
@@ -314,7 +337,7 @@
         "roi": [1100, 640, 100, 50],
         "threshold": 0.9,
         "action": "DoNothing",
-        "timeout": 1000,
+        "timeout": 20000,
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -558,7 +581,7 @@
         "roi": [1000, 660, 50, 50],
         "threshold": 0.9,
         "action": "DoNothing",
-        "timeout": 1000,
+        "timeout": 20000,
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -593,7 +616,7 @@
         "roi": [30, 430, 100, 40],
         "threshold": 0.8,
         "action": "DoNothing",
-        "timeout": 10000,
+        "timeout": 20000,
         "pre_delay": 500,
         "post_delay": 100,
         "next": [
@@ -641,7 +664,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 20,
-        "target": [80, 630, 15, 15],
+        "target": [80, 630, 0, 0],
         "pre_delay": 500,
         "post_delay": 100,
         "next": [
@@ -664,7 +687,7 @@
         "roi": [1100, 640, 100, 50],
         "threshold": 0.9,
         "action": "DoNothing",
-        "timeout": 1000,
+        "timeout": 20000,
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -752,7 +775,7 @@
         "roi": [1000, 660, 50, 50],
         "threshold": 0.9,
         "action": "DoNothing",
-        "timeout": 1000,
+        "timeout": 20000,
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -767,8 +790,8 @@
         "threshold": 0.9,
         "action": "LongPress",
         "duration": 20,
-        "target": [80, 630, 15, 15],
-        "timeout": 1000,
+        "target": [80, 630, 0, 0],
+        "timeout": 20000,
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -814,7 +837,7 @@
         "roi": [30, 430, 100, 40],
         "threshold": 0.8,
         "action": "DoNothing",
-        "timeout": 5000,
+        "timeout": 20000,
         "pre_delay": 500,
         "post_delay": 100,
         "next": [
@@ -856,11 +879,11 @@
     // if 右侧（1梯队）补给成功，则开始补给左侧梯队
     "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_检查补给状态": {
         "recognition": "TemplateMatch",
-        "template": "./sandbox_resource/07_end_r_cropped.png",
-        "roi": [600, 550, 80, 20],
+        "template": "./sandbox_resource/07_point_1_cropped.png",
+        "roi": [1200, 175, 20, 20],
         "threshold": 0.9,
         "action": "DoNothing",
-        "timeout": 1000,
+        "timeout": 20000,
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -895,7 +918,7 @@
         "roi": [30, 430, 100, 40],
         "threshold": 0.8,
         "action": "DoNothing",
-        "timeout": 5000,
+        "timeout": 20000,
         "pre_delay": 500,
         "post_delay": 100,
         "next": [
@@ -937,15 +960,15 @@
     // if 左侧（2梯队）补给成功，尝试结算
     "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_检查补给状态": {
         "recognition": "TemplateMatch",
-        "template": "./sandbox_resource/07_end_l_cropped.png",
-        "roi": [450, 400, 80, 20],
+        "template": "./sandbox_resource/07_point_2_cropped.png",
+        "roi": [1200, 175, 20, 20],
         "threshold": 0.9,
         "action": "DoNothing",
-        "timeout": 1000,
+        "timeout": 20000,
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
-            "静默沙盒_结算_判断"
+            "静默沙盒_结算_点击战役结算"
         ]
     },
     // else 重新执行右侧补给逻辑
@@ -959,19 +982,6 @@
         ]
     },
 // 补给铁血 L End
-    "静默沙盒_结算_判断": {
-        "recognition": "TemplateMatch",
-        "template": "./sandbox_resource/07_end_cropped.png",
-        "roi": [1200, 175, 30, 25],
-        "threshold": 0.8,
-        "action": "DoNothing",
-        "timeout": 5000,
-        "pre_delay": 500,
-        "post_delay": 100,
-        "next": [
-            "静默沙盒_结算_点击战役结算"
-        ]
-    },
     "静默沙盒_结算_点击战役结算": {
         "recognition": "DirectHit",
         "action": "LongPress",
@@ -1026,6 +1036,16 @@
         "post_delay": 3000,
         "target" : [366,610,100,27],
         "next":[
+            "静默沙盒_输出日志"
+        ]
+    },
+    "静默沙盒_输出日志": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "sandbox_runtimes",
+        "pre_delay": 100,
+        "post_delay": 100,
+        "next": [
             "静默沙盒_主循环"
         ]
     }
