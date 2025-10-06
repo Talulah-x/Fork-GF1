@@ -58,6 +58,69 @@ class MyCustomAction(CustomAction):
             print("==========================================\n")
             return CustomAction.RunResult(success=False)
 
+@AgentServer.custom_action("custom_mouse_left_up")
+class CustomMouseLeftUpAction(CustomAction):
+    """
+    自定义鼠标左键抬起动作
+    使用Win32 API实现
+    """
+    
+    def run(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg,
+    ) -> bool:
+        print("custom_mouse_left_up 动作开始执行")
+        
+        try:
+            print("执行鼠标左键抬起操作")
+            
+            # 使用Win32 API执行鼠标左键抬起
+            result = win32_mouse_left_up()
+            
+            if result:
+                print("鼠标左键抬起操作执行成功")
+                print("==========================================\n")
+                return CustomAction.RunResult(success=True)
+            else:
+                print("鼠标左键抬起操作执行失败")
+                print("==========================================\n")
+                return CustomAction.RunResult(success=False)
+                
+        except Exception as e:
+            print(f"custom_mouse_left_up 动作执行时发生异常: {e}")
+            traceback.print_exc()
+            print("==========================================\n")
+            return CustomAction.RunResult(success=False)
+
+# 新增的Win32 API鼠标操作函数
+def win32_mouse_left_up():
+    """
+    使用Win32 API执行鼠标左键抬起操作
+    
+    返回:
+        bool: 是否成功
+    """
+    try:
+        print("执行Win32鼠标左键抬起")
+        
+        # 确保目标窗口获得焦点
+        hwnd = find_game_window()
+        if hwnd != 0:
+            win32gui.SetForegroundWindow(hwnd)
+            time.sleep(0.1)
+        
+        # 使用mouse_event发送鼠标左键抬起事件
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+        print("鼠标左键抬起发送成功")
+        
+        return True
+        
+    except Exception as e:
+        print(f"Win32鼠标左键抬起操作失败: {e}")
+        traceback.print_exc()
+        return False
+
 def find_game_window():
     """查找少女前线游戏窗口"""
     try:
@@ -210,7 +273,6 @@ def convert_maa_coordinates(x, y, hwnd=None, maa_width=1280, maa_height=720, x_c
         print(f"坐标转换失败: {e}")
         traceback.print_exc()
         return x, y  # 出错时返回原始坐标
-
 
 
 # 简化的模拟鼠标点击函数 - 修复点击不正确的问题
