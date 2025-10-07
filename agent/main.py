@@ -1,6 +1,7 @@
 import sys
 import os
 import traceback
+import time  # 添加time导入
 
 # 添加DLL路径到PATH环境变量
 def setup_dll_path():
@@ -54,6 +55,8 @@ except Exception as e:
 try:
     import my_action
     import my_reco
+    from action import input, log
+    from server import server  # 导入server模块
     print("✅ 自定义模块导入成功")
 except Exception as e:
     print(f"❌ 自定义模块导入失败: {e}")
@@ -62,6 +65,8 @@ except Exception as e:
 
 
 def main():
+    custom_server = None
+    
     try:
         print("开始初始化 MaaFramework...")
         # 使用相对于DLL目录的路径
@@ -73,17 +78,49 @@ def main():
 
         print("开始启动 AgentServer...")
         AgentServer.start_up(socket_id)
-        print("AgentServer 启动成功，开始等待连接...")
+        print("AgentServer 启动成功")
         
+        # 等待AgentServer完全启动
+        print("等待 AgentServer 完全启动...")
+        time.sleep(2)
+        print("AgentServer 启动等待完成")
+        
+        # 现在启动CustomServer后台服务
+        print("开始启动 CustomServer...")
+        custom_server = server.get_custom_server()
+        custom_server.start()
+        print("CustomServer 启动成功")
+        
+        print("开始等待连接...")
+        
+        # AgentServer.join() 会阻塞直到连接结束
+        # 在此期间，CustomServer在后台线程中持续运行
         AgentServer.join()
         print("AgentServer 连接结束")
         
+        # 清理资源
+        print("开始清理资源...")
+        if custom_server:
+            custom_server.stop()
         AgentServer.shut_down()
-        print("AgentServer 关闭完成")
+        print("所有服务关闭完成")
 
     except Exception as e:
-        print(f"AgentServer 启动失败: {e}")
+        print(f"服务启动失败: {e}")
         traceback.print_exc()
+        
+        # 确保在出错时也能清理资源
+        try:
+            if custom_server:
+                custom_server.stop()
+        except:
+            pass
+        
+        try:
+            AgentServer.shut_down()
+        except:
+            pass
+        
         sys.exit(1)
 
 
