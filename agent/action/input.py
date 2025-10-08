@@ -1,6 +1,101 @@
 from .include import *
 from .log import MaaLog_Debug, MaaLog_Info
 
+#######################################################################################################################################################################################
+################################################################################ Part I : Registration ################################################################################
+#######################################################################################################################################################################################
+
+@AgentServer.custom_action("sandbox_runtimes")
+class SandboxRuntimesAction(CustomAction):
+    """
+    沙盒运行次数统计动作
+    """
+    
+    def run(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg,
+    ) -> bool:
+        global Sandbox_Runtimes
+        
+        Sandbox_Runtimes = Sandbox_Runtimes + 1
+        MaaLog_Info(f"静默沙盒运行次数：{Sandbox_Runtimes}")
+        
+        return CustomAction.RunResult(success=True)
+
+@AgentServer.custom_action("custom_mouse_left_down")
+class CustomMouseLeftDownAction(CustomAction):
+    """
+    自定义鼠标左键按下动作
+    使用Win32 API实现
+    """
+    
+    def run(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg,
+    ) -> bool:
+        MaaLog_Debug("custom_mouse_left_down 动作开始执行")
+        
+        try:
+            MaaLog_Debug("执行鼠标左键按下操作")
+            
+            # 使用Win32 API执行鼠标左键按下
+            result = win32_mouse_left_down()
+            
+            if result:
+                MaaLog_Debug("鼠标左键按下操作执行成功")
+                MaaLog_Debug("==========================================\n")
+                return CustomAction.RunResult(success=True)
+            else:
+                MaaLog_Debug("鼠标左键按下操作执行失败")
+                MaaLog_Debug("==========================================\n")
+                return CustomAction.RunResult(success=False)
+                
+        except Exception as e:
+            MaaLog_Debug(f"custom_mouse_left_down 动作执行时发生异常: {e}")
+            traceback.print_exc()
+            MaaLog_Debug("==========================================\n")
+            return CustomAction.RunResult(success=False)
+@AgentServer.custom_action("custom_mouse_left_up")
+class CustomMouseLeftUpAction(CustomAction):
+    """
+    自定义鼠标左键抬起动作
+    使用Win32 API实现
+    """
+    
+    def run(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg,
+    ) -> bool:
+        MaaLog_Debug("custom_mouse_left_up 动作开始执行")
+        
+        try:
+            MaaLog_Debug("执行鼠标左键抬起操作")
+            
+            # 使用Win32 API执行鼠标左键抬起
+            result = win32_mouse_left_up()
+            
+            if result:
+                MaaLog_Debug("鼠标左键抬起操作执行成功")
+                MaaLog_Debug("==========================================\n")
+                return CustomAction.RunResult(success=True)
+            else:
+                MaaLog_Debug("鼠标左键抬起操作执行失败")
+                MaaLog_Debug("==========================================\n")
+                return CustomAction.RunResult(success=False)
+                
+        except Exception as e:
+            MaaLog_Debug(f"custom_mouse_left_up 动作执行时发生异常: {e}")
+            traceback.print_exc()
+            MaaLog_Debug("==========================================\n")
+            return CustomAction.RunResult(success=False)
+
+##########################################################################################################################################################################################
+################################################################################ Part II : Implementation ################################################################################
+##########################################################################################################################################################################################
+
 def find_game_window():
     """查找少女前线游戏窗口"""
     try:
@@ -239,90 +334,5 @@ def win32_mouse_left_up():
         
     except Exception as e:
         MaaLog_Debug(f"Win32鼠标左键抬起操作失败: {e}")
-        traceback.print_exc()
-        return False
-
-def simple_mouse_click(x, y, button="left", repeat=1, delay=0.5):
-    """使用绝对坐标直接点击
-    
-    参数:
-        x, y: 屏幕绝对坐标
-        button: 鼠标按钮，"left", "right", "middle"
-        repeat: 重复执行次数
-        delay: 每次执行间的延迟(秒)
-    
-    返回:
-        bool: 是否成功
-    """
-    try:
-        # 确保坐标是整数
-        x, y = int(x), int(y)
-        
-        # 打印点击信息
-        MaaLog_Debug(f"执行点击操作: 屏幕坐标({x}, {y}), 按钮={button}, 重复={repeat}次")
-        
-        # 获取屏幕大小用于安全检查
-        screen_width = win32api.GetSystemMetrics(win32con.SM_CXSCREEN)
-        screen_height = win32api.GetSystemMetrics(win32con.SM_CYSCREEN)
-        MaaLog_Debug(f"屏幕大小: {screen_width}x{screen_height}")
-        
-        # 确保坐标在屏幕范围内
-        if x < 0 or x >= screen_width or y < 0 or y >= screen_height:
-            MaaLog_Debug(f"警告: 坐标({x}, {y})超出屏幕范围，将进行调整")
-            x = max(0, min(x, screen_width - 1))
-            y = max(0, min(y, screen_height - 1))
-            MaaLog_Debug(f"调整后坐标: ({x}, {y})")
-        
-        # 移动鼠标到指定位置
-        win32api.SetCursorPos((x, y))
-        time.sleep(0.1)
-        
-        # 根据按钮类型执行点击
-        if button.lower() == "left":
-            MaaLog_Debug(f"执行左键点击")
-            win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-            time.sleep(0.05)
-            win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
-            
-            # 重复执行
-            for i in range(repeat - 1):
-                MaaLog_Debug(f"重复执行第 {i+2}/{repeat} 次左键点击...")
-                time.sleep(delay)
-                win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-                time.sleep(0.05)
-                win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
-                
-        elif button.lower() == "right":
-            MaaLog_Debug(f"执行右键点击")
-            win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0)
-            time.sleep(0.05)
-            win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0)
-            
-            # 重复执行
-            for i in range(repeat - 1):
-                MaaLog_Debug(f"重复执行第 {i+2}/{repeat} 次右键点击...")
-                time.sleep(delay)
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0)
-                time.sleep(0.05)
-                win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0)
-                
-        elif button.lower() == "middle":
-            MaaLog_Debug(f"执行中键点击")
-            win32api.mouse_event(win32con.MOUSEEVENTF_MIDDLEDOWN, 0, 0, 0, 0)
-            time.sleep(0.05)
-            win32api.mouse_event(win32con.MOUSEEVENTF_MIDDLEUP, 0, 0, 0, 0)
-            
-            # 重复执行
-            for i in range(repeat - 1):
-                MaaLog_Debug(f"重复执行第 {i+2}/{repeat} 次中键点击...")
-                time.sleep(delay)
-                win32api.mouse_event(win32con.MOUSEEVENTF_MIDDLEDOWN, 0, 0, 0, 0)
-                time.sleep(0.05)
-                win32api.mouse_event(win32con.MOUSEEVENTF_MIDDLEUP, 0, 0, 0, 0)
-        
-        return True
-        
-    except Exception as e:
-        MaaLog_Debug(f"鼠标点击操作失败: {e}")
         traceback.print_exc()
         return False

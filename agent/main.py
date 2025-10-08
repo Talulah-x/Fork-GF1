@@ -53,10 +53,9 @@ except Exception as e:
 
 # 导入自定义模块
 try:
-    import my_action
     import my_reco
     from action import input, log
-    from server import server  # 导入server模块
+    from server import server
     print("✅ 自定义模块导入成功")
 except Exception as e:
     print(f"❌ 自定义模块导入失败: {e}")

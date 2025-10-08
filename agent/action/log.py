@@ -1,7 +1,7 @@
 from .include import *
 
 # 日志控制开关
-Enable_MaaLog_Debug = 0
+Enable_MaaLog_Debug = 1
 Enable_MaaLog_Info = 1
 
 def MaaLog_Debug(message):

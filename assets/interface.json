@@ -210,6 +210,17 @@
             "option": [
                 "选择夜战打捞地图"
             ]
+        },
+        {
+            "name": "CustomServer",
+            "entry": "!CustomServer",
+            "check": false,
+            "doc": "Placeholder",
+            "option": [
+                "CustomServer_List"
+            ],
+            "repeatable": false,
+            "repeat_count": 1
         }
     ],
     "advanced": {
@@ -983,6 +994,18 @@
                                 "跑步机_切换待机",
                                 "跑步机_跳过战斗"
                             ]
+                        }
+                    }
+                }
+            ]
+        },
+        "CustomServer_List": {
+            "cases": [
+                {
+                    "name": "GreyZone",
+                    "pipeline_override": {
+                        "!CustomServer": {
+                            "next": "!CustomServer_Task_GreyZone"
                         }
                     }
                 }
