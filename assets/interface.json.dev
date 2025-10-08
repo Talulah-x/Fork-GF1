@@ -30,6 +30,12 @@
             ]
         }
     ],
+    "agent": {
+        "child_exec": "python",
+        "child_args": [
+            "{PROJECT_DIR}/agent/main.py"
+        ]
+    },
     "task": [
         {
             "name": "13-4循环",
@@ -209,7 +215,7 @@
             "name": "CustomServer",
             "entry": "!CustomServer",
             "check": false,
-            "doc": "自定义后台服务器，开发中",
+            "doc": "Placeholder",
             "option": [
                 "CustomServer_List"
             ],
