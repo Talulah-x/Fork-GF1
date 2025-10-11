@@ -9,7 +9,7 @@ class ImageCropTool:
         self.root = root
         self.root.title("图片剪裁工具 - Image Crop Helper")
         self.root.geometry("800x600")
-        self.root.attributes("-topmost", True)  # 窗口置顶
+        self.root.attributes("-topmost", True)
         
         # 变量
         self.current_directory = ""
@@ -209,7 +209,7 @@ class ImageCropTool:
             img_width, img_height = self.original_image.size
             scale_x = self.canvas_width / img_width
             scale_y = self.canvas_height / img_height
-            self.scale_factor = min(scale_x, scale_y, 1.0)  # 不放大，只缩小
+            self.scale_factor = min(scale_x, scale_y, 1.0)
             
             # 缩放图片
             new_width = int(img_width * self.scale_factor)
