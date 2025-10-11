@@ -5,24 +5,6 @@ from .log import MaaLog_Debug, MaaLog_Info
 ################################################################################ Part I : Registration ################################################################################
 #######################################################################################################################################################################################
 
-@AgentServer.custom_action("sandbox_runtimes")
-class SandboxRuntimesAction(CustomAction):
-    """
-    沙盒运行次数统计动作
-    """
-    
-    def run(
-        self,
-        context: Context,
-        argv: CustomAction.RunArg,
-    ) -> bool:
-        global Sandbox_Runtimes
-        
-        Sandbox_Runtimes = Sandbox_Runtimes + 1
-        MaaLog_Info(f"静默沙盒运行次数：{Sandbox_Runtimes}")
-        
-        return CustomAction.RunResult(success=True)
-
 @AgentServer.custom_action("custom_mouse_left_down")
 class CustomMouseLeftDownAction(CustomAction):
     """
