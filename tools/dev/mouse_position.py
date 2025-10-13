@@ -12,7 +12,7 @@ class MouseCoordinateTracker:
         self.root = root
         self.root.title("鼠标坐标获取工具 - MaaFramework ROI Helper (带偏置修正)")
         self.root.geometry("600x400")
-        self.root.attributes("-topmost", True)  # 窗口置顶
+        self.root.attributes("-topmost", True)
         
         # 变量
         self.tracking = False
@@ -176,7 +176,7 @@ class MouseCoordinateTracker:
             
             # 计算偏移（通常边框在左侧和顶部）
             offset_x = (detected_width - actual_width) // 2
-            offset_y = detected_height - actual_height - offset_x  # 顶部边框通常更大
+            offset_y = detected_height - actual_height - offset_x
             
             self.offset_x_var.set(str(-offset_x))
             self.offset_y_var.set(str(-offset_y))

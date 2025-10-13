@@ -1,7 +1,7 @@
 import sys
 import os
 import traceback
-import time  # 添加time导入
+import time
 
 # 添加DLL路径到PATH环境变量
 def setup_dll_path():
@@ -57,11 +57,17 @@ try:
     from action import input, log
     from server import server
     print("✅ 自定义模块导入成功")
+    
+    # 加载配置文件
+    print("开始加载配置文件...")
+    from config import load_config
+    load_config()  # 加载agent.conf配置
+    print("配置文件加载完成")
+    
 except Exception as e:
     print(f"❌ 自定义模块导入失败: {e}")
     traceback.print_exc()
     sys.exit(1)
-
 
 def main():
     custom_server = None
@@ -121,7 +127,6 @@ def main():
             pass
         
         sys.exit(1)
-
 
 if __name__ == "__main__":
     main()

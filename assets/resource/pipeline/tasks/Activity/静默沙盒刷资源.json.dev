@@ -1042,7 +1042,15 @@
     "静默沙盒_输出日志": {
         "recognition": "DirectHit",
         "action": "Custom",
-        "custom_action": "sandbox_runtimes",
+        "custom_action": "parametric_telegram",
+        "custom_action_param": {
+            "type": "info",
+            "message": "沙盒运行状态：{status}，当前次数：{count}",
+            "parameters": {
+                "status": "正常",
+                "count": "{increment_Task_Counter}"
+            }
+        },
         "pre_delay": 100,
         "post_delay": 100,
         "next": [

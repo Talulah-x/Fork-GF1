@@ -24,5 +24,18 @@ from maa.agent.agent_server import AgentServer
 from maa.custom_action import CustomAction
 from maa.context import Context
 
-# 全局变量
-Sandbox_Runtimes = 0
+#################### 全局变量 ####################
+
+# 任务计数器
+Task_Counter = 0
+
+#################### 日志控制开关 ####################
+
+Enable_MaaLog_Debug = 0
+Enable_MaaLog_Info = 1
+
+#################### Telegram配置 ####################
+
+# Telegram配置变量
+Bot_Token = None
+Chat_ID = None
