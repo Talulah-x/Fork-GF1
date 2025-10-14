@@ -32,17 +32,7 @@
         "editor.tabSize": 4,
         "editor.indentSize": "tabSize"
     },
-    "[jsonc]": {
-        "editor.formatOnSave": true,
-        "editor.insertSpaces": true,
-        "editor.tabSize": 4,
-        "editor.indentSize": "tabSize"
-    },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
-    },
-    "json.format.keepLines": true,
-    "json.format.enable": true,
-    "editor.bracketPairColorization.enabled": true,
-    "json.format.keepArrayIndentation": true
+    }
 }
