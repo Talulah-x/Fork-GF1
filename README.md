@@ -8,11 +8,7 @@
 
 # MaaGF1_Test - 少女前线自动化助手
 
-<div align="center">
-
 > **基于 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 项目模板创建**
-
-</div>
 
 ---
 
@@ -113,27 +109,25 @@
 | 功能           | 作者                                          | 手册链接                                                                                                                                                        |
 | ------------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ▶️ 13-4循环    | [LeonNagant](https://github.com/LeonNagant) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/13-4%E5%8F%8C%E6%89%93%E6%89%8B%E6%8B%96%E5%B0%B8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
-| ▶️ 13-4地图初始化 |                                             |                                                                                                                                                             |
 | ▶️ 8-1N循环    | [LeonNagant](https://github.com/LeonNagant) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8C%E6%89%93%E6%89%8B%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
-| ▶️ 8-1N地图初始化 |                                             |                                                                                                                                                             |
 | ▶️ 跑步机       | [白烛](https://github.com/Talulah-x)          | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%B7%91%E6%AD%A5%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)                       |
 
 ### 🎣 打捞系统
 
 | 功能        | 作者                                                                                 | 手册链接                                                                                                                                           |
 | --------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| ▶️ 常驻人形打捞 | [Ethan Lee](https://github.com/hake971920), [坠机の科比](https://github.com/LIUBEI1233) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)                   |
+| ▶️ 常驻人形打捞 | [Ethan Lee](https://github.com/hake971920), [坠机の科比](https://github.com/LIUBEI1233), [do_e](https://github.com/isla23), [Morning](https://github.com/SwordofMorning) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)                   |
 | ▶️ 夜战打捞   | [白烛](https://github.com/Talulah-x)                                                 | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%A4%9C%E6%88%98%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
-| ▶️ 虚粒子对打捞 | [do_e](https://github.com/isla23)                                                  |                                                                                                                                                |
-| ▶️ 蝴蝶星云打捞 | [白烛](https://github.com/Talulah-x)                                                 |                                                                                                                                                |
+| ▶️ 虚粒子对打捞 | [do_e](https://github.com/isla23)                                                  | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)                   |
+| ▶️ 蝴蝶星云打捞 | [白烛](https://github.com/Talulah-x)                                                 | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)                   |
 
 ### 🏠 宿舍功能
 
 | 功能           | 作者                                          | 手册链接                                                                                                                                                             |
 | ------------ | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ▶️ 兵棋挂机循环    | [LeonNagant](https://github.com/LeonNagant) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%85%B5%E6%A3%8B%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
-| ▶️ 宿舍内自动点击爱心 | [LeonNagant](https://github.com/LeonNagant) |                                                                                                                                                                  |
-| ▶️ 宿舍自动点赞    | [LeonNagant](https://github.com/LeonNagant) |                                                                                                                                                                  |
+| ▶️ 宿舍内自动点击爱心 | [LeonNagant](https://github.com/LeonNagant) | |
+| ▶️ 宿舍自动点赞    | [LeonNagant](https://github.com/LeonNagant) | |
 
 ### 🧩 其他功能
 
