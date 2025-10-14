@@ -6,19 +6,30 @@
     },
     "静默沙盒_主循环": {
         "recognition": "DirectHit",
-        "action": "DoNothing", 
+        "action": "DoNothing",
         "next": [
-            "静默沙盒_剧情对话_00"
+            "静默沙盒_剧情对话_00",
+            "静默沙盒_重置"
         ]
     },
+    "静默沙盒_重置": {
+        "recognition": "OCR",
+        "roi": [ 265, 9, 106, 77 ],
+        "expected": "结算",
+        "next": [
+            "静默沙盒_结算_点击战役结算"
+        ]
+    },
+
+
     "静默沙盒_剧情对话_00": {
         "recognition": "OCR",
-        "roi" : [40, 50, 35, 20],
-        "expected":"记录",
+        "roi": [ 40, 50, 35, 20 ],
+        "expected": "记录",
         "action": "LongPress",
         "duration": 200,
-        "target": [1231, 30, 0, 0],
-        "post_delay":200,
+        "target": [ 1231, 30, 0, 0 ],
+        "post_delay": 200,
         "next": [
             "静默沙盒_缩小地图",
             "静默沙盒_剧情对话_00"
@@ -39,75 +50,75 @@
             "静默沙盒_地图平移1"
         ]
     },
-    "静默沙盒_地图平移1":{
+    "静默沙盒_地图平移1": {
         "recognition": "DirectHit",
         "action": "Swipe",
-        "begin": [280, 600, 1, 1],
-        "end": [1000, 110, 1, 1],
+        "begin": [ 280, 600, 1, 1 ],
+        "end": [ 1000, 110, 1, 1 ],
         "duration": 500,
         "post_delay": 200,
         "next": [
             "静默沙盒_地图平移2"
         ]
     },
-    "静默沙盒_地图平移2":{
+    "静默沙盒_地图平移2": {
         "recognition": "DirectHit",
         "action": "Swipe",
-        "begin": [280, 600, 1, 1],
-        "end": [1000, 110, 1, 1],
+        "begin": [ 280, 600, 1, 1 ],
+        "end": [ 1000, 110, 1, 1 ],
         "duration": 500,
         "post_delay": 200,
         "next": [
             "静默沙盒_部署铁血_R_点击机场"
         ]
     },
-    "静默沙盒_部署铁血_R_点击机场":{
+    "静默沙盒_部署铁血_R_点击机场": {
         "recognition": "OCR",
-        "roi" : [1037,621,94,47],
-        "expected":"开始",
+        "roi": [ 1037, 621, 94, 47 ],
+        "expected": "开始",
         "action": "LongPress",
         "duration": 200,
-        "target" : [483,530,0,0],
-        "post_delay":200,
+        "target": [ 483, 530, 0, 0 ],
+        "post_delay": 200,
         "next": [
             "静默沙盒_部署铁血_R_部署_点击确定",
             "静默沙盒_部署铁血_R_已部署_点击取消",
             "静默沙盒_部署铁血_R_重装部队_被选中"
         ]
     },
-    "静默沙盒_部署铁血_R_部署_点击确定":{
+    "静默沙盒_部署铁血_R_部署_点击确定": {
         "recognition": "OCR",
-        "roi" : [1141,612,86,50],
-        "expected":"确定",
+        "roi": [ 1141, 612, 86, 50 ],
+        "expected": "确定",
         "action": "LongPress",
         "duration": 200,
-        "pre_delay":200,
-        "target" : [1141,612,86,50],
-        "post_delay":400,
-        "next":[
+        "pre_delay": 200,
+        "target": [ 1141, 612, 86, 50 ],
+        "post_delay": 400,
+        "next": [
             "静默沙盒_部署铁血_L_点击机场"
         ]
     },
-    "静默沙盒_部署铁血_R_已部署_点击取消":{
+    "静默沙盒_部署铁血_R_已部署_点击取消": {
         "recognition": "OCR",
-        "roi" : [1141,612,86,50],
-        "expected":"取消",
+        "roi": [ 1141, 612, 86, 50 ],
+        "expected": "取消",
         "action": "LongPress",
         "duration": 200,
-        "pre_delay":200,
-        "target" : [1141,612,86,50],
-        "post_delay":400,
-        "next":[
+        "pre_delay": 200,
+        "target": [ 1141, 612, 86, 50 ],
+        "post_delay": 400,
+        "next": [
             "静默沙盒_部署铁血_L_点击机场"
         ]
     },
-    "静默沙盒_部署铁血_R_重装部队_被选中":{
+    "静默沙盒_部署铁血_R_重装部队_被选中": {
         "recognition": "OCR",
-        "roi" : [140, 150, 30, 35],
-        "expected":"火",
+        "roi": [ 140, 150, 30, 35 ],
+        "expected": "火",
         "action": "LongPress",
         "duration": 200,
-        "target": [300, 95, 0, 0],
+        "target": [ 300, 95, 0, 0 ],
         "timeout": 20000,
         "pre_delay": 500,
         "post_delay": 200,
@@ -115,53 +126,53 @@
             "静默沙盒_部署铁血_R_部署_点击确定"
         ]
     },
-    "静默沙盒_部署铁血_L_点击机场":{
+    "静默沙盒_部署铁血_L_点击机场": {
         "recognition": "OCR",
-        "roi" : [1037,621,94,47],
-        "expected":"开始",
+        "roi": [ 1037, 621, 94, 47 ],
+        "expected": "开始",
         "action": "LongPress",
         "duration": 200,
-        "target" : [408,455,0,0],
-        "post_delay":200,
+        "target": [ 408, 455, 0, 0 ],
+        "post_delay": 200,
         "next": [
             "静默沙盒_部署铁血_L_部署_点击确定",
             "静默沙盒_部署铁血_L_已部署_点击取消",
             "静默沙盒_部署铁血_L_重装部队_被选中"
         ]
     },
-    "静默沙盒_部署铁血_L_部署_点击确定":{
+    "静默沙盒_部署铁血_L_部署_点击确定": {
         "recognition": "OCR",
-        "roi" : [1141,612,86,50],
-        "expected":"确定",
+        "roi": [ 1141, 612, 86, 50 ],
+        "expected": "确定",
         "action": "LongPress",
         "duration": 200,
-        "pre_delay":200,
-        "target" : [1141,612,86,50],
-        "post_delay":200,
-        "next":[
+        "pre_delay": 200,
+        "target": [ 1141, 612, 86, 50 ],
+        "post_delay": 200,
+        "next": [
             "静默沙盒_作战开始"
         ]
     },
-    "静默沙盒_部署铁血_L_已部署_点击取消":{
+    "静默沙盒_部署铁血_L_已部署_点击取消": {
         "recognition": "OCR",
-        "roi" : [1141,612,86,50],
-        "expected":"取消",
+        "roi": [ 1141, 612, 86, 50 ],
+        "expected": "取消",
         "action": "LongPress",
         "duration": 200,
-        "pre_delay":200,
-        "target" : [1141,612,86,50],
-        "post_delay":200,
-        "next":[
+        "pre_delay": 200,
+        "target": [ 1141, 612, 86, 50 ],
+        "post_delay": 200,
+        "next": [
             "静默沙盒_作战开始"
         ]
     },
-    "静默沙盒_部署铁血_L_重装部队_被选中":{
+    "静默沙盒_部署铁血_L_重装部队_被选中": {
         "recognition": "OCR",
-        "roi" : [140, 150, 30, 35],
-        "expected":"火",
+        "roi": [ 140, 150, 30, 35 ],
+        "expected": "火",
         "action": "LongPress",
         "duration": 200,
-        "target": [300, 95, 0, 0],
+        "target": [ 300, 95, 0, 0 ],
         "timeout": 20000,
         "pre_delay": 500,
         "post_delay": 200,
@@ -173,33 +184,33 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [300, 95, 0, 0],
+        "target": [ 300, 95, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
             "静默沙盒_部署铁血_L_部署_点击确定"
         ]
     },
-    "静默沙盒_作战开始":{
+    "静默沙盒_作战开始": {
         "recognition": "OCR",
-        "roi" : [1042,624,88,45],
-        "expected":"开始",
+        "roi": [ 1042, 624, 88, 45 ],
+        "expected": "开始",
         "action": "LongPress",
         "duration": 200,
-        "target" : [1040,629,179,61],
+        "target": [ 1040, 629, 179, 61 ],
         "post_delay": 2000,
-        "next":[
+        "next": [
             "静默沙盒_剧情对话_01"
         ]
     },
     "静默沙盒_剧情对话_01": {
         "recognition": "OCR",
-        "roi" : [240, 560, 80, 35],
-        "expected":"指挥官",
+        "roi": [ 240, 560, 80, 35 ],
+        "expected": "指挥官",
         "action": "LongPress",
         "duration": 200,
-        "target": [1231, 30, 0, 0],
-        "post_delay":200,
+        "target": [ 1231, 30, 0, 0 ],
+        "post_delay": 200,
         "next": [
             "静默沙盒_任务简报",
             "静默沙盒_剧情对话_01"
@@ -207,36 +218,36 @@
     },
     "静默沙盒_任务简报": {
         "recognition": "OCR",
-        "roi" : [260, 185, 70, 50],
-        "expected":"任务",
+        "roi": [ 260, 185, 70, 50 ],
+        "expected": "任务",
         "action": "LongPress",
         "duration": 200,
-        "target": [97, 122, 0, 0],
-        "post_delay":200,
+        "target": [ 97, 122, 0, 0 ],
+        "post_delay": 200,
         "next": [
             "静默沙盒_战斗阶段_计划模式_1_Begin",
             "静默沙盒_任务简报"
         ]
     },
-// 第一轮战斗 Begin
+    // 第一轮战斗 Begin
     "静默沙盒_战斗阶段_计划模式_1_Begin": {
         "recognition": "DirectHit",
         // 点击空白位置
         "action": "LongPress",
         "duration": 200,
-        "target": [305, 605, 0, 0],
+        "target": [ 305, 605, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
             "静默沙盒_战斗阶段_计划模式_1_点击计划_Begin"
         ]
     },
-/// 计划模式 Begin
+    /// 计划模式 Begin
     "静默沙盒_战斗阶段_计划模式_1_点击计划_Begin": {
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [80, 630, 0, 0],
+        "target": [ 80, 630, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 200,
         "next": [
@@ -256,7 +267,7 @@
     "静默沙盒_战斗阶段_计划模式_1_点击计划_检查是否进入计划模式": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_planning_cropped.png",
-        "roi": [1100, 640, 100, 50],
+        "roi": [ 1100, 640, 100, 50 ],
         "threshold": 0.9,
         "action": "DoNothing",
         "timeout": 20000,
@@ -275,13 +286,13 @@
             "静默沙盒_战斗阶段_计划模式_1_点击计划_Begin"
         ]
     },
-/// 计划模式 End
-/// 梯队R Begin
+    /// 计划模式 End
+    /// 梯队R Begin
     "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击梯队": {
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [483, 530, 0, 0],
+        "target": [ 483, 530, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 500,
         "next": [
@@ -292,7 +303,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [560, 530, 0, 0],
+        "target": [ 560, 530, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
@@ -303,20 +314,20 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [305, 605, 0, 0],
+        "target": [ 305, 605, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
             "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击梯队"
         ]
     },
-/// 梯队R End
-/// 梯队L Begin
+    /// 梯队R End
+    /// 梯队L Begin
     "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击梯队": {
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [408, 455, 0, 0],
+        "target": [ 408, 455, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
@@ -337,7 +348,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [408, 380, 0, 0],
+        "target": [ 408, 380, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
@@ -358,7 +369,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [305, 605, 0, 0],
+        "target": [ 305, 605, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
@@ -379,7 +390,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [747, 192, 0, 0],
+        "target": [ 747, 192, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
@@ -400,7 +411,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [860, 225, 0, 0],
+        "target": [ 860, 225, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
@@ -421,7 +432,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [785, 82, 0, 0],
+        "target": [ 785, 82, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
@@ -442,7 +453,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [747, 192, 0, 0],
+        "target": [ 747, 192, 0, 0 ],
         "pre_delay": 200,
         "post_delay": 200,
         "next": [
@@ -473,7 +484,7 @@
     "静默沙盒_战斗阶段_计划模式_1_检查回合5": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_end5_cropped.png",
-        "roi": [1000, 660, 50, 50],
+        "roi": [ 1000, 660, 50, 50 ],
         "threshold": 0.9,
         "action": "DoNothing",
         "timeout": 20000,
@@ -497,18 +508,18 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [1185, 675, 0, 0],
+        "target": [ 1185, 675, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 10000,
         "next": [
             "静默沙盒_战斗阶段_指挥官_制造补给_判断"
         ]
     },
-// 第一轮战斗 第一轮战斗End
+    // 第一轮战斗 第一轮战斗End
     "静默沙盒_战斗阶段_指挥官_制造补给_判断": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/05_create_cropped.png",
-        "roi": [30, 430, 100, 40],
+        "roi": [ 30, 430, 100, 40 ],
         "threshold": 0.8,
         "action": "DoNothing",
         "timeout": 20000,
@@ -522,7 +533,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target" : [100,520,0,0],
+        "target": [ 100, 520, 0, 0 ],
         "pre_delay": 500,
         // 装备制造会卡一下，这里用暂定3秒
         "post_delay": 3000,
@@ -530,25 +541,25 @@
             "静默沙盒_战斗阶段_计划模式_2_Begin"
         ]
     },
-// 第二轮战斗 Begin
+    // 第二轮战斗 Begin
     "静默沙盒_战斗阶段_计划模式_2_Begin": {
         "recognition": "DirectHit",
         // 点击空白位置
         "action": "LongPress",
         "duration": 200,
-        "target" : [305,605,0,0],
+        "target": [ 305, 605, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
             "静默沙盒_战斗阶段_计划模式_2_点击计划_Begin"
         ]
     },
-/// 计划模式 Begin
+    /// 计划模式 Begin
     "静默沙盒_战斗阶段_计划模式_2_点击计划_Begin": {
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [80, 630, 0, 0],
+        "target": [ 80, 630, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 200,
         "next": [
@@ -568,7 +579,7 @@
     "静默沙盒_战斗阶段_计划模式_2_点击计划_检查是否进入计划模式": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_planning_cropped.png",
-        "roi": [1100, 640, 100, 50],
+        "roi": [ 1100, 640, 100, 50 ],
         "threshold": 0.9,
         "action": "DoNothing",
         "timeout": 20000,
@@ -587,12 +598,12 @@
             "静默沙盒_战斗阶段_计划模式_2_点击计划_Begin"
         ]
     },
-/// 计划模式 End
+    /// 计划模式 End
     "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队": {
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [638, 357, 0, 0],
+        "target": [ 638, 357, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 200,
         "next": [
@@ -603,7 +614,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [638, 357, 0, 0],
+        "target": [ 638, 357, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 200,
         "next": [
@@ -624,7 +635,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [524, 470, 0, 0],
+        "target": [ 524, 470, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
@@ -656,7 +667,7 @@
     "静默沙盒_战斗阶段_计划模式_2_检查回合2": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_end2_cropped.png",
-        "roi": [1000, 660, 50, 50],
+        "roi": [ 1000, 660, 50, 50 ],
         "threshold": 0.9,
         "action": "DoNothing",
         "timeout": 20000,
@@ -670,11 +681,11 @@
     "静默沙盒_战斗阶段_计划模式_2_检查回合5": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/04_end5_cropped.png",
-        "roi": [1000, 660, 50, 50],
+        "roi": [ 1000, 660, 50, 50 ],
         "threshold": 0.9,
         "action": "LongPress",
         "duration": 200,
-        "target": [80, 630, 0, 0],
+        "target": [ 80, 630, 0, 0 ],
         "timeout": 20000,
         "pre_delay": 200,
         "post_delay": 200,
@@ -696,16 +707,16 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target": [1185, 675, 0, 0],
+        "target": [ 1185, 675, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 10000,
         "next": [
             "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_Begin"
         ]
     },
-// 第二轮战斗 End
+    // 第二轮战斗 End
 
-// 补给铁血 R Begin
+    // 补给铁血 R Begin
     "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_Begin": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -718,7 +729,7 @@
     "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_判断_使用装置": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/06_supply_cropped.png",
-        "roi": [30, 430, 100, 40],
+        "roi": [ 30, 430, 100, 40 ],
         "threshold": 0.8,
         "action": "DoNothing",
         "timeout": 20000,
@@ -732,7 +743,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target" : [100,455,0,0],
+        "target": [ 100, 455, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
@@ -743,7 +754,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target" : [558,588,0,0],
+        "target": [ 558, 588, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 1000,
         "next": [
@@ -764,7 +775,7 @@
     "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_检查补给状态": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/07_point_1_cropped.png",
-        "roi": [1200, 175, 20, 20],
+        "roi": [ 1200, 175, 20, 20 ],
         "threshold": 0.9,
         "action": "DoNothing",
         "timeout": 20000,
@@ -784,9 +795,9 @@
             "静默沙盒_战斗阶段_指挥官_执行补给_铁血R_Begin"
         ]
     },
-// 补给铁血 R End
+    // 补给铁血 R End
 
-// 补给铁血 L Begin
+    // 补给铁血 L Begin
     "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_Begin": {
         "recognition": "DirectHit",
         "action": "DoNothing",
@@ -799,7 +810,7 @@
     "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_判断_使用装置": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/06_supply_cropped.png",
-        "roi": [30, 430, 100, 40],
+        "roi": [ 30, 430, 100, 40 ],
         "threshold": 0.8,
         "action": "DoNothing",
         "timeout": 20000,
@@ -813,7 +824,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target" : [100,455,0,0],
+        "target": [ 100, 455, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
@@ -824,7 +835,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target" : [408,433,0,0],
+        "target": [ 408, 433, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
@@ -845,7 +856,7 @@
     "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_检查补给状态": {
         "recognition": "TemplateMatch",
         "template": "./sandbox_resource/07_point_2_cropped.png",
-        "roi": [1200, 175, 20, 20],
+        "roi": [ 1200, 175, 20, 20 ],
         "threshold": 0.9,
         "action": "DoNothing",
         "timeout": 20000,
@@ -865,12 +876,12 @@
             "静默沙盒_战斗阶段_指挥官_执行补给_铁血L_Begin"
         ]
     },
-// 补给铁血 L End
+    // 补给铁血 L End
     "静默沙盒_结算_点击战役结算": {
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target" : [315,50,0,0],
+        "target": [ 315, 50, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
@@ -881,22 +892,22 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target" : [740,500,0,0],
+        "target": [ 740, 500, 0, 0 ],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
             "静默沙盒_再次作战_1"
         ]
     },
-    "静默沙盒_再次作战_1":{
+    "静默沙盒_再次作战_1": {
         "recognition": "OCR",
-        "roi" : [366,610,100,27],
+        "roi": [ 366, 610, 100, 27 ],
         "expected": "再次作战",
         "action": "LongPress",
         "duration": 200,
         "post_delay": 1000,
-        "target" : [366,610,100,27],
-        "next":[
+        "target": [ 366, 610, 100, 27 ],
+        "next": [
             "静默沙盒_再次作战_2"
         ]
     },
@@ -904,22 +915,22 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 200,
-        "target" : [366,610,100,27],
+        "target": [ 366, 610, 100, 27 ],
         "pre_delay": 500,
         "post_delay": 500,
         "next": [
             "静默沙盒_再次作战_3"
         ]
     },
-    "静默沙盒_再次作战_3":{
+    "静默沙盒_再次作战_3": {
         "recognition": "OCR",
-        "roi" : [366,610,100,27],
+        "roi": [ 366, 610, 100, 27 ],
         "expected": "再次作战",
         "action": "LongPress",
         "duration": 200,
         "post_delay": 3000,
-        "target" : [366,610,100,27],
-        "next":[
+        "target": [ 366, 610, 100, 27 ],
+        "next": [
             "静默沙盒_输出日志"
         ]
     },
