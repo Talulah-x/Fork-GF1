@@ -998,10 +998,26 @@
         "CustomServer_List": {
             "cases": [
                 {
-                    "name": "GreyZone",
+                    "name": "默认外部通知接口",
                     "pipeline_override": {
                         "!CustomServer": {
-                            "next": "!CustomServer_Task_GreyZone"
+                            "next": "!Notify_Default_Task"
+                        }
+                    }
+                },
+                {
+                    "name": "Telegram消息测试",
+                    "pipeline_override": {
+                        "!CustomServer": {
+                            "next": "!Notify_Telegram_Task"
+                        }
+                    }
+                },
+                {
+                    "name": "企业微信消息测试",
+                    "pipeline_override": {
+                        "!CustomServer": {
+                            "next": "!Notify_Wechat_Task"
                         }
                     }
                 }
