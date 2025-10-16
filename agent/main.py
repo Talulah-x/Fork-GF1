@@ -61,7 +61,7 @@ try:
     # 加载配置文件
     print("开始加载配置文件...")
     from config import load_config
-    load_config()  # 加载agent.conf配置
+    load_config()
     print("配置文件加载完成")
     
 except Exception as e:
@@ -70,7 +70,7 @@ except Exception as e:
     sys.exit(1)
 
 def main():
-    custom_server = None
+    # custom_server = None
     
     try:
         print("开始初始化 MaaFramework...")
@@ -92,8 +92,8 @@ def main():
         
         # 现在启动CustomServer后台服务
         print("开始启动 CustomServer...")
-        custom_server = server.get_custom_server()
-        custom_server.start()
+        # custom_server = server.get_custom_server()
+        # custom_server.start()
         print("CustomServer 启动成功")
         
         print("开始等待连接...")
@@ -105,8 +105,8 @@ def main():
         
         # 清理资源
         print("开始清理资源...")
-        if custom_server:
-            custom_server.stop()
+        # if custom_server:
+            # custom_server.stop()
         AgentServer.shut_down()
         print("所有服务关闭完成")
 
@@ -114,12 +114,11 @@ def main():
         print(f"服务启动失败: {e}")
         traceback.print_exc()
         
-        # 确保在出错时也能清理资源
-        try:
-            if custom_server:
-                custom_server.stop()
-        except:
-            pass
+        # try:
+        #     if custom_server:
+        #         custom_server.stop()
+        # except:
+        #     pass
         
         try:
             AgentServer.shut_down()
