@@ -29,7 +29,7 @@
         "expected": [
             "02"
         ],
-        "post_delay": 5000,
+        "post_delay": 5500,
         "pre_delay": 1,
         "rate_limit": 500,
         "timeout": 600000,

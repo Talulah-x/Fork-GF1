@@ -28,7 +28,7 @@
             "134部署_确认2队是否已部署"
         ],
         "rate_limit": 100,
-        "post_delay": 10,
+        "post_delay": 1000,
         "pre_delay": 1,
         "interrupt": [
             "134部署_部署2队"
@@ -48,7 +48,7 @@
         ],
         "rate_limit": 100,
         "pre_delay": 1,
-        "post_delay": 10
+        "post_delay": 1000
     },
     "134部署_布置完成": {
         "recognition": "TemplateMatch",
