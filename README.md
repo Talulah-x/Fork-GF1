@@ -71,20 +71,10 @@
   必须开启：记录上次完成关卡时镜头缩放
   ```
 
-### ⚠️ 重要注意事项
+### 📖 使用手册
 
-1. **鼠标占用问题**
-
-   - 现象：执行时系统鼠标被占用（~丹小姐抢鼠标~）
-
-   - 解决方案：
-
-     ```快捷键
-     Win + ↓ (连续按至窗口最小化)
-     ```
-
-2. **必读文档**  
-   [使用手册全集](https://github.com/LeonNagant/MaaGF1_Test/tree/main/manual)
+- [使用手册全集](https://github.com/LeonNagant/MaaGF1_Test/tree/main/manual)
+- [常见问题解答](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/常见问题解答.md)
 
 ---
 
@@ -120,6 +110,7 @@
 | ▶️ 夜战打捞   | [白烛](https://github.com/Talulah-x)                                                 | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%A4%9C%E6%88%98%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
 | ▶️ 虚粒子对打捞 | [do_e](https://github.com/isla23)                                                  | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)                   |
 | ▶️ 蝴蝶星云打捞 | [白烛](https://github.com/Talulah-x)                                                 | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%89%93%E6%8D%9E%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)                   |
+| ▶️ 零态潮汐打捞 | [白烛](https://github.com/Talulah-x)                                                 |  见说明                  |
 
 ### 🏠 宿舍功能
 
@@ -136,7 +127,7 @@
 | ▶️ 灰域探查         | [do_e](https://github.com/isla23), [白烛](https://github.com/Talulah-x) | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E8%87%AA%E5%8A%A8%E6%89%93%E7%81%B0%E5%A5%96%E5%8A%B1%E5%85%B3%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md) |
 | ▶️ 裂变链接捡垃圾      | [白烛](https://github.com/Talulah-x)                                    | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8D%A1%E5%9E%83%E5%9C%BE%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)                                     |
 | ▶️ 指挥官后勤        | [白烛](https://github.com/Talulah-x)                                    | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)                   |
-| ▶️ 静默沙盒刷资源(WIP) | [Morning](https://github.com/SwordofMorning)                          | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E9%9D%99%E9%BB%98%E6%B2%99%E7%9B%98%E5%88%B7%E8%B5%84%E6%BA%90.md)                                                                                                                                                                          |
+| ▶️ 静默沙盒刷资源 | [Morning](https://github.com/SwordofMorning)                          | [使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E9%9D%99%E9%BB%98%E6%B2%99%E7%9B%98%E5%88%B7%E8%B5%84%E6%BA%90.md)                                                                                                                                                                          |
 
 ---
 
