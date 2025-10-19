@@ -30,6 +30,10 @@
             ]
         }
     ],
+    "agent": {
+        "child_exec": "{PROJECT_DIR}/agent/dist/maa_agent.exe",
+        "child_args": []
+    },
     "task": [
         {
             "name": "13-4循环",
