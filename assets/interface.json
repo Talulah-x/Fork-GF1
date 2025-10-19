@@ -158,7 +158,7 @@
 
     {
       "name": "4-6地图初始化",
-      "entry": "!46总流程",
+      "entry": "!4_6捡垃圾总流程",
       "check": false,
       "doc": "部署梯队拉到左上角",
       "repeatable": false,
