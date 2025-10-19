@@ -1,8 +1,95 @@
 {
     "!零态潮汐打捞": {
         "next": [
-            "零态潮汐_开始作战"
+            "零态潮汐_开始作战",
+            "零态潮汐_战斗页面进入",
+            "零态潮汐_主界面进入"
         ]
+    },
+    "零态潮汐_主界面进入": {
+        "recognition": "OCR",
+        "roi" : [1003,451,277,203],
+        "expected": "零态潮汐",
+        "action": "LongPress",
+        "duration": 10,
+        "post_delay":2000,
+        "next": [
+            "零态潮汐_点击打捞关卡",
+            "零态潮汐_滑动到打捞关卡",
+            "零态潮汐_主界面进入"
+        ]
+    },
+    "零态潮汐_战斗页面进入": {
+        "recognition": "OCR",
+        "roi" :[42,117,137,60],
+        "expected": "零",
+        "action": "LongPress",
+        "duration": 10,
+        "post_delay":2000,
+        "next": [
+            "零态潮汐_点击打捞关卡",
+            "零态潮汐_滑动到打捞关卡",
+            "零态潮汐_战斗页面进入"
+        ]
+    },
+    "零态潮汐_滑动到打捞关卡":{
+        "recognition": "OCR",
+        "roi" : [37,527,192,125],
+        "expected" : "Quantum",
+        "action": "swipe",
+        "begin" : [1269,554,1,1],
+        "end" : [275,559,1,1],
+        "post_delay":500,
+        "next": [
+            "零态潮汐_点击打捞关卡",
+            "零态潮汐_滑动到打捞关卡"
+        ]
+    },
+    "零态潮汐_点击打捞关卡": {
+        "recognition": "OCR",
+        "roi" : [308,498,971,41],
+        "expected": [
+            "子",
+            "E",
+            "X"
+        ],
+        "action": "LongPress",
+        "duration": 10,
+        "next": [
+            "零态潮汐_进入打捞关卡",
+            "零态潮汐_点击打捞关卡"
+        ]
+    },
+    "零态潮汐_进入打捞关卡": {
+        "recognition": "OCR",
+        "roi" : [1009,141,238,162],
+        "expected" : "种子-EX",
+        "action": "LongPress",
+        "duration": 10,
+        "target": [
+            1130,
+            394,
+            94,
+            32
+        ],
+        "post_delay": 500,
+        "next": [
+            "零态潮汐_部署梯队",
+            "零态潮汐_进入打捞关卡"
+        ]
+    },
+    "零态潮汐_部署梯队": {
+        "recognition": "OCR",
+        "roi" : [993,596,267,123],
+        "expected" : "点击指挥",
+        "action": "LongPress",
+        "duration": 10,
+        "target":[424,457,24,9],
+        "post_delay": 500,
+        "next": [
+            "零态潮汐_开始作战"
+        ],
+        "interrupt":"!public梯队部署"
     },
     "零态潮汐_开始作战": {
         "recognition": "OCR",
@@ -115,6 +202,7 @@
         "action": "LongPress",
         "duration": 10,
         "next": [
+            "public二星人形回收_人形回收",
             "零态潮汐_结算加速"
         ]
     },
