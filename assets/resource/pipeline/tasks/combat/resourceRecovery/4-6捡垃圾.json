@@ -1,0 +1,155 @@
+{
+  "!46总流程": {
+    "timeout": 10000,
+    "next": [ "46开始作战", "46主页进入" ]
+  },
+  "46主页进入": {
+    "recognition": "OCR",
+    "expected": "战斗",
+    "roi": [ 903, 394, 113, 63 ],
+    "action": "LongPress",
+    "duration": 20,
+    "next": [ "46战役下滑", "46主页进入" ]
+  },
+  "46战役下滑": {
+    "recognition": "OCR",
+    "expected": "战斗",
+    "roi": [ 322, 13, 97, 64 ],
+    "action": "Swipe",
+    "begin": [ 679, 635, 47, 45 ],
+    "end": [ 680, 302, 36, 22 ],
+    "duration": 200,
+    "post_delay": 500,
+    "next": [ "46战役进入", "46战役下滑" ]
+  },
+  "46战役进入": {
+    "recognition": "OCR",
+    "expected": [ "平息", "干扰" ],
+    "roi": [ 610, 554, 262, 135 ],
+    "action": "LongPress",
+    "duration": 20,
+    "next": [ "46进入_普通作战", "46战役进入" ]
+  },
+  "46进入_普通作战": {
+    "recognition": "OCR",
+    "roi": [ 828, 527, 329, 142 ],
+    "expected": "普通作战",
+    "action": "LongPress",
+    "duration": 20,
+    "next": [ "46开始作战", "46进入_普通作战", "46战役下滑" ]
+  },
+
+  "46开始作战": {
+    "recognition": "OCR",
+    "expected": "开始作战",
+    "roi": [ 1037, 622, 180, 49 ],
+    "action": "LongPress",
+    "duration": 20,
+    "next": [ "46梯队点击", "46开始作战" ]
+  },
+  "46梯队点击": {
+    "recognition": "OCR",
+    "roi": [ 1108, 634, 144, 56 ],
+    "expected": "结束回合",
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 832, 244, 14, 20 ],
+    "next": [ "46计划模式", "46梯队取消", "46梯队点击" ]
+  },
+  "46梯队取消": {
+    "recognition": "OCR",
+    "roi": [ 1144, 611, 87, 51 ],
+    "expected": "取消",
+    "action": "LongPress",
+    "duration": 20,
+    "post_delay": 300,
+    "next": [ "46计划模式", "46梯队取消" ]
+  },
+  "46计划模式": {
+    "recognition": "OCR",
+    "expected": "妖精",
+    "roi": [ 1152, 114, 62, 42 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 40, 621, 79, 21 ],
+    "next": [ "46计划点1", "46计划模式" ]
+  },
+  "46计划点1": {
+    "recognition": "OCR",
+    "expected": "执行计划",
+    "roi": [ 1104, 632, 149, 64 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 661, 522, 15, 17 ],
+    "next": [ "46计划点2", "46计划点1" ]
+  },
+  "46计划点2": {
+    "recognition": "OCR",
+    "expected": [ "下一", "回合" ],
+    "roi": [ 1100, 528, 167, 46 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 760, 558, 22, 18 ],
+    "next": [ "46计划执行", "46计划点1" ]
+  },
+  "46计划执行": {
+    "recognition": "OCR",
+    "expected": "0",
+    "roi": [ 1004, 662, 37, 43 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 1152, 655, 72, 27 ],
+    "next": [ "46终止作战", "战斗撤退" ],
+    "interrupt": [ "突发新闻", "public_不中断计划", "人形掉落" ]
+  },
+  "46终止作战": {
+    "recognition": "ColorMatch",
+    "roi": [ 1258, 623, 4, 4 ],
+    "lower": [ 235, 235, 0 ],
+    "upper": [ 255, 255, 0 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 288, 28, 44, 22 ],
+    "next": [ "46重新作战", "46终止作战" ]
+  },
+  "46重新作战": {
+    "recognition": "OCR",
+    "expected": "重新作战",
+    "roi": [ 423, 467, 134, 48 ],
+    "action": "LongPress",
+    "duration": 20,
+    "next": [ "46开始作战", "46重新作战" ]
+  },
+  "战斗撤退": {
+    "recognition": "OCR",
+    "expected": [ "自动", "技能" ],
+    "roi": [ 1172, 125, 99, 44 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 633, 10, 21, 15 ],
+    "next": [ "全体撤退", "战斗撤退" ]
+  },
+  "全体撤退": {
+    "recognition": "OCR",
+    "expected": [ "全体", "撤退" ],
+    "roi": [ 336, 1, 146, 49 ],
+    "action": "LongPress",
+    "duration": 20,
+    "next": [ "46终止作战", "全体撤退" ]
+  },
+  "突发新闻": {
+    "recognition": "OCR",
+    "expected": "突发新闻",
+    "roi": [ 421, 362, 137, 49 ],
+    "action": "LongPress",
+    "duration": 20
+  },
+  "人形掉落": {
+    "recognition": "OCR",
+    "expected": [ "枪", "种" ],
+    "roi": [ 13, 10, 1153, 282 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 423, 120, 406, 84 ]
+  }
+}

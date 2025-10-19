@@ -153,6 +153,17 @@
       "repeatable": true,
       "repeat_count": 9999
     },
+
+
+
+    {
+      "name": "4-6地图初始化",
+      "entry": "!46总流程",
+      "check": false,
+      "doc": "部署梯队拉到左上角",
+      "repeatable": false,
+      "repeat_count": 1
+    },
     {
       "name": "指挥官后勤",
       "entry": "!指挥官后勤",
