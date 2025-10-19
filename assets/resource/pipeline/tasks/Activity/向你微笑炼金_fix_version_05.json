@@ -27,7 +27,8 @@
         "target" : [1041,626,178,65],
         "post_delay":400,
         "next":[
-            "向你微笑_选中指挥官"
+            "向你微笑_选中指挥官",
+            "向你微笑_开始作战"
         ]
     },
     "向你微笑_选中指挥官":{
@@ -107,9 +108,9 @@
         "template": "./smile_to_you/Round2.png",
         "threshold":0.7,
         "action": "LongPress",
-        "duration": 20,
+        "duration":20,
         "target" : [841,32,12,12],
-        "post_delay":400,
+        "post_delay":600,
         "next":[
             "向你微笑_R2_部署铁血",
             "向你微笑_R2_点击机场"
@@ -119,68 +120,58 @@
         "recognition": "OCR",
         "roi" : [1140,612,88,51],
         "expected":"确定",
+        "pre_delay":200,
         "action": "LongPress",
         "duration": 20,
         "target" : [1140,612,88,51],
-        "post_delay":1000,
+        "post_delay":1500,
         "next":[
             "向你微笑_R2_点击指挥官"
         ]
     },
     "向你微笑_R2_点击指挥官":{
         "recognition": "DirectHit",
+        "pre_delay":400,
         "action": "LongPress",
         "duration": 20,
         "target" : [632,351,14,14],
-        "post_delay":1000,
-        "next":[
-            "向你微笑_R2_滑动补给"
-        ]
-    },
-    "向你微笑_R2_滑动补给":{
-        "recognition": "OCR",
-        "roi" : [49,394,49,37],
-        "expected":"修理",
-        "action":"Swipe",
-        "begin" : [89,413,1,1],
-        "end" : [89,346,1,1],
-        "duration":200,
-        "post_delay":1000,
+        "post_delay":800,
         "next":[
             "向你微笑_R2_点击补给",
-            "向你微笑_R2_滑动补给"
+            "向你微笑_R2_点击指挥官"
         ]
     },
     "向你微笑_R2_点击补给":{
         "recognition": "OCR",
         "roi" : [49,394,49,37],
-        "expected":"补给",
+        "expected":"修理",
         "action": "LongPress",
         "duration": 20,
-        "target" : [72,437,58,27],
-        "post_delay":400,
+        "target" : [100, 515, 0, 0],
+        "post_delay":600,
         "next":[
             "向你微笑_R2_点击铁血"
         ]
     },
     "向你微笑_R2_点击铁血":{
-        "recognition": "OCR",
-        "roi" : [75,434,72,36],
-        "expected":"取消",
-        "action": "LongPress",
-        "duration": 20,
+        "recognition": "DirectHit",
+        "pre_delay":400,
+
+        "action": "Click",
+
         "target" : [841,32,12,12],
-        "post_delay":800,
+        "post_delay":1000,
         "next":[
             "向你微笑_R2_点击铁血1"
         ]
     },
     "向你微笑_R2_点击铁血1":{
         "recognition": "DirectHit",
+        "pre_delay":1000,
         "action": "LongPress",
-        "duration": 200,
+        "duration":150,
         "target" : [841,32,12,12],
-        "post_delay":400,
+        "post_delay":1000,
         "next":[
             "向你微笑_R2_撤离铁血",
             "向你微笑_R2_点击铁血1"
@@ -196,7 +187,8 @@
         "target" : [959,622,73,29],
         "post_delay":1000,
         "next":[
-            "向你微笑_R2_确认撤离"
+            "向你微笑_R2_确认撤离",
+            "向你微笑_R2_撤离铁血"
         ]
     },
     "向你微笑_R2_确认撤离":{
