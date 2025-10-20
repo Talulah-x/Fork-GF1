@@ -130,12 +130,19 @@
     "next": [ "4_6捡垃圾重新作战", "4_6捡垃圾重新作战判断2", "4_6捡垃圾终止作战" ]
   },
   "4_6捡垃圾重新作战": {
-    "recognition": "ColorMatch",
-    "lower": [ 220, 60, 60 ],
-    "upper": [ 220, 60, 60 ],
-    "roi": [ 557, 489, 7, 10 ],
-    "action": "LongPress",
-    "duration": 20,
+    "recognition": "OCR",
+        "timeout": 600000,
+        "roi": [
+            398,
+            459,
+            205,
+            68
+        ],
+        "expected": [
+            "重新"
+        ],
+        "action": "LongPress",
+        "duration": 20,
     "next": [ "4_6捡垃圾开始作战", "4_6捡垃圾重新作战" ]
   },
   "4_6捡垃圾重新作战判断2": {
