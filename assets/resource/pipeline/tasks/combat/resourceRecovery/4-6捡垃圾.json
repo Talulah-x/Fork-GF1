@@ -46,7 +46,7 @@
     "upper": [ 255, 230, 0 ],
     "action": "LongPress",
     "duration": 20,
-    "next": [ "4_6捡垃圾计划模式", "4_6捡垃圾开始作战" ]
+    "next": [ "4_6捡垃圾开始作战", "4_6捡垃圾计划模式" ]
   },
   "4_6捡垃圾计划模式": {
     "recognition": "ColorMatch",
@@ -78,13 +78,25 @@
     "next": [ "4_6捡垃圾计划点2", "4_6捡垃圾计划点1" ]
   },
   "4_6捡垃圾计划点2": {
-    "recognition": "OCR",
-    "expected": "1",
-    "roi": [ 1008, 657, 46, 53 ],
+    "recognition": "ColorMatch",
+    "lower": [ 170, 210, 0 ],
+    "upper": [ 180, 220, 10 ],
+    "roi": [ 1157, 557, 15, 11 ],
     "action": "LongPress",
     "duration": 20,
     "target": [ 760, 558, 22, 18 ],
-    "next": [ "4_6捡垃圾计划执行", "4_6捡垃圾计划点1" ]
+    "next": [ "4_6捡垃圾计划执行加速", "4_6捡垃圾计划执行", "4_6捡垃圾计划点1" ]
+  },
+  "4_6捡垃圾计划执行加速": {
+    "recognition": "ColorMatch",
+    "lower": [ 250, 250, 250 ],
+    "upper": [ 255, 255, 255 ],
+    "roi": [ 758, 582, 1, 4 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 1152, 655, 72, 27 ],
+    "next": [ "4_6捡垃圾终止作战", "4_6捡垃圾计划结束加速", "4_6捡垃圾战斗撤退" ],
+    "interrupt": [ "4_6捡垃圾突发新闻", "4_6捡垃圾不中断计划", "人形掉落" ]
   },
   "4_6捡垃圾计划执行": {
     "recognition": "OCR",
@@ -93,8 +105,19 @@
     "action": "LongPress",
     "duration": 20,
     "target": [ 1152, 655, 72, 27 ],
-    "next": [ "4_6捡垃圾终止作战", "战斗撤退" ],
-    "interrupt": [ "突发新闻", "public_不中断计划", "人形掉落" ]
+    "next": [ "4_6捡垃圾终止作战", "4_6捡垃圾计划结束加速", "4_6捡垃圾战斗撤退" ],
+    "interrupt": [ "4_6捡垃圾突发新闻", "4_6捡垃圾不中断计划", "人形掉落" ]
+  },
+  "4_6捡垃圾计划结束加速": {
+    "recognition": "ColorMatch",
+    "roi": [ 771, 371, 1, 7 ],
+    "lower": [ 255, 180, 0 ],
+    "upper": [ 255, 180, 0 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 288, 28, 44, 22 ],
+    "next": [ "4_6捡垃圾重新作战", "4_6捡垃圾终止作战", "4_6捡垃圾计划结束加速", "4_6捡垃圾战斗撤退" ],
+    "interrupt": [ "4_6捡垃圾突发新闻", "4_6捡垃圾不中断计划", "人形掉落" ]
   },
   "4_6捡垃圾终止作战": {
     "recognition": "ColorMatch",
@@ -104,7 +127,7 @@
     "action": "LongPress",
     "duration": 20,
     "target": [ 288, 28, 44, 22 ],
-    "next": [ "4_6捡垃圾重新作战", "4_6捡垃圾终止作战" ]
+    "next": [ "4_6捡垃圾重新作战", "4_6捡垃圾重新作战判断2", "4_6捡垃圾终止作战" ]
   },
   "4_6捡垃圾重新作战": {
     "recognition": "ColorMatch",
@@ -115,7 +138,17 @@
     "duration": 20,
     "next": [ "4_6捡垃圾开始作战", "4_6捡垃圾重新作战" ]
   },
-  "战斗撤退": {
+  "4_6捡垃圾重新作战判断2": {
+    "recognition": "ColorMatch",
+    "lower": [ 244, 130, 55 ],
+    "upper": [ 244, 130, 55 ],
+    "roi": [ 719, 482, 6, 20 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 557, 489, 7, 10 ],
+    "next": [ "4_6捡垃圾开始作战", "4_6捡垃圾重新作战判断2" ]
+  },
+  "4_6捡垃圾战斗撤退": {
     "recognition": "ColorMatch",
     "lower": [ 255, 181, 0 ],
     "upper": [ 255, 181, 0 ],
@@ -123,24 +156,34 @@
     "action": "LongPress",
     "duration": 20,
     "target": [ 633, 10, 21, 15 ],
-    "next": [ "全体撤退", "战斗撤退" ]
+    "next": [ "4_6捡垃圾全体撤退", "4_6捡垃圾战斗撤退" ]
   },
-  "全体撤退": {
+  "4_6捡垃圾全体撤退": {
     "recognition": "ColorMatch",
     "lower": [ 200, 80, 20 ],
     "upper": [ 230, 100, 50 ],
     "roi": [ 488, 21, 12, 9 ],
     "action": "LongPress",
     "duration": 20,
-    "next": [ "4_6捡垃圾终止作战", "全体撤退" ]
+    "next": [ "4_6捡垃圾终止作战", "4_6捡垃圾全体撤退", "4_6捡垃圾战斗加速结算" ]
   },
-  "突发新闻": {
+  "4_6捡垃圾战斗加速结算": {
+    "recognition": "OCR",
+    "expected": [ "等", "级" ],
+    "roi": [ 23, 645, 34, 28 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 288, 28, 44, 22 ],
+    "next": [ "4_6捡垃圾终止作战", "4_6捡垃圾战斗加速结算" ]
+  },
+  "4_6捡垃圾突发新闻": {
     "recognition": "ColorMatch",
     "lower": [ 255, 80, 0 ],
     "upper": [ 255, 80, 0 ],
     "roi": [ 518, 365, 9, 5 ],
     "action": "LongPress",
-    "duration": 20
+    "duration": 20,
+    "target_offset": [ 100, 0, 0, 0 ]
   },
   "人形掉落": {
     "recognition": "OCR",
@@ -149,5 +192,14 @@
     "action": "LongPress",
     "duration": 20,
     "target": [ 423, 120, 406, 84 ]
+  },
+  "4_6捡垃圾不中断计划": {
+    "recognition": "ColorMatch",
+    "lower": [ 255, 181, 0 ],
+    "upper": [ 255, 181, 0 ],
+    "roi": [ 814, 501, 10, 11 ],
+    "action": "LongPress",
+    "duration": 20,
+    "target": [ 566, 495, 13, 6 ]
   }
 }
