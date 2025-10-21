@@ -36,7 +36,7 @@
         "recognition": "OCR",
         "roi" : [37,527,192,125],
         "expected" : "Quantum",
-        "action": "swipe",
+        "action": "Swipe",
         "begin" : [1269,554,1,1],
         "end" : [275,559,1,1],
         "post_delay":500,
@@ -129,7 +129,7 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "结束",
-        "action": "swipe",
+        "action": "Swipe",
         "begin" : [978,90,1,1],
         "end" : [346,704,1,1],
         "next": [
@@ -140,7 +140,7 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "结束",
-        "action": "swipe",
+        "action": "Swipe",
         "begin" : [978,90,1,1],
         "end" : [346,704,1,1],
         "next": [
@@ -151,7 +151,7 @@
         "recognition": "OCR",
         "roi" : [1020,623,211,79],
         "expected": "结束",
-        "action": "swipe",
+        "action": "Swipe",
         "begin" : [978,90,1,1],
         "end" : [346,704,1,1],
         "next": [
