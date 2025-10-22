@@ -9,8 +9,8 @@
         "recognition": "DirectHit",
         "pre_delay":200,
         "action":"Swipe",
-        "begin" : [300,650,1,1],
-        "end" : [900,140,1,1],
+        "begin" : [899,509,1,1],
+        "end" : [488,243,1,1],
         "duration" :80,
         "next":[
             "向你微笑_开始作战",
@@ -19,8 +19,8 @@
     },
     "向你微笑_开始作战":{
         "recognition": "TemplateMatch",
-        "roi" : [583,422,107,103],
-        "template": "./smile_to_you/begin.png",
+        "roi" : [668,305,114,103],
+        "template": "./smile_to_you/begin-1.png",
         "pre_delay":200,
         "action": "LongPress",
         "duration": 20,
@@ -35,7 +35,7 @@
         "recognition": "DirectHit",
         "action": "LongPress",
         "duration": 20,
-        "target" : [916,452,15,15],
+        "target" : [233,454,11,13],
         "post_delay":200,
         "next":[
             "向你微笑_确认选中指挥官",
@@ -56,8 +56,8 @@
     },
     "向你微笑_点击计划模式":{
         "recognition": "TemplateMatch",
-        "roi" : [974,619,111,100],
-        "template": "./smile_to_you/行动点数03.png",
+        "roi" : [975,620,108,99],
+        "template": "./smile_to_you/行动点数04.png",
         "action": "LongPress",
         "duration": 20,
         "target" : [22,618,99,25],
@@ -68,79 +68,64 @@
     },
     "向你微笑_点击路径点":{
         "recognition": "TemplateMatch",
-        "roi" : [975,616,116,103],
-        "template": "./smile_to_you/计划点数3.png",
+        "roi" : [981,613,108,106],
+        "template": "./smile_to_you/计划点数4.png",
         "action": "LongPress",
         "duration": 20,
-        "target" : [776,198,12,12],
+        "target" : [229,196,16,16],
         "post_delay":200,
         "next":[
-            "向你微笑_点击下一回合"
+            "向你微笑_点击路径点1"
         ]
     },
-    "向你微笑_点击下一回合":{
-        "recognition": "OCR",
-        "roi" : [1106,529,78,44],
-        "expected":"下一",
+    "向你微笑_点击路径点1":{
+        "recognition": "TemplateMatch",
+        "roi" : [981,618,107,101],
+        "template": "./smile_to_you/计划点数2.png",
         "action": "LongPress",
         "duration": 20,
-        "target" : [1106,529,78,44],
+        "target" : [502,199,14,14],
         "post_delay":200,
         "next":[
             "向你微笑_执行计划"
         ]
     },
     "向你微笑_执行计划":{
-        "recognition": "OCR",
-        "roi" : [975,530,89,42],
-        "expected":"取消",
+        "recognition": "TemplateMatch",
+        "roi" : [980,618,108,101],
+        "template": "./smile_to_you/计划点数0.png",
         "action": "LongPress",
         "duration": 20,
         "target" : [1132,641,84,45],
-        "post_delay":28000,
+        "post_delay":16000,
         "next":[
-            "向你微笑_R2_点击机场"
+            "向你微笑_地图调整"
         ]
     },
-    "向你微笑_R2_点击机场":{
-        "recognition": "TemplateMatch",
-        "roi" : [406,2,78,83],
-        "template": "./smile_to_you/Round2.png",
-        "threshold":0.7,
-        "action": "LongPress",
-        "duration":20,
-        "target" : [841,32,12,12],
-        "post_delay":600,
-        "next":[
-            "向你微笑_R2_部署铁血",
-            "向你微笑_R2_点击机场"
-        ]
-    },
-    "向你微笑_R2_部署铁血":{
-        "recognition": "OCR",
-        "roi" : [1140,612,88,51],
-        "expected":"确定",
-        "pre_delay":200,
-        "action": "LongPress",
-        "duration": 20,
-        "target" : [1140,612,88,51],
-        "post_delay":1500,
-        "next":[
-            "向你微笑_R2_点击指挥官"
-        ]
-    },
-    "向你微笑_R2_点击指挥官":{
+    "向你微笑_地图调整":{
         "recognition": "DirectHit",
-        "pre_delay":400,
-        "action": "LongPress",
-        "duration": 20,
-        "target" : [632,351,14,14],
-        "post_delay":800,
+        "pre_delay":200,
+        "action":"Swipe",
+        "begin" : [950,169,1,1],
+        "end" : [444,618,1,1],
+        "duration" :100,
+        "next":[
+            "向你微笑_调整完毕",
+            "向你微笑_地图调整"
+        ]
+    },
+    "向你微笑_调整完毕":{
+        "recognition":"TemplateMatch",
+        "template":"./smile_to_you/调整完毕.png",
+        "roi" : [610,229,99,98],
+        "action":"DoNothing",
+        "post_delay":1000,
         "next":[
             "向你微笑_R2_点击补给",
-            "向你微笑_R2_点击指挥官"
+            "向你微笑_地图调整"
         ]
     },
+
     "向你微笑_R2_点击补给":{
         "recognition": "OCR",
         "roi" : [49,394,49,37],
@@ -156,10 +141,8 @@
     "向你微笑_R2_点击铁血":{
         "recognition": "DirectHit",
         "pre_delay":400,
-
         "action": "Click",
-
-        "target" : [841,32,12,12],
+        "target" : [297,252,10,11],
         "post_delay":1000,
         "next":[
             "向你微笑_R2_点击铁血1"
@@ -170,7 +153,7 @@
         "pre_delay":1000,
         "action": "LongPress",
         "duration":150,
-        "target" : [841,32,12,12],
+       "target" : [297,252,10,11],
         "post_delay":1000,
         "next":[
             "向你微笑_R2_撤离铁血",
@@ -185,7 +168,7 @@
         "action": "LongPress",
         "duration": 20,
         "target" : [959,622,73,29],
-        "post_delay":1000,
+        "post_delay":600,
         "next":[
             "向你微笑_R2_确认撤离",
             "向你微笑_R2_撤离铁血"
@@ -198,19 +181,19 @@
         "action": "LongPress",
         "duration": 20,
         "target" : [719,467,99,57],
-        "post_delay":800,
+        "post_delay":600,
         "next":[
             "向你微笑_R2_终止作战"
         ]
     },
     "向你微笑_R2_终止作战":{
         "recognition": "TemplateMatch",
-        "roi" : [984,622,95,97],
-        "template": "./smile_to_you/R2_行动点数02.png",
+        "roi" : [974,616,110,103],
+        "template": "./smile_to_you/行动点数00.png",
         "action": "LongPress",
         "duration": 20,
         "target" : [292,20,40,40],
-        "post_delay":800,
+        "post_delay":600,
         "next":[
             "向你微笑_R2_重新作战",
             "向你微笑_R2_终止作战"
