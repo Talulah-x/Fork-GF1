@@ -99,9 +99,23 @@
         "target" : [1132,641,84,45],
         "post_delay":16000,
         "next":[
+            "向你微笑_R2_点击补给"
+        ]
+    },
+
+     "向你微笑_R2_点击补给":{
+        "recognition": "OCR",
+        "roi" : [49,394,49,37],
+        "expected":"修理",
+        "action": "LongPress",
+        "duration": 20,
+        "target" : [100, 515, 0, 0],
+        "post_delay":600,
+        "next":[
             "向你微笑_地图调整"
         ]
     },
+
     "向你微笑_地图调整":{
         "recognition": "DirectHit",
         "pre_delay":200,
@@ -121,23 +135,12 @@
         "action":"DoNothing",
         "post_delay":1000,
         "next":[
-            "向你微笑_R2_点击补给",
+            "向你微笑_R2_点击铁血",
             "向你微笑_地图调整"
         ]
     },
 
-    "向你微笑_R2_点击补给":{
-        "recognition": "OCR",
-        "roi" : [49,394,49,37],
-        "expected":"修理",
-        "action": "LongPress",
-        "duration": 20,
-        "target" : [100, 515, 0, 0],
-        "post_delay":600,
-        "next":[
-            "向你微笑_R2_点击铁血"
-        ]
-    },
+   
     "向你微笑_R2_点击铁血":{
         "recognition": "DirectHit",
         "pre_delay":400,
