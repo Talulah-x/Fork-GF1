@@ -7,7 +7,6 @@ a = Analysis(
     pathex=[],
     binaries=[],
     datas=[
-        # 包含配置文件
         ('agent.conf', '.'),
     ],
     hiddenimports=[
