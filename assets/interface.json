@@ -158,6 +158,9 @@
       "entry": "!4_6捡垃圾总流程",
       "check": false,
       "doc": "部署梯队拉到右上角边缘",
+      "option": [
+        "捡垃圾版本选择"
+      ],
       "repeatable": false,
       "repeat_count": 1
     },
@@ -221,7 +224,7 @@
       "check": false,
       "doc": "通关任意难度向你微笑，将地图缩放至最小即可开启运行，自动部署的梯队须为铁血梯队。[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E9%9D%99%E9%BB%98%E6%B2%99%E7%9B%98%E5%88%B7%E8%B5%84%E6%BA%90.md)"
     },
-        {
+    {
       "name": "向你微笑炼金(DLzcccc版)",
       "entry": "!活动炼金开始作战",
       "check": false,
@@ -265,6 +268,24 @@
     }
   },
   "option": {
+    "捡垃圾版本选择": {
+      "cases": [
+        {
+          "name": "新版",
+          "pipeline_override": {}
+        },
+        {
+          "name": "旧版",
+          "pipeline_override": {
+            "!4_6捡垃圾总流程": {
+              "next": [
+                "!旧版_4_6捡垃圾总流程"
+              ]
+            }
+          }
+        }
+      ]
+    },
     "134_路线选择": {
       "cases": [
         {
