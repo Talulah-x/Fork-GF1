@@ -7,7 +7,7 @@ import sys
 import os
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, parent_dir)
-from config import (get_telegram_config, is_telegram_configured, 
+from utils import (get_telegram_config, is_telegram_configured, 
                    get_wechat_config, is_wechat_configured,
                    get_default_ext_notify, get_available_notifiers)
 

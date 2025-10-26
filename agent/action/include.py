@@ -33,8 +33,3 @@ Task_Counter = 0
 
 Enable_MaaLog_Debug = 1
 Enable_MaaLog_Info = 1
-
-#################### Telegram ####################
-
-Bot_Token = None
-Chat_ID = None

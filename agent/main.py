@@ -100,7 +100,7 @@ except Exception as e:
 try:
     print("Starting to import custom modules...")
     import my_reco
-    from action import input, log
+    import action
     print("Custom modules imported successfully")
     
 except Exception as e:
@@ -122,7 +122,7 @@ try:
     
     print(f"Configuration file path: {config_path}")
     
-    from config import load_config
+    from utils import load_config
     load_config(config_path)
     print("Configuration file loading completed")
     
