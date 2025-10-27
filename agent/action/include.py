@@ -1,4 +1,4 @@
-# 标准库导入
+# Std Lib
 import time
 import ctypes
 import sys
@@ -7,7 +7,7 @@ import traceback
 import json
 import re
 
-# Win32相关导入
+# Win32
 import win32con
 import win32gui
 import win32process
@@ -15,27 +15,21 @@ import win32api
 import win32ui
 from ctypes import windll, wintypes, byref, sizeof
 
-# 图像处理导入
+# CV
 from PIL import Image, ImageGrab
 import numpy as np
 
-# MaaFramework相关导入
+# MaaFramework
 from maa.agent.agent_server import AgentServer
 from maa.custom_action import CustomAction
 from maa.context import Context
 
-#################### 全局变量 ####################
+#################### Global ####################
 
-# 任务计数器
+# Default Counter
 Task_Counter = 0
 
-#################### 日志控制开关 ####################
+#################### Log Control ####################
 
 Enable_MaaLog_Debug = 1
 Enable_MaaLog_Info = 1
-
-#################### Telegram配置 ####################
-
-# Telegram配置变量
-Bot_Token = None
-Chat_ID = None

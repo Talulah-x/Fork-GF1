@@ -193,8 +193,39 @@
         "threshold": 0.8,
         "green_mask": true,
         "rate_limit": 200,
+        "next": []
+    },
+    "134战斗_胡蜂": {
+        "target": [
+            702,
+            629,
+            12,
+            7
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "rate_limit": 200,
         "next": [
-            "134战斗_钢狮"
+            "134战斗_胡蜂_确认",
+            "134战斗_胡蜂"
+        ]
+    },
+    "134战斗_胡蜂_确认": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            969,
+            650,
+            94,
+            69
+        ],
+        "template": [
+            "combat/levelUp/13-4/Gap0.png"
+        ],
+        "threshold": 0.8,
+        "green_mask": true,
+        "rate_limit": 200,
+        "next": [
+            "134战斗_下一回合"
         ]
     },
     "134战斗_钢狮": {

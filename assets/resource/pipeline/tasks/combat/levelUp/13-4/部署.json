@@ -28,7 +28,7 @@
             "134部署_确认2队是否已部署"
         ],
         "rate_limit": 100,
-        "post_delay": 10,
+        "post_delay": 1000,
         "pre_delay": 1,
         "interrupt": [
             "134部署_部署2队"
@@ -48,7 +48,7 @@
         ],
         "rate_limit": 100,
         "pre_delay": 1,
-        "post_delay": 10
+        "post_delay": 1000
     },
     "134部署_布置完成": {
         "recognition": "TemplateMatch",
@@ -72,7 +72,7 @@
         ],
         "action": "LongPress",
         "duration": 20,
-        "post_delay": 1000,
+        "post_delay": 1500,
         "next": [
             "134部署_部署1队确定",
             "134部署_部署1队"
@@ -112,13 +112,29 @@
         "action": "LongPress",
         "duration": 20,
         "post_delay": 1500,
-        "pre_delay": 1500,
+        "pre_delay": 500,
         "next": [
-            "134部署_部署2队确定",
+            "134部署_部署2队_点击2队",
             "134部署_布置完成",
             "134部署_部署2队"
         ],
         "interrupt": "134部署_重装机场选择梯队"
+    },
+    "134部署_部署2队_点击2队": {
+        "recognition": "OCR",
+        "expected": "2",
+        "roi": [
+            68,
+            0,
+            52,
+            720
+        ],
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 1500,
+        "next": [
+            "134部署_部署2队确定"
+        ]
     },
     "134部署_部署2队确定": {
         "recognition": "OCR",

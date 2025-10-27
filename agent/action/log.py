@@ -7,7 +7,7 @@ import sys
 import os
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, parent_dir)
-from config import (get_telegram_config, is_telegram_configured, 
+from utils import (get_telegram_config, is_telegram_configured, 
                    get_wechat_config, is_wechat_configured,
                    get_default_ext_notify, get_available_notifiers)
 
@@ -17,7 +17,7 @@ from config import (get_telegram_config, is_telegram_configured,
 
 class TelegramNotifier:
     """
-    Telegram通知器
+    Telegram notifier
     """
     def __init__(self, bot_token, chat_id):
         self.bot_token = bot_token
@@ -25,7 +25,7 @@ class TelegramNotifier:
         self.base_url = f"https://api.telegram.org/bot{bot_token}"
     
     def send_message(self, message):
-        """发送消息到Telegram"""
+        """Send message to Telegram"""
         url = f"{self.base_url}/sendMessage"
         data = {
             'chat_id': self.chat_id,
@@ -35,26 +35,26 @@ class TelegramNotifier:
         try:
             response = requests.post(url, data=data, timeout=10)
             if response.status_code == 200:
-                MaaLog_Debug(f"Telegram消息发送成功: {message}")
+                MaaLog_Debug(f"Telegram message sent successfully: {message}")
                 return True
             else:
-                MaaLog_Debug(f"Telegram消息发送失败: {response.text}")
+                MaaLog_Debug(f"Telegram message sending failed: {response.text}")
                 return False
         except Exception as e:
-            MaaLog_Debug(f"发送Telegram消息时出错: {e}")
+            MaaLog_Debug(f"Error occurred while sending Telegram message: {e}")
             return False
 
 class WeChatWorkNotifier:
     """
-    企业微信通知器
+    Enterprise WeChat notifier
     """
     def __init__(self, webhook_key):
         self.webhook_key = webhook_key
         self.webhook_url = f"https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key={webhook_key}"
     
     def send_message(self, message, msgtype="text"):
-        """发送消息到企业微信"""
-        # 构造消息体
+        """Send message to Enterprise WeChat"""
+        # Construct message body
         if msgtype == "text":
             data = {
                 "msgtype": "text",
@@ -70,11 +70,11 @@ class WeChatWorkNotifier:
                 }
             }
         else:
-            MaaLog_Debug(f"不支持的消息类型: {msgtype}")
+            MaaLog_Debug(f"Unsupported message type: {msgtype}")
             return False
         
         try:
-            # 发送POST请求
+            # Send POST request
             headers = {'Content-Type': 'application/json'}
             response = requests.post(
                 self.webhook_url, 
@@ -86,23 +86,23 @@ class WeChatWorkNotifier:
             if response.status_code == 200:
                 result = response.json()
                 if result.get('errcode') == 0:
-                    MaaLog_Debug(f"企业微信消息发送成功: {message}")
+                    MaaLog_Debug(f"Enterprise WeChat message sent successfully: {message}")
                     return True
                 else:
-                    MaaLog_Debug(f"企业微信消息发送失败: {result.get('errmsg', '未知错误')}")
+                    MaaLog_Debug(f"Enterprise WeChat message sending failed: {result.get('errmsg', 'Unknown error')}")
                     return False
             else:
-                MaaLog_Debug(f"企业微信HTTP请求失败: {response.status_code} - {response.text}")
+                MaaLog_Debug(f"Enterprise WeChat HTTP request failed: {response.status_code} - {response.text}")
                 return False
                 
         except Exception as e:
-            MaaLog_Debug(f"发送企业微信消息时出错: {e}")
+            MaaLog_Debug(f"Error occurred while sending Enterprise WeChat message: {e}")
             return False
 
 class ParametricBaseAction(CustomAction):
     """
-    参数化动作基类
-    提供通用的参数解析、处理和格式化功能
+    Parametric action base class
+    Provides common parameter parsing, processing and formatting functions
     """
     
     def __init__(self):
@@ -111,73 +111,73 @@ class ParametricBaseAction(CustomAction):
     
     def run(self, context: Context, argv: CustomAction.RunArg) -> bool:
         """
-        基类run方法，处理通用逻辑
+        Base class run method, handles common logic
         """
         try:
-            # 从custom_action_param获取参数
+            # Get parameters from custom_action_param
             param = argv.custom_action_param
             
-            # 解析参数
+            # Parse parameters
             parsed_param = self._parse_param(param)
             
-            # 处理参数化消息
+            # Handle parametric message
             result = self._handle_parametric_message(parsed_param)
             
             return CustomAction.RunResult(success=result)
             
         except Exception as e:
-            MaaLog_Debug(f"{self.action_name}执行异常: {e}")
+            MaaLog_Debug(f"{self.action_name} execution exception: {e}")
             import traceback
-            MaaLog_Debug(f"异常堆栈: {traceback.format_exc()}")
+            MaaLog_Debug(f"Exception stack: {traceback.format_exc()}")
             return CustomAction.RunResult(success=False)
     
     def _parse_param(self, param):
         """
-        解析参数，支持字符串、JSON和字典格式
+        Parse parameters, support string, JSON and dictionary formats
         """
-        # 无param：返回None
+        # No param: return None
         if not param:
-            MaaLog_Debug(f"{self.action_name}: 无参数，使用默认处理")
+            MaaLog_Debug(f"{self.action_name}: No parameters, using default processing")
             return None
         
-        # 调试：输出param的类型和内容
-        MaaLog_Debug(f"{self.action_name} param类型: {type(param)}, 内容: {param}")
+        # Debug: output param type and content
+        MaaLog_Debug(f"{self.action_name} param type: {type(param)}, content: {param}")
         
-        # 尝试解析JSON字符串
+        # Try to parse JSON string
         if isinstance(param, str):
             try:
-                # 尝试将字符串解析为JSON
+                # Try to parse string as JSON
                 parsed_param = json.loads(param)
-                MaaLog_Debug(f"{self.action_name}: 成功解析JSON，类型: {type(parsed_param)}")
+                MaaLog_Debug(f"{self.action_name}: Successfully parsed JSON, type: {type(parsed_param)}")
                 return parsed_param
             except json.JSONDecodeError:
-                # 如果不是JSON，直接返回字符串
-                MaaLog_Debug(f"{self.action_name}: 非JSON字符串，直接使用")
+                # If not JSON, return string directly
+                MaaLog_Debug(f"{self.action_name}: Non-JSON string, using directly")
                 return param
         
-        # 字典或其他类型直接返回
+        # Return dictionary or other types directly
         return param
     
     def _process_parameters(self, parameters: dict) -> dict:
         """
-        处理特殊参数，支持动态值
+        Process special parameters, support dynamic values
         """
         global Task_Counter
         
         processed = {}
         
         for key, value in parameters.items():
-            MaaLog_Debug(f"{self.action_name}处理参数 {key}: {value} (类型: {type(value)})")
+            MaaLog_Debug(f"{self.action_name} processing parameter {key}: {value} (type: {type(value)})")
             
             if isinstance(value, str):
-                # 处理特殊占位符
+                # Handle special placeholders
                 if value == "{Task_Counter}":
                     processed[key] = Task_Counter
-                    MaaLog_Debug(f"{self.action_name}替换 {key} = {Task_Counter}")
+                    MaaLog_Debug(f"{self.action_name} replace {key} = {Task_Counter}")
                 elif value == "{increment_Task_Counter}":
                     Task_Counter += 1
                     processed[key] = Task_Counter
-                    MaaLog_Debug(f"{self.action_name}递增并替换 {key} = {Task_Counter}")
+                    MaaLog_Debug(f"{self.action_name} increment and replace {key} = {Task_Counter}")
                 else:
                     processed[key] = value
             else:
@@ -187,85 +187,85 @@ class ParametricBaseAction(CustomAction):
     
     def _format_message(self, message_template: str, parameters: dict) -> str:
         """
-        格式化消息模板
+        Format message template
         """
         try:
-            # 处理特殊参数
+            # Process special parameters
             processed_params = self._process_parameters(parameters)
-            MaaLog_Debug(f"{self.action_name}处理后的参数: {processed_params}")
+            MaaLog_Debug(f"{self.action_name} processed parameters: {processed_params}")
             
-            # 格式化消息
+            # Format message
             formatted_message = message_template.format(**processed_params)
-            MaaLog_Debug(f"{self.action_name}格式化后的消息: {formatted_message}")
+            MaaLog_Debug(f"{self.action_name} formatted message: {formatted_message}")
             return formatted_message
         except KeyError as e:
-            MaaLog_Debug(f"{self.action_name}消息模板格式化失败，缺少参数: {e}")
+            MaaLog_Debug(f"{self.action_name} message template formatting failed, missing parameter: {e}")
             return message_template
         except Exception as e:
-            MaaLog_Debug(f"{self.action_name}消息格式化异常: {e}")
+            MaaLog_Debug(f"{self.action_name} message formatting exception: {e}")
             return message_template
     
     def _handle_parametric_message(self, parsed_param):
         """
-        处理参数化消息的通用逻辑
-        子类可以重写此方法来自定义处理逻辑
+        Common logic for handling parametric messages
+        Subclasses can override this method to customize processing logic
         """
-        # 无参数情况
+        # No parameter case
         if parsed_param is None:
             return self._handle_default_message()
         
-        # 字符串情况：直接处理
+        # String case: process directly
         if isinstance(parsed_param, str):
             return self._handle_string_message(parsed_param)
         
-        # 字典情况：参数化处理
+        # Dictionary case: parametric processing
         if isinstance(parsed_param, dict):
             return self._handle_dict_message(parsed_param)
         
-        # 其他类型：转字符串处理
+        # Other types: convert to string and process
         return self._handle_string_message(str(parsed_param))
     
-    # 抽象方法，子类必须实现
+    # Abstract methods, subclasses must implement
     def _handle_default_message(self):
-        """处理默认消息，子类必须实现"""
-        raise NotImplementedError("子类必须实现 _handle_default_message 方法")
+        """Handle default message, subclasses must implement"""
+        raise NotImplementedError("Subclasses must implement _handle_default_message method")
     
     def _handle_string_message(self, message: str):
-        """处理字符串消息，子类必须实现"""
-        raise NotImplementedError("子类必须实现 _handle_string_message 方法")
+        """Handle string message, subclasses must implement"""
+        raise NotImplementedError("Subclasses must implement _handle_string_message method")
     
     def _handle_dict_message(self, param_dict: dict):
-        """处理字典参数消息，子类必须实现"""
-        raise NotImplementedError("子类必须实现 _handle_dict_message 方法")
+        """Handle dictionary parameter message, subclasses must implement"""
+        raise NotImplementedError("Subclasses must implement _handle_dict_message method")
 
 @AgentServer.custom_action("parametric_log")
 class ParametricLogAction(ParametricBaseAction):
     """
-    支持从custom_action_param中读取日志消息模板和参数
+    Support reading log message template and parameters from custom_action_param
     """
     
     def _handle_default_message(self):
-        """处理默认消息"""
-        MaaLog_Info("默认日志消息")
+        """Handle default message"""
+        MaaLog_Info("Default log message")
         return True
     
     def _handle_string_message(self, message: str):
-        """处理字符串消息"""
+        """Handle string message"""
         MaaLog_Info(message)
         return True
     
     def _handle_dict_message(self, param_dict: dict):
-        """处理字典参数消息"""
+        """Handle dictionary parameter message"""
         log_type = param_dict.get('type', 'info')
-        message_template = param_dict.get('message', '默认日志消息')
+        message_template = param_dict.get('message', 'Default log message')
         parameters = param_dict.get('parameters', {})
         
-        MaaLog_Debug(f"开始处理参数化日志 - 类型: {log_type}, 模板: {message_template}, 参数: {parameters}")
+        MaaLog_Debug(f"Start processing parametric log - type: {log_type}, template: {message_template}, parameters: {parameters}")
         
-        # 格式化消息
+        # Format message
         formatted_message = self._format_message(message_template, parameters)
         
-        # 输出日志
+        # Output log
         if log_type.lower() == 'debug':
             MaaLog_Debug(formatted_message)
         else:
@@ -276,7 +276,7 @@ class ParametricLogAction(ParametricBaseAction):
 @AgentServer.custom_action("parametric_telegram")
 class ParametricTelegramAction(ParametricBaseAction):
     """
-    支持从custom_action_param中读取消息模板和参数，并发送到Telegram
+    Support reading message template and parameters from custom_action_param and send to Telegram
     """
     
     def __init__(self):
@@ -284,50 +284,50 @@ class ParametricTelegramAction(ParametricBaseAction):
         self.notifier = None
     
     def _get_notifier(self):
-        """获取Telegram通知器"""
+        """Get Telegram notifier"""
         if self.notifier is None:
             bot_token, chat_id = get_telegram_config()
             if not bot_token or not chat_id:
-                MaaLog_Debug("Telegram配置未设置，无法发送消息")
+                MaaLog_Debug("Telegram configuration not set, cannot send message")
                 return None
             self.notifier = TelegramNotifier(bot_token, chat_id)
         return self.notifier
     
     def _handle_default_message(self):
-        """处理默认消息"""
+        """Handle default message"""
         notifier = self._get_notifier()
         if not notifier:
             return False
-        return notifier.send_message("默认Telegram消息")
+        return notifier.send_message("Default Telegram message")
     
     def _handle_string_message(self, message: str):
-        """处理字符串消息"""
+        """Handle string message"""
         notifier = self._get_notifier()
         if not notifier:
             return False
         return notifier.send_message(message)
     
     def _handle_dict_message(self, param_dict: dict):
-        """处理字典参数消息"""
+        """Handle dictionary parameter message"""
         notifier = self._get_notifier()
         if not notifier:
             return False
         
-        message_template = param_dict.get('message', '默认Telegram消息')
+        message_template = param_dict.get('message', 'Default Telegram message')
         parameters = param_dict.get('parameters', {})
         
-        MaaLog_Debug(f"开始处理参数化Telegram消息 - 模板: {message_template}, 参数: {parameters}")
+        MaaLog_Debug(f"Start processing parametric Telegram message - template: {message_template}, parameters: {parameters}")
         
-        # 格式化消息
+        # Format message
         formatted_message = self._format_message(message_template, parameters)
         
-        # 发送到Telegram
+        # Send to Telegram
         return notifier.send_message(formatted_message)
 
 @AgentServer.custom_action("parametric_wechat")
 class ParametricWeChatAction(ParametricBaseAction):
     """
-    支持从custom_action_param中读取消息模板和参数，并发送到企业微信
+    Support reading message template and parameters from custom_action_param and send to Enterprise WeChat
     """
     
     def __init__(self):
@@ -335,52 +335,52 @@ class ParametricWeChatAction(ParametricBaseAction):
         self.notifier = None
     
     def _get_notifier(self):
-        """获取企业微信通知器"""
+        """Get Enterprise WeChat notifier"""
         if self.notifier is None:
             webhook_key = get_wechat_config()
             if not webhook_key:
-                MaaLog_Debug("企业微信配置未设置，无法发送消息")
+                MaaLog_Debug("Enterprise WeChat configuration not set, cannot send message")
                 return None
             self.notifier = WeChatWorkNotifier(webhook_key)
         return self.notifier
     
     def _handle_default_message(self):
-        """处理默认消息"""
+        """Handle default message"""
         notifier = self._get_notifier()
         if not notifier:
             return False
-        return notifier.send_message("默认企业微信消息")
+        return notifier.send_message("Default Enterprise WeChat message")
     
     def _handle_string_message(self, message: str):
-        """处理字符串消息"""
+        """Handle string message"""
         notifier = self._get_notifier()
         if not notifier:
             return False
         return notifier.send_message(message)
     
     def _handle_dict_message(self, param_dict: dict):
-        """处理字典参数消息"""
+        """Handle dictionary parameter message"""
         notifier = self._get_notifier()
         if not notifier:
             return False
         
-        message_template = param_dict.get('message', '默认企业微信消息')
+        message_template = param_dict.get('message', 'Default Enterprise WeChat message')
         parameters = param_dict.get('parameters', {})
-        msgtype = param_dict.get('msgtype', 'text')  # 支持消息类型设置
+        msgtype = param_dict.get('msgtype', 'text')  # Support message type setting
         
-        MaaLog_Debug(f"开始处理参数化企业微信消息 - 模板: {message_template}, 参数: {parameters}, 类型: {msgtype}")
+        MaaLog_Debug(f"Start processing parametric Enterprise WeChat message - template: {message_template}, parameters: {parameters}, type: {msgtype}")
         
-        # 格式化消息
+        # Format message
         formatted_message = self._format_message(message_template, parameters)
         
-        # 发送到企业微信
+        # Send to Enterprise WeChat
         return notifier.send_message(formatted_message, msgtype)
 
 @AgentServer.custom_action("parametric_extnotify")
 class ParametricExtNotifyAction(ParametricBaseAction):
     """
-    智能外部通知动作
-    根据配置自动选择Telegram或企业微信发送消息
+    Smart external notification action
+    Automatically choose Telegram or Enterprise WeChat to send message based on configuration
     """
     
     def __init__(self):
@@ -389,7 +389,7 @@ class ParametricExtNotifyAction(ParametricBaseAction):
         self.wechat_notifier = None
     
     def _get_telegram_notifier(self):
-        """获取Telegram通知器"""
+        """Get Telegram notifier"""
         if self.telegram_notifier is None:
             bot_token, chat_id = get_telegram_config()
             if bot_token and chat_id:
@@ -397,7 +397,7 @@ class ParametricExtNotifyAction(ParametricBaseAction):
         return self.telegram_notifier
     
     def _get_wechat_notifier(self):
-        """获取企业微信通知器"""
+        """Get Enterprise WeChat notifier"""
         if self.wechat_notifier is None:
             webhook_key = get_wechat_config()
             if webhook_key:
@@ -406,79 +406,79 @@ class ParametricExtNotifyAction(ParametricBaseAction):
     
     def _send_message_with_fallback(self, message, msgtype="text", preferred_platform=None):
         """
-        发送消息，支持自动降级
+        Send message with automatic fallback support
         """
-        # 获取默认平台和可用平台
+        # Get default platform and available platforms
         default_platform = preferred_platform or get_default_ext_notify()
         available_platforms = get_available_notifiers()
         
-        MaaLog_Debug(f"智能通知 - 默认平台: {default_platform}, 可用平台: {available_platforms}")
+        MaaLog_Debug(f"Smart notification - default platform: {default_platform}, available platforms: {available_platforms}")
         
         if not available_platforms:
-            MaaLog_Debug("智能通知失败: 没有可用的通知平台")
+            MaaLog_Debug("Smart notification failed: no available notification platforms")
             return False
         
-        # 构建尝试顺序
+        # Build try order
         try_order = []
         if default_platform and default_platform in available_platforms:
             try_order.append(default_platform)
         
-        # 添加其他可用平台作为备选
+        # Add other available platforms as alternatives
         for platform in available_platforms:
             if platform not in try_order:
                 try_order.append(platform)
         
-        MaaLog_Debug(f"智能通知尝试顺序: {try_order}")
+        MaaLog_Debug(f"Smart notification try order: {try_order}")
         
-        # 按顺序尝试发送
+        # Try sending in order
         for platform in try_order:
             try:
                 if platform == 'telegram':
                     notifier = self._get_telegram_notifier()
                     if notifier:
-                        MaaLog_Debug(f"尝试通过Telegram发送消息")
+                        MaaLog_Debug(f"Trying to send message via Telegram")
                         if notifier.send_message(message):
-                            MaaLog_Debug(f"智能通知成功: 使用Telegram发送")
+                            MaaLog_Debug(f"Smart notification success: sent via Telegram")
                             return True
                         else:
-                            MaaLog_Debug(f"Telegram发送失败，尝试下一个平台")
+                            MaaLog_Debug(f"Telegram sending failed, trying next platform")
                 elif platform == 'wechat':
                     notifier = self._get_wechat_notifier()
                     if notifier:
-                        MaaLog_Debug(f"尝试通过企业微信发送消息")
+                        MaaLog_Debug(f"Trying to send message via Enterprise WeChat")
                         if notifier.send_message(message, msgtype):
-                            MaaLog_Debug(f"智能通知成功: 使用企业微信发送")
+                            MaaLog_Debug(f"Smart notification success: sent via Enterprise WeChat")
                             return True
                         else:
-                            MaaLog_Debug(f"企业微信发送失败，尝试下一个平台")
+                            MaaLog_Debug(f"Enterprise WeChat sending failed, trying next platform")
             except Exception as e:
-                MaaLog_Debug(f"{platform}发送异常: {e}，尝试下一个平台")
+                MaaLog_Debug(f"{platform} sending exception: {e}, trying next platform")
                 continue
         
-        MaaLog_Debug("智能通知失败: 所有平台都无法发送消息")
+        MaaLog_Debug("Smart notification failed: all platforms unable to send message")
         return False
     
     def _handle_default_message(self):
-        """处理默认消息"""
-        return self._send_message_with_fallback("默认智能通知消息")
+        """Handle default message"""
+        return self._send_message_with_fallback("Default smart notification message")
     
     def _handle_string_message(self, message: str):
-        """处理字符串消息"""
+        """Handle string message"""
         return self._send_message_with_fallback(message)
     
     def _handle_dict_message(self, param_dict: dict):
-        """处理字典参数消息"""
-        message_template = param_dict.get('message', '默认智能通知消息')
+        """Handle dictionary parameter message"""
+        message_template = param_dict.get('message', 'Default smart notification message')
         parameters = param_dict.get('parameters', {})
         msgtype = param_dict.get('msgtype', 'text')
         preferred_platform = param_dict.get('platform', None)
         
-        MaaLog_Debug(f"开始处理参数化智能通知消息 - 模板: {message_template}, 参数: {parameters}, 类型: {msgtype}, 首选平台: {preferred_platform}")
+        MaaLog_Debug(f"Start processing parametric smart notification message - template: {message_template}, parameters: {parameters}, type: {msgtype}, preferred platform: {preferred_platform}")
         
-        # 格式化消息
+        # Format message
         formatted_message = self._format_message(message_template, parameters)
         
-        # 发送消息
+        # Send message
         return self._send_message_with_fallback(formatted_message, msgtype, preferred_platform)
 
 ##########################################################################################################################################################################################
@@ -486,31 +486,31 @@ class ParametricExtNotifyAction(ParametricBaseAction):
 ##########################################################################################################################################################################################
 
 def MaaLog_Debug(message):
-    """调试日志输出"""
+    """Debug log output"""
     if Enable_MaaLog_Debug:
         print(f"[DEBUG] {message}")
 
 def MaaLog_Info(message):
-    """信息日志输出"""
+    """Info log output"""
     if Enable_MaaLog_Info:
         print(f"[INFO] {message}")
 
 def set_debug_log(enabled):
-    """设置调试日志开关"""
+    """Set debug log switch"""
     global Enable_MaaLog_Debug
     Enable_MaaLog_Debug = 1 if enabled else 0
 
 def set_info_log(enabled):
-    """设置信息日志开关"""
+    """Set info log switch"""
     global Enable_MaaLog_Info
     Enable_MaaLog_Info = 1 if enabled else 0
 
 def get_Task_Counter():
-    """获取当前任务运行次数"""
+    """Get current task run count"""
     global Task_Counter
     return Task_Counter
 
 def reset_Task_Counter():
-    """重置任务运行次数"""
+    """Reset task run count"""
     global Task_Counter
     Task_Counter = 0
