@@ -3,6 +3,7 @@ import os
 import traceback
 import time
 import uuid
+import threading
 
 def get_executable_dir():
     """Get the directory where the executable is located"""
@@ -101,6 +102,7 @@ try:
     print("Starting to import custom modules...")
     import my_reco
     import action
+    from action import get_global_watchdog
     print("Custom modules imported successfully")
     
 except Exception as e:
@@ -131,6 +133,81 @@ except Exception as e:
     traceback.print_exc()
     sys.exit(1)
 
+class CustomAgentServer:
+    """
+    Custom AgentServer wrapper with watchdog monitoring
+    """
+    
+    def __init__(self):
+        self._watchdog_check_interval = 2.0  # Check every 2 seconds
+        self._watchdog_thread = None
+        self._stop_event = threading.Event()
+        self._watchdog = get_global_watchdog()
+    
+    def _watchdog_monitor_loop(self):
+        """
+        Watchdog monitoring loop running in separate thread
+        """
+        print("Watchdog monitor thread started")
+        
+        while not self._stop_event.wait(self._watchdog_check_interval):
+            try:
+                if self._watchdog.poll():
+                    print("Watchdog timeout detected, sending notification...")
+                    self._watchdog.notify()
+                    # Continue monitoring even after timeout
+                else:
+                    # Watchdog is healthy, no action needed
+                    pass
+            except Exception as e:
+                print(f"Watchdog monitor exception: {e}")
+                traceback.print_exc()
+        
+        print("Watchdog monitor thread stopped")
+    
+    def start_up(self, socket_id):
+        """Start AgentServer with watchdog monitoring"""
+        # Start original AgentServer
+        print("Starting to launch AgentServer...")
+        AgentServer.start_up(socket_id)
+        print("AgentServer started successfully")
+        
+        # Start watchdog monitoring thread
+        self._stop_event.clear()
+        self._watchdog_thread = threading.Thread(
+            target=self._watchdog_monitor_loop,
+            daemon=True,
+            name="WatchdogMonitor"
+        )
+        self._watchdog_thread.start()
+        print("Watchdog monitor thread started")
+    
+    def join(self):
+        """Wait for AgentServer to complete"""
+        # This will block until connection ends
+        AgentServer.join()
+    
+    def shut_down(self):
+        """Shutdown AgentServer and stop watchdog monitoring"""
+        # Stop watchdog monitoring
+        if self._watchdog_thread and self._watchdog_thread.is_alive():
+            print("Stopping watchdog monitor thread...")
+            self._stop_event.set()
+            self._watchdog_thread.join(timeout=10)
+            if self._watchdog_thread.is_alive():
+                print("Warning: Watchdog monitor thread did not stop gracefully")
+            else:
+                print("Watchdog monitor thread stopped")
+        
+        # Shutdown original AgentServer
+        AgentServer.shut_down()
+    
+    # Expose other AgentServer methods if needed
+    @staticmethod
+    def custom_action(name):
+        """Decorator for custom actions"""
+        return AgentServer.custom_action(name)
+
 def main():
     
     try:
@@ -152,9 +229,11 @@ def main():
         
         print(f"Final socket_id to use: {socket_id}")
 
-        print("Starting to launch AgentServer...")
-        AgentServer.start_up(socket_id)
-        print("AgentServer started successfully")
+        # Create custom agent server with watchdog support
+        custom_agent_server = CustomAgentServer()
+        
+        # Start up the server
+        custom_agent_server.start_up(socket_id)
         
         # Wait for AgentServer to fully start
         print("Waiting for AgentServer to fully start...")
@@ -163,11 +242,11 @@ def main():
         print("Starting to wait for connections...")
         
         # AgentServer.join() will block until connection ends
-        AgentServer.join()
+        custom_agent_server.join()
         print("AgentServer connection ended")
         
         # Clean up resources
-        AgentServer.shut_down()
+        custom_agent_server.shut_down()
         print("All services shutdown completed")
 
     except Exception as e:

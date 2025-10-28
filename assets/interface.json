@@ -252,7 +252,7 @@
             "name": "CustomServer",
             "entry": "!CustomServer",
             "check": false,
-            "doc": "自定义后台服务器，开发中",
+            "doc": "Agent功能测试接口",
             "option": [
                 "CustomServer_List"
             ],
@@ -1239,6 +1239,22 @@
                     "pipeline_override": {
                         "!CustomServer": {
                             "next": "!Notify_Wechat_Task"
+                        }
+                    }
+                },
+                {
+                    "name": "看门狗测试_正常情况",
+                    "pipeline_override": {
+                        "!CustomServer": {
+                            "next": "!Watchdog_Normal_Test"
+                        }
+                    }
+                },
+                {
+                    "name": "看门狗测试_超时情况",
+                    "pipeline_override": {
+                        "!CustomServer": {
+                            "next": "!Watchdog_Timeout_Test"
                         }
                     }
                 }

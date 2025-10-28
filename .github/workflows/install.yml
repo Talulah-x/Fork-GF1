@@ -51,7 +51,7 @@ jobs:
 
   install:
     needs: meta
-    runs-on: windows-latest  # 改为 windows-latest 以支持 pywin32
+    runs-on: windows-latest
     strategy:
       matrix:
         os: [win]
@@ -120,7 +120,6 @@ jobs:
             if [ -d "MFA" ]; then
               echo "Copying MFA files to install directory..."
               mkdir -p install
-              # 使用 cp 命令替代 rsync（Windows 环境）
               cp -r MFA/* install/ 2>/dev/null || true
             else
               echo "MFA directory not found, skipping copy."
