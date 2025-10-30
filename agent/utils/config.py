@@ -8,12 +8,17 @@ class Config:
     """Configuration management class"""
     
     def __init__(self):
+        # External notification config
         self.bot_token = None
         self.chat_id = None
         self.webhook_key = None
         self.default_ext_notify = None
         self.telegram_loaded = False
         self.wechat_loaded = False
+        
+        # Watchdog config
+        self.wd_interval = 5.0  # Default 5 seconds
+        self.wd_interval_loaded = False
     
     def load_config(self, config_path=None):
         """
@@ -28,6 +33,7 @@ class Config:
         
         if not os.path.exists(config_path):
             print(f"Configuration file does not exist: {config_path}")
+            print("Using default configuration values")
             return False
         
         try:
@@ -39,6 +45,7 @@ class Config:
                         key = key.strip()
                         value = value.strip()
                         
+                        # External notification config
                         if key == 'Bot_Token':
                             self.bot_token = value
                             print(f"Loaded Bot_Token: {self.bot_token[:10] if self.bot_token else 'None'}...")
@@ -51,6 +58,32 @@ class Config:
                         elif key == 'Default_ExtNotify':
                             self.default_ext_notify = value.lower()
                             print(f"Loaded Default_ExtNotify: {self.default_ext_notify}")
+                        
+                        # Watchdog config
+                        elif key == 'WD_Interval':
+                            try:
+                                self.wd_interval = float(value)
+                                self.wd_interval_loaded = True
+                                print(f"Loaded WD_Interval: {self.wd_interval} seconds")
+                                
+                                # Validate watchdog interval
+                                if self.wd_interval <= 0:
+                                    print(f"Warning: Invalid WD_Interval value: {self.wd_interval}, must be positive. Using default: 5.0")
+                                    self.wd_interval = 5.0
+                                    self.wd_interval_loaded = False
+                                elif self.wd_interval < 0.5:
+                                    print(f"Warning: WD_Interval value too small: {self.wd_interval}, minimum recommended: 0.5s. Using default: 5.0")
+                                    self.wd_interval = 5.0
+                                    self.wd_interval_loaded = False
+                                elif self.wd_interval > 3600:
+                                    print(f"Warning: WD_Interval value too large: {self.wd_interval}, maximum recommended: 3600s. Using default: 5.0")
+                                    self.wd_interval = 5.0
+                                    self.wd_interval_loaded = False
+                                    
+                            except ValueError:
+                                print(f"Error: Invalid WD_Interval format: {value}, expected float number. Using default: 5.0")
+                                self.wd_interval = 5.0
+                                self.wd_interval_loaded = False
             
             # Check Telegram configuration
             if self.bot_token and self.chat_id:
@@ -86,11 +119,16 @@ class Config:
                     print("Automatically selected Telegram as default notification platform")
                 else:
                     print("Warning: No available external notification platform")
-                
+            
+            # Report watchdog configuration status
+            if not self.wd_interval_loaded:
+                print(f"WD_Interval not found in config file, using default: {self.wd_interval} seconds")
+            
             return self.telegram_loaded or self.wechat_loaded
                 
         except Exception as e:
             print(f"Failed to load configuration file: {e}")
+            print("Using default configuration values")
             return False
     
     def get_telegram_config(self):
@@ -114,6 +152,10 @@ class Config:
             available.append('wechat')
         return available
     
+    def get_watchdog_interval(self):
+        """Get watchdog check interval in seconds"""
+        return self.wd_interval
+    
     def set_telegram_config(self, bot_token, chat_id):
         """Manually set Telegram configuration"""
         self.bot_token = bot_token
@@ -136,6 +178,22 @@ class Config:
         else:
             print(f"Invalid notification platform: {platform}")
     
+    def set_watchdog_interval(self, interval):
+        """Manually set watchdog check interval"""
+        try:
+            interval = float(interval)
+            if interval > 0:
+                self.wd_interval = interval
+                self.wd_interval_loaded = True
+                print(f"Set watchdog interval: {interval} seconds")
+                return True
+            else:
+                print(f"Invalid watchdog interval: {interval}, must be positive")
+                return False
+        except (ValueError, TypeError):
+            print(f"Invalid watchdog interval format: {interval}")
+            return False
+    
     def is_telegram_configured(self):
         """Check if Telegram is configured"""
         return self.telegram_loaded and self.bot_token and self.chat_id
@@ -143,6 +201,10 @@ class Config:
     def is_wechat_configured(self):
         """Check if WeChat Work is configured"""
         return self.wechat_loaded and self.webhook_key
+    
+    def is_watchdog_interval_configured(self):
+        """Check if watchdog interval is loaded from config file"""
+        return self.wd_interval_loaded
 
 # Global configuration instance
 app_config = Config()
@@ -167,6 +229,10 @@ def get_available_notifiers():
     """Get all available notification platforms"""
     return app_config.get_available_notifiers()
 
+def get_watchdog_interval():
+    """Get watchdog check interval in seconds"""
+    return app_config.get_watchdog_interval()
+
 def set_telegram_config(bot_token, chat_id):
     """Manually set Telegram configuration"""
     return app_config.set_telegram_config(bot_token, chat_id)
@@ -179,6 +245,10 @@ def set_default_ext_notify(platform):
     """Manually set default notification platform"""
     return app_config.set_default_ext_notify(platform)
 
+def set_watchdog_interval(interval):
+    """Manually set watchdog check interval"""
+    return app_config.set_watchdog_interval(interval)
+
 def is_telegram_configured():
     """Check if Telegram is configured"""
     return app_config.is_telegram_configured()
@@ -186,3 +256,7 @@ def is_telegram_configured():
 def is_wechat_configured():
     """Check if WeChat Work is configured"""
     return app_config.is_wechat_configured()
+
+def is_watchdog_interval_configured():
+    """Check if watchdog interval is loaded from config file"""
+    return app_config.is_watchdog_interval_configured()

@@ -124,22 +124,44 @@ try:
     
     print(f"Configuration file path: {config_path}")
     
-    from utils import load_config
+    from utils import load_config, get_watchdog_interval, is_watchdog_interval_configured
     load_config(config_path)
     print("Configuration file loading completed")
+    
+    # Get watchdog interval from configuration
+    watchdog_interval = get_watchdog_interval()
+    interval_from_config = is_watchdog_interval_configured()
+    
+    print(f"Watchdog check interval: {watchdog_interval} seconds ({'from config file' if interval_from_config else 'using default'})")
     
 except Exception as e:
     print(f"Configuration file loading failed: {e}")
     traceback.print_exc()
-    sys.exit(1)
+    # Set default watchdog interval if config loading fails
+    watchdog_interval = 5.0
+    print(f"Using fallback watchdog interval: {watchdog_interval} seconds")
+    # Don't exit here, continue with defaults
+    # sys.exit(1)
 
 class CustomAgentServer:
     """
     Custom AgentServer wrapper with watchdog monitoring
     """
     
-    def __init__(self):
-        self._watchdog_check_interval = 2.0  # Check every 2 seconds
+    def __init__(self, watchdog_check_interval=None):
+        # Use provided interval or get from global config
+        if watchdog_check_interval is not None:
+            self._watchdog_check_interval = float(watchdog_check_interval)
+        else:
+            try:
+                from utils import get_watchdog_interval
+                self._watchdog_check_interval = get_watchdog_interval()
+            except:
+                # Fallback if config module is not available
+                self._watchdog_check_interval = 5.0
+        
+        print(f"CustomAgentServer initialized with watchdog check interval: {self._watchdog_check_interval} seconds")
+        
         self._watchdog_thread = None
         self._stop_event = threading.Event()
         self._watchdog = get_global_watchdog()
@@ -148,7 +170,7 @@ class CustomAgentServer:
         """
         Watchdog monitoring loop running in separate thread
         """
-        print("Watchdog monitor thread started")
+        print(f"Watchdog monitor thread started (check interval: {self._watchdog_check_interval}s)")
         
         while not self._stop_event.wait(self._watchdog_check_interval):
             try:
@@ -180,7 +202,7 @@ class CustomAgentServer:
             name="WatchdogMonitor"
         )
         self._watchdog_thread.start()
-        print("Watchdog monitor thread started")
+        print(f"Watchdog monitor thread started with {self._watchdog_check_interval}s interval")
     
     def join(self):
         """Wait for AgentServer to complete"""
@@ -201,6 +223,25 @@ class CustomAgentServer:
         
         # Shutdown original AgentServer
         AgentServer.shut_down()
+    
+    def set_watchdog_check_interval(self, interval):
+        """Set watchdog check interval (requires restart to take effect)"""
+        try:
+            interval = float(interval)
+            if interval > 0:
+                self._watchdog_check_interval = interval
+                print(f"Watchdog check interval updated to: {interval} seconds (restart required)")
+                return True
+            else:
+                print(f"Invalid watchdog interval: {interval}, must be positive")
+                return False
+        except (ValueError, TypeError):
+            print(f"Invalid watchdog interval format: {interval}")
+            return False
+    
+    def get_watchdog_check_interval(self):
+        """Get current watchdog check interval"""
+        return self._watchdog_check_interval
     
     # Expose other AgentServer methods if needed
     @staticmethod
@@ -230,7 +271,8 @@ def main():
         print(f"Final socket_id to use: {socket_id}")
 
         # Create custom agent server with watchdog support
-        custom_agent_server = CustomAgentServer()
+        # Pass the watchdog interval from configuration
+        custom_agent_server = CustomAgentServer(watchdog_interval)
         
         # Start up the server
         custom_agent_server.start_up(socket_id)
