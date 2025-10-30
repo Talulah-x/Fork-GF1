@@ -7,6 +7,7 @@ Provides unified access to all action module functionalities
 from . import include
 from . import log
 from . import input
+from . import watchdog
 
 # Import commonly used functions and classes for convenient access
 from .log import MaaLog_Debug, MaaLog_Info
@@ -16,6 +17,9 @@ from .input import (
     find_game_window, 
     convert_maa_coordinates
 )
+
+# Import watchdog functions
+from .watchdog import get_global_watchdog
 
 # Import global variables and configuration from include
 from .include import (
@@ -30,6 +34,7 @@ __all__ = [
     'include',
     'log', 
     'input',
+    'watchdog',
     
     # Logging functions
     'MaaLog_Debug',
@@ -40,6 +45,9 @@ __all__ = [
     'win32_mouse_left_up', 
     'find_game_window',
     'convert_maa_coordinates',
+    
+    # Watchdog functions
+    'get_global_watchdog',
     
     # Global variables
     'Task_Counter',

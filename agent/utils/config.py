@@ -20,9 +20,8 @@ class Config:
         Load configuration file
         """
         if config_path is None:
-            # 从utils目录向上两级找到项目根目录，再进入agent目录
             current_dir = os.path.dirname(os.path.abspath(__file__))
-            parent_dir = os.path.dirname(current_dir)  # 回到agent目录
+            parent_dir = os.path.dirname(current_dir)
             config_path = os.path.join(parent_dir, "agent.conf")
         
         print(f"Attempting to load configuration file: {config_path}")
