@@ -1009,6 +1009,14 @@
                             "next": "!9-4打捞"
                         }
                     }
+                },
+                {
+                    "name": "UMP_UX(EP8.5_CH2-3)",
+                    "pipeline_override": {
+                        "!夜战打捞": {
+                            "next": "!UMP-UX打捞"
+                        }
+                    }
                 }
             ]
         },
