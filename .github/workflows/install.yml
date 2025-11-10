@@ -79,6 +79,7 @@ jobs:
           pip install numpy
           pip install requests
           pip install pywin32
+          pip install pygetwindow
           
           echo "=== Installed packages ==="
           pip list | grep -E "(MaaFw|Pillow|numpy|requests|pywin32|pyinstaller)"
