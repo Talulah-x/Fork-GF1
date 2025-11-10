@@ -8,6 +8,7 @@ from . import include
 from . import log
 from . import input
 from . import watchdog
+from . import borderless
 
 # Import commonly used functions and classes for convenient access
 from .log import MaaLog_Debug, MaaLog_Info
@@ -20,6 +21,9 @@ from .input import (
 
 # Import watchdog functions
 from .watchdog import get_global_watchdog
+
+# Import borderless functions
+from .borderless import get_global_optimizer
 
 # Import global variables and configuration from include
 from .include import (
@@ -35,6 +39,7 @@ __all__ = [
     'log', 
     'input',
     'watchdog',
+    'borderless',
     
     # Logging functions
     'MaaLog_Debug',
@@ -48,6 +53,9 @@ __all__ = [
     
     # Watchdog functions
     'get_global_watchdog',
+    
+    # Borderless functions
+    'get_global_optimizer',
     
     # Global variables
     'Task_Counter',

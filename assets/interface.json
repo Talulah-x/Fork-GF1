@@ -1273,6 +1273,22 @@
                             "next": "!Watchdog_Timeout_Test"
                         }
                     }
+                },
+                {
+                    "name": "去除窗口装饰",
+                    "pipeline_override": {
+                        "!CustomServer": {
+                            "next": "!Borderless_Optimize_Task"
+                        }
+                    }
+                },
+                {
+                    "name": "恢复窗口装饰",
+                    "pipeline_override": {
+                        "!CustomServer": {
+                            "next": "!Borderless_Revert_Task"
+                        }
+                    }
                 }
             ]
         }
