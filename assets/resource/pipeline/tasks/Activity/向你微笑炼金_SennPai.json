@@ -18,9 +18,9 @@
         ]
     },
     "向你微笑_开始作战":{
-        "recognition": "TemplateMatch",
-        "roi" : [668,305,114,103],
-        "template": "./smile_to_you/begin-1.png",
+        "recognition": "OCR",
+        "roi" : [1010,605,123,65],
+        "expected":"开始",
         "pre_delay":200,
         "action": "LongPress",
         "duration": 20,

@@ -14,7 +14,7 @@
                 "class_regex": ".*",
                 "window_regex": "少女前线",
                 "input": 1,
-                "screencap": 1
+                "screencap": 16
             }
         },
         {
@@ -230,7 +230,7 @@
         },
         {
             "name": "向你微笑炼金(DLzcccc版)",
-            "entry": "!活动炼金开始作战",
+            "entry": "!活动炼金总流程",
             "check": false,
             "doc": "通关任意难度向你微笑，地图缩放到最小，拖动到右下角边缘开始"
         },
@@ -1117,6 +1117,14 @@
                             "next": "!AK-5打捞"
                         }
                     }
+                },
+                {
+                    "name": "异构体-混沌落幕打捞",
+                    "pipeline_override": {
+                        "!常驻人形打捞": {
+                            "next": "!异构体-混沌落幕p打捞"
+                        }
+                    }
                 }
             ]
         },
@@ -1271,6 +1279,22 @@
                     "pipeline_override": {
                         "!CustomServer": {
                             "next": "!Watchdog_Timeout_Test"
+                        }
+                    }
+                },
+                {
+                    "name": "去除窗口装饰",
+                    "pipeline_override": {
+                        "!CustomServer": {
+                            "next": "!Borderless_Optimize_Task"
+                        }
+                    }
+                },
+                {
+                    "name": "恢复窗口装饰",
+                    "pipeline_override": {
+                        "!CustomServer": {
+                            "next": "!Borderless_Revert_Task"
                         }
                     }
                 }
