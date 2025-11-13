@@ -188,7 +188,7 @@ class Watchdog:
             
             elapsed_ms = (datetime.now() - self._last_feed_time).total_seconds() * 1000 if self._last_feed_time else float('inf')
             
-            timeout_message = f"[WATCHDOG] Timeout Alert!\n\nStart Info: {self._start_info}\n\nTimeout Threshold: {self._timeout_ms}ms\n\nElapsed Time: {elapsed_ms:.1f}ms\n\nLast Feed: {self._last_feed_time.strftime('%Y-%m-%d %H:%M:%S') if self._last_feed_time else 'Never'}\n\nAlert Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n\n\n[WARNING] Watchdog will auto-stop to prevent spam notifications."
+            timeout_message = f"[WATCHDOG] Timeout Alert!\n\nStart Info: {self._start_info}\n\nTimeout Threshold: {self._timeout_ms}ms\n\nElapsed Time: {elapsed_ms:.1f}ms\n\nLast Feed: {self._last_feed_time.strftime('%Y-%m-%d %H:%M:%S') if self._last_feed_time else 'Never'}\n\nAlert Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
             
             MaaLog_Info(f"Watchdog timeout alert - elapsed: {elapsed_ms:.1f}ms, threshold: {self._timeout_ms}ms, auto-stopping")
             
@@ -196,7 +196,7 @@ class Watchdog:
             notification_sent = self._send_notification(timeout_message)
             
             # Auto-stop to prevent further notifications
-            self._internal_stop("Timeout occurred - auto-stopped to prevent spam")
+            self._internal_stop("Timeout occurred")
             
             return notification_sent
     
