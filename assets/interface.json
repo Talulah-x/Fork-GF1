@@ -1235,8 +1235,7 @@
                 }
             ]
         },
-        "Dormitory_Task_List" :
-        {
+        "Dormitory_Task_List": {
             "cases": [
                 {
                     "name": "好友点赞偷电",
