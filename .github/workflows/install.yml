@@ -19,6 +19,11 @@ on:
       - "**.py"
   workflow_dispatch:
 
+permissions:
+  contents: write
+  issues: read
+  pull-requests: read
+
 jobs:
   meta:
     runs-on: ubuntu-latest
