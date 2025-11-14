@@ -1,5 +1,14 @@
 {
     "!异构体-混沌落幕p打捞":{
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "watchdog_feed",
+        "custom_action_param": {
+            "timeout_ms": 240000,
+            "info": "混沌落幕看门狗初始化 - 240秒超时"
+        },
+        "pre_delay": 100,
+        "post_delay": 500,
         "next":["混沌落幕进入作战0",
                 "混沌落幕确认出击",
                 "混沌落幕开始作战"
@@ -355,6 +364,16 @@
         "target" : [728,470,84,53],
         "post_delay":6000,
         "next":[
+            "混沌落幕_WD_Loop_Feed"
+        ]
+    },
+    "混沌落幕_WD_Loop_Feed": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "watchdog_feed",
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
             "混沌落幕点击再战"
         ]
     },
