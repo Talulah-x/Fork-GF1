@@ -84,132 +84,93 @@ jobs:
           echo "=== Installed packages ==="
           pip list | grep -E "(MaaFw|Pillow|numpy|requests|pywin32|pyinstaller)"
 
-      - name: Download MaaFramework and collect info
-        id: download_maa
-        uses: robinraju/release-downloader@v1
-        with:
-          repository: MaaXYZ/MaaFramework
-          fileName: "MAA-${{ matrix.os }}-${{ matrix.arch }}*"
-          latest: true
-          out-file-path: "deps"
-          extract: true
-
-      - name: Get MaaFramework release info
+      - name: Get MaaFramework latest stable release info
         id: maa_info
         shell: bash
         run: |
-          # Get MaaFramework latest release information
-          response=$(curl -sX GET "https://api.github.com/repos/MaaXYZ/MaaFramework/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}')
+          echo "Getting MaaFramework latest stable release (excluding pre-releases)..."
           
-          tag=$(echo "$response" | jq -r '.tag_name // "unknown"')
-          date=$(echo "$response" | jq -r '.published_at // "unknown"')
-          url=$(echo "$response" | jq -r '.html_url // "unknown"')
+          # Get all releases and filter out pre-releases
+          response=$(curl -sX GET "https://api.github.com/repos/MaaXYZ/MaaFramework/releases" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}')
+          
+          # Find the first release that is not a prerelease
+          stable_release=$(echo "$response" | jq -r '.[] | select(.prerelease == false) | select(.draft == false) | .tag_name' | head -1)
+          
+          if [[ -z "$stable_release" || "$stable_release" == "null" ]]; then
+            echo "No stable release found, falling back to latest release"
+            latest_response=$(curl -sX GET "https://api.github.com/repos/MaaXYZ/MaaFramework/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}')
+            tag=$(echo "$latest_response" | jq -r '.tag_name // "unknown"')
+            date=$(echo "$latest_response" | jq -r '.published_at // "unknown"')
+            url=$(echo "$latest_response" | jq -r '.html_url // "unknown"')
+            prerelease=$(echo "$latest_response" | jq -r '.prerelease // false')
+          else
+            echo "Found stable release: $stable_release"
+            # Get details for the stable release
+            release_response=$(curl -sX GET "https://api.github.com/repos/MaaXYZ/MaaFramework/releases/tags/$stable_release" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}')
+            tag=$(echo "$release_response" | jq -r '.tag_name // "unknown"')
+            date=$(echo "$release_response" | jq -r '.published_at // "unknown"')
+            url=$(echo "$release_response" | jq -r '.html_url // "unknown"')
+            prerelease=$(echo "$release_response" | jq -r '.prerelease // false')
+          fi
           
           echo "MaaFramework Info:"
           echo "  Tag: $tag"
           echo "  Date: $date"
           echo "  URL: $url"
+          echo "  Prerelease: $prerelease"
           
           echo "maa_tag=$tag" >> $GITHUB_OUTPUT
           echo "maa_date=$date" >> $GITHUB_OUTPUT
           echo "maa_url=$url" >> $GITHUB_OUTPUT
+          echo "maa_prerelease=$prerelease" >> $GITHUB_OUTPUT
 
-      - name: Compare and get latest MFAAvalonia repository
+      - name: Download MaaFramework
+        id: download_maa
+        uses: robinraju/release-downloader@v1
+        with:
+          repository: MaaXYZ/MaaFramework
+          fileName: "MAA-${{ matrix.os }}-${{ matrix.arch }}*"
+          tag: ${{ steps.maa_info.outputs.maa_tag }}
+          out-file-path: "deps"
+          extract: true
+
+      - name: Get MFAAvalonia release info
         if: matrix.os != 'android'
-        id: get_latest_repo
+        id: mfa_info
         shell: bash
         run: |
-          echo "=== Comparing MFAAvalonia repositories ==="
+          echo "Getting MaaGF1/MFAAvalonia latest release..."
           
-          # Function to get release information
-          get_release_info() {
-            local repo=$1
-            local response=$(curl -sX GET "https://api.github.com/repos/$repo/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}')
-            local date=$(echo "$response" | jq -r '.published_at // empty')
-            local tag=$(echo "$response" | jq -r '.tag_name // empty')
-            local url=$(echo "$response" | jq -r '.html_url // empty')
-            
-            # Only output debug info to stderr, return result to stdout
-            if [[ -n "$date" && "$date" != "null" && "$date" != "empty" ]]; then
-              echo "$repo: $tag ($date)" >&2
-              echo "$date|$tag|$url"
-            else
-              echo "$repo: No releases found" >&2
-              echo "||"
-            fi
-          }
+          response=$(curl -sX GET "https://api.github.com/repos/MaaGF1/MFAAvalonia/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}')
           
-          echo "Checking SwordofMorning/MFAAvalonia..."
-          sword_info=$(get_release_info "SwordofMorning/MFAAvalonia")
-          sword_date=$(echo "$sword_info" | cut -d'|' -f1)
-          sword_tag=$(echo "$sword_info" | cut -d'|' -f2)
-          sword_url=$(echo "$sword_info" | cut -d'|' -f3)
+          tag=$(echo "$response" | jq -r '.tag_name // "unknown"')
+          date=$(echo "$response" | jq -r '.published_at // "unknown"')
+          url=$(echo "$response" | jq -r '.html_url // "unknown"')
+          prerelease=$(echo "$response" | jq -r '.prerelease // false')
           
-          echo "Checking SweetSmellFox/MFAAvalonia..."
-          sweet_info=$(get_release_info "SweetSmellFox/MFAAvalonia")
-          sweet_date=$(echo "$sweet_info" | cut -d'|' -f1)
-          sweet_tag=$(echo "$sweet_info" | cut -d'|' -f2)
-          sweet_url=$(echo "$sweet_info" | cut -d'|' -f3)
+          echo "MFAAvalonia Info:"
+          echo "  Repository: MaaGF1/MFAAvalonia"
+          echo "  Tag: $tag"
+          echo "  Date: $date"
+          echo "  URL: $url"
+          echo "  Prerelease: $prerelease"
           
-          # Default repository selection
-          latest_repo="SweetSmellFox/MFAAvalonia"
-          selected_tag="$sweet_tag"
-          selected_date="$sweet_date"
-          selected_url="$sweet_url"
+          # Handle empty values
+          tag=${tag:-"No releases"}
+          date=${date:-"N/A"}
+          url=${url:-""}
           
-          if [[ -n "$sword_date" && "$sword_date" != "null" && "$sword_date" != "" ]]; then
-            if [[ -z "$sweet_date" || "$sweet_date" == "null" || "$sweet_date" == "" ]]; then
-              echo "Only SwordofMorning has releases, using it."
-              latest_repo="SwordofMorning/MFAAvalonia"
-              selected_tag="$sword_tag"
-              selected_date="$sword_date"
-              selected_url="$sword_url"
-            elif [[ "$sword_date" > "$sweet_date" ]]; then
-              echo "SwordofMorning has newer release, using it."
-              latest_repo="SwordofMorning/MFAAvalonia"
-              selected_tag="$sword_tag"
-              selected_date="$sword_date"
-              selected_url="$sword_url"
-            else
-              echo "SweetSmellFox has newer or equal release, using it."
-            fi
-          else
-            echo "SwordofMorning has no releases, using SweetSmellFox."
-          fi
-          
-          echo "=== Selected repository: $latest_repo ==="
-          echo "Selected tag: $selected_tag"
-          echo "Selected date: $selected_date"
-          
-          # Handle empty values before outputting to GITHUB_OUTPUT
-          sword_tag=${sword_tag:-"No releases"}
-          sword_date=${sword_date:-"N/A"}
-          sword_url=${sword_url:-""}
-          sweet_tag=${sweet_tag:-"No releases"}
-          sweet_date=${sweet_date:-"N/A"}
-          sweet_url=${sweet_url:-""}
-          selected_tag=${selected_tag:-"No releases"}
-          selected_date=${selected_date:-"N/A"}
-          selected_url=${selected_url:-""}
-          
-          # Output all information for build report
-          echo "repository=$latest_repo" >> $GITHUB_OUTPUT
-          echo "mfa_tag=$selected_tag" >> $GITHUB_OUTPUT
-          echo "mfa_date=$selected_date" >> $GITHUB_OUTPUT
-          echo "mfa_url=$selected_url" >> $GITHUB_OUTPUT
-          echo "sword_tag=$sword_tag" >> $GITHUB_OUTPUT
-          echo "sword_date=$sword_date" >> $GITHUB_OUTPUT
-          echo "sword_url=$sword_url" >> $GITHUB_OUTPUT
-          echo "sweet_tag=$sweet_tag" >> $GITHUB_OUTPUT
-          echo "sweet_date=$sweet_date" >> $GITHUB_OUTPUT
-          echo "sweet_url=$sweet_url" >> $GITHUB_OUTPUT
+          echo "mfa_tag=$tag" >> $GITHUB_OUTPUT
+          echo "mfa_date=$date" >> $GITHUB_OUTPUT
+          echo "mfa_url=$url" >> $GITHUB_OUTPUT
+          echo "mfa_prerelease=$prerelease" >> $GITHUB_OUTPUT
 
       - name: Download MFAAvalonia
         if: matrix.os != 'android'
         id: download_mfa
         uses: robinraju/release-downloader@v1
         with:
-          repository: ${{ steps.get_latest_repo.outputs.repository }}
+          repository: MaaGF1/MFAAvalonia
           fileName: "MFAAvalonia-*-${{ (matrix.os == 'win' && 'win') || (matrix.os == 'macos' && 'osx') || (matrix.os == 'linux' && 'linux') }}-${{ (matrix.arch == 'x86_64' && 'x64') || (matrix.arch == 'aarch64' && 'arm64') }}*"
           latest: true
           out-file-path: "MFA"
@@ -248,17 +209,12 @@ jobs:
           BUILD_DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
           
           # Handle empty values and create proper display text
-          MFA_TAG="${{ steps.get_latest_repo.outputs.mfa_tag }}"
-          MFA_DATE="${{ steps.get_latest_repo.outputs.mfa_date }}"
-          MFA_URL="${{ steps.get_latest_repo.outputs.mfa_url }}"
+          MFA_TAG="${{ steps.mfa_info.outputs.mfa_tag }}"
+          MFA_DATE="${{ steps.mfa_info.outputs.mfa_date }}"
+          MFA_URL="${{ steps.mfa_info.outputs.mfa_url }}"
+          MFA_PRERELEASE="${{ steps.mfa_info.outputs.mfa_prerelease }}"
           
-          SWORD_TAG="${{ steps.get_latest_repo.outputs.sword_tag }}"
-          SWORD_DATE="${{ steps.get_latest_repo.outputs.sword_date }}"
-          SWORD_URL="${{ steps.get_latest_repo.outputs.sword_url }}"
-          
-          SWEET_TAG="${{ steps.get_latest_repo.outputs.sweet_tag }}"
-          SWEET_DATE="${{ steps.get_latest_repo.outputs.sweet_date }}"
-          SWEET_URL="${{ steps.get_latest_repo.outputs.sweet_url }}"
+          MAA_PRERELEASE="${{ steps.maa_info.outputs.maa_prerelease }}"
 
           # Create Job Summary for GitHub Actions page
           cat >> $GITHUB_STEP_SUMMARY << 'SUMMARY_EOF'
@@ -284,21 +240,16 @@ jobs:
           | **Repository** | [MaaXYZ/MaaFramework](https://github.com/MaaXYZ/MaaFramework) |
           | **Version** | [${{ steps.maa_info.outputs.maa_tag }}](${{ steps.maa_info.outputs.maa_url }}) |
           | **Release Date** | `${{ steps.maa_info.outputs.maa_date }}` |
+          | **Release Type** | MAA_PRERELEASE_PLACEHOLDER |
           
           ### MFAAvalonia (UI Framework)
           
           | Property | Value |
           |----------|-------|
-          | **Selected Repository** | [${{ steps.get_latest_repo.outputs.repository }}](https://github.com/${{ steps.get_latest_repo.outputs.repository }}) |
+          | **Repository** | [MaaGF1/MFAAvalonia](https://github.com/MaaGF1/MFAAvalonia) |
           | **Version** | MFA_VERSION_PLACEHOLDER |
           | **Release Date** | `MFA_DATE_PLACEHOLDER` |
-          
-          ### 🔍 Repository Comparison
-          
-          | Repository | Latest Version | Release Date | Status |
-          |------------|----------------|--------------|--------|
-          | [SwordofMorning/MFAAvalonia](https://github.com/SwordofMorning/MFAAvalonia) | SWORD_VERSION_PLACEHOLDER | `SWORD_DATE_PLACEHOLDER` | ${{ steps.get_latest_repo.outputs.repository == 'SwordofMorning/MFAAvalonia' && '✅ Selected' || '⏸️ Not selected' }} |
-          | [SweetSmellFox/MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia) | SWEET_VERSION_PLACEHOLDER | `SWEET_DATE_PLACEHOLDER` | ${{ steps.get_latest_repo.outputs.repository == 'SweetSmellFox/MFAAvalonia' && '✅ Selected' || '⏸️ Not selected' }} |
+          | **Release Type** | MFA_PRERELEASE_PLACEHOLDER |
           
           ## 🐍 Python Dependencies
           
@@ -346,20 +297,18 @@ jobs:
           
           sed -i "s/MFA_DATE_PLACEHOLDER/${MFA_DATE}/g" $GITHUB_STEP_SUMMARY
           
-          # Handle repository info in summary
-          if [[ -n "$SWORD_URL" && "$SWORD_URL" != "" ]]; then
-            sed -i "s|SWORD_VERSION_PLACEHOLDER|[${SWORD_TAG}](${SWORD_URL})|g" $GITHUB_STEP_SUMMARY
+          # Handle prerelease status
+          if [[ "$MAA_PRERELEASE" == "true" ]]; then
+            sed -i "s/MAA_PRERELEASE_PLACEHOLDER/🚧 Pre-release/g" $GITHUB_STEP_SUMMARY
           else
-            sed -i "s/SWORD_VERSION_PLACEHOLDER/${SWORD_TAG}/g" $GITHUB_STEP_SUMMARY
+            sed -i "s/MAA_PRERELEASE_PLACEHOLDER/✅ Stable/g" $GITHUB_STEP_SUMMARY
           fi
-          sed -i "s/SWORD_DATE_PLACEHOLDER/${SWORD_DATE}/g" $GITHUB_STEP_SUMMARY
           
-          if [[ -n "$SWEET_URL" && "$SWEET_URL" != "" ]]; then
-            sed -i "s|SWEET_VERSION_PLACEHOLDER|[${SWEET_TAG}](${SWEET_URL})|g" $GITHUB_STEP_SUMMARY
+          if [[ "$MFA_PRERELEASE" == "true" ]]; then
+            sed -i "s/MFA_PRERELEASE_PLACEHOLDER/🚧 Pre-release/g" $GITHUB_STEP_SUMMARY
           else
-            sed -i "s/SWEET_VERSION_PLACEHOLDER/${SWEET_TAG}/g" $GITHUB_STEP_SUMMARY
+            sed -i "s/MFA_PRERELEASE_PLACEHOLDER/✅ Stable/g" $GITHUB_STEP_SUMMARY
           fi
-          sed -i "s/SWEET_DATE_PLACEHOLDER/${SWEET_DATE}/g" $GITHUB_STEP_SUMMARY
 
           # Create BUILD_REPORT.md file (keep existing functionality)
           cat > install/BUILD_REPORT.md << 'EOF'
@@ -384,21 +333,16 @@ jobs:
           | **Repository** | [MaaXYZ/MaaFramework](https://github.com/MaaXYZ/MaaFramework) |
           | **Version** | [${{ steps.maa_info.outputs.maa_tag }}](${{ steps.maa_info.outputs.maa_url }}) |
           | **Release Date** | `${{ steps.maa_info.outputs.maa_date }}` |
+          | **Release Type** | MAA_PRERELEASE_PLACEHOLDER |
           
           ### MFAAvalonia (UI Framework)
           
           | Property | Value |
           |----------|-------|
-          | **Selected Repository** | [${{ steps.get_latest_repo.outputs.repository }}](https://github.com/${{ steps.get_latest_repo.outputs.repository }}) |
+          | **Repository** | [MaaGF1/MFAAvalonia](https://github.com/MaaGF1/MFAAvalonia) |
           | **Version** | MFA_VERSION_PLACEHOLDER |
           | **Release Date** | `MFA_DATE_PLACEHOLDER` |
-          
-          #### Repository Comparison
-          
-          | Repository | Latest Version | Release Date | Status |
-          |------------|----------------|--------------|--------|
-          | [SwordofMorning/MFAAvalonia](https://github.com/SwordofMorning/MFAAvalonia) | SWORD_VERSION_PLACEHOLDER | SWORD_DATE_PLACEHOLDER | ${{ steps.get_latest_repo.outputs.repository == 'SwordofMorning/MFAAvalonia' && '✅ Selected' || '⏸️ Not selected' }} |
-          | [SweetSmellFox/MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia) | SWEET_VERSION_PLACEHOLDER | SWEET_DATE_PLACEHOLDER | ${{ steps.get_latest_repo.outputs.repository == 'SweetSmellFox/MFAAvalonia' && '✅ Selected' || '⏸️ Not selected' }} |
+          | **Release Type** | MFA_PRERELEASE_PLACEHOLDER |
           
           ## Python Dependencies
           
@@ -446,21 +390,18 @@ jobs:
           
           sed -i "s/MFA_DATE_PLACEHOLDER/${MFA_DATE}/g" install/BUILD_REPORT.md
           
-          # Handle Sword repository info in file
-          if [[ -n "$SWORD_URL" && "$SWORD_URL" != "" ]]; then
-            sed -i "s|SWORD_VERSION_PLACEHOLDER|[${SWORD_TAG}](${SWORD_URL})|g" install/BUILD_REPORT.md
+          # Handle prerelease status in file
+          if [[ "$MAA_PRERELEASE" == "true" ]]; then
+            sed -i "s/MAA_PRERELEASE_PLACEHOLDER/🚧 Pre-release/g" install/BUILD_REPORT.md
           else
-            sed -i "s/SWORD_VERSION_PLACEHOLDER/${SWORD_TAG}/g" install/BUILD_REPORT.md
+            sed -i "s/MAA_PRERELEASE_PLACEHOLDER/✅ Stable/g" install/BUILD_REPORT.md
           fi
-          sed -i "s/SWORD_DATE_PLACEHOLDER/${SWORD_DATE}/g" install/BUILD_REPORT.md
           
-          # Handle Sweet repository info in file
-          if [[ -n "$SWEET_URL" && "$SWEET_URL" != "" ]]; then
-            sed -i "s|SWEET_VERSION_PLACEHOLDER|[${SWEET_TAG}](${SWEET_URL})|g" install/BUILD_REPORT.md
+          if [[ "$MFA_PRERELEASE" == "true" ]]; then
+            sed -i "s/MFA_PRERELEASE_PLACEHOLDER/🚧 Pre-release/g" install/BUILD_REPORT.md
           else
-            sed -i "s/SWEET_VERSION_PLACEHOLDER/${SWEET_TAG}/g" install/BUILD_REPORT.md
+            sed -i "s/MFA_PRERELEASE_PLACEHOLDER/✅ Stable/g" install/BUILD_REPORT.md
           fi
-          sed -i "s/SWEET_DATE_PLACEHOLDER/${SWEET_DATE}/g" install/BUILD_REPORT.md
           
           echo "✅ Build report and summary generated successfully."
 
@@ -498,6 +439,13 @@ jobs:
           | **Branch/Tag** | `${{ github.ref_name }}` |
           | **Commit** | [`${{ github.sha }}`](https://github.com/${{ github.repository }}/commit/${{ github.sha }}) |
           | **Build Date** | `BUILD_DATE_PLACEHOLDER` |
+          
+          ## 📦 Dependencies Used
+          
+          | Component | Repository |
+          |-----------|------------|
+          | **MaaFramework** | [MaaXYZ/MaaFramework](https://github.com/MaaXYZ/MaaFramework) (Stable releases only) |
+          | **MFAAvalonia** | [MaaGF1/MFAAvalonia](https://github.com/MaaGF1/MFAAvalonia) |
           
           ## 🔗 Quick Actions
           
