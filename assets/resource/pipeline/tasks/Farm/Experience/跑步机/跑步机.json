@@ -21,7 +21,6 @@
 		"roi": [874, 377, 162, 102],
 		"expected": "战斗",
 		"action": "LongPress",
-		"post_delay": 1000,
 		"duration": 50,
 		"next": [
 			"跑步机_主界面进入跑步机",
