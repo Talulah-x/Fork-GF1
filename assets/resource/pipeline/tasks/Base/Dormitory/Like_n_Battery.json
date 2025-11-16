@@ -77,13 +77,10 @@
 	},
 	"宿舍_偷电": {
 		"recognition": "TemplateMatch",
-		"roi": [75, 291, 396, 272],
+		"roi": [89, 370, 329, 88],
 		"green_mask": true,
 		"rate_limit": 100,
-		"template": [
-			"dormitory/Gbattery1.png",
-			"dormitory/Gbattery2.png"
-		],
+		"template": "dormitory/Gbattery1.png",
 		"action": "LongPress",
 		"duration": 20,
 		"threshold": 0.75,
