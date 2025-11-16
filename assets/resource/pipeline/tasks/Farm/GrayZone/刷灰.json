@@ -4,8 +4,8 @@
 		"action": "Custom",
 		"custom_action": "watchdog_feed",
 		"custom_action_param": {
-			"timeout_ms": 60000,
-			"info": "灰域看门狗 - 60秒超时"
+			"timeout_ms": 300000,
+			"info": "灰域看门狗 - 300秒超时"
 		},
 		"next": [
 			"灰域_选择地图",
