@@ -8,6 +8,16 @@
 		"rate_limit": 500,
 		"timeout": 600000,
 		"next": [
+			"134重置_WD_Loop_Feed"
+		]
+	},
+	"134重置_WD_Loop_Feed": {
+		"post_delay": 1,
+		"pre_delay": 1,
+		"recognition": "DirectHit",
+		"action": "Custom",
+		"custom_action": "watchdog_feed",
+		"next": [
 			"134重置_再战连点2"
 		]
 	},

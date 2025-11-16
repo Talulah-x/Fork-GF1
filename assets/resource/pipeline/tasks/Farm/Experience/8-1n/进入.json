@@ -1,5 +1,12 @@
 {
 	"!81N总流程": {
+		"recognition": "DirectHit",
+		"action": "Custom",
+		"custom_action": "watchdog_feed",
+		"custom_action_param": {
+			"timeout_ms": 300000,
+			"info": "8-1N看门狗初始化 - 300秒超时"
+		},
 		"next": [
 			"81N进入_点击8-1N",
 			"81N部署_部署梯队",

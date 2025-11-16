@@ -235,8 +235,20 @@
 		"post_delay": 500,
 		"duration": 50,
 		"next": [
-			"跑步机_计划模式1",
-			"跑步机_开始作战"
+			"跑步机_开始作战",
+			"跑步机_看门狗初始化"
+		]
+	},
+	"跑步机_看门狗初始化": {
+		"recognition": "DirectHit",
+		"action": "Custom",
+		"custom_action": "watchdog_feed",
+		"custom_action_param": {
+			"timeout_ms": 600000,
+			"info": "跑步机看门狗初始化 - 600秒超时"
+		},
+		"next": [
+			"跑步机_计划模式1"
 		]
 	},
 	"跑步机_计划模式1": {
@@ -1192,7 +1204,21 @@
 		"target": [1112, 631, 138, 57],
 		"next": [
 			"跑步机_计划结束7",
-			"跑步机_跳过战斗"
+			"跑步机_部署完成_Feed"
+		]
+	},
+	"跑步机_部署完成_Feed": {
+		"recognition": "DirectHit",
+		"action": "Custom",
+		"custom_action": "watchdog_feed",
+		"custom_action_param": {
+			"timeout_ms": 7200000,
+			"info": "看门狗部署完成 - 7200s超时"
+		},
+		"pre_delay": 100,
+		"post_delay": 500,
+		"next": [
+			"Notify_Status_1"
 		]
 	},
 	"跑步机_跳过战斗": {
