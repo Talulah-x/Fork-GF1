@@ -21,7 +21,6 @@
 		"roi": [874, 377, 162, 102],
 		"expected": "战斗",
 		"action": "LongPress",
-		"post_delay": 1000,
 		"duration": 50,
 		"next": [
 			"跑步机_主界面进入跑步机",
@@ -37,9 +36,33 @@
 		"duration": 50,
 		"post_delay": 1000,
 		"next": [
+			"跑步机_确认进入常驻",
+			"跑步机_常驻活动"
+		]
+	},
+	"跑步机_确认进入常驻": {
+		"recognition": "OCR",
+		"roi": [182, 95, 136, 624],
+		"expected": "魔方行动",
+		"action": "DoNothing",
+		"next": [
 			"跑步机_进入裂变链接",
 			"跑步机_点击裂变链接",
-			"跑步机_常驻活动"
+			"跑步机_滑动到裂变链接"
+		]
+	},
+	"跑步机_滑动到裂变链接": {
+		"recognition": "OCR",
+		"roi": [182, 95, 136, 624],
+		"expected": "裂变链接",
+		"inverse": true,
+		"action": "Swipe",
+		"begin": [250, 655, 1, 1],
+		"end": [250, 500, 1, 1],
+		"post_wait_freezes": 50,
+		"next": [
+			"跑步机_点击裂变链接",
+			"跑步机_滑动到裂变链接"
 		]
 	},
 	"跑步机_点击裂变链接": {
