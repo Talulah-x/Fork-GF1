@@ -137,20 +137,45 @@ class Watchdog:
         
         return True
     
-    def feed(self, timeout_ms=30000, string_info=""):
+    def _update_timeout(self, timeout_ms, string_info=""):
+        """
+        Update timeout threshold for running watchdog
+        """
+        old_timeout = self._timeout_ms
+        self._timeout_ms = timeout_ms
+        
+        update_message = f"[WATCHDOG] Timeout Updated\n\nOld Timeout: {old_timeout}ms\n\nNew Timeout: {timeout_ms}ms\n\nInfo: {string_info}\n\nTime: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        
+        MaaLog_Info(f"Watchdog timeout updated - old: {old_timeout}ms, new: {timeout_ms}ms, info: {string_info}")
+        
+        # Send notification
+        self._send_notification(update_message)
+        
+        return True
+    
+    def feed(self, timeout_ms=None, string_info=""):
         """
         Feed the watchdog (auto-start if not running, reset timeout if running)
+        If timeout_ms is provided, always update the timeout threshold
         """
         with self._lock:
             if not self._is_running:
                 # First feed - auto start
-                MaaLog_Debug(f"Watchdog not running, auto-starting with timeout: {timeout_ms}ms, info: {string_info}")
-                return self._internal_start(timeout_ms, string_info)
+                actual_timeout = timeout_ms if timeout_ms is not None else 30000
+                MaaLog_Debug(f"Watchdog not running, auto-starting with timeout: {actual_timeout}ms, info: {string_info}")
+                return self._internal_start(actual_timeout, string_info)
             else:
-                # Subsequent feeds - reset timer
+                # Watchdog is already running
+                # Reset timer first
                 self._last_feed_time = datetime.now()
                 self._is_timeout_occurred = False  # Reset timeout flag
                 MaaLog_Debug(f"Watchdog fed at {self._last_feed_time.strftime('%Y-%m-%d %H:%M:%S')}")
+                
+                # Update timeout if provided
+                if timeout_ms is not None:
+                    MaaLog_Debug(f"Updating watchdog timeout to {timeout_ms}ms")
+                    self._update_timeout(timeout_ms, string_info)
+                
                 return True
     
     def poll(self):
@@ -223,6 +248,12 @@ class Watchdog:
         """Check if timeout has occurred"""
         with self._lock:
             return self._is_timeout_occurred
+    
+    @property
+    def current_timeout_ms(self):
+        """Get current timeout threshold"""
+        with self._lock:
+            return self._timeout_ms
 
 # Global watchdog instance
 _global_watchdog = Watchdog()
@@ -234,7 +265,7 @@ def get_global_watchdog():
 @AgentServer.custom_action("watchdog_feed")
 class WatchdogFeedAction(CustomAction):
     """
-    Feed watchdog action (auto-start if not running)
+    Feed watchdog action (auto-start if not running, update timeout if provided)
     """
     
     def run(self, context: Context, argv: CustomAction.RunArg) -> bool:
@@ -243,7 +274,7 @@ class WatchdogFeedAction(CustomAction):
             MaaLog_Debug(f"WatchdogFeedAction param: {param} (type: {type(param)})")
             
             # Parse parameters
-            timeout_ms = 30000  # Default 30 seconds
+            timeout_ms = None  # Changed to None to distinguish between "not provided" and "default value"
             string_info = ""
             
             if isinstance(param, str):
@@ -254,7 +285,9 @@ class WatchdogFeedAction(CustomAction):
                     string_info = param
             
             if isinstance(param, dict):
-                timeout_ms = param.get('timeout_ms', 30000)
+                # Only set timeout_ms if explicitly provided
+                if 'timeout_ms' in param:
+                    timeout_ms = param['timeout_ms']
                 string_info = param.get('info', '')
             
             watchdog = get_global_watchdog()

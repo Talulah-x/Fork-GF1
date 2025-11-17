@@ -1401,6 +1401,14 @@
                     }
                 },
                 {
+                    "name": "看门狗测试_更新超时阈值",
+                    "pipeline_override": {
+                        "!CustomServer": {
+                            "next": "!Watchdog_Update_Test"
+                        }
+                    }
+                },
+                {
                     "name": "去除窗口装饰",
                     "pipeline_override": {
                         "!CustomServer": {
