@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "name": "MaaGF1",
-    "version": "v1.6",
+    "version": "v1.7.0-beta.3",
     "url": "https://github.com/LeonNagant/MaaGF1_Test",
     "mirrorchyan_rid": null,
     "mirrorchyan_multiplatform": false,
@@ -1119,7 +1119,40 @@
                             "next": "!异构体-混沌落幕p打捞"
                         }
                     }
-                }
+                },
+                {
+                    "name": "沙维奇99打捞",
+                    "pipeline_override": {
+                        "!常驻人形打捞": {
+                            "next": "!沙维奇99打捞"
+                        }
+                    }
+                },
+                {
+                    "name": "LAMG打捞",
+                    "pipeline_override": {
+                        "!常驻人形打捞": {
+                            "next": "!LAMG打捞"
+                        }
+                    }
+                },
+                {
+                    "name": "VRB打捞",
+                    "pipeline_override": {
+                        "!常驻人形打捞": {
+                            "next": "!VRB打捞"
+                        }
+                    }
+                },
+                {
+                    "name": "蟒蛇打捞",
+                    "pipeline_override": {
+                        "!常驻人形打捞": {
+                            "next": "!蟒蛇打捞"
+                        }
+                    }
+                }                      
+
             ]
         },
         "打灰选择": {
