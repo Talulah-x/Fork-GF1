@@ -34,35 +34,32 @@
 		"expected": "常驻活动",
 		"action": "LongPress",
 		"duration": 50,
-		"post_delay": 1000,
+		"post_delay": 2000,
 		"next": [
-			"跑步机_确认进入常驻",
+			"跑步机_已进入常驻活动",
 			"跑步机_常驻活动"
 		]
 	},
-	"跑步机_确认进入常驻": {
+	"跑步机_已进入常驻活动": {
 		"recognition": "OCR",
-		"roi": [182, 95, 136, 624],
-		"expected": "魔方行动",
-		"action": "DoNothing",
+		"roi": [184, 110, 128, 608],
+		"expected": ["魔方", "失温", "深层", "塌缩", "有序", "异构体"],
 		"next": [
-			"跑步机_进入裂变链接",
 			"跑步机_点击裂变链接",
-			"跑步机_滑动到裂变链接"
+			"跑步机_拖动到裂变链接"
 		]
 	},
-	"跑步机_滑动到裂变链接": {
+	"跑步机_拖动到裂变链接": {
 		"recognition": "OCR",
-		"roi": [182, 95, 136, 624],
-		"expected": "裂变链接",
-		"inverse": true,
+		"roi": [0, 0, 0, 0],
 		"action": "Swipe",
-		"begin": [250, 655, 1, 1],
-		"end": [250, 500, 1, 1],
-		"post_wait_freezes": 50,
+		"begin": [259, 657, 1, 1],
+		"end": [259, 657, 1, 1],
+		"duration": 200,
+		"post_delay": 1000,
 		"next": [
 			"跑步机_点击裂变链接",
-			"跑步机_滑动到裂变链接"
+			"跑步机_拖动到裂变链接"
 		]
 	},
 	"跑步机_点击裂变链接": {
@@ -258,8 +255,20 @@
 		"post_delay": 500,
 		"duration": 50,
 		"next": [
-			"跑步机_计划模式1",
-			"跑步机_开始作战"
+			"跑步机_开始作战",
+			"跑步机_看门狗初始化"
+		]
+	},
+	"跑步机_看门狗初始化": {
+		"recognition": "DirectHit",
+		"action": "Custom",
+		"custom_action": "watchdog_feed",
+		"custom_action_param": {
+			"timeout_ms": 600000,
+			"info": "跑步机看门狗初始化 - 600秒超时"
+		},
+		"next": [
+			"跑步机_计划模式1"
 		]
 	},
 	"跑步机_计划模式1": {
@@ -1215,7 +1224,21 @@
 		"target": [1112, 631, 138, 57],
 		"next": [
 			"跑步机_计划结束7",
-			"跑步机_跳过战斗"
+			"跑步机_部署完成_Feed"
+		]
+	},
+	"跑步机_部署完成_Feed": {
+		"recognition": "DirectHit",
+		"action": "Custom",
+		"custom_action": "watchdog_feed",
+		"custom_action_param": {
+			"timeout_ms": 7200000,
+			"info": "看门狗部署完成 - 7200s超时"
+		},
+		"pre_delay": 100,
+		"post_delay": 500,
+		"next": [
+			"Notify_Status_1"
 		]
 	},
 	"跑步机_跳过战斗": {

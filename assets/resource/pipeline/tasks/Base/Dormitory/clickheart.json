@@ -5,15 +5,15 @@
 		"template": "dormitory/Gheart.png",
 		"threshold": 0.7,
 		"action": "LongPress",
-		"duration": 50,
+		"duration": 10,
 		"rate_limit": 50,
-		"pre_delay": 10,
+		"pre_delay": 1,
 		"green_mask": true,
-		"post_delay": 10,
+		"post_delay": 1,
 		"next": [
 			"!点击爱心"
 		],
-		"timeout": 20000
+		"timeout": 60000
 	},
 	"StopTask": {
 		"recognition": "DirectHit",
