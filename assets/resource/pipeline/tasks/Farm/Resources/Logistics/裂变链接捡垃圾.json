@@ -245,7 +245,7 @@
 		"roi": [712, 446, 127, 89],
 		"action": "LongPress",
 		"duration": 20,
-		"expected": ["确定"],
+		"expected": "确定",
 		"next": [
 			"裂变链接捡垃圾_确认出击",
 			"裂变链接捡垃圾_暂停"
@@ -255,10 +255,9 @@
 		"recognition": "DirectHit",
 		"action": "LongPress",
 		"duration": 20,
-		"target": [640, 10, 0, 0],
+		"target": [560, 10, 160, 20],
 		"next": [
 			"裂变链接捡垃圾_撤退",
-			"裂变链接捡垃圾_确认出击",
 			"裂变链接捡垃圾_暂停"
 		]
 	},
@@ -271,15 +270,6 @@
 		"target": [381, 9, 107, 31],
 		"next": [
 			"裂变链接捡垃圾_撤退",
-			"裂变链接捡垃圾_点击"
-		]
-	},
-	"裂变链接捡垃圾_点击": {
-		"recognition": "DirectHit",
-		"action": "LongPress",
-		"duration": 20,
-		"target": [381, 9, 107, 31],
-		"next": [
 			"裂变链接捡垃圾_看门狗喂狗"
 		]
 	},
@@ -291,17 +281,8 @@
 			"timeout_ms": 120000
 		},
 		"next": [
-			"裂变链接捡垃圾_战败检测"
+			"裂变链接捡垃圾_再次作战"
 		]
-	},
-	"裂变链接捡垃圾_战败检测": {
-		"recognition": "DirectHit",
-		"roi": [371, 74, 392, 289],
-		"expected": ["7"],
-		"action": "LongPress",
-		"duration": 20,
-		"timeout": 30000,
-		"next": "裂变链接捡垃圾_再次作战"
 	},
 	"裂变链接捡垃圾_再次作战": {
 		"recognition": "DirectHit",
