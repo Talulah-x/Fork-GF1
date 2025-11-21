@@ -28,14 +28,14 @@
             "path": [
                 "{PROJECT_DIR}/resource/"
             ]
-        }   , 
+        },
         {
-            "name":"美服",
+            "name": "美服",
             "path": [
                 "{PROJECT_DIR}/resource/",
                 "{PROJECT_DIR}/resource_en/"
-      ]
-    }
+            ]
+        }
     ],
     "task": [
         {
