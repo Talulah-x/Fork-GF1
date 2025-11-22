@@ -315,17 +315,6 @@
 		"lower": [245, 170, 0],
 		"upper": [255, 190, 10],
 		"next": [
-			"4_6捡垃圾_看门狗喂狗"
-		]
-	},
-	"4_6捡垃圾_看门狗喂狗": {
-		"recognition": "DirectHit",
-		"action": "Custom",
-		"custom_action": "watchdog_feed",
-		"custom_action_param": {
-			"timeout_ms": 120000
-		},
-		"next": [
 			"4_6捡垃圾_开始作战"
 		]
 	},

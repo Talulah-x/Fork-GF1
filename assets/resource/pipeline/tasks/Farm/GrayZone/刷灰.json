@@ -86,14 +86,6 @@
 		"duration": 10,
 		"post_delay": 3000,
 		"next": [
-			"灰域_喂狗"
-		]
-	},
-	"灰域_喂狗": {
-		"recognition": "DirectHit",
-		"action": "Custom",
-		"custom_action": "watchdog_feed",
-		"next": [
 			"灰域_检测"
 		]
 	},

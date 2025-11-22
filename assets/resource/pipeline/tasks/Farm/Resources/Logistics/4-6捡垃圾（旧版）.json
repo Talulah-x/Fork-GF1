@@ -64,17 +64,6 @@
 		"action": "LongPress",
 		"duration": 20,
 		"next": [
-			"旧版_4-6捡垃圾_看门狗喂狗"
-		]
-	},
-	"旧版_4-6捡垃圾_看门狗喂狗": {
-		"recognition": "DirectHit",
-		"action": "Custom",
-		"custom_action": "watchdog_feed",
-		"custom_action_param": {
-			"timeout_ms": 120000
-		},
-		"next": [
 			"旧版_4_6捡垃圾开始作战",
 			"旧版_4_6捡垃圾计划模式"
 		]
