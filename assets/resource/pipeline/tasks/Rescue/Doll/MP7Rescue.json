@@ -472,16 +472,6 @@
 		"target": [719, 467, 99, 57],
 		"post_delay": 500,
 		"next": [
-			"塌缩点-再点火IV_WD_Loop_Feed"
-		]
-	},
-	"塌缩点-再点火IV_WD_Loop_Feed": {
-		"recognition": "DirectHit",
-		"action": "Custom",
-		"custom_action": "watchdog_feed",
-		"pre_delay": 500,
-		"post_delay": 500,
-		"next": [
 			"塌缩点-再点火IV终止作战"
 		]
 	},

@@ -348,16 +348,6 @@
 		"target": [728, 470, 84, 53],
 		"post_delay": 6000,
 		"next": [
-			"混沌落幕_WD_Loop_Feed"
-		]
-	},
-	"混沌落幕_WD_Loop_Feed": {
-		"recognition": "DirectHit",
-		"action": "Custom",
-		"custom_action": "watchdog_feed",
-		"pre_delay": 500,
-		"post_delay": 500,
-		"next": [
 			"混沌落幕点击再战"
 		]
 	},
