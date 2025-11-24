@@ -724,31 +724,31 @@
                 }
             ]
         },
-        "0元购关卡":{
-            "cases":[
+        "0元购关卡": {
+            "cases": [
                 {
-                    "name":"莫比乌斯带上的逃亡(普通难度)",
-                    "pipeline_override":{
-                        "public二星人形回收_导航栏战斗":{
-                            "post_delay":400,
-                            "next":[
+                    "name": "莫比乌斯带上的逃亡(普通难度)",
+                    "pipeline_override": {
+                        "public二星人形回收_导航栏战斗": {
+                            "post_delay": 400,
+                            "next": [
                                 "逃亡_进入卷积核"
                             ]
                         }
                     }
                 },
                 {
-                    "name":"黑暗中的对话",
-                    "pipeline_override":{
-                        "逃亡_进入卷积核":{
+                    "name": "黑暗中的对话",
+                    "pipeline_override": {
+                        "逃亡_进入卷积核": {
                             "next": [
-		             	        "黑话_识别假打捞关",
-		            	        "黑话_滑动1"
-		                    ]
+                                "黑话_识别假打捞关",
+                                "黑话_滑动1"
+                            ]
                         },
-                        "public拆人形_导航栏战斗":{
-                            "post_delay":400,
-                            "next":[
+                        "public拆人形_导航栏战斗": {
+                            "post_delay": 400,
+                            "next": [
                                 "逃亡_进入卷积核"
                             ]
                         }
