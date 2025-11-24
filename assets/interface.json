@@ -157,8 +157,15 @@
             "repeat_count": 1
         },
         {
-            "name": "指挥官后勤",
-            "entry": "!指挥官后勤",
+            "name": "0元购_无核心",
+            "entry": "!莫比乌斯带上的逃亡",
+            "check": false,
+            "doc": "⚠️在主界面 或 常驻活动-卷积核界面运行[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
+            "repeatable": true,
+            "repeat_count": 9999
+        },        {
+            "name": "0元购_有核心",
+            "entry": "!黑暗中的对话",
             "check": false,
             "doc": "⚠️在主界面 或 常驻活动-卷积核界面运行[点击这里浏览器打开操作手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E6%8C%87%E6%8C%A5%E5%AE%98%E5%90%8E%E5%8B%A4%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)",
             "repeatable": true,
