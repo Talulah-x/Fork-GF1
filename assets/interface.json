@@ -1442,7 +1442,14 @@
             ]
         },
         "Alchemy_Task_List": {
-            "cases": [
+            "cases": [{
+                    "name": "潘洛斯",
+                    "pipeline_override": {
+                        "!Alchemy_Entry": {
+                            "next": "潘_炼金"
+                        }
+                    }
+                },
                 {
                     "name": "静默沙盘",
                     "pipeline_override": {
