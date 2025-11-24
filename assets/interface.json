@@ -1442,7 +1442,8 @@
             ]
         },
         "Alchemy_Task_List": {
-            "cases": [{
+            "cases": [
+                {
                     "name": "潘洛斯",
                     "pipeline_override": {
                         "!Alchemy_Entry": {
