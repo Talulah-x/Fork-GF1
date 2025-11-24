@@ -1,12 +1,7 @@
 {
 	"!跑步机总流程": {
 		"recognition": "DirectHit",
-		"action": "Custom",
-		"custom_action": "watchdog_feed",
-		"custom_action_param": {
-			"timeout_ms": 300000,
-			"info": "跑步机看门狗初始化 - 300秒超时"
-		},
+		"action": "DoNothing",
 		"next": [
 			"跑步机_已进入循环",
 			"跑步机_主界面进入跑步机",
@@ -20,7 +15,7 @@
 		"roi": [1101, 619, 153, 89],
 		"expected": "结束",
 		"next": [
-			"跑步机_部署完毕看门狗喂狗"
+			"跑步机_跳过战斗"
 		]
 	},
 	"跑步机_主界面进入跑步机": {
@@ -51,13 +46,13 @@
 		"recognition": "OCR",
 		"roi": [182, 95, 136, 624],
 		"expected": "魔方行动",
-		"action": "DoNothing",
 		"next": [
 			"跑步机_进入裂变链接",
 			"跑步机_点击裂变链接",
 			"跑步机_滑动到裂变链接"
 		]
 	},
+ //这是不可能发生的。此处目的是于早期常驻的兼容性
 	"跑步机_滑动到裂变链接": {
 		"recognition": "OCR",
 		"roi": [182, 95, 136, 624],
@@ -77,8 +72,8 @@
 		"roi": [182, 95, 136, 624],
 		"expected": "裂变",
 		"action": "LongPress",
-		"duration": 50,
-		"post_delay": 1000,
+		"duration": 20,
+		"post_delay": 800,
 		"next": [
 			"跑步机_进入裂变链接",
 			"跑步机_点击裂变链接"
@@ -89,23 +84,20 @@
 		"roi": [559, 459, 365, 127],
 		"expected": "SHATTERED",
 		"action": "LongPress",
-		"duration": 50,
-		"post_delay": 1000,
+		"duration": 20,
 		"next": [
-			"跑步机_点击跑步机关卡",
-			"跑步机_进入第三章",
+			"跑步机_滑动到跑步机地图",
 			"跑步机_滑动到第三章",
 			"跑步机_进入裂变链接"
 		]
 	},
+ //这里并不判断是困难还是简单，一是默认使用者再次之前捡过垃圾，二是因为目前没有脚本必须在简单下运行。
 	"跑步机_滑动到第三章": {
 		"recognition": "OCR",
-		"roi": [507, 145, 561, 545],
 		"expected": "塔林",
 		"action": "Swipe",
 		"begin": [446, 112, 1, 1],
 		"end": [437, 517, 1, 1],
-		"post_delay": 500,
 		"next": [
 			"跑步机_进入第三章",
 			"跑步机_滑动到第三章"
@@ -113,23 +105,22 @@
 	},
 	"跑步机_进入第三章": {
 		"recognition": "OCR",
-		"roi": [214, 118, 557, 478],
 		"expected": "献祭",
 		"action": "LongPress",
-		"duration": 50,
-		"post_delay": 1000,
+		"duration": 20,
+		"post_delay": 300,
 		"next": [
-			"跑步机_点击跑步机关卡",
 			"跑步机_滑动到跑步机地图",
 			"跑步机_进入第三章"
 		]
 	},
 	"跑步机_滑动到跑步机地图": {
+		"recognition": "OCR",
+		"expected": "CHAP",
+		"roi": [12, 261, 99, 56],
 		"action": "Swipe",
-		"begin": [373, 338, 1, 1],
-		"end": [1233, 335, 1, 1],
-		"pre_delay": 1000,
-		"post_delay": 1000,
+		"begin": [312, 660, 1, 1],
+		"end": [1223, 660, 1, 1],
 		"next": [
 			"跑步机_点击跑步机关卡",
 			"跑步机_滑动到跑步机地图"
@@ -193,18 +184,8 @@
 		"action": "DoNothing",
 		"post_delay": 500,
 		"next": [
-			"跑步机_部署看门狗喂狗"
+			"跑步机_开始作战"
 		]
-	},
-	"跑步机_部署看门狗喂狗": {
-		"recognition": "DirectHit",
-		"action": "Custom",
-		"custom_action": "watchdog_feed",
-		"custom_action_param": {
-			"timeout_ms": 1200000,
-			"info": "跑步机部署中 - 看门狗喂狗 - 20分钟超时"
-		},
-		"next": "跑步机_开始作战"
 	},
 	"跑步机_部署第一梯队": {
 		"recognition": "OCR",
@@ -250,7 +231,7 @@
 		"roi": [171, 23, 598, 118],
 		"expected": "梯队",
 		"action": "LongPress",
-		"post_delay": 1500,
+		"post_delay": 500,
 		"duration": 50,
 		"next": [
 			"跑步机_确认部署第二梯队",
@@ -265,8 +246,8 @@
 		"duration": 50,
 		"post_delay": 1000,
 		"next": [
-			"跑步机_确认部署第二梯队",
-			"跑步机_部署看门狗喂狗"
+			"跑步机_开始作战",
+			"跑步机_确认部署第二梯队"
 		]
 	},
 	"跑步机_开始作战": {
@@ -1233,17 +1214,12 @@
 		"duration": 50,
 		"target": [1112, 631, 138, 57],
 		"next": [
-			"跑步机_部署完毕看门狗喂狗"
+			"跑步机_看门狗喂狗"
 		]
 	},
-	"跑步机_部署完毕看门狗喂狗": {
+	"跑步机_看门狗喂狗": {
 		"recognition": "DirectHit",
-		"action": "Custom",
-		"custom_action": "watchdog_feed",
-		"custom_action_param": {
-			"timeout_ms": 9000000,
-			"info": "跑步机部署完毕 - 看门狗喂狗 - 2.5小时超时"
-		},
+		"action": "DoNothing",
 		"next": [
 			"跑步机_计划结束7",
 			"跑步机_跳过战斗"
